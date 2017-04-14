@@ -53,22 +53,22 @@
 }
 
  /**
- * For serialization of enum Direction type property as NSString*
+ * For serialization of enum DirectionEnum type property as NSString*
  */
 -(id) JSONObjectForDirection
 {
      
-    return [DirectionHelper stringFromDirection:(enum Direction) direction withDefault: nil];
+    return [DirectionEnumHelper stringFromDirectionEnum:(enum DirectionEnum) direction withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum Direction type property from NSString*
+ * For deserialization of enum DirectionEnum type property from NSString*
  */
  
 -(void)setDirectionWithNSString:(NSString*) strValue
 {
-    direction = [DirectionHelper directionFromString:(NSString*) strValue];
+    direction = [DirectionEnumHelper directionEnumFromString:(NSString*) strValue];
 }
 
 

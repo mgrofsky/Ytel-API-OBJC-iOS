@@ -27,7 +27,7 @@
 {
     if (self = [super init])
     {
-        self.activate = [ActivateStatusHelper activateStatusFromString:@"0"];
+        self.activate = [ActivateStatusEnumHelper activateStatusEnumFromString:@"0"];
     }
     return self;
 }

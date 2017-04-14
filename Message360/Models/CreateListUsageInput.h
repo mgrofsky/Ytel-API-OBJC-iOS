@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "ProductCode.h"
-#import "ProductCodeHelper.h"
+#import "ProductCodeEnum.h"
+#import "ProductCodeEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -24,7 +24,7 @@
 /**
 * Product Code
 */
-@property enum ProductCode productCode;
+@property enum ProductCodeEnum productCode;
 
 /**
 * Start Usage Date

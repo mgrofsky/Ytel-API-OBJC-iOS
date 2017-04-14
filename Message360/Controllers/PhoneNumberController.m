@@ -49,17 +49,17 @@
         @"PhoneNumber": input.phoneNumber,
         @"FriendlyName": (nil != input.friendlyName) ? input.friendlyName : [NSNull null],
         @"VoiceUrl": (nil != input.voiceUrl) ? input.voiceUrl : [NSNull null],
-        @"VoiceMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.voiceMethod withDefault: [NSNull null]],
+        @"VoiceMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.voiceMethod withDefault: [NSNull null]],
         @"VoiceFallbackUrl": (nil != input.voiceFallbackUrl) ? input.voiceFallbackUrl : [NSNull null],
-        @"VoiceFallbackMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.voiceFallbackMethod withDefault: [NSNull null]],
+        @"VoiceFallbackMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.voiceFallbackMethod withDefault: [NSNull null]],
         @"HangupCallback": (nil != input.hangupCallback) ? input.hangupCallback : [NSNull null],
-        @"HangupCallbackMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.hangupCallbackMethod withDefault: [NSNull null]],
+        @"HangupCallbackMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.hangupCallbackMethod withDefault: [NSNull null]],
         @"HeartbeatUrl": (nil != input.heartbeatUrl) ? input.heartbeatUrl : [NSNull null],
-        @"HeartbeatMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.heartbeatMethod withDefault: [NSNull null]],
+        @"HeartbeatMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.heartbeatMethod withDefault: [NSNull null]],
         @"SmsUrl": (nil != input.smsUrl) ? input.smsUrl : [NSNull null],
-        @"SmsMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.smsMethod withDefault: [NSNull null]],
+        @"SmsMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.smsMethod withDefault: [NSNull null]],
         @"SmsFallbackUrl": (nil != input.smsFallbackUrl) ? input.smsFallbackUrl : [NSNull null],
-        @"SmsFallbackMethod": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.smsFallbackMethod withDefault: [NSNull null]]
+        @"SmsFallbackMethod": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.smsFallbackMethod withDefault: [NSNull null]]
     }];
 
     //convert to form parameters
@@ -462,7 +462,7 @@
     [_parameters addEntriesFromDictionary: @{
         @"Page": (nil != input.page) ? input.page : [NSNull null],
         @"PageSize": [NSNumber numberWithInteger: input.pageSize],
-        @"NumberType": [NumberTypeHelper stringFromNumberType: (enum NumberType) input.numberType withDefault: [NSNull null]],
+        @"NumberType": [NumberTypeEnumHelper stringFromNumberTypeEnum: (enum NumberTypeEnum) input.numberType withDefault: [NSNull null]],
         @"FriendlyName": (nil != input.friendlyName) ? input.friendlyName : [NSNull null]
     }];
 
@@ -564,7 +564,7 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"NumberType": [NumberTypeHelper stringFromNumberType: (enum NumberType) input.numberType withDefault: [NSNull null]],
+        @"NumberType": [NumberTypeEnumHelper stringFromNumberTypeEnum: (enum NumberTypeEnum) input.numberType withDefault: [NSNull null]],
         @"AreaCode": input.areaCode,
         @"PageSize": [NSNumber numberWithInteger: input.pageSize]
     }];

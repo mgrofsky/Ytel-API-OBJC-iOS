@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = "Message360"
-  s.version          = "2.0.0"
+  s.version          = "3.0.0"
   s.summary          = <<-SUMMARY
-  <p>message360 API version 2</p>
+  <p>message360 API version 3</p>
 
 SUMMARY
   s.homepage         = "http://apimatic.io"

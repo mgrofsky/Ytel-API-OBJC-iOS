@@ -153,7 +153,7 @@
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
         @"SubAccountSID": input.subAccountSID,
-        @"Activate": [ActivateStatusHelper stringFromActivateStatus: (enum ActivateStatus) input.activate withDefault: @"0"]
+        @"Activate": [ActivateStatusEnumHelper stringFromActivateStatusEnum: (enum ActivateStatusEnum) input.activate withDefault: @"0"]
     }];
 
     //convert to form parameters
@@ -255,7 +255,7 @@
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
         @"SubAccountSID": input.subAccountSID,
-        @"MergeNumber": [MergeNumberStatusHelper stringFromMergeNumberStatus: (enum MergeNumberStatus) input.mergeNumber withDefault: @"0"]
+        @"MergeNumber": [MergeNumberStatusEnumHelper stringFromMergeNumberStatusEnum: (enum MergeNumberStatusEnum) input.mergeNumber withDefault: @"0"]
     }];
 
     //convert to form parameters

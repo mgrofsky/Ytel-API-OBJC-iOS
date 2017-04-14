@@ -348,7 +348,7 @@
     [_parameters addEntriesFromDictionary: @{
         @"Page": (nil != input.page) ? input.page : [NSNull null],
         @"PageSize": (nil != input.pageSize) ? input.pageSize : [NSNull null],
-        @"Status": [StatusHelper stringFromStatus: (enum Status) input.status withDefault: [NSNull null]],
+        @"Status": [StatusEnumHelper stringFromStatusEnum: (enum StatusEnum) input.status withDefault: [NSNull null]],
         @"DateTranscribed": (nil != input.dateTranscribed) ? input.dateTranscribed : [NSNull null]
     }];
 

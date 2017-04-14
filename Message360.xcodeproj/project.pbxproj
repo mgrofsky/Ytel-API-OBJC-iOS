@@ -159,42 +159,44 @@
 		AA4B67CE513012BE8BB91F38 /* CreateViewSMSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */; };
 		AA05FCE4C1A15CD5F4366611 /* CreateListCallsInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA5ABCE33CE6845207FAF624 /* CreateListCallsInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA41F1A2425C3F930247554C /* CreateListCallsInput.m */; };
-		AAE6BD6827ADE100C7CD9A90 /* AudioDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1FAC70D7FA9847F857DFA0 /* AudioDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA7B15C6574D4F9AEF4FACC4 /* AudioDirectionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA849132C23A6C87853EC201 /* AudioDirectionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA849FC82F425B718C3082FA /* AudioDirectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA91EC7D70123A22417A52E2 /* AudioDirectionHelper.m */; };
-		AAC8D8807DFE9E7419F76D3F /* MergeNumberStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5104C8828B1EC9948B1610 /* MergeNumberStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA2458AD7C0A314216C06593 /* MergeNumberStatusHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA65C7CD8C48C292EC7DF793 /* MergeNumberStatusHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAED31148D09165112D6B695 /* MergeNumberStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD8F507CAB0650EBB1D3FCB /* MergeNumberStatusHelper.m */; };
-		AAF5B5EC2AE38483582F70BE /* ActivateStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA708E7E8E630C5DEC6D0A5E /* ActivateStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA3610AEF3E2EAD67BEB38CB /* ActivateStatusHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3FB77297DD3BDF3722C309 /* ActivateStatusHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA404B352F55D394D9FE82E3 /* ActivateStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE052893BF39D6B0B3144C6 /* ActivateStatusHelper.m */; };
-		AA90C4FDF4F18F41DC7F7ED9 /* SendEmailAs.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEAAEB49A2CEB543FA5A6D3 /* SendEmailAs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA67F1A2EFCC764F38C17FBC /* SendEmailAsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8A24CA2BF052B63F4DC39F /* SendEmailAsHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA013B930DCB645FE75411F9 /* SendEmailAsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC3F968EEBFCA6866EC399F /* SendEmailAsHelper.m */; };
-		AA27D8088A071A03DE9BD00F /* Status.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA6DD940C3D7428C9B000C0 /* Status.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA14AA0387A7ECDC7AEB7C48 /* StatusHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8BA6FD91D359E415A4857D /* StatusHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA7C9746B06B828B7071AE43 /* StatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA70978D444D9DCF8BD16704 /* StatusHelper.m */; };
-		AA1060A18ABB64CF5D68C4D0 /* NumberType.h in Headers */ = {isa = PBXBuildFile; fileRef = AA82D9B28B29D601C5523001 /* NumberType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA455AB4144DDBDF2482DBA9 /* NumberTypeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8602F9B011B650D0998C69 /* NumberTypeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAADF1FAAD4E10D9100B2B68 /* NumberTypeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5DD8A7BBF6F213DC28806B /* NumberTypeHelper.m */; };
-		AADA9961DF7648F5BD646FF5 /* Direction.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7167A047F73AB7B020D1B7 /* Direction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA901E191B94641D990AA2E3 /* DirectionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA10E74D1BE78DF434ECACC1 /* DirectionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA09353118F66A37087CAAEE /* DirectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF730CC71E78EDAF09BABB7 /* DirectionHelper.m */; };
-		AA09440FD5CD17E40C970EC7 /* InterruptedCallStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = AA699AD5E694B01F51F6D40F /* InterruptedCallStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAB24A04AB2111D7071F9C7D /* InterruptedCallStatusHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1D33B79B7C79E5D608D52E /* InterruptedCallStatusHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA2FFDC02571E0EF3FE936C7 /* InterruptedCallStatusHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB0D81BCD8CE4442F8F038B /* InterruptedCallStatusHelper.m */; };
-		AA527656EB231B79AD6CFE7A /* AudioFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = AA61D6FEFDAFDD56EC5896D0 /* AudioFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA837E58007AE90B7570E555 /* AudioFormatHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE60C29584120E95BB181AB /* AudioFormatHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAC13BBBAA3BB93CC722D62A /* AudioFormatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB1A25B2D1EFAD91B9AC4FD /* AudioFormatHelper.m */; };
-		AAAC8CD9D9610BDDF307D4ED /* ProductCode.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9FEB0ED0C97EC50BD8A96E /* ProductCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAEC783C8172FA6775666718 /* ProductCodeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA61948115DA16CCC5ADB963 /* ProductCodeHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA93F46AC866A77EC410FEBD /* ProductCodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA89F037F494B7B4446DAE04 /* ProductCodeHelper.m */; };
-		AA9FDF06B01059DA7D127883 /* IfMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC6C3CD17C4EB2B65BD08D8 /* IfMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA68925597257E6CCD51722A /* IfMachineHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAC6CFA0683EAB645823F07 /* IfMachineHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA5AA8128F88C209CDF48B39 /* IfMachineHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC266ADE700BD2A53B2DBE1 /* IfMachineHelper.m */; };
-		AA4844211E359863D2E1EB95 /* HttpAction.h in Headers */ = {isa = PBXBuildFile; fileRef = AA58127B47CE784D93FE769F /* HttpAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA813209241700D45B128D98 /* HttpActionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1F185068A8B6F7E7353183 /* HttpActionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAC3C484DC060F871BBF6A75 /* HttpActionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4B2AC3858D59346B7632FB /* HttpActionHelper.m */; };
+		AA972379BAC7E2C8ADE98910 /* CreateSendRinglessVMInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6140C1C4EA5A3C04AAB8B1 /* CreateSendRinglessVMInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */; };
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */; };
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */; };
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */; };
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */; };
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3332638CCB919DFB501866 /* StatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF389387126F0941CB348A /* StatusEnumHelper.m */; };
+		AA8F60D49DEC0BEAA7448820 /* NumberTypeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF8A0891DE29C7B96113BEA /* NumberTypeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF4CE54726A439B256AAF58 /* NumberTypeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */; };
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6E95087CB45783F783AA30 /* DirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */; };
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */; };
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */; };
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */; };
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA12FF61B621F420040B4098 /* IfMachineEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */; };
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */; };
 		AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4AF826B686E34D8C722F89 /* BaseController.m */; };
 		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */; };
@@ -432,42 +434,44 @@
 		AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewSMSInput.m; path = Models/CreateViewSMSInput.m; sourceTree = "<group>"; };
 		AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListCallsInput.h; path = Models/CreateListCallsInput.h; sourceTree = "<group>"; };
 		AA41F1A2425C3F930247554C /* CreateListCallsInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListCallsInput.m; path = Models/CreateListCallsInput.m; sourceTree = "<group>"; };
-		AA1FAC70D7FA9847F857DFA0 /* AudioDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirection.h; path = Models/AudioDirection.h; sourceTree = "<group>"; };
-		AA849132C23A6C87853EC201 /* AudioDirectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionHelper.h; path = Models/AudioDirectionHelper.h; sourceTree = "<group>"; };
-		AA91EC7D70123A22417A52E2 /* AudioDirectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDirectionHelper.m; path = Models/AudioDirectionHelper.m; sourceTree = "<group>"; };
-		AA5104C8828B1EC9948B1610 /* MergeNumberStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatus.h; path = Models/MergeNumberStatus.h; sourceTree = "<group>"; };
-		AA65C7CD8C48C292EC7DF793 /* MergeNumberStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusHelper.h; path = Models/MergeNumberStatusHelper.h; sourceTree = "<group>"; };
-		AAD8F507CAB0650EBB1D3FCB /* MergeNumberStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumberStatusHelper.m; path = Models/MergeNumberStatusHelper.m; sourceTree = "<group>"; };
-		AA708E7E8E630C5DEC6D0A5E /* ActivateStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatus.h; path = Models/ActivateStatus.h; sourceTree = "<group>"; };
-		AA3FB77297DD3BDF3722C309 /* ActivateStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusHelper.h; path = Models/ActivateStatusHelper.h; sourceTree = "<group>"; };
-		AAE052893BF39D6B0B3144C6 /* ActivateStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivateStatusHelper.m; path = Models/ActivateStatusHelper.m; sourceTree = "<group>"; };
-		AAEAAEB49A2CEB543FA5A6D3 /* SendEmailAs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAs.h; path = Models/SendEmailAs.h; sourceTree = "<group>"; };
-		AA8A24CA2BF052B63F4DC39F /* SendEmailAsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsHelper.h; path = Models/SendEmailAsHelper.h; sourceTree = "<group>"; };
-		AAC3F968EEBFCA6866EC399F /* SendEmailAsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendEmailAsHelper.m; path = Models/SendEmailAsHelper.m; sourceTree = "<group>"; };
-		AAA6DD940C3D7428C9B000C0 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status.h; path = Models/Status.h; sourceTree = "<group>"; };
-		AA8BA6FD91D359E415A4857D /* StatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusHelper.h; path = Models/StatusHelper.h; sourceTree = "<group>"; };
-		AA70978D444D9DCF8BD16704 /* StatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusHelper.m; path = Models/StatusHelper.m; sourceTree = "<group>"; };
-		AA82D9B28B29D601C5523001 /* NumberType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType.h; path = Models/NumberType.h; sourceTree = "<group>"; };
-		AA8602F9B011B650D0998C69 /* NumberTypeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberTypeHelper.h; path = Models/NumberTypeHelper.h; sourceTree = "<group>"; };
-		AA5DD8A7BBF6F213DC28806B /* NumberTypeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberTypeHelper.m; path = Models/NumberTypeHelper.m; sourceTree = "<group>"; };
-		AA7167A047F73AB7B020D1B7 /* Direction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction.h; path = Models/Direction.h; sourceTree = "<group>"; };
-		AA10E74D1BE78DF434ECACC1 /* DirectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionHelper.h; path = Models/DirectionHelper.h; sourceTree = "<group>"; };
-		AAF730CC71E78EDAF09BABB7 /* DirectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DirectionHelper.m; path = Models/DirectionHelper.m; sourceTree = "<group>"; };
-		AA699AD5E694B01F51F6D40F /* InterruptedCallStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatus.h; path = Models/InterruptedCallStatus.h; sourceTree = "<group>"; };
-		AA1D33B79B7C79E5D608D52E /* InterruptedCallStatusHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusHelper.h; path = Models/InterruptedCallStatusHelper.h; sourceTree = "<group>"; };
-		AAB0D81BCD8CE4442F8F038B /* InterruptedCallStatusHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterruptedCallStatusHelper.m; path = Models/InterruptedCallStatusHelper.m; sourceTree = "<group>"; };
-		AA61D6FEFDAFDD56EC5896D0 /* AudioFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormat.h; path = Models/AudioFormat.h; sourceTree = "<group>"; };
-		AAE60C29584120E95BB181AB /* AudioFormatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatHelper.h; path = Models/AudioFormatHelper.h; sourceTree = "<group>"; };
-		AAB1A25B2D1EFAD91B9AC4FD /* AudioFormatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioFormatHelper.m; path = Models/AudioFormatHelper.m; sourceTree = "<group>"; };
-		AA9FEB0ED0C97EC50BD8A96E /* ProductCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCode.h; path = Models/ProductCode.h; sourceTree = "<group>"; };
-		AA61948115DA16CCC5ADB963 /* ProductCodeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeHelper.h; path = Models/ProductCodeHelper.h; sourceTree = "<group>"; };
-		AA89F037F494B7B4446DAE04 /* ProductCodeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCodeHelper.m; path = Models/ProductCodeHelper.m; sourceTree = "<group>"; };
-		AAC6C3CD17C4EB2B65BD08D8 /* IfMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachine.h; path = Models/IfMachine.h; sourceTree = "<group>"; };
-		AAAC6CFA0683EAB645823F07 /* IfMachineHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineHelper.h; path = Models/IfMachineHelper.h; sourceTree = "<group>"; };
-		AAC266ADE700BD2A53B2DBE1 /* IfMachineHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IfMachineHelper.m; path = Models/IfMachineHelper.m; sourceTree = "<group>"; };
-		AA58127B47CE784D93FE769F /* HttpAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpAction.h; path = Models/HttpAction.h; sourceTree = "<group>"; };
-		AA1F185068A8B6F7E7353183 /* HttpActionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionHelper.h; path = Models/HttpActionHelper.h; sourceTree = "<group>"; };
-		AA4B2AC3858D59346B7632FB /* HttpActionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpActionHelper.m; path = Models/HttpActionHelper.m; sourceTree = "<group>"; };
+		AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendRinglessVMInput.h; path = Models/CreateSendRinglessVMInput.h; sourceTree = "<group>"; };
+		AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendRinglessVMInput.m; path = Models/CreateSendRinglessVMInput.m; sourceTree = "<group>"; };
+		AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnum.h; path = Models/AudioDirectionEnum.h; sourceTree = "<group>"; };
+		AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnumHelper.h; path = Models/AudioDirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDirectionEnumHelper.m; path = Models/AudioDirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnum.h; path = Models/MergeNumberStatusEnum.h; sourceTree = "<group>"; };
+		AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnumHelper.h; path = Models/MergeNumberStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumberStatusEnumHelper.m; path = Models/MergeNumberStatusEnumHelper.m; sourceTree = "<group>"; };
+		AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnum.h; path = Models/ActivateStatusEnum.h; sourceTree = "<group>"; };
+		AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnumHelper.h; path = Models/ActivateStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivateStatusEnumHelper.m; path = Models/ActivateStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnum.h; path = Models/SendEmailAsEnum.h; sourceTree = "<group>"; };
+		AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnumHelper.h; path = Models/SendEmailAsEnumHelper.h; sourceTree = "<group>"; };
+		AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendEmailAsEnumHelper.m; path = Models/SendEmailAsEnumHelper.m; sourceTree = "<group>"; };
+		AA3332638CCB919DFB501866 /* StatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnum.h; path = Models/StatusEnum.h; sourceTree = "<group>"; };
+		AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnumHelper.h; path = Models/StatusEnumHelper.h; sourceTree = "<group>"; };
+		AABF389387126F0941CB348A /* StatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusEnumHelper.m; path = Models/StatusEnumHelper.m; sourceTree = "<group>"; };
+		AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberTypeEnum.h; path = Models/NumberTypeEnum.h; sourceTree = "<group>"; };
+		AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberTypeEnumHelper.h; path = Models/NumberTypeEnumHelper.h; sourceTree = "<group>"; };
+		AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberTypeEnumHelper.m; path = Models/NumberTypeEnumHelper.m; sourceTree = "<group>"; };
+		AA6E95087CB45783F783AA30 /* DirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnum.h; path = Models/DirectionEnum.h; sourceTree = "<group>"; };
+		AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnumHelper.h; path = Models/DirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DirectionEnumHelper.m; path = Models/DirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnum.h; path = Models/InterruptedCallStatusEnum.h; sourceTree = "<group>"; };
+		AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnumHelper.h; path = Models/InterruptedCallStatusEnumHelper.h; sourceTree = "<group>"; };
+		AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterruptedCallStatusEnumHelper.m; path = Models/InterruptedCallStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnum.h; path = Models/AudioFormatEnum.h; sourceTree = "<group>"; };
+		AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnumHelper.h; path = Models/AudioFormatEnumHelper.h; sourceTree = "<group>"; };
+		AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioFormatEnumHelper.m; path = Models/AudioFormatEnumHelper.m; sourceTree = "<group>"; };
+		AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnum.h; path = Models/ProductCodeEnum.h; sourceTree = "<group>"; };
+		AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnumHelper.h; path = Models/ProductCodeEnumHelper.h; sourceTree = "<group>"; };
+		AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCodeEnumHelper.m; path = Models/ProductCodeEnumHelper.m; sourceTree = "<group>"; };
+		AA12FF61B621F420040B4098 /* IfMachineEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnum.h; path = Models/IfMachineEnum.h; sourceTree = "<group>"; };
+		AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnumHelper.h; path = Models/IfMachineEnumHelper.h; sourceTree = "<group>"; };
+		AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IfMachineEnumHelper.m; path = Models/IfMachineEnumHelper.m; sourceTree = "<group>"; };
+		AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnum.h; path = Models/HttpActionEnum.h; sourceTree = "<group>"; };
+		AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnumHelper.h; path = Models/HttpActionEnumHelper.h; sourceTree = "<group>"; };
+		AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpActionEnumHelper.m; path = Models/HttpActionEnumHelper.m; sourceTree = "<group>"; };
 		AA4AF826B686E34D8C722F89 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
 		AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortCodeController.h; path = Controllers/ShortCodeController.h; sourceTree = "<group>"; };
 		AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShortCodeController.m; path = Controllers/ShortCodeController.m; sourceTree = "<group>"; };
@@ -815,42 +819,44 @@
 				AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */,
 				AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */,
 				AA41F1A2425C3F930247554C /* CreateListCallsInput.m */,
-				AA1FAC70D7FA9847F857DFA0 /* AudioDirection.h */,
-				AA849132C23A6C87853EC201 /* AudioDirectionHelper.h */,
-				AA91EC7D70123A22417A52E2 /* AudioDirectionHelper.m */,
-				AA5104C8828B1EC9948B1610 /* MergeNumberStatus.h */,
-				AA65C7CD8C48C292EC7DF793 /* MergeNumberStatusHelper.h */,
-				AAD8F507CAB0650EBB1D3FCB /* MergeNumberStatusHelper.m */,
-				AA708E7E8E630C5DEC6D0A5E /* ActivateStatus.h */,
-				AA3FB77297DD3BDF3722C309 /* ActivateStatusHelper.h */,
-				AAE052893BF39D6B0B3144C6 /* ActivateStatusHelper.m */,
-				AAEAAEB49A2CEB543FA5A6D3 /* SendEmailAs.h */,
-				AA8A24CA2BF052B63F4DC39F /* SendEmailAsHelper.h */,
-				AAC3F968EEBFCA6866EC399F /* SendEmailAsHelper.m */,
-				AAA6DD940C3D7428C9B000C0 /* Status.h */,
-				AA8BA6FD91D359E415A4857D /* StatusHelper.h */,
-				AA70978D444D9DCF8BD16704 /* StatusHelper.m */,
-				AA82D9B28B29D601C5523001 /* NumberType.h */,
-				AA8602F9B011B650D0998C69 /* NumberTypeHelper.h */,
-				AA5DD8A7BBF6F213DC28806B /* NumberTypeHelper.m */,
-				AA7167A047F73AB7B020D1B7 /* Direction.h */,
-				AA10E74D1BE78DF434ECACC1 /* DirectionHelper.h */,
-				AAF730CC71E78EDAF09BABB7 /* DirectionHelper.m */,
-				AA699AD5E694B01F51F6D40F /* InterruptedCallStatus.h */,
-				AA1D33B79B7C79E5D608D52E /* InterruptedCallStatusHelper.h */,
-				AAB0D81BCD8CE4442F8F038B /* InterruptedCallStatusHelper.m */,
-				AA61D6FEFDAFDD56EC5896D0 /* AudioFormat.h */,
-				AAE60C29584120E95BB181AB /* AudioFormatHelper.h */,
-				AAB1A25B2D1EFAD91B9AC4FD /* AudioFormatHelper.m */,
-				AA9FEB0ED0C97EC50BD8A96E /* ProductCode.h */,
-				AA61948115DA16CCC5ADB963 /* ProductCodeHelper.h */,
-				AA89F037F494B7B4446DAE04 /* ProductCodeHelper.m */,
-				AAC6C3CD17C4EB2B65BD08D8 /* IfMachine.h */,
-				AAAC6CFA0683EAB645823F07 /* IfMachineHelper.h */,
-				AAC266ADE700BD2A53B2DBE1 /* IfMachineHelper.m */,
-				AA58127B47CE784D93FE769F /* HttpAction.h */,
-				AA1F185068A8B6F7E7353183 /* HttpActionHelper.h */,
-				AA4B2AC3858D59346B7632FB /* HttpActionHelper.m */,
+				AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */,
+				AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */,
+				AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */,
+				AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */,
+				AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */,
+				AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */,
+				AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */,
+				AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */,
+				AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */,
+				AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */,
+				AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */,
+				AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */,
+				AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */,
+				AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */,
+				AA3332638CCB919DFB501866 /* StatusEnum.h */,
+				AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */,
+				AABF389387126F0941CB348A /* StatusEnumHelper.m */,
+				AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */,
+				AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */,
+				AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */,
+				AA6E95087CB45783F783AA30 /* DirectionEnum.h */,
+				AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */,
+				AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */,
+				AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */,
+				AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */,
+				AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */,
+				AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */,
+				AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */,
+				AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */,
+				AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */,
+				AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */,
+				AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */,
+				AA12FF61B621F420040B4098 /* IfMachineEnum.h */,
+				AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */,
+				AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */,
+				AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */,
+				AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */,
+				AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */,
             );
             name = Models;
             sourceTree = "<group>";
@@ -927,30 +933,31 @@
 		AAF73618DD3CF1ACCBB501B5 /* CreateViewShortCodeInput.h in Headers */,
 		AA783FD4BB8BCB6F9074D70B /* CreateViewSMSInput.h in Headers */,
 		AA05FCE4C1A15CD5F4366611 /* CreateListCallsInput.h in Headers */,
-		AAE6BD6827ADE100C7CD9A90 /* AudioDirection.h in Headers */,
-		AA7B15C6574D4F9AEF4FACC4 /* AudioDirectionHelper.h in Headers */,
-		AAC8D8807DFE9E7419F76D3F /* MergeNumberStatus.h in Headers */,
-		AA2458AD7C0A314216C06593 /* MergeNumberStatusHelper.h in Headers */,
-		AAF5B5EC2AE38483582F70BE /* ActivateStatus.h in Headers */,
-		AA3610AEF3E2EAD67BEB38CB /* ActivateStatusHelper.h in Headers */,
-		AA90C4FDF4F18F41DC7F7ED9 /* SendEmailAs.h in Headers */,
-		AA67F1A2EFCC764F38C17FBC /* SendEmailAsHelper.h in Headers */,
-		AA27D8088A071A03DE9BD00F /* Status.h in Headers */,
-		AA14AA0387A7ECDC7AEB7C48 /* StatusHelper.h in Headers */,
-		AA1060A18ABB64CF5D68C4D0 /* NumberType.h in Headers */,
-		AA455AB4144DDBDF2482DBA9 /* NumberTypeHelper.h in Headers */,
-		AADA9961DF7648F5BD646FF5 /* Direction.h in Headers */,
-		AA901E191B94641D990AA2E3 /* DirectionHelper.h in Headers */,
-		AA09440FD5CD17E40C970EC7 /* InterruptedCallStatus.h in Headers */,
-		AAB24A04AB2111D7071F9C7D /* InterruptedCallStatusHelper.h in Headers */,
-		AA527656EB231B79AD6CFE7A /* AudioFormat.h in Headers */,
-		AA837E58007AE90B7570E555 /* AudioFormatHelper.h in Headers */,
-		AAAC8CD9D9610BDDF307D4ED /* ProductCode.h in Headers */,
-		AAEC783C8172FA6775666718 /* ProductCodeHelper.h in Headers */,
-		AA9FDF06B01059DA7D127883 /* IfMachine.h in Headers */,
-		AA68925597257E6CCD51722A /* IfMachineHelper.h in Headers */,
-		AA4844211E359863D2E1EB95 /* HttpAction.h in Headers */,
-		AA813209241700D45B128D98 /* HttpActionHelper.h in Headers */,
+		AA972379BAC7E2C8ADE98910 /* CreateSendRinglessVMInput.h in Headers */,
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */,
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */,
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */,
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */,
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */,
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */,
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */,
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */,
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */,
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */,
+		AA8F60D49DEC0BEAA7448820 /* NumberTypeEnum.h in Headers */,
+		AAF8A0891DE29C7B96113BEA /* NumberTypeEnumHelper.h in Headers */,
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */,
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */,
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */,
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */,
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */,
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */,
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */,
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */,
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */,
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */,
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */,
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */,
 		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */,
 		AAE320CACEAA31D6DE4CC5A0 /* ConferenceController.h in Headers */,
 		AAEE86A14DF6D55C496B157D /* EmailController.h in Headers */,
@@ -1165,18 +1172,19 @@
 				AAC14F58A4F554433AC7215D /* CreateViewShortCodeInput.m in Sources */,
 				AA4B67CE513012BE8BB91F38 /* CreateViewSMSInput.m in Sources */,
 				AA5ABCE33CE6845207FAF624 /* CreateListCallsInput.m in Sources */,
-				AA849FC82F425B718C3082FA /* AudioDirectionHelper.m in Sources */,
-				AAED31148D09165112D6B695 /* MergeNumberStatusHelper.m in Sources */,
-				AA404B352F55D394D9FE82E3 /* ActivateStatusHelper.m in Sources */,
-				AA013B930DCB645FE75411F9 /* SendEmailAsHelper.m in Sources */,
-				AA7C9746B06B828B7071AE43 /* StatusHelper.m in Sources */,
-				AAADF1FAAD4E10D9100B2B68 /* NumberTypeHelper.m in Sources */,
-				AA09353118F66A37087CAAEE /* DirectionHelper.m in Sources */,
-				AA2FFDC02571E0EF3FE936C7 /* InterruptedCallStatusHelper.m in Sources */,
-				AAC13BBBAA3BB93CC722D62A /* AudioFormatHelper.m in Sources */,
-				AA93F46AC866A77EC410FEBD /* ProductCodeHelper.m in Sources */,
-				AA5AA8128F88C209CDF48B39 /* IfMachineHelper.m in Sources */,
-				AAC3C484DC060F871BBF6A75 /* HttpActionHelper.m in Sources */,
+				AA6140C1C4EA5A3C04AAB8B1 /* CreateSendRinglessVMInput.m in Sources */,
+				AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */,
+				AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */,
+				AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */,
+				AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */,
+				AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */,
+				AAF4CE54726A439B256AAF58 /* NumberTypeEnumHelper.m in Sources */,
+				AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */,
+				AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */,
+				AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */,
+				AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */,
+				AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */,
+				AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */,
 				AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */,
 				AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */,
 				AA19FD45FA709EFA78988E66 /* ConferenceController.m in Sources */,

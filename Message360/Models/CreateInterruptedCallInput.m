@@ -43,42 +43,42 @@
 }
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) method withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) method withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setMethodWithNSString:(NSString*) strValue
 {
-    method = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    method = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum InterruptedCallStatus type property as NSString*
+ * For serialization of enum InterruptedCallStatusEnum type property as NSString*
  */
 -(id) JSONObjectForStatus
 {
      
-    return [InterruptedCallStatusHelper stringFromInterruptedCallStatus:(enum InterruptedCallStatus) status withDefault: nil];
+    return [InterruptedCallStatusEnumHelper stringFromInterruptedCallStatusEnum:(enum InterruptedCallStatusEnum) status withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum InterruptedCallStatus type property from NSString*
+ * For deserialization of enum InterruptedCallStatusEnum type property from NSString*
  */
  
 -(void)setStatusWithNSString:(NSString*) strValue
 {
-    status = [InterruptedCallStatusHelper interruptedCallStatusFromString:(NSString*) strValue];
+    status = [InterruptedCallStatusEnumHelper interruptedCallStatusEnumFromString:(NSString*) strValue];
 }
 
 

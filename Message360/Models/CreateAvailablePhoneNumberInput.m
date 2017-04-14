@@ -39,22 +39,22 @@
 }
 
  /**
- * For serialization of enum NumberType type property as NSString*
+ * For serialization of enum NumberTypeEnum type property as NSString*
  */
 -(id) JSONObjectForNumberType
 {
      
-    return [NumberTypeHelper stringFromNumberType:(enum NumberType) numberType withDefault: nil];
+    return [NumberTypeEnumHelper stringFromNumberTypeEnum:(enum NumberTypeEnum) numberType withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum NumberType type property from NSString*
+ * For deserialization of enum NumberTypeEnum type property from NSString*
  */
  
 -(void)setNumberTypeWithNSString:(NSString*) strValue
 {
-    numberType = [NumberTypeHelper numberTypeFromString:(NSString*) strValue];
+    numberType = [NumberTypeEnumHelper numberTypeEnumFromString:(NSString*) strValue];
 }
 
 

@@ -260,7 +260,7 @@
         @"tocountrycode": [NSNumber numberWithInteger: input.tocountrycode],
         @"to": input.to,
         @"body": input.body,
-        @"method": [HttpActionHelper stringFromHttpAction: (enum HttpAction) input.method withDefault: [NSNull null]],
+        @"method": [HttpActionEnumHelper stringFromHttpActionEnum: (enum HttpActionEnum) input.method withDefault: [NSNull null]],
         @"messagestatuscallback": (nil != input.messagestatuscallback) ? input.messagestatuscallback : [NSNull null]
     }];
 

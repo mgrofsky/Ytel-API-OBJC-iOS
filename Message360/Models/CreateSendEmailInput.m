@@ -57,29 +57,29 @@
 {
     if (self = [super init])
     {
-        self.type = [SendEmailAsHelper sendEmailAsFromString:@"html"];
+        self.type = [SendEmailAsEnumHelper sendEmailAsEnumFromString:@"html"];
         self.responseType = @"json";
     }
     return self;
 }
 
  /**
- * For serialization of enum SendEmailAs type property as NSString*
+ * For serialization of enum SendEmailAsEnum type property as NSString*
  */
 -(id) JSONObjectForType
 {
      
-    return [SendEmailAsHelper stringFromSendEmailAs:(enum SendEmailAs) type withDefault:@"html"];
+    return [SendEmailAsEnumHelper stringFromSendEmailAsEnum:(enum SendEmailAsEnum) type withDefault:@"html"];
 
 }
 
 /**
- * For deserialization of enum SendEmailAs type property from NSString*
+ * For deserialization of enum SendEmailAsEnum type property from NSString*
  */
  
 -(void)setTypeWithNSString:(NSString*) strValue
 {
-    type = [SendEmailAsHelper sendEmailAsFromString:(NSString*) strValue];
+    type = [SendEmailAsEnumHelper sendEmailAsEnumFromString:(NSString*) strValue];
 }
 
 

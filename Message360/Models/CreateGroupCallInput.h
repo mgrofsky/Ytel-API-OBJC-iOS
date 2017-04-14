@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -49,7 +49,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction method;
+@property enum HttpActionEnum method;
 
 /**
 * TODO: Write general description for this field
@@ -59,7 +59,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction statusCallBackMethod;
+@property enum HttpActionEnum statusCallBackMethod;
 
 /**
 * TODO: Write general description for this field
@@ -69,7 +69,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction fallBackMethod;
+@property enum HttpActionEnum fallBackMethod;
 
 /**
 * TODO: Write general description for this field
@@ -79,7 +79,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction heartBeatMethod;
+@property enum HttpActionEnum heartBeatMethod;
 
 /**
 * TODO: Write general description for this field
@@ -109,7 +109,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction recordCallBackMethod;
+@property enum HttpActionEnum recordCallBackMethod;
 
 /**
 * TODO: Write general description for this field

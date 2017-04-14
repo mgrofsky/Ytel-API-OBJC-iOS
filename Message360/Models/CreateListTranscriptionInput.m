@@ -43,22 +43,22 @@
 }
 
  /**
- * For serialization of enum Status type property as NSString*
+ * For serialization of enum StatusEnum type property as NSString*
  */
 -(id) JSONObjectForStatus
 {
      
-    return [StatusHelper stringFromStatus:(enum Status) status withDefault: nil];
+    return [StatusEnumHelper stringFromStatusEnum:(enum StatusEnum) status withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum Status type property from NSString*
+ * For deserialization of enum StatusEnum type property from NSString*
  */
  
 -(void)setStatusWithNSString:(NSString*) strValue
 {
-    status = [StatusHelper statusFromString:(NSString*) strValue];
+    status = [StatusEnumHelper statusEnumFromString:(NSString*) strValue];
 }
 
 

@@ -38,22 +38,22 @@
 }
 
  /**
- * For serialization of enum Direction type property as NSString*
+ * For serialization of enum DirectionEnum type property as NSString*
  */
 -(id) JSONObjectForPlayDtmfDirection
 {
      
-    return [DirectionHelper stringFromDirection:(enum Direction) playDtmfDirection withDefault: nil];
+    return [DirectionEnumHelper stringFromDirectionEnum:(enum DirectionEnum) playDtmfDirection withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum Direction type property from NSString*
+ * For deserialization of enum DirectionEnum type property from NSString*
  */
  
 -(void)setPlayDtmfDirectionWithNSString:(NSString*) strValue
 {
-    playDtmfDirection = [DirectionHelper directionFromString:(NSString*) strValue];
+    playDtmfDirection = [DirectionEnumHelper directionEnumFromString:(NSString*) strValue];
 }
 
 

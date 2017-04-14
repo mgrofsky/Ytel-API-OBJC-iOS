@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "NumberType.h"
-#import "NumberTypeHelper.h"
+#import "NumberTypeEnum.h"
+#import "NumberTypeEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -34,7 +34,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum NumberType numberType;
+@property enum NumberTypeEnum numberType;
 
 /**
 * TODO: Write general description for this field

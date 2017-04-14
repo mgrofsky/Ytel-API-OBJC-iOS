@@ -125,102 +125,102 @@
 }
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) method withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) method withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setMethodWithNSString:(NSString*) strValue
 {
-    method = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    method = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForStatusCallBackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) statusCallBackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) statusCallBackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setStatusCallBackMethodWithNSString:(NSString*) strValue
 {
-    statusCallBackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    statusCallBackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForFallBackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) fallBackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) fallBackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setFallBackMethodWithNSString:(NSString*) strValue
 {
-    fallBackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    fallBackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForHeartBeatMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) heartBeatMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) heartBeatMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setHeartBeatMethodWithNSString:(NSString*) strValue
 {
-    heartBeatMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    heartBeatMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForRecordCallBackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) recordCallBackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) recordCallBackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setRecordCallBackMethodWithNSString:(NSString*) strValue
 {
-    recordCallBackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    recordCallBackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 

@@ -53,42 +53,42 @@
 }
 
  /**
- * For serialization of enum Direction type property as NSString*
+ * For serialization of enum DirectionEnum type property as NSString*
  */
 -(id) JSONObjectForDirection
 {
      
-    return [DirectionHelper stringFromDirection:(enum Direction) direction withDefault: nil];
+    return [DirectionEnumHelper stringFromDirectionEnum:(enum DirectionEnum) direction withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum Direction type property from NSString*
+ * For deserialization of enum DirectionEnum type property from NSString*
  */
  
 -(void)setDirectionWithNSString:(NSString*) strValue
 {
-    direction = [DirectionHelper directionFromString:(NSString*) strValue];
+    direction = [DirectionEnumHelper directionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum AudioFormat type property as NSString*
+ * For serialization of enum AudioFormatEnum type property as NSString*
  */
 -(id) JSONObjectForFileformat
 {
      
-    return [AudioFormatHelper stringFromAudioFormat:(enum AudioFormat) fileformat withDefault: nil];
+    return [AudioFormatEnumHelper stringFromAudioFormatEnum:(enum AudioFormatEnum) fileformat withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum AudioFormat type property from NSString*
+ * For deserialization of enum AudioFormatEnum type property from NSString*
  */
  
 -(void)setFileformatWithNSString:(NSString*) strValue
 {
-    fileformat = [AudioFormatHelper audioFormatFromString:(NSString*) strValue];
+    fileformat = [AudioFormatEnumHelper audioFormatEnumFromString:(NSString*) strValue];
 }
 
 

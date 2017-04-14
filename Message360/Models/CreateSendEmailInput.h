@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "SendEmailAs.h"
-#import "SendEmailAsHelper.h"
+#import "SendEmailAsEnum.h"
+#import "SendEmailAsEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -34,7 +34,7 @@
 /**
 * email format type, html or text
 */
-@property enum SendEmailAs type;
+@property enum SendEmailAsEnum type;
 
 /**
 * Email subject

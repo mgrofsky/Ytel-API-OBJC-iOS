@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "MergeNumberStatus.h"
-#import "MergeNumberStatusHelper.h"
+#import "MergeNumberStatusEnum.h"
+#import "MergeNumberStatusEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -29,7 +29,7 @@
 /**
 * 0 to delete or 1 to merge numbers to parent account.
 */
-@property enum MergeNumberStatus mergeNumber;
+@property enum MergeNumberStatusEnum mergeNumber;
 
 /**
 * Response type format xml or json

@@ -1158,7 +1158,7 @@
     [_parameters addEntriesFromDictionary: @{
         @"to": input.to,
         @"from": input.from,
-        @"type": [SendEmailAsHelper stringFromSendEmailAs: (enum SendEmailAs) input.type withDefault: @"html"],
+        @"type": [SendEmailAsEnumHelper stringFromSendEmailAsEnum: (enum SendEmailAsEnum) input.type withDefault: @"html"],
         @"subject": input.subject,
         @"message": input.message,
         @"cc": (nil != input.cc) ? input.cc : [NSNull null],

@@ -22,8 +22,8 @@
 #import "AddUnsubscribesInput.h"
 #import "CreateDeleteBlockInput.h"
 #import "CreateDeleteSpamInput.h"
-#import "SendEmailAs.h"
-#import "SendEmailAsHelper.h"
+#import "SendEmailAsEnum.h"
+#import "SendEmailAsEnumHelper.h"
 #import "CreateSendEmailInput.h"
 
 @interface EmailController : BaseController

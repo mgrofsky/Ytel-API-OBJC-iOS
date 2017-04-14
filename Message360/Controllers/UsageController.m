@@ -49,7 +49,7 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"ProductCode": [ProductCodeHelper stringFromProductCode: (enum ProductCode) input.productCode withDefault: @"0"],
+        @"ProductCode": [ProductCodeEnumHelper stringFromProductCodeEnum: (enum ProductCodeEnum) input.productCode withDefault: @"0"],
         @"startDate": input.startDate,
         @"endDate": input.endDate
     }];

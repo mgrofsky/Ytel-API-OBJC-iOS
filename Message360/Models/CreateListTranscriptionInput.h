@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "Status.h"
-#import "StatusHelper.h"
+#import "StatusEnum.h"
+#import "StatusEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -34,7 +34,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum Status status;
+@property enum StatusEnum status;
 
 /**
 * TODO: Write general description for this field

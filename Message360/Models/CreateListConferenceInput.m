@@ -53,22 +53,22 @@
 }
 
  /**
- * For serialization of enum InterruptedCallStatus type property as NSString*
+ * For serialization of enum InterruptedCallStatusEnum type property as NSString*
  */
 -(id) JSONObjectForStatus
 {
      
-    return [InterruptedCallStatusHelper stringFromInterruptedCallStatus:(enum InterruptedCallStatus) status withDefault: nil];
+    return [InterruptedCallStatusEnumHelper stringFromInterruptedCallStatusEnum:(enum InterruptedCallStatusEnum) status withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum InterruptedCallStatus type property from NSString*
+ * For deserialization of enum InterruptedCallStatusEnum type property from NSString*
  */
  
 -(void)setStatusWithNSString:(NSString*) strValue
 {
-    status = [InterruptedCallStatusHelper interruptedCallStatusFromString:(NSString*) strValue];
+    status = [InterruptedCallStatusEnumHelper interruptedCallStatusEnumFromString:(NSString*) strValue];
 }
 
 

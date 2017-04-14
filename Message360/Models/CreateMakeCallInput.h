@@ -11,10 +11,10 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
-#import "IfMachine.h"
-#import "IfMachineHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
+#import "IfMachineEnum.h"
+#import "IfMachineEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -51,7 +51,7 @@
 /**
 * Specifies the HTTP method used to request the required URL once call connects.
 */
-@property enum HttpAction method;
+@property enum HttpActionEnum method;
 
 /**
 * specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
@@ -61,7 +61,7 @@
 /**
 * Specifies the HTTP methodlinkclass used to request StatusCallbackUrl.
 */
-@property enum HttpAction statusCallBackMethod;
+@property enum HttpActionEnum statusCallBackMethod;
 
 /**
 * URL requested if the initial Url parameter fails or encounters an error
@@ -71,7 +71,7 @@
 /**
 * Specifies the HTTP method used to request the required FallbackUrl once call connects.
 */
-@property enum HttpAction fallBackMethod;
+@property enum HttpActionEnum fallBackMethod;
 
 /**
 * URL that can be requested every 60 seconds during the call to notify of elapsed tim
@@ -111,7 +111,7 @@
 /**
 * Method used to request the RecordCallback URL.
 */
-@property enum HttpAction recordCallBackMethod;
+@property enum HttpActionEnum recordCallBackMethod;
 
 /**
 * Specifies if the call recording should be transcribed
@@ -126,7 +126,7 @@
 /**
 * How Message360 should handle the receiving numbers voicemail machine
 */
-@property enum IfMachine ifMachine;
+@property enum IfMachineEnum ifMachine;
 
 /**
 * Response type format xml or json

@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -49,7 +49,7 @@
 /**
 * Specifies the HTTP method used to request the required URL once SMS sent.
 */
-@property enum HttpAction method;
+@property enum HttpActionEnum method;
 
 /**
 * URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished.

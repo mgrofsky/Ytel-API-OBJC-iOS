@@ -12,11 +12,11 @@
 #import "UnirestClient.h"
 #import "HttpContext.h"
 #import "CreateSubAccountInput.h"
-#import "ActivateStatus.h"
-#import "ActivateStatusHelper.h"
+#import "ActivateStatusEnum.h"
+#import "ActivateStatusEnumHelper.h"
 #import "CreateSuspendSubAccountInput.h"
-#import "MergeNumberStatus.h"
-#import "MergeNumberStatusHelper.h"
+#import "MergeNumberStatusEnum.h"
+#import "MergeNumberStatusEnumHelper.h"
 #import "CreateDeleteSubAccountInput.h"
 
 @interface SubAccountController : BaseController

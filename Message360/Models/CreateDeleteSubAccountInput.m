@@ -27,7 +27,7 @@
 {
     if (self = [super init])
     {
-        self.mergeNumber = [MergeNumberStatusHelper mergeNumberStatusFromString:@"0"];
+        self.mergeNumber = [MergeNumberStatusEnumHelper mergeNumberStatusEnumFromString:@"0"];
         self.responseType = @"json";
     }
     return self;

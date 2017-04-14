@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "Direction.h"
-#import "DirectionHelper.h"
+#import "DirectionEnum.h"
+#import "DirectionEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -39,7 +39,7 @@
 /**
 * The leg of the call audio will be played to
 */
-@property enum Direction direction;
+@property enum DirectionEnum direction;
 
 /**
 * Repeat audio playback indefinitely

@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "InterruptedCallStatus.h"
-#import "InterruptedCallStatusHelper.h"
+#import "InterruptedCallStatusEnum.h"
+#import "InterruptedCallStatusEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -39,7 +39,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum InterruptedCallStatus status;
+@property enum InterruptedCallStatusEnum status;
 
 /**
 * TODO: Write general description for this field

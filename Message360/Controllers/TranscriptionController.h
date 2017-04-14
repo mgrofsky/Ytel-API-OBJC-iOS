@@ -14,8 +14,8 @@
 #import "CreateAudioURLTranscriptionInput.h"
 #import "CreateRecordingTranscriptionInput.h"
 #import "CreateViewTranscriptionInput.h"
-#import "Status.h"
-#import "StatusHelper.h"
+#import "StatusEnum.h"
+#import "StatusEnumHelper.h"
 #import "CreateListTranscriptionInput.h"
 
 @interface TranscriptionController : BaseController

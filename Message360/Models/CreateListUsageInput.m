@@ -32,7 +32,7 @@
 {
     if (self = [super init])
     {
-        self.productCode = [ProductCodeHelper productCodeFromString:@"0"];
+        self.productCode = [ProductCodeEnumHelper productCodeEnumFromString:@"0"];
         self.startDate = @"2016-09-06";
         self.endDate = @"2016-09-06";
         self.responseType = @"json";

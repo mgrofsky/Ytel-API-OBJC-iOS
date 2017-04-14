@@ -11,10 +11,10 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "Direction.h"
-#import "DirectionHelper.h"
-#import "AudioFormat.h"
-#import "AudioFormatHelper.h"
+#import "DirectionEnum.h"
+#import "DirectionEnumHelper.h"
+#import "AudioFormatEnum.h"
+#import "AudioFormatEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -36,7 +36,7 @@
 /**
 * The leg of the call to record
 */
-@property enum Direction direction;
+@property enum DirectionEnum direction;
 
 /**
 * Time in seconds the recording duration should not exceed
@@ -51,7 +51,7 @@
 /**
 * Format of the recording file. Can be .mp3 or .wav
 */
-@property enum AudioFormat fileformat;
+@property enum AudioFormatEnum fileformat;
 
 /**
 * Response format, xml or json

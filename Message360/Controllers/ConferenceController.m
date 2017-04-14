@@ -153,7 +153,7 @@
         @"Page": (nil != input.page) ? input.page : [NSNull null],
         @"PageSize": (nil != input.pageSize) ? input.pageSize : [NSNull null],
         @"FriendlyName": (nil != input.friendlyName) ? input.friendlyName : [NSNull null],
-        @"Status": [InterruptedCallStatusHelper stringFromInterruptedCallStatus: (enum InterruptedCallStatus) input.status withDefault: [NSNull null]],
+        @"Status": [InterruptedCallStatusEnumHelper stringFromInterruptedCallStatusEnum: (enum InterruptedCallStatusEnum) input.status withDefault: [NSNull null]],
         @"DateCreated": (nil != input.dateCreated) ? input.dateCreated : [NSNull null],
         @"DateUpdated": (nil != input.dateUpdated) ? input.dateUpdated : [NSNull null]
     }];

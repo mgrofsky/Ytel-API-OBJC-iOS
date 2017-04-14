@@ -8,7 +8,7 @@
 
 @implementation Configuration
 
-static NSString* Configuration_BaseUri = @"https://api.message360.com/api/v2";
+static NSString* Configuration_BaseUri = @"https://api.message360.com/api/v3";
 NSString* Configuration_BasicAuthUserName;
 NSString* Configuration_BasicAuthPassword;
 

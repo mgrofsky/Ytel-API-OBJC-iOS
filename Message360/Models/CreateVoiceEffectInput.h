@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "AudioDirection.h"
-#import "AudioDirectionHelper.h"
+#import "AudioDirectionEnum.h"
+#import "AudioDirectionEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -29,7 +29,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum AudioDirection audioDirection;
+@property enum AudioDirectionEnum audioDirection;
 
 /**
 * value between -14 and 14

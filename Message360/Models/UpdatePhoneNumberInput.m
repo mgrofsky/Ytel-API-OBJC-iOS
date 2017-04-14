@@ -93,122 +93,122 @@
 }
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForVoiceMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) voiceMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) voiceMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setVoiceMethodWithNSString:(NSString*) strValue
 {
-    voiceMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    voiceMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForVoiceFallbackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) voiceFallbackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) voiceFallbackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setVoiceFallbackMethodWithNSString:(NSString*) strValue
 {
-    voiceFallbackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    voiceFallbackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForHangupCallbackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) hangupCallbackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) hangupCallbackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setHangupCallbackMethodWithNSString:(NSString*) strValue
 {
-    hangupCallbackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    hangupCallbackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForHeartbeatMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) heartbeatMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) heartbeatMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setHeartbeatMethodWithNSString:(NSString*) strValue
 {
-    heartbeatMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    heartbeatMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForSmsMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) smsMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) smsMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setSmsMethodWithNSString:(NSString*) strValue
 {
-    smsMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    smsMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 
  /**
- * For serialization of enum HttpAction type property as NSString*
+ * For serialization of enum HttpActionEnum type property as NSString*
  */
 -(id) JSONObjectForSmsFallbackMethod
 {
      
-    return [HttpActionHelper stringFromHttpAction:(enum HttpAction) smsFallbackMethod withDefault: nil];
+    return [HttpActionEnumHelper stringFromHttpActionEnum:(enum HttpActionEnum) smsFallbackMethod withDefault: nil];
 
 }
 
 /**
- * For deserialization of enum HttpAction type property from NSString*
+ * For deserialization of enum HttpActionEnum type property from NSString*
  */
  
 -(void)setSmsFallbackMethodWithNSString:(NSString*) strValue
 {
-    smsFallbackMethod = [HttpActionHelper httpActionFromString:(NSString*) strValue];
+    smsFallbackMethod = [HttpActionEnumHelper httpActionEnumFromString:(NSString*) strValue];
 }
 
 

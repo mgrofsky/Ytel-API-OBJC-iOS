@@ -13,8 +13,8 @@
 #import "HttpContext.h"
 #import "CreateListInboundSMSInput.h"
 #import "CreateListSMSInput.h"
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
 #import "CreateSendSMSInput.h"
 #import "CreateViewSMSInput.h"
 

@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -39,7 +39,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction voiceMethod;
+@property enum HttpActionEnum voiceMethod;
 
 /**
 * URL requested if the voice URL is not available
@@ -49,7 +49,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction voiceFallbackMethod;
+@property enum HttpActionEnum voiceFallbackMethod;
 
 /**
 * TODO: Write general description for this field
@@ -59,7 +59,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction hangupCallbackMethod;
+@property enum HttpActionEnum hangupCallbackMethod;
 
 /**
 * URL requested once the call connects
@@ -69,7 +69,7 @@
 /**
 * URL that can be requested every 60 seconds during the call to notify of elapsed time
 */
-@property enum HttpAction heartbeatMethod;
+@property enum HttpActionEnum heartbeatMethod;
 
 /**
 * URL requested when an SMS is received
@@ -79,7 +79,7 @@
 /**
 * TODO: Write general description for this field
 */
-@property enum HttpAction smsMethod;
+@property enum HttpActionEnum smsMethod;
 
 /**
 * URL requested once the call connects
@@ -89,7 +89,7 @@
 /**
 * URL requested if the sms URL is not available
 */
-@property enum HttpAction smsFallbackMethod;
+@property enum HttpActionEnum smsFallbackMethod;
 
 /**
 * Response type format xml or json

@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "NumberType.h"
-#import "NumberTypeHelper.h"
+#import "NumberTypeEnum.h"
+#import "NumberTypeEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -24,7 +24,7 @@
 /**
 * Number type either SMS,Voice or all
 */
-@property enum NumberType numberType;
+@property enum NumberTypeEnum numberType;
 
 /**
 * Phone Number Area Code

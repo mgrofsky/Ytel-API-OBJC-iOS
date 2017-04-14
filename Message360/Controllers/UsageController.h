@@ -11,8 +11,8 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "ProductCode.h"
-#import "ProductCodeHelper.h"
+#import "ProductCodeEnum.h"
+#import "ProductCodeEnumHelper.h"
 #import "CreateListUsageInput.h"
 
 @interface UsageController : BaseController

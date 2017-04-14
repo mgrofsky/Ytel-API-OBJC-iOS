@@ -11,8 +11,8 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "ActivateStatus.h"
-#import "ActivateStatusHelper.h"
+#import "ActivateStatusEnum.h"
+#import "ActivateStatusEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -29,7 +29,7 @@
 /**
 * 0 to suspend or 1 to activate
 */
-@property enum ActivateStatus activate;
+@property enum ActivateStatusEnum activate;
 
 /**
 * TODO: Write general description for this field

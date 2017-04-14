@@ -12,26 +12,27 @@
 #import "UnirestClient.h"
 #import "HttpContext.h"
 #import "CreateViewCallInput.h"
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
 #import "CreateGroupCallInput.h"
-#import "AudioDirection.h"
-#import "AudioDirectionHelper.h"
+#import "AudioDirectionEnum.h"
+#import "AudioDirectionEnumHelper.h"
 #import "CreateVoiceEffectInput.h"
-#import "Direction.h"
-#import "DirectionHelper.h"
-#import "AudioFormat.h"
-#import "AudioFormatHelper.h"
+#import "DirectionEnum.h"
+#import "DirectionEnumHelper.h"
+#import "AudioFormatEnum.h"
+#import "AudioFormatEnumHelper.h"
 #import "CreateRecordCallInput.h"
 #import "CreatePlayAudioInput.h"
-#import "InterruptedCallStatus.h"
-#import "InterruptedCallStatusHelper.h"
+#import "InterruptedCallStatusEnum.h"
+#import "InterruptedCallStatusEnumHelper.h"
 #import "CreateInterruptedCallInput.h"
 #import "CreateSendDigitInput.h"
-#import "IfMachine.h"
-#import "IfMachineHelper.h"
+#import "IfMachineEnum.h"
+#import "IfMachineEnumHelper.h"
 #import "CreateMakeCallInput.h"
 #import "CreateListCallsInput.h"
+#import "CreateSendRinglessVMInput.h"
 
 @interface CallController : BaseController
 
@@ -133,5 +134,16 @@ typedef void (^CompletedPostListCalls)(BOOL success, HttpContext* context, NSStr
 */
 - (void) createListCallsAsyncWithCreateListCallsInput:(CreateListCallsInput*) input
                 completionBlock:(CompletedPostListCalls) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Send Ringless VM */
+typedef void (^CompletedPostSendRinglessVM)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* API endpoint used to send a Ringless Voicemail
+* @param  CreateSendRinglessVMInput     Object with all parameters
+*/
+- (void) createSendRinglessVMAsyncWithCreateSendRinglessVMInput:(CreateSendRinglessVMInput*) input
+                completionBlock:(CompletedPostSendRinglessVM) onCompleted;
 
 @end

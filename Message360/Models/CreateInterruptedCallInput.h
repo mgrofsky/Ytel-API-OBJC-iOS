@@ -11,10 +11,10 @@
 #import "JSONModel.h"
 #import "APIHelper.h"
 
-#import "HttpAction.h"
-#import "HttpActionHelper.h"
-#import "InterruptedCallStatus.h"
-#import "InterruptedCallStatusHelper.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
+#import "InterruptedCallStatusEnum.h"
+#import "InterruptedCallStatusEnumHelper.h"
 
 
 //protocol defined for deserialization of JSON
@@ -36,12 +36,12 @@
 /**
 * The method used to request the above Url parameter
 */
-@property enum HttpAction method;
+@property enum HttpActionEnum method;
 
 /**
 * Status to set the in-progress call to
 */
-@property enum InterruptedCallStatus status;
+@property enum InterruptedCallStatusEnum status;
 
 /**
 * Response type format xml or json
