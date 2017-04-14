@@ -1,0 +1,1380 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
+     
+/* Begin PBXAggregateTarget section */
+        AAEE5E87CAD05D168656264B /* Framework */ = {
+            isa = PBXAggregateTarget;
+            buildConfigurationList = AA6B40043ACECBE13E13500A /* Build configuration list for PBXAggregateTarget "Framework" */;
+            buildPhases = (
+                AACF2FCBE910DF27909EEA33 /* MultiBuild Framework */,
+            );
+            dependencies = (
+                AA64289540A97CFC567617A7 /* PBXTargetDependency */,
+            );
+            name = Framework;
+            productName = Framework;
+        };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+        AA156D6B8C98CDFEC6517A86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6C52504A381F7C41B67182 /* Foundation.framework */; };
+        AAB95DE29AE69E555D2350F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6C52504A381F7C41B67182 /* Foundation.framework */; };
+        AAB6FF0AA3C1D0F2B493849F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA12F8206E62E7B415ACF0E1 /* UIKit.framework */; };
+        AAEC3975AAF8AA1308CB9DB7 /* libMessage360.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB6F12C34BFAB07465B52 /* libMessage360.a */; };
+        AA2F009821D5B379D796665A /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6FB783652324EFB3E7BA31 /* APIHelper.m */; };
+        AA3FC84281C8B49DAC26F961 /* APIError.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C1510C4F3D56A3A951CFD /* APIError.m */; };
+        AABE48236E273EF1DB3275E0 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFCE585F7417595F3776274 /* Configuration.m */; };
+		AAF3192B74890E3A1FC5014D /* CreateViewTemplateInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3ADD5D3FB24030472D58AD /* CreateViewTemplateInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2B207350E54ACE6EF1E340 /* CreateViewTemplateInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9AE5444950C61CE19DCCA1 /* CreateViewTemplateInput.m */; };
+		AAF804AD67A821D5AFF39BB6 /* CreateDeafMuteParticipantInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB2E1D11DF2F7092E67E115 /* CreateDeafMuteParticipantInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA503B9EF29BF67097EC4A9 /* CreateDeafMuteParticipantInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD72AB443B6414416D3EC98 /* CreateDeafMuteParticipantInput.m */; };
+		AAC2D3D41073E2C01B177132 /* CreateDeleteInvalidInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA33C4A70CEC424494A4CE02 /* CreateDeleteInvalidInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA514311EDBCC36B5D16F812 /* CreateDeleteInvalidInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0739615445450338241B72 /* CreateDeleteInvalidInput.m */; };
+		AA898BFB57CFD38455BE4B2F /* CreateVerifyNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7B7BBB95B62A6A7450E65D /* CreateVerifyNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABEE2975809FF3BA70CEB63 /* CreateVerifyNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA443C10E6EB4FF4AB5FCC04 /* CreateVerifyNumberInput.m */; };
+		AA8679AF554E9960F5786AAD /* CreateCarrierLookupInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA7C1A1D85D3014982B034B /* CreateCarrierLookupInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA864D06CABA3B7B16B8AD25 /* CreateCarrierLookupInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7678499BE8AEC808419EB2 /* CreateCarrierLookupInput.m */; };
+		AA80B8F122C5F9F041F18394 /* CreateViewCallInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11E8D4032DDF671BAB2206 /* CreateViewCallInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACC953077E4F5700B813CF7 /* CreateViewCallInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA05CFD17A2CFCD5ECE3D45B /* CreateViewCallInput.m */; };
+		AA8015B561938D54845B7BB6 /* CreateCheckFundsInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA336E9718512FD1C31C766B /* CreateCheckFundsInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2D62295B4D9E76A57B80CD /* CreateCheckFundsInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9A512FC98C169A45AC88BC /* CreateCheckFundsInput.m */; };
+		AA913D24FC595066BA3B58C2 /* CreateGroupCallInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6E7B59C0311DFDACE5E694 /* CreateGroupCallInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA2837D44CB0CC2CC94BA0E /* CreateGroupCallInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA448C9E11EB057DD71DA28F /* CreateGroupCallInput.m */; };
+		AAFFB111A53AE7286878A6A9 /* CreateSubAccountInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB77EB3735F1920D632452B /* CreateSubAccountInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA25BBE217B3F32DF5AF6612 /* CreateSubAccountInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AADE6E45BB4D4FC5EF925D8A /* CreateSubAccountInput.m */; };
+		AAEFA9FDB70264FE347BD114 /* CreateAddressInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA681E4E8F35227C4E5556C5 /* CreateAddressInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBBBB785536496AD9DC67F /* CreateAddressInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D085FED8396A3D2278213 /* CreateAddressInput.m */; };
+		AA6E984971242DAA364F0F27 /* CreateSuspendSubAccountInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA903AC225A76140C1786202 /* CreateSuspendSubAccountInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE5920DB62DDAFAF3F08EC0 /* CreateSuspendSubAccountInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78E5855D221DC0B40E36A4 /* CreateSuspendSubAccountInput.m */; };
+		AAD0DF09B793CF4EB5152E8A /* CreateDeleteSubAccountInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA00CB9D75C99B0265D75543 /* CreateDeleteSubAccountInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5614DA2007E5C3ACAD7650 /* CreateDeleteSubAccountInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8D83BC822C854E5E31366C /* CreateDeleteSubAccountInput.m */; };
+		AAF984DB08F694B8A3695ACB /* CreateListConferenceInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8D5B9A74A9E2D4C60E9AD0 /* CreateListConferenceInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8FBA9509D817F1455A6E77 /* CreateListConferenceInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC1D42AA18E17B0E3B20237 /* CreateListConferenceInput.m */; };
+		AAD73EBCA7F079C9B4DE907B /* CreateDeleteAddressInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AACF510E5470360C7F5A94E3 /* CreateDeleteAddressInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB2873B2C2C9998DCF7A69B /* CreateDeleteAddressInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AACBF8B1A6F54FE88B54AD44 /* CreateDeleteAddressInput.m */; };
+		AAEDEAE17DFD6A30E1CA565E /* CreateVoiceEffectInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5D6D7A1E261E839D96AE8A /* CreateVoiceEffectInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACA3F1002DEDACE19F25860 /* CreateVoiceEffectInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62448ADD5593511CB64C76 /* CreateVoiceEffectInput.m */; };
+		AA3C326313A6F24C3C9A1F8C /* CreateVerifyAddressInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0B4F25FE0A765B23CAC630 /* CreateVerifyAddressInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA95C8C294F5CFD730C68992 /* CreateVerifyAddressInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7790070893F85B78C4ECFB /* CreateVerifyAddressInput.m */; };
+		AA407997970F595D658B01E3 /* CreateListAddressInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA92B745A5D1CA0C91922DA4 /* CreateListAddressInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA65CA41618BAD382529CF5A /* CreateListAddressInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8244FAAE12354091307D03 /* CreateListAddressInput.m */; };
+		AACF3592EC79ECA363EFE73A /* CreateViewAddressInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5ACD169B02BC323F1593F9 /* CreateViewAddressInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB200FAAA0B674E02C4A81C /* CreateViewAddressInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA2E80EFFCB75CD27883AED /* CreateViewAddressInput.m */; };
+		AA4E5408EEB5F20E97DBE557 /* CreateListBlocksInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AABFF755492AB8F7AA972F84 /* CreateListBlocksInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA85FDB73530E8D72E96D733 /* CreateListBlocksInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB8843975D82173F843FA25 /* CreateListBlocksInput.m */; };
+		AA5B8956408236B24E2F4892 /* CreateListSpamInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA539544FA5F7D8097D20499 /* CreateListSpamInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0B9CA81E75E8B2DF2A2E89 /* CreateListSpamInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0D121E44FB0B90134C055B /* CreateListSpamInput.m */; };
+		AA1A1A654636D65CC2D0D5B4 /* CreateListBouncesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5E1018758A42363EDE73D9 /* CreateListBouncesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA710491C27733E16955E0E /* CreateListBouncesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AADAA410B7BAB617C6C89744 /* CreateListBouncesInput.m */; };
+		AAB1A3303436CBF5F1097D63 /* CreateRecordCallInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA96662E3A2B6EF04D79350D /* CreateRecordCallInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5EDC4E6CB1A97171FB5B0D /* CreateRecordCallInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD5E17D13619A1B3370D18B /* CreateRecordCallInput.m */; };
+		AA892E9960D666E020EE45BC /* CreateDeleteBouncesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3906A5A87B2FC22A21F9DB /* CreateDeleteBouncesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0A35DDD58B28C068330C8F /* CreateDeleteBouncesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD450A34ACD74E6CF2EDC8B /* CreateDeleteBouncesInput.m */; };
+		AAF8C1A6887D57EB16865015 /* CreatePlayAudioInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA65C81A300BD262F0ADF174 /* CreatePlayAudioInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0906F0D4B99669674C88D4 /* CreatePlayAudioInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA986DDDE6146C4ECC5047ED /* CreatePlayAudioInput.m */; };
+		AAC9CB0F0129F92659C4A53E /* UpdatePhoneNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6102C2B16DC332FFA2C4AB /* UpdatePhoneNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD1FCBBCC8EFB9C402D94F5 /* UpdatePhoneNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7F1BC5A21FC37ADF579C65 /* UpdatePhoneNumberInput.m */; };
+		AACAFAB07FA8E019A838DB8F /* CreateListInvalidInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA45FB84BC0D9F1D8EEA655 /* CreateListInvalidInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3E23E8844EDB52088898B9 /* CreateListInvalidInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AABE3DD0C6F3E77ACCCAA127 /* CreateListInvalidInput.m */; };
+		AAC665F2C516C1D8E4E5B120 /* CreateListRecordingInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9BE42EF96331D56C07F5C7 /* CreateListRecordingInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA52301C6548791ED4F82987 /* CreateListRecordingInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEF35E1A43E1CC1E4D60ADF /* CreateListRecordingInput.m */; };
+		AA36925850B5A7AEC21B7565 /* CreateCarrierLookupListInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA83842373CDE2C3BBF4CFDF /* CreateCarrierLookupListInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA71BDE6CFD9DC9171FD2CDA /* CreateCarrierLookupListInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB72F674A744DF134972EBD /* CreateCarrierLookupListInput.m */; };
+		AA625DB755CB15F4EB4B10D6 /* CreateInterruptedCallInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF2614FCDF945BE3940869A /* CreateInterruptedCallInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7D9466FA087F8982E0D4DB /* CreateInterruptedCallInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E5AB27D68D76C438FB120 /* CreateInterruptedCallInput.m */; };
+		AAE0AA664AC56F6EB44F7EFF /* CreateSendDigitInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA00DC9B1D87669A845BF46F /* CreateSendDigitInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE31213746C503FC390E5B9 /* CreateSendDigitInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9C1507080949D22A425926 /* CreateSendDigitInput.m */; };
+		AACABC455624D105B0CA3B69 /* CreateListInboundSMSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA92893BC5BBD742565BF111 /* CreateListInboundSMSInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5680748B49C21BF6F49C2A /* CreateListInboundSMSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6A5664E63100A36A16276A /* CreateListInboundSMSInput.m */; };
+		AAA442B1249ED2CBEFD80675 /* CreateListSMSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF95732B542809CB7B05BB9 /* CreateListSMSInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7152613F60F754716349CC /* CreateListSMSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA93F278268ED0A4FD6C00D1 /* CreateListSMSInput.m */; };
+		AAA3D829C2800BC9117A88E2 /* CreateListUnsubscribesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0656A69744F817C8273399 /* CreateListUnsubscribesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEE7834FB33F20C109DF6E2 /* CreateListUnsubscribesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2147CD25F70F49AC10EFB5 /* CreateListUnsubscribesInput.m */; };
+		AABE17E1311337AC4C15713E /* CreateDeleteUnsubscribesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA43A1E6B6B19BBA5EDFE16B /* CreateDeleteUnsubscribesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8600708B24503F675AA7E4 /* CreateDeleteUnsubscribesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7BFD0EAF12FE420D84CC9F /* CreateDeleteUnsubscribesInput.m */; };
+		AAB6AAA218B41BD9C8035031 /* CreateViewConferenceInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA24621BBE76ADAB91193866 /* CreateViewConferenceInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA50EFABBEE0A17F6ADAD54 /* CreateViewConferenceInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1D01274712D800930347D4 /* CreateViewConferenceInput.m */; };
+		AA84C64554BFA4DAA6815711 /* AddUnsubscribesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA483A13E8209689FEA6DCF0 /* AddUnsubscribesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF36C93BEB4CF80F90D8DD1 /* AddUnsubscribesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6F0CFB700D3E1334FC6FEA /* AddUnsubscribesInput.m */; };
+		AA163712A42D9C1E7EAC1499 /* CreateDeleteBlockInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA287704A0FA3584518F0A76 /* CreateDeleteBlockInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA034F91CE76F7B6D92338B0 /* CreateDeleteBlockInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6070AAE74CD5CE5C641C98 /* CreateDeleteBlockInput.m */; };
+		AAB3D99BFEA3622AA6317E9C /* CreateDeleteSpamInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE62420763DC6363C157411 /* CreateDeleteSpamInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA704C2423A93568E201BA15 /* CreateDeleteSpamInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE88A786FB7A669D09D7D79 /* CreateDeleteSpamInput.m */; };
+		AA4E297CC167292336BC4798 /* CreateBuyNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA216BEDA9DB02B1763CBD9D /* CreateBuyNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4508525CAEC5C2DECC4459 /* CreateBuyNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB271752B2079A9816DF7D5 /* CreateBuyNumberInput.m */; };
+		AA102D95A30F393F7EC4FD15 /* CreateReleaseNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AACE13CA6A9BDD38951A7C60 /* CreateReleaseNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBAE835ACB7AFA723F52A5 /* CreateReleaseNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5FA43830ADFC2DFDB27323 /* CreateReleaseNumberInput.m */; };
+		AAEDDFCE2C2ACF2F76C791B9 /* CreateViewNumberDetailsInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4E82734B9DB9058095459C /* CreateViewNumberDetailsInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBEC3C2A3AB5CF18EC9E28 /* CreateViewNumberDetailsInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB900E53D4154DC605604 /* CreateViewNumberDetailsInput.m */; };
+		AAF4FA27813E1850D3B05E42 /* CreateDeleteRecordingInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9CEB7DCDE1F17191875395 /* CreateDeleteRecordingInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2A0C1F11414BD1B8AF163C /* CreateDeleteRecordingInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA542D9F92F2F70853628306 /* CreateDeleteRecordingInput.m */; };
+		AA8CC2C2008BA160DD4E7B27 /* CreateViewRecordingInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE2839790C0816564A9A316 /* CreateViewRecordingInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA9F7F5BCC2E74EFBF0C8BB /* CreateViewRecordingInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFCEDB08AB97DC0C70576B1 /* CreateViewRecordingInput.m */; };
+		AA061CC9FB9B882D608FEE91 /* CreateAudioURLTranscriptionInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA81021ED7822D8D439E4453 /* CreateAudioURLTranscriptionInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1A3D119C2A38FCDDEE8AEA /* CreateAudioURLTranscriptionInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC9EEED35C6E35C63D21EBB /* CreateAudioURLTranscriptionInput.m */; };
+		AAFA5A2D5AF6867D30F5C1CA /* CreateRecordingTranscriptionInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3303FAFAE13C15E9CC1B18 /* CreateRecordingTranscriptionInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5017BAC9B5C49A283F8C16 /* CreateRecordingTranscriptionInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0947569DC889F8A9466912 /* CreateRecordingTranscriptionInput.m */; };
+		AA09BB1FE7B9C70A497D9074 /* CreateViewTranscriptionInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB94EFB2BBF56A99CD95700 /* CreateViewTranscriptionInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF71FFEDD266F7A4530854B /* CreateViewTranscriptionInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC19F91B9C6F5327180C27 /* CreateViewTranscriptionInput.m */; };
+		AA77C32D7116849F3005EC65 /* CreateListUsageInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF225C411196B0E4F591730 /* CreateListUsageInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD021800E6735082527A387 /* CreateListUsageInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF2E459CC86D06209C16739 /* CreateListUsageInput.m */; };
+		AA057788376C1CB57B71BAB5 /* CreateSendSMSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AADCAC7465CB088FC2FC44E1 /* CreateSendSMSInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE54556D38A3FB0795F15D2 /* CreateSendSMSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA91EC8BF36260CD082769AC /* CreateSendSMSInput.m */; };
+		AA40222E6226233163A1E3FF /* CreateListNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB22FD127325A81B5CAFF44 /* CreateListNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5500FCD15FB9BF0E1B93BC /* CreateListNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA650FA1D45CAA57373A762 /* CreateListNumberInput.m */; };
+		AA5C7FB8441F8EEBAF3245E6 /* CreateAvailablePhoneNumberInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3A20E2F1DAFE57990CB8A9 /* CreateAvailablePhoneNumberInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8F3231397DDB2D876BE2B8 /* CreateAvailablePhoneNumberInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0366A10B57D216421BBFF0 /* CreateAvailablePhoneNumberInput.m */; };
+		AAEB7C551F05E234F109CE37 /* CreateListTranscriptionInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6CF5647C2C6250C82B3FEB /* CreateListTranscriptionInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAEA7061A7C1BEBA3DB14C7E /* CreateListTranscriptionInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7766670CAAE8A9F68414D5 /* CreateListTranscriptionInput.m */; };
+		AAF13BAA4545A42DF92AF302 /* AddParticipantInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAED7B69E9DAF05714C0D5E7 /* AddParticipantInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0FCEB0CC7150E54C16A4BF /* AddParticipantInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF93DE68D3B9B8B47A1DE1F /* AddParticipantInput.m */; };
+		AA0157A2F7E2FD9BF5A39152 /* CreateSendEmailInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AACEBD0D63D27D19677FD3AD /* CreateSendEmailInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC6C533808260DC23B2E91F /* CreateSendEmailInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1FC468D69D69C79A65DA46 /* CreateSendEmailInput.m */; };
+		AAA96FDCFC8ADB2CA8A5059D /* CreateListParticipantInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA77DC250F3324EDD9F9416B /* CreateListParticipantInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA25A4FCDA03428319340932 /* CreateListParticipantInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFD8D292462725E9D65358D /* CreateListParticipantInput.m */; };
+		AA407C56C85D13E4520C108C /* CreateViewParticipantInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA08ED7FC1B32AED5983479D /* CreateViewParticipantInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA792E0D295058992B084986 /* CreateViewParticipantInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8DC9BC9EB5D068B579DA1B /* CreateViewParticipantInput.m */; };
+		AA9794AEA168B030822A38D6 /* CreateMakeCallInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA169E6EA5122F7922ADB6E7 /* CreateMakeCallInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5BB93D538FCE4F6A11A1F5 /* CreateMakeCallInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB411094EFE8A41B7351DE3 /* CreateMakeCallInput.m */; };
+		AA00F3951B4CDB00627B1EEC /* CreateTokenInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7B1EF51B30887599560A13 /* CreateTokenInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE38B821DF77B43CBA63D38 /* CreateTokenInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8FA89D54FC639472476C78 /* CreateTokenInput.m */; };
+		AA3DD3D8B19114326677149E /* CreateSendShortCodeInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8CBA4C22DDC1A9E116BB3F /* CreateSendShortCodeInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA40A24D2940B3CE9E7F0A4C /* CreateSendShortCodeInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC886F9A98449BC37DFBC37 /* CreateSendShortCodeInput.m */; };
+		AAB3AF3A6B0021B11EE9E8B8 /* CreateViewAccountInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AADA1D2C45C014C2E8985AFA /* CreateViewAccountInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA06B9F265D92B8CE84142B2 /* CreateViewAccountInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE2A0B67B165615341926FE /* CreateViewAccountInput.m */; };
+		AAE4CEC3E10246194ABFA4E2 /* CreateListInboundShortCodeInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5991BB72DDC35DA95D2EE5 /* CreateListInboundShortCodeInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA275A193C20455E24D02530 /* CreateListInboundShortCodeInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA102E0B073C31192EC2806 /* CreateListInboundShortCodeInput.m */; };
+		AA68F52CDB71330932274EF2 /* CreateListShortCodeInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8ABE6D9BF1F21F9752855B /* CreateListShortCodeInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA624F8C141EDAA131B54FF7 /* CreateListShortCodeInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA75F022EDCB05EA655C196C /* CreateListShortCodeInput.m */; };
+		AAD34D9F25FC0F22A7CC931C /* CreateListTemplatesInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF9A1067992838E0487095B /* CreateListTemplatesInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8EBD5C94E9D17DEC8FD436 /* CreateListTemplatesInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA0837C72AE38D115F4F4B0E /* CreateListTemplatesInput.m */; };
+		AAF73618DD3CF1ACCBB501B5 /* CreateViewShortCodeInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5925453B3352E3537D2869 /* CreateViewShortCodeInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC14F58A4F554433AC7215D /* CreateViewShortCodeInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA39B71B665E508697CDBE9B /* CreateViewShortCodeInput.m */; };
+		AA783FD4BB8BCB6F9074D70B /* CreateViewSMSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB93B8BFDE210224E86421D /* CreateViewSMSInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4B67CE513012BE8BB91F38 /* CreateViewSMSInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */; };
+		AA05FCE4C1A15CD5F4366611 /* CreateListCallsInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5ABCE33CE6845207FAF624 /* CreateListCallsInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA41F1A2425C3F930247554C /* CreateListCallsInput.m */; };
+		AA972379BAC7E2C8ADE98910 /* CreateSendRinglessVMInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6140C1C4EA5A3C04AAB8B1 /* CreateSendRinglessVMInput.m in Sources */ = {isa = PBXBuildFile; fileRef = AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */; };
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */; };
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */; };
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */; };
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */; };
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3332638CCB919DFB501866 /* StatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF389387126F0941CB348A /* StatusEnumHelper.m */; };
+		AA8F60D49DEC0BEAA7448820 /* NumberTypeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF8A0891DE29C7B96113BEA /* NumberTypeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF4CE54726A439B256AAF58 /* NumberTypeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */; };
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6E95087CB45783F783AA30 /* DirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */; };
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */; };
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */; };
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */; };
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA12FF61B621F420040B4098 /* IfMachineEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */; };
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */; };
+		AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4AF826B686E34D8C722F89 /* BaseController.m */; };
+		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */; };
+		AAE320CACEAA31D6DE4CC5A0 /* ConferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA81F92408B7C55C821BB4D3 /* ConferenceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA19FD45FA709EFA78988E66 /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */; };
+		AAEE86A14DF6D55C496B157D /* EmailController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA318A9E219748C8ECFCABAE /* EmailController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1ABE4537E611FD7556989B /* EmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9ED896F435094DB0E5AA54 /* EmailController.m */; };
+		AA04506C5152F6E4EF33627B /* NumberVerificationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA834DDC96CE6BA5E1F0AE61 /* NumberVerificationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA105BBB3843A54BB7A155AC /* NumberVerificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA69226D124057978FA61DAE /* NumberVerificationController.m */; };
+		AAD7546C82BE41672C9D58B0 /* CarrierController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2657510856339A58BD110F /* CarrierController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9F5B4B193CAB558C4EC30F /* CarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9128986187196F56167741 /* CarrierController.m */; };
+		AA4E0229E250AA06838C78D0 /* CallController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0D03E9A2213E7EB3BC33F3 /* CallController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA45A1451C52D002FC5B8FEA /* CallController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA903D7FB6C91C80995EA301 /* CallController.m */; };
+		AAA42D6DC9835520EA160E26 /* WebRTCController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7D8629A5E3B1C5AE5FE1D6 /* WebRTCController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2F8283C28DE5A55FCD9D7A /* WebRTCController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA83E0AEE29E43871B825391 /* WebRTCController.m */; };
+		AA87CF247168694FAC2AF75B /* SubAccountController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACD93C5737404A7EB61E1BA /* SubAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD42F72B0811B33CDE47456 /* SubAccountController.m */; };
+		AAB77FA1D52FA85F2EE0FBF3 /* AddressController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11460EF3700A7F7018A3DC /* AddressController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD12DE65BE2213FC11B6C0E /* AddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5ED7FFA015973685AAC46F /* AddressController.m */; };
+		AA0C06B2B55864E2F18F9DD9 /* PhoneNumberController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA86CBBF76237B9FDB448955 /* PhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA408FD4D42B04A34E34261C /* PhoneNumberController.m */; };
+		AA4BC2149A809FA9AE433E90 /* RecordingController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAB468F09960CF5D081F9E7 /* RecordingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA70C85AB2B055B28FA877D4 /* RecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADDDC6CAB773E881C322698 /* RecordingController.m */; };
+		AA51BA983EA6DD47EADD767D /* SMSController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A1081BD407E66ED9F8475 /* SMSController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA53BF2F574700239CEE91C0 /* SMSController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67A0E0319ACE13F97F3892 /* SMSController.m */; };
+		AAC534682174EDBD3880A0A8 /* TranscriptionController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAAE3427710161D8CF0778FE /* TranscriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA855C6D96B42602C073F3B1 /* TranscriptionController.m */; };
+		AA5BEED5489112A144F60335 /* UsageController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1709549528F49F39603685 /* UsageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA179B90D667B8EF94E6C0DD /* UsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA45AC54E9989F859BAC238B /* UsageController.m */; };
+		AABB26DA752AB72F432C52D0 /* AccountController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEBEC9B69A8F7B5117AE60C /* AccountController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2FB7E2A2747B93BB99E302 /* AccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */; };
+        AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFDA2A62B62D6847BB95686 /* Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA9A82CCE1219D4C5910FE3B /* APIError.h in Headers */ = {isa = PBXBuildFile; fileRef = AA48BFFBF934C1B6D2406E77 /* APIError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+	
+        AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */; };
+        AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */; };		
+
+        AA561654D3DF3A6B4926FBE4 /* IHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1173ED2E32674C48620A64 /* IHttpClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAA4DBB5CE589B5B0303FD74 /* HttpContext.h in Headers */ = {isa = PBXBuildFile; fileRef = AA406D274803136B567B1E87 /* HttpContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AADE4B211C778689E60B2D58 /* HttpContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF0E81765DC544641E6641 /* HttpContext.m */; };
+		AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */ = {isa = PBXBuildFile; fileRef = AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA0C599E7D4F200F8897AFF7 /* NSDate+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC241C706904812E6B3DBD1 /* NSDate+extension.m */; };
+        
+        AADD0D6E9D0D2ECB46296055 /* UnirestClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */; };
+        AAD8F51F714DD5966CCD659B /* HttpBodyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA751EC3D8D1E1F02BC41D50 /* HttpBodyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */; };
+        AA033D32966F32BFBD65DD34 /* HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = AA31975203C7EAF86B56F415 /* HttpMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA727179A75A81C7BFF5708F /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA1A7ED3A893EFFCD4DDD12E /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */; };
+        AAFBD14918A6E076A0BF62B7 /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF67FE2ADA5B77379090F09 /* HttpResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA19178EE1D12F29A92B4F31 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE099E73BF6EE469D4AB217 /* HttpResponse.m */; };
+        AA9312BDFDCA04EB5F7358C2 /* HttpStringResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA9B8CABE328A66C2F9C101E /* HttpStringResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78889B46E63B2815E8A97C /* HttpStringResponse.m */; };
+        AABB789B7FACBAA15967C8E9 /* BaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5D18C97F1ED2716A752AA8 /* BaseController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA940686A027FAC0683E87AE /* BaseController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+        AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = AA9E028AD27263E3C2D60210 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = AA28707B011D40DC5FCAABD7;
+            remoteInfo = Message360;
+        };
+        AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = AAD86B0C4A909E780CCAF44D /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = AA28707B011D40DC5FCAABD7;
+            remoteInfo = Message360;
+        };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+        AA6976EEF676DCB4C0327BF2 /* CopyFiles */ = {
+            isa = PBXCopyFilesBuildPhase;
+            buildActionMask = 2147483647;
+            dstPath = "include/$(PRODUCT_NAME)";
+            dstSubfolderSpec = 16;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+        
+        AAFFB6F12C34BFAB07465B52 /* libMessage360.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0;  path = libMessage360.a; sourceTree = BUILT_PRODUCTS_DIR; };
+        AA6C52504A381F7C41B67182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+        AAD0DA7640475994DA60613B /* Message360-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Message360-Prefix.pch"; sourceTree = "<group>"; };
+        AA5CAA5BE3DEB378387D5842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml;name = Info.plist; path = Message360/Tests/Info.plist; sourceTree = "<group>"; };
+        AA12F8206E62E7B415ACF0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+        AA6FB783652324EFB3E7BA31 /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
+        AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };		
+     
+        AA1C1510C4F3D56A3A951CFD /* APIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIError.m; sourceTree = "<group>"; };
+        AA48BFFBF934C1B6D2406E77 /* APIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIError.h; sourceTree = "<group>"; };
+        AAFCE585F7417595F3776274 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+        AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+extension.h"; sourceTree = "<group>"; };
+        AAC241C706904812E6B3DBD1 /* NSDate+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+extension.m"; sourceTree = "<group>"; };
+       
+        AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSUUID.h"; sourceTree = "<group>"; };
+        AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSUUID.m"; sourceTree = "<group>"; };
+        AAFDA2A62B62D6847BB95686 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		AA3ADD5D3FB24030472D58AD /* CreateViewTemplateInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewTemplateInput.h; path = Models/CreateViewTemplateInput.h; sourceTree = "<group>"; };
+		AA9AE5444950C61CE19DCCA1 /* CreateViewTemplateInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewTemplateInput.m; path = Models/CreateViewTemplateInput.m; sourceTree = "<group>"; };
+		AAB2E1D11DF2F7092E67E115 /* CreateDeafMuteParticipantInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeafMuteParticipantInput.h; path = Models/CreateDeafMuteParticipantInput.h; sourceTree = "<group>"; };
+		AAD72AB443B6414416D3EC98 /* CreateDeafMuteParticipantInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeafMuteParticipantInput.m; path = Models/CreateDeafMuteParticipantInput.m; sourceTree = "<group>"; };
+		AA33C4A70CEC424494A4CE02 /* CreateDeleteInvalidInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteInvalidInput.h; path = Models/CreateDeleteInvalidInput.h; sourceTree = "<group>"; };
+		AA0739615445450338241B72 /* CreateDeleteInvalidInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteInvalidInput.m; path = Models/CreateDeleteInvalidInput.m; sourceTree = "<group>"; };
+		AA7B7BBB95B62A6A7450E65D /* CreateVerifyNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateVerifyNumberInput.h; path = Models/CreateVerifyNumberInput.h; sourceTree = "<group>"; };
+		AA443C10E6EB4FF4AB5FCC04 /* CreateVerifyNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateVerifyNumberInput.m; path = Models/CreateVerifyNumberInput.m; sourceTree = "<group>"; };
+		AAA7C1A1D85D3014982B034B /* CreateCarrierLookupInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateCarrierLookupInput.h; path = Models/CreateCarrierLookupInput.h; sourceTree = "<group>"; };
+		AA7678499BE8AEC808419EB2 /* CreateCarrierLookupInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateCarrierLookupInput.m; path = Models/CreateCarrierLookupInput.m; sourceTree = "<group>"; };
+		AA11E8D4032DDF671BAB2206 /* CreateViewCallInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewCallInput.h; path = Models/CreateViewCallInput.h; sourceTree = "<group>"; };
+		AA05CFD17A2CFCD5ECE3D45B /* CreateViewCallInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewCallInput.m; path = Models/CreateViewCallInput.m; sourceTree = "<group>"; };
+		AA336E9718512FD1C31C766B /* CreateCheckFundsInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateCheckFundsInput.h; path = Models/CreateCheckFundsInput.h; sourceTree = "<group>"; };
+		AA9A512FC98C169A45AC88BC /* CreateCheckFundsInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateCheckFundsInput.m; path = Models/CreateCheckFundsInput.m; sourceTree = "<group>"; };
+		AA6E7B59C0311DFDACE5E694 /* CreateGroupCallInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateGroupCallInput.h; path = Models/CreateGroupCallInput.h; sourceTree = "<group>"; };
+		AA448C9E11EB057DD71DA28F /* CreateGroupCallInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateGroupCallInput.m; path = Models/CreateGroupCallInput.m; sourceTree = "<group>"; };
+		AAB77EB3735F1920D632452B /* CreateSubAccountInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSubAccountInput.h; path = Models/CreateSubAccountInput.h; sourceTree = "<group>"; };
+		AADE6E45BB4D4FC5EF925D8A /* CreateSubAccountInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSubAccountInput.m; path = Models/CreateSubAccountInput.m; sourceTree = "<group>"; };
+		AA681E4E8F35227C4E5556C5 /* CreateAddressInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAddressInput.h; path = Models/CreateAddressInput.h; sourceTree = "<group>"; };
+		AA9D085FED8396A3D2278213 /* CreateAddressInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAddressInput.m; path = Models/CreateAddressInput.m; sourceTree = "<group>"; };
+		AA903AC225A76140C1786202 /* CreateSuspendSubAccountInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSuspendSubAccountInput.h; path = Models/CreateSuspendSubAccountInput.h; sourceTree = "<group>"; };
+		AA78E5855D221DC0B40E36A4 /* CreateSuspendSubAccountInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSuspendSubAccountInput.m; path = Models/CreateSuspendSubAccountInput.m; sourceTree = "<group>"; };
+		AA00CB9D75C99B0265D75543 /* CreateDeleteSubAccountInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteSubAccountInput.h; path = Models/CreateDeleteSubAccountInput.h; sourceTree = "<group>"; };
+		AA8D83BC822C854E5E31366C /* CreateDeleteSubAccountInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteSubAccountInput.m; path = Models/CreateDeleteSubAccountInput.m; sourceTree = "<group>"; };
+		AA8D5B9A74A9E2D4C60E9AD0 /* CreateListConferenceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListConferenceInput.h; path = Models/CreateListConferenceInput.h; sourceTree = "<group>"; };
+		AAC1D42AA18E17B0E3B20237 /* CreateListConferenceInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListConferenceInput.m; path = Models/CreateListConferenceInput.m; sourceTree = "<group>"; };
+		AACF510E5470360C7F5A94E3 /* CreateDeleteAddressInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteAddressInput.h; path = Models/CreateDeleteAddressInput.h; sourceTree = "<group>"; };
+		AACBF8B1A6F54FE88B54AD44 /* CreateDeleteAddressInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteAddressInput.m; path = Models/CreateDeleteAddressInput.m; sourceTree = "<group>"; };
+		AA5D6D7A1E261E839D96AE8A /* CreateVoiceEffectInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateVoiceEffectInput.h; path = Models/CreateVoiceEffectInput.h; sourceTree = "<group>"; };
+		AA62448ADD5593511CB64C76 /* CreateVoiceEffectInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateVoiceEffectInput.m; path = Models/CreateVoiceEffectInput.m; sourceTree = "<group>"; };
+		AA0B4F25FE0A765B23CAC630 /* CreateVerifyAddressInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateVerifyAddressInput.h; path = Models/CreateVerifyAddressInput.h; sourceTree = "<group>"; };
+		AA7790070893F85B78C4ECFB /* CreateVerifyAddressInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateVerifyAddressInput.m; path = Models/CreateVerifyAddressInput.m; sourceTree = "<group>"; };
+		AA92B745A5D1CA0C91922DA4 /* CreateListAddressInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListAddressInput.h; path = Models/CreateListAddressInput.h; sourceTree = "<group>"; };
+		AA8244FAAE12354091307D03 /* CreateListAddressInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListAddressInput.m; path = Models/CreateListAddressInput.m; sourceTree = "<group>"; };
+		AA5ACD169B02BC323F1593F9 /* CreateViewAddressInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewAddressInput.h; path = Models/CreateViewAddressInput.h; sourceTree = "<group>"; };
+		AAA2E80EFFCB75CD27883AED /* CreateViewAddressInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewAddressInput.m; path = Models/CreateViewAddressInput.m; sourceTree = "<group>"; };
+		AABFF755492AB8F7AA972F84 /* CreateListBlocksInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListBlocksInput.h; path = Models/CreateListBlocksInput.h; sourceTree = "<group>"; };
+		AAB8843975D82173F843FA25 /* CreateListBlocksInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListBlocksInput.m; path = Models/CreateListBlocksInput.m; sourceTree = "<group>"; };
+		AA539544FA5F7D8097D20499 /* CreateListSpamInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListSpamInput.h; path = Models/CreateListSpamInput.h; sourceTree = "<group>"; };
+		AA0D121E44FB0B90134C055B /* CreateListSpamInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListSpamInput.m; path = Models/CreateListSpamInput.m; sourceTree = "<group>"; };
+		AA5E1018758A42363EDE73D9 /* CreateListBouncesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListBouncesInput.h; path = Models/CreateListBouncesInput.h; sourceTree = "<group>"; };
+		AADAA410B7BAB617C6C89744 /* CreateListBouncesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListBouncesInput.m; path = Models/CreateListBouncesInput.m; sourceTree = "<group>"; };
+		AA96662E3A2B6EF04D79350D /* CreateRecordCallInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateRecordCallInput.h; path = Models/CreateRecordCallInput.h; sourceTree = "<group>"; };
+		AAD5E17D13619A1B3370D18B /* CreateRecordCallInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateRecordCallInput.m; path = Models/CreateRecordCallInput.m; sourceTree = "<group>"; };
+		AA3906A5A87B2FC22A21F9DB /* CreateDeleteBouncesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteBouncesInput.h; path = Models/CreateDeleteBouncesInput.h; sourceTree = "<group>"; };
+		AAD450A34ACD74E6CF2EDC8B /* CreateDeleteBouncesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteBouncesInput.m; path = Models/CreateDeleteBouncesInput.m; sourceTree = "<group>"; };
+		AA65C81A300BD262F0ADF174 /* CreatePlayAudioInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreatePlayAudioInput.h; path = Models/CreatePlayAudioInput.h; sourceTree = "<group>"; };
+		AA986DDDE6146C4ECC5047ED /* CreatePlayAudioInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreatePlayAudioInput.m; path = Models/CreatePlayAudioInput.m; sourceTree = "<group>"; };
+		AA6102C2B16DC332FFA2C4AB /* UpdatePhoneNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdatePhoneNumberInput.h; path = Models/UpdatePhoneNumberInput.h; sourceTree = "<group>"; };
+		AA7F1BC5A21FC37ADF579C65 /* UpdatePhoneNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdatePhoneNumberInput.m; path = Models/UpdatePhoneNumberInput.m; sourceTree = "<group>"; };
+		AAA45FB84BC0D9F1D8EEA655 /* CreateListInvalidInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListInvalidInput.h; path = Models/CreateListInvalidInput.h; sourceTree = "<group>"; };
+		AABE3DD0C6F3E77ACCCAA127 /* CreateListInvalidInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListInvalidInput.m; path = Models/CreateListInvalidInput.m; sourceTree = "<group>"; };
+		AA9BE42EF96331D56C07F5C7 /* CreateListRecordingInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListRecordingInput.h; path = Models/CreateListRecordingInput.h; sourceTree = "<group>"; };
+		AAEF35E1A43E1CC1E4D60ADF /* CreateListRecordingInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListRecordingInput.m; path = Models/CreateListRecordingInput.m; sourceTree = "<group>"; };
+		AA83842373CDE2C3BBF4CFDF /* CreateCarrierLookupListInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateCarrierLookupListInput.h; path = Models/CreateCarrierLookupListInput.h; sourceTree = "<group>"; };
+		AAB72F674A744DF134972EBD /* CreateCarrierLookupListInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateCarrierLookupListInput.m; path = Models/CreateCarrierLookupListInput.m; sourceTree = "<group>"; };
+		AAF2614FCDF945BE3940869A /* CreateInterruptedCallInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateInterruptedCallInput.h; path = Models/CreateInterruptedCallInput.h; sourceTree = "<group>"; };
+		AA9E5AB27D68D76C438FB120 /* CreateInterruptedCallInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateInterruptedCallInput.m; path = Models/CreateInterruptedCallInput.m; sourceTree = "<group>"; };
+		AA00DC9B1D87669A845BF46F /* CreateSendDigitInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendDigitInput.h; path = Models/CreateSendDigitInput.h; sourceTree = "<group>"; };
+		AA9C1507080949D22A425926 /* CreateSendDigitInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendDigitInput.m; path = Models/CreateSendDigitInput.m; sourceTree = "<group>"; };
+		AA92893BC5BBD742565BF111 /* CreateListInboundSMSInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListInboundSMSInput.h; path = Models/CreateListInboundSMSInput.h; sourceTree = "<group>"; };
+		AA6A5664E63100A36A16276A /* CreateListInboundSMSInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListInboundSMSInput.m; path = Models/CreateListInboundSMSInput.m; sourceTree = "<group>"; };
+		AAF95732B542809CB7B05BB9 /* CreateListSMSInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListSMSInput.h; path = Models/CreateListSMSInput.h; sourceTree = "<group>"; };
+		AA93F278268ED0A4FD6C00D1 /* CreateListSMSInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListSMSInput.m; path = Models/CreateListSMSInput.m; sourceTree = "<group>"; };
+		AA0656A69744F817C8273399 /* CreateListUnsubscribesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListUnsubscribesInput.h; path = Models/CreateListUnsubscribesInput.h; sourceTree = "<group>"; };
+		AA2147CD25F70F49AC10EFB5 /* CreateListUnsubscribesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListUnsubscribesInput.m; path = Models/CreateListUnsubscribesInput.m; sourceTree = "<group>"; };
+		AA43A1E6B6B19BBA5EDFE16B /* CreateDeleteUnsubscribesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteUnsubscribesInput.h; path = Models/CreateDeleteUnsubscribesInput.h; sourceTree = "<group>"; };
+		AA7BFD0EAF12FE420D84CC9F /* CreateDeleteUnsubscribesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteUnsubscribesInput.m; path = Models/CreateDeleteUnsubscribesInput.m; sourceTree = "<group>"; };
+		AA24621BBE76ADAB91193866 /* CreateViewConferenceInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewConferenceInput.h; path = Models/CreateViewConferenceInput.h; sourceTree = "<group>"; };
+		AA1D01274712D800930347D4 /* CreateViewConferenceInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewConferenceInput.m; path = Models/CreateViewConferenceInput.m; sourceTree = "<group>"; };
+		AA483A13E8209689FEA6DCF0 /* AddUnsubscribesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddUnsubscribesInput.h; path = Models/AddUnsubscribesInput.h; sourceTree = "<group>"; };
+		AA6F0CFB700D3E1334FC6FEA /* AddUnsubscribesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddUnsubscribesInput.m; path = Models/AddUnsubscribesInput.m; sourceTree = "<group>"; };
+		AA287704A0FA3584518F0A76 /* CreateDeleteBlockInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteBlockInput.h; path = Models/CreateDeleteBlockInput.h; sourceTree = "<group>"; };
+		AA6070AAE74CD5CE5C641C98 /* CreateDeleteBlockInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteBlockInput.m; path = Models/CreateDeleteBlockInput.m; sourceTree = "<group>"; };
+		AAE62420763DC6363C157411 /* CreateDeleteSpamInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteSpamInput.h; path = Models/CreateDeleteSpamInput.h; sourceTree = "<group>"; };
+		AAE88A786FB7A669D09D7D79 /* CreateDeleteSpamInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteSpamInput.m; path = Models/CreateDeleteSpamInput.m; sourceTree = "<group>"; };
+		AA216BEDA9DB02B1763CBD9D /* CreateBuyNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateBuyNumberInput.h; path = Models/CreateBuyNumberInput.h; sourceTree = "<group>"; };
+		AAB271752B2079A9816DF7D5 /* CreateBuyNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateBuyNumberInput.m; path = Models/CreateBuyNumberInput.m; sourceTree = "<group>"; };
+		AACE13CA6A9BDD38951A7C60 /* CreateReleaseNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateReleaseNumberInput.h; path = Models/CreateReleaseNumberInput.h; sourceTree = "<group>"; };
+		AA5FA43830ADFC2DFDB27323 /* CreateReleaseNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateReleaseNumberInput.m; path = Models/CreateReleaseNumberInput.m; sourceTree = "<group>"; };
+		AA4E82734B9DB9058095459C /* CreateViewNumberDetailsInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewNumberDetailsInput.h; path = Models/CreateViewNumberDetailsInput.h; sourceTree = "<group>"; };
+		AA9DB900E53D4154DC605604 /* CreateViewNumberDetailsInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewNumberDetailsInput.m; path = Models/CreateViewNumberDetailsInput.m; sourceTree = "<group>"; };
+		AA9CEB7DCDE1F17191875395 /* CreateDeleteRecordingInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateDeleteRecordingInput.h; path = Models/CreateDeleteRecordingInput.h; sourceTree = "<group>"; };
+		AA542D9F92F2F70853628306 /* CreateDeleteRecordingInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateDeleteRecordingInput.m; path = Models/CreateDeleteRecordingInput.m; sourceTree = "<group>"; };
+		AAE2839790C0816564A9A316 /* CreateViewRecordingInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewRecordingInput.h; path = Models/CreateViewRecordingInput.h; sourceTree = "<group>"; };
+		AAFCEDB08AB97DC0C70576B1 /* CreateViewRecordingInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewRecordingInput.m; path = Models/CreateViewRecordingInput.m; sourceTree = "<group>"; };
+		AA81021ED7822D8D439E4453 /* CreateAudioURLTranscriptionInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAudioURLTranscriptionInput.h; path = Models/CreateAudioURLTranscriptionInput.h; sourceTree = "<group>"; };
+		AAC9EEED35C6E35C63D21EBB /* CreateAudioURLTranscriptionInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAudioURLTranscriptionInput.m; path = Models/CreateAudioURLTranscriptionInput.m; sourceTree = "<group>"; };
+		AA3303FAFAE13C15E9CC1B18 /* CreateRecordingTranscriptionInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateRecordingTranscriptionInput.h; path = Models/CreateRecordingTranscriptionInput.h; sourceTree = "<group>"; };
+		AA0947569DC889F8A9466912 /* CreateRecordingTranscriptionInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateRecordingTranscriptionInput.m; path = Models/CreateRecordingTranscriptionInput.m; sourceTree = "<group>"; };
+		AAB94EFB2BBF56A99CD95700 /* CreateViewTranscriptionInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewTranscriptionInput.h; path = Models/CreateViewTranscriptionInput.h; sourceTree = "<group>"; };
+		AAFC19F91B9C6F5327180C27 /* CreateViewTranscriptionInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewTranscriptionInput.m; path = Models/CreateViewTranscriptionInput.m; sourceTree = "<group>"; };
+		AAF225C411196B0E4F591730 /* CreateListUsageInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListUsageInput.h; path = Models/CreateListUsageInput.h; sourceTree = "<group>"; };
+		AAF2E459CC86D06209C16739 /* CreateListUsageInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListUsageInput.m; path = Models/CreateListUsageInput.m; sourceTree = "<group>"; };
+		AADCAC7465CB088FC2FC44E1 /* CreateSendSMSInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendSMSInput.h; path = Models/CreateSendSMSInput.h; sourceTree = "<group>"; };
+		AA91EC8BF36260CD082769AC /* CreateSendSMSInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendSMSInput.m; path = Models/CreateSendSMSInput.m; sourceTree = "<group>"; };
+		AAB22FD127325A81B5CAFF44 /* CreateListNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListNumberInput.h; path = Models/CreateListNumberInput.h; sourceTree = "<group>"; };
+		AAA650FA1D45CAA57373A762 /* CreateListNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListNumberInput.m; path = Models/CreateListNumberInput.m; sourceTree = "<group>"; };
+		AA3A20E2F1DAFE57990CB8A9 /* CreateAvailablePhoneNumberInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAvailablePhoneNumberInput.h; path = Models/CreateAvailablePhoneNumberInput.h; sourceTree = "<group>"; };
+		AA0366A10B57D216421BBFF0 /* CreateAvailablePhoneNumberInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAvailablePhoneNumberInput.m; path = Models/CreateAvailablePhoneNumberInput.m; sourceTree = "<group>"; };
+		AA6CF5647C2C6250C82B3FEB /* CreateListTranscriptionInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListTranscriptionInput.h; path = Models/CreateListTranscriptionInput.h; sourceTree = "<group>"; };
+		AA7766670CAAE8A9F68414D5 /* CreateListTranscriptionInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListTranscriptionInput.m; path = Models/CreateListTranscriptionInput.m; sourceTree = "<group>"; };
+		AAED7B69E9DAF05714C0D5E7 /* AddParticipantInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddParticipantInput.h; path = Models/AddParticipantInput.h; sourceTree = "<group>"; };
+		AAF93DE68D3B9B8B47A1DE1F /* AddParticipantInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddParticipantInput.m; path = Models/AddParticipantInput.m; sourceTree = "<group>"; };
+		AACEBD0D63D27D19677FD3AD /* CreateSendEmailInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendEmailInput.h; path = Models/CreateSendEmailInput.h; sourceTree = "<group>"; };
+		AA1FC468D69D69C79A65DA46 /* CreateSendEmailInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendEmailInput.m; path = Models/CreateSendEmailInput.m; sourceTree = "<group>"; };
+		AA77DC250F3324EDD9F9416B /* CreateListParticipantInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListParticipantInput.h; path = Models/CreateListParticipantInput.h; sourceTree = "<group>"; };
+		AAFD8D292462725E9D65358D /* CreateListParticipantInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListParticipantInput.m; path = Models/CreateListParticipantInput.m; sourceTree = "<group>"; };
+		AA08ED7FC1B32AED5983479D /* CreateViewParticipantInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewParticipantInput.h; path = Models/CreateViewParticipantInput.h; sourceTree = "<group>"; };
+		AA8DC9BC9EB5D068B579DA1B /* CreateViewParticipantInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewParticipantInput.m; path = Models/CreateViewParticipantInput.m; sourceTree = "<group>"; };
+		AA169E6EA5122F7922ADB6E7 /* CreateMakeCallInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateMakeCallInput.h; path = Models/CreateMakeCallInput.h; sourceTree = "<group>"; };
+		AAB411094EFE8A41B7351DE3 /* CreateMakeCallInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateMakeCallInput.m; path = Models/CreateMakeCallInput.m; sourceTree = "<group>"; };
+		AA7B1EF51B30887599560A13 /* CreateTokenInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateTokenInput.h; path = Models/CreateTokenInput.h; sourceTree = "<group>"; };
+		AA8FA89D54FC639472476C78 /* CreateTokenInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateTokenInput.m; path = Models/CreateTokenInput.m; sourceTree = "<group>"; };
+		AA8CBA4C22DDC1A9E116BB3F /* CreateSendShortCodeInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendShortCodeInput.h; path = Models/CreateSendShortCodeInput.h; sourceTree = "<group>"; };
+		AAC886F9A98449BC37DFBC37 /* CreateSendShortCodeInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendShortCodeInput.m; path = Models/CreateSendShortCodeInput.m; sourceTree = "<group>"; };
+		AADA1D2C45C014C2E8985AFA /* CreateViewAccountInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewAccountInput.h; path = Models/CreateViewAccountInput.h; sourceTree = "<group>"; };
+		AAE2A0B67B165615341926FE /* CreateViewAccountInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewAccountInput.m; path = Models/CreateViewAccountInput.m; sourceTree = "<group>"; };
+		AA5991BB72DDC35DA95D2EE5 /* CreateListInboundShortCodeInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListInboundShortCodeInput.h; path = Models/CreateListInboundShortCodeInput.h; sourceTree = "<group>"; };
+		AAA102E0B073C31192EC2806 /* CreateListInboundShortCodeInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListInboundShortCodeInput.m; path = Models/CreateListInboundShortCodeInput.m; sourceTree = "<group>"; };
+		AA8ABE6D9BF1F21F9752855B /* CreateListShortCodeInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListShortCodeInput.h; path = Models/CreateListShortCodeInput.h; sourceTree = "<group>"; };
+		AA75F022EDCB05EA655C196C /* CreateListShortCodeInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListShortCodeInput.m; path = Models/CreateListShortCodeInput.m; sourceTree = "<group>"; };
+		AAF9A1067992838E0487095B /* CreateListTemplatesInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListTemplatesInput.h; path = Models/CreateListTemplatesInput.h; sourceTree = "<group>"; };
+		AA0837C72AE38D115F4F4B0E /* CreateListTemplatesInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListTemplatesInput.m; path = Models/CreateListTemplatesInput.m; sourceTree = "<group>"; };
+		AA5925453B3352E3537D2869 /* CreateViewShortCodeInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewShortCodeInput.h; path = Models/CreateViewShortCodeInput.h; sourceTree = "<group>"; };
+		AA39B71B665E508697CDBE9B /* CreateViewShortCodeInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewShortCodeInput.m; path = Models/CreateViewShortCodeInput.m; sourceTree = "<group>"; };
+		AAB93B8BFDE210224E86421D /* CreateViewSMSInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateViewSMSInput.h; path = Models/CreateViewSMSInput.h; sourceTree = "<group>"; };
+		AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateViewSMSInput.m; path = Models/CreateViewSMSInput.m; sourceTree = "<group>"; };
+		AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateListCallsInput.h; path = Models/CreateListCallsInput.h; sourceTree = "<group>"; };
+		AA41F1A2425C3F930247554C /* CreateListCallsInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateListCallsInput.m; path = Models/CreateListCallsInput.m; sourceTree = "<group>"; };
+		AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateSendRinglessVMInput.h; path = Models/CreateSendRinglessVMInput.h; sourceTree = "<group>"; };
+		AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateSendRinglessVMInput.m; path = Models/CreateSendRinglessVMInput.m; sourceTree = "<group>"; };
+		AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnum.h; path = Models/AudioDirectionEnum.h; sourceTree = "<group>"; };
+		AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnumHelper.h; path = Models/AudioDirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDirectionEnumHelper.m; path = Models/AudioDirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnum.h; path = Models/MergeNumberStatusEnum.h; sourceTree = "<group>"; };
+		AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnumHelper.h; path = Models/MergeNumberStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumberStatusEnumHelper.m; path = Models/MergeNumberStatusEnumHelper.m; sourceTree = "<group>"; };
+		AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnum.h; path = Models/ActivateStatusEnum.h; sourceTree = "<group>"; };
+		AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnumHelper.h; path = Models/ActivateStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivateStatusEnumHelper.m; path = Models/ActivateStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnum.h; path = Models/SendEmailAsEnum.h; sourceTree = "<group>"; };
+		AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnumHelper.h; path = Models/SendEmailAsEnumHelper.h; sourceTree = "<group>"; };
+		AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendEmailAsEnumHelper.m; path = Models/SendEmailAsEnumHelper.m; sourceTree = "<group>"; };
+		AA3332638CCB919DFB501866 /* StatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnum.h; path = Models/StatusEnum.h; sourceTree = "<group>"; };
+		AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnumHelper.h; path = Models/StatusEnumHelper.h; sourceTree = "<group>"; };
+		AABF389387126F0941CB348A /* StatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusEnumHelper.m; path = Models/StatusEnumHelper.m; sourceTree = "<group>"; };
+		AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberTypeEnum.h; path = Models/NumberTypeEnum.h; sourceTree = "<group>"; };
+		AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberTypeEnumHelper.h; path = Models/NumberTypeEnumHelper.h; sourceTree = "<group>"; };
+		AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberTypeEnumHelper.m; path = Models/NumberTypeEnumHelper.m; sourceTree = "<group>"; };
+		AA6E95087CB45783F783AA30 /* DirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnum.h; path = Models/DirectionEnum.h; sourceTree = "<group>"; };
+		AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnumHelper.h; path = Models/DirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DirectionEnumHelper.m; path = Models/DirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnum.h; path = Models/InterruptedCallStatusEnum.h; sourceTree = "<group>"; };
+		AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnumHelper.h; path = Models/InterruptedCallStatusEnumHelper.h; sourceTree = "<group>"; };
+		AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterruptedCallStatusEnumHelper.m; path = Models/InterruptedCallStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnum.h; path = Models/AudioFormatEnum.h; sourceTree = "<group>"; };
+		AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnumHelper.h; path = Models/AudioFormatEnumHelper.h; sourceTree = "<group>"; };
+		AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioFormatEnumHelper.m; path = Models/AudioFormatEnumHelper.m; sourceTree = "<group>"; };
+		AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnum.h; path = Models/ProductCodeEnum.h; sourceTree = "<group>"; };
+		AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnumHelper.h; path = Models/ProductCodeEnumHelper.h; sourceTree = "<group>"; };
+		AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCodeEnumHelper.m; path = Models/ProductCodeEnumHelper.m; sourceTree = "<group>"; };
+		AA12FF61B621F420040B4098 /* IfMachineEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnum.h; path = Models/IfMachineEnum.h; sourceTree = "<group>"; };
+		AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnumHelper.h; path = Models/IfMachineEnumHelper.h; sourceTree = "<group>"; };
+		AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IfMachineEnumHelper.m; path = Models/IfMachineEnumHelper.m; sourceTree = "<group>"; };
+		AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnum.h; path = Models/HttpActionEnum.h; sourceTree = "<group>"; };
+		AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnumHelper.h; path = Models/HttpActionEnumHelper.h; sourceTree = "<group>"; };
+		AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpActionEnumHelper.m; path = Models/HttpActionEnumHelper.m; sourceTree = "<group>"; };
+		AA4AF826B686E34D8C722F89 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
+		AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortCodeController.h; path = Controllers/ShortCodeController.h; sourceTree = "<group>"; };
+		AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShortCodeController.m; path = Controllers/ShortCodeController.m; sourceTree = "<group>"; };
+		AA81F92408B7C55C821BB4D3 /* ConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConferenceController.h; path = Controllers/ConferenceController.h; sourceTree = "<group>"; };
+		AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConferenceController.m; path = Controllers/ConferenceController.m; sourceTree = "<group>"; };
+		AA318A9E219748C8ECFCABAE /* EmailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailController.h; path = Controllers/EmailController.h; sourceTree = "<group>"; };
+		AA9ED896F435094DB0E5AA54 /* EmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailController.m; path = Controllers/EmailController.m; sourceTree = "<group>"; };
+		AA834DDC96CE6BA5E1F0AE61 /* NumberVerificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberVerificationController.h; path = Controllers/NumberVerificationController.h; sourceTree = "<group>"; };
+		AA69226D124057978FA61DAE /* NumberVerificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberVerificationController.m; path = Controllers/NumberVerificationController.m; sourceTree = "<group>"; };
+		AA2657510856339A58BD110F /* CarrierController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarrierController.h; path = Controllers/CarrierController.h; sourceTree = "<group>"; };
+		AA9128986187196F56167741 /* CarrierController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarrierController.m; path = Controllers/CarrierController.m; sourceTree = "<group>"; };
+		AA0D03E9A2213E7EB3BC33F3 /* CallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallController.h; path = Controllers/CallController.h; sourceTree = "<group>"; };
+		AA903D7FB6C91C80995EA301 /* CallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallController.m; path = Controllers/CallController.m; sourceTree = "<group>"; };
+		AA7D8629A5E3B1C5AE5FE1D6 /* WebRTCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebRTCController.h; path = Controllers/WebRTCController.h; sourceTree = "<group>"; };
+		AA83E0AEE29E43871B825391 /* WebRTCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebRTCController.m; path = Controllers/WebRTCController.m; sourceTree = "<group>"; };
+		AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubAccountController.h; path = Controllers/SubAccountController.h; sourceTree = "<group>"; };
+		AAD42F72B0811B33CDE47456 /* SubAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubAccountController.m; path = Controllers/SubAccountController.m; sourceTree = "<group>"; };
+		AA11460EF3700A7F7018A3DC /* AddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressController.h; path = Controllers/AddressController.h; sourceTree = "<group>"; };
+		AA5ED7FFA015973685AAC46F /* AddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressController.m; path = Controllers/AddressController.m; sourceTree = "<group>"; };
+		AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneNumberController.h; path = Controllers/PhoneNumberController.h; sourceTree = "<group>"; };
+		AA408FD4D42B04A34E34261C /* PhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberController.m; path = Controllers/PhoneNumberController.m; sourceTree = "<group>"; };
+		AAAB468F09960CF5D081F9E7 /* RecordingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordingController.h; path = Controllers/RecordingController.h; sourceTree = "<group>"; };
+		AADDDC6CAB773E881C322698 /* RecordingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordingController.m; path = Controllers/RecordingController.m; sourceTree = "<group>"; };
+		AA7A1081BD407E66ED9F8475 /* SMSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMSController.h; path = Controllers/SMSController.h; sourceTree = "<group>"; };
+		AA67A0E0319ACE13F97F3892 /* SMSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMSController.m; path = Controllers/SMSController.m; sourceTree = "<group>"; };
+		AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TranscriptionController.h; path = Controllers/TranscriptionController.h; sourceTree = "<group>"; };
+		AA855C6D96B42602C073F3B1 /* TranscriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TranscriptionController.m; path = Controllers/TranscriptionController.m; sourceTree = "<group>"; };
+		AA1709549528F49F39603685 /* UsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsageController.h; path = Controllers/UsageController.h; sourceTree = "<group>"; };
+		AA45AC54E9989F859BAC238B /* UsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsageController.m; path = Controllers/UsageController.m; sourceTree = "<group>"; };
+		AAEBEC9B69A8F7B5117AE60C /* AccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountController.h; path = Controllers/AccountController.h; sourceTree = "<group>"; };
+		AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountController.m; path = Controllers/AccountController.m; sourceTree = "<group>"; };
+
+        AA1173ED2E32674C48620A64 /* IHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IHttpClient.h; path = Http/Client/IHttpClient.h; sourceTree = "<group>"; };
+        AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnirestClient.h; path = Http/Client/UnirestClient.h; sourceTree = "<group>"; };
+        AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnirestClient.m; path = Http/Client/UnirestClient.m; sourceTree = "<group>"; };
+        AA406D274803136B567B1E87 /* HttpContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpContext.h; path = Http/Client/HttpContext.h; sourceTree = "<group>"; };
+        AAFF0E81765DC544641E6641 /* HttpContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc;name = HttpContext.m;  path = Http/Client/HttpContext.m; sourceTree = "<group>"; };
+
+        AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpBodyRequest.h; path = Http/Request/HttpBodyRequest.h; sourceTree = "<group>"; };
+        AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpBodyRequest.m; path = Http/Request/HttpBodyRequest.m; sourceTree = "<group>"; };
+        AA31975203C7EAF86B56F415 /* HttpMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpMethod.h; path = Http/Request/HttpMethod.h; sourceTree = "<group>"; };
+        AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = Http/Request/HttpRequest.h; sourceTree = "<group>"; };
+        AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = Http/Request/HttpRequest.m; sourceTree = "<group>"; };
+        AAF67FE2ADA5B77379090F09 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpResponse.h; path = Http/Response/HttpResponse.h; sourceTree = "<group>"; };
+        AAE099E73BF6EE469D4AB217 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpResponse.m; path = Http/Response/HttpResponse.m; sourceTree = "<group>"; };
+        AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpStringResponse.h; path = Http/Response/HttpStringResponse.h; sourceTree = "<group>"; };
+        AA78889B46E63B2815E8A97C /* HttpStringResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpStringResponse.m; path = Http/Response/HttpStringResponse.m; sourceTree = "<group>"; };
+        AA5D18C97F1ED2716A752AA8 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseController.h; path = Controllers/BaseController.h; sourceTree = "<group>"; };
+        AA940686A027FAC0683E87AE /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        AAC01B07AF245CB0CDD170FA /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA156D6B8C98CDFEC6517A86 /* Foundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        AAFA9A16D872F6A26FA42D16 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AAB6FF0AA3C1D0F2B493849F /* UIKit.framework in Frameworks */,
+                AAEC3975AAF8AA1308CB9DB7 /* libMessage360.a in Frameworks */,
+                AAB95DE29AE69E555D2350F1 /* Foundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        AAD4984ADF584177665EB2F2 = {
+            isa = PBXGroup;
+            children = (
+                AAE5FE10AA73B8B0BF58D30E /* Message360 */,
+                AA9EA450E464263161F6BD14 /* Frameworks */,
+                AA8858C16C1B7799495DB67C /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        AA8858C16C1B7799495DB67C /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                AAFFB6F12C34BFAB07465B52 /* libMessage360.a */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        AA9EA450E464263161F6BD14 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                AA6C52504A381F7C41B67182 /* Foundation.framework */,
+                AA12F8206E62E7B415ACF0E1 /* UIKit.framework */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
+        AAE5FE10AA73B8B0BF58D30E /* Message360 */ = {
+            isa = PBXGroup;
+            children = (
+                AA01453D8EB8DA40D84E17AB /* Models */,
+                AAAB4E1BA682F714FFFE50E0 /* Http */,
+				AABB66C6B414A46151F694C8 /* Test Helper */,
+                AA56C8CB120D74D9FD3C57DB /* Controllers */,
+                AA15EC52DAFD549AA1AE2F7F /* Supporting Files */,
+                AA6FB783652324EFB3E7BA31 /* APIHelper.m */,
+                AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */,
+                AA1C1510C4F3D56A3A951CFD /* APIError.m */,
+                AA48BFFBF934C1B6D2406E77 /* APIError.h */,
+				AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */,
+                AAC241C706904812E6B3DBD1 /* NSDate+extension.m */,
+                AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */,
+                AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */,
+                AAFCE585F7417595F3776274 /* Configuration.m */,
+                AAFDA2A62B62D6847BB95686 /* Configuration.h */,
+            );
+            path = Message360;
+            sourceTree = "<group>";
+        };
+        AA15EC52DAFD549AA1AE2F7F /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                AAD0DA7640475994DA60613B /* Message360-Prefix.pch */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+        AA56C8CB120D74D9FD3C57DB /* Controllers */ = {
+            isa = PBXGroup;
+            children = (
+                AA5D18C97F1ED2716A752AA8 /* BaseController.h */,
+                AA940686A027FAC0683E87AE /* BaseController.m */,
+				AA4AF826B686E34D8C722F89 /* BaseController.m */,
+				AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */,
+				AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */,
+				AA81F92408B7C55C821BB4D3 /* ConferenceController.h */,
+				AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */,
+				AA318A9E219748C8ECFCABAE /* EmailController.h */,
+				AA9ED896F435094DB0E5AA54 /* EmailController.m */,
+				AA834DDC96CE6BA5E1F0AE61 /* NumberVerificationController.h */,
+				AA69226D124057978FA61DAE /* NumberVerificationController.m */,
+				AA2657510856339A58BD110F /* CarrierController.h */,
+				AA9128986187196F56167741 /* CarrierController.m */,
+				AA0D03E9A2213E7EB3BC33F3 /* CallController.h */,
+				AA903D7FB6C91C80995EA301 /* CallController.m */,
+				AA7D8629A5E3B1C5AE5FE1D6 /* WebRTCController.h */,
+				AA83E0AEE29E43871B825391 /* WebRTCController.m */,
+				AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */,
+				AAD42F72B0811B33CDE47456 /* SubAccountController.m */,
+				AA11460EF3700A7F7018A3DC /* AddressController.h */,
+				AA5ED7FFA015973685AAC46F /* AddressController.m */,
+				AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */,
+				AA408FD4D42B04A34E34261C /* PhoneNumberController.m */,
+				AAAB468F09960CF5D081F9E7 /* RecordingController.h */,
+				AADDDC6CAB773E881C322698 /* RecordingController.m */,
+				AA7A1081BD407E66ED9F8475 /* SMSController.h */,
+				AA67A0E0319ACE13F97F3892 /* SMSController.m */,
+				AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */,
+				AA855C6D96B42602C073F3B1 /* TranscriptionController.m */,
+				AA1709549528F49F39603685 /* UsageController.h */,
+				AA45AC54E9989F859BAC238B /* UsageController.m */,
+				AAEBEC9B69A8F7B5117AE60C /* AccountController.h */,
+				AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */,
+            );
+            name = Controllers;
+            sourceTree = "<group>";
+        };
+        AA6945303944BAD4445B8A6F /* Client */ = {
+            isa = PBXGroup;
+            children = (
+                AA1173ED2E32674C48620A64 /* IHttpClient.h */,
+                AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */,
+                AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */,
+                AA406D274803136B567B1E87 /* HttpContext.h */,
+                AAFF0E81765DC544641E6641 /* HttpContext.m */,
+            );
+            name = Client;
+            sourceTree = "<group>";
+        };
+        AABB66C6B414A46151F694C8 /* Test Helper */ = {
+            isa = PBXGroup;
+            children = (
+                AA613A713697E8E9E6AB31AB /* Request */,
+                AA6945303944BAD4445B8A6F /* Client */,
+                AAD6140F9EE3518738ACC212 /* Response */,
+            );
+            name = Http;
+            sourceTree = "<group>";
+        };
+        AA613A713697E8E9E6AB31AB /* Request */ = {
+            isa = PBXGroup;
+            children = (
+                AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */,
+                AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */,
+                AA31975203C7EAF86B56F415 /* HttpMethod.h */,
+                AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */,
+                AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */,
+            );
+            name = Request;
+            sourceTree = "<group>";
+        };
+        AAD6140F9EE3518738ACC212 /* Response */ = {
+            isa = PBXGroup;
+            children = (
+                AAF67FE2ADA5B77379090F09 /* HttpResponse.h */,
+                AAE099E73BF6EE469D4AB217 /* HttpResponse.m */,
+                AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */,
+                AA78889B46E63B2815E8A97C /* HttpStringResponse.m */,
+            );
+            name = Response;
+            sourceTree = "<group>";
+        };
+        AA01453D8EB8DA40D84E17AB /* Models */ = {
+            isa = PBXGroup;
+            children = (
+				AA3ADD5D3FB24030472D58AD /* CreateViewTemplateInput.h */,
+				AA9AE5444950C61CE19DCCA1 /* CreateViewTemplateInput.m */,
+				AAB2E1D11DF2F7092E67E115 /* CreateDeafMuteParticipantInput.h */,
+				AAD72AB443B6414416D3EC98 /* CreateDeafMuteParticipantInput.m */,
+				AA33C4A70CEC424494A4CE02 /* CreateDeleteInvalidInput.h */,
+				AA0739615445450338241B72 /* CreateDeleteInvalidInput.m */,
+				AA7B7BBB95B62A6A7450E65D /* CreateVerifyNumberInput.h */,
+				AA443C10E6EB4FF4AB5FCC04 /* CreateVerifyNumberInput.m */,
+				AAA7C1A1D85D3014982B034B /* CreateCarrierLookupInput.h */,
+				AA7678499BE8AEC808419EB2 /* CreateCarrierLookupInput.m */,
+				AA11E8D4032DDF671BAB2206 /* CreateViewCallInput.h */,
+				AA05CFD17A2CFCD5ECE3D45B /* CreateViewCallInput.m */,
+				AA336E9718512FD1C31C766B /* CreateCheckFundsInput.h */,
+				AA9A512FC98C169A45AC88BC /* CreateCheckFundsInput.m */,
+				AA6E7B59C0311DFDACE5E694 /* CreateGroupCallInput.h */,
+				AA448C9E11EB057DD71DA28F /* CreateGroupCallInput.m */,
+				AAB77EB3735F1920D632452B /* CreateSubAccountInput.h */,
+				AADE6E45BB4D4FC5EF925D8A /* CreateSubAccountInput.m */,
+				AA681E4E8F35227C4E5556C5 /* CreateAddressInput.h */,
+				AA9D085FED8396A3D2278213 /* CreateAddressInput.m */,
+				AA903AC225A76140C1786202 /* CreateSuspendSubAccountInput.h */,
+				AA78E5855D221DC0B40E36A4 /* CreateSuspendSubAccountInput.m */,
+				AA00CB9D75C99B0265D75543 /* CreateDeleteSubAccountInput.h */,
+				AA8D83BC822C854E5E31366C /* CreateDeleteSubAccountInput.m */,
+				AA8D5B9A74A9E2D4C60E9AD0 /* CreateListConferenceInput.h */,
+				AAC1D42AA18E17B0E3B20237 /* CreateListConferenceInput.m */,
+				AACF510E5470360C7F5A94E3 /* CreateDeleteAddressInput.h */,
+				AACBF8B1A6F54FE88B54AD44 /* CreateDeleteAddressInput.m */,
+				AA5D6D7A1E261E839D96AE8A /* CreateVoiceEffectInput.h */,
+				AA62448ADD5593511CB64C76 /* CreateVoiceEffectInput.m */,
+				AA0B4F25FE0A765B23CAC630 /* CreateVerifyAddressInput.h */,
+				AA7790070893F85B78C4ECFB /* CreateVerifyAddressInput.m */,
+				AA92B745A5D1CA0C91922DA4 /* CreateListAddressInput.h */,
+				AA8244FAAE12354091307D03 /* CreateListAddressInput.m */,
+				AA5ACD169B02BC323F1593F9 /* CreateViewAddressInput.h */,
+				AAA2E80EFFCB75CD27883AED /* CreateViewAddressInput.m */,
+				AABFF755492AB8F7AA972F84 /* CreateListBlocksInput.h */,
+				AAB8843975D82173F843FA25 /* CreateListBlocksInput.m */,
+				AA539544FA5F7D8097D20499 /* CreateListSpamInput.h */,
+				AA0D121E44FB0B90134C055B /* CreateListSpamInput.m */,
+				AA5E1018758A42363EDE73D9 /* CreateListBouncesInput.h */,
+				AADAA410B7BAB617C6C89744 /* CreateListBouncesInput.m */,
+				AA96662E3A2B6EF04D79350D /* CreateRecordCallInput.h */,
+				AAD5E17D13619A1B3370D18B /* CreateRecordCallInput.m */,
+				AA3906A5A87B2FC22A21F9DB /* CreateDeleteBouncesInput.h */,
+				AAD450A34ACD74E6CF2EDC8B /* CreateDeleteBouncesInput.m */,
+				AA65C81A300BD262F0ADF174 /* CreatePlayAudioInput.h */,
+				AA986DDDE6146C4ECC5047ED /* CreatePlayAudioInput.m */,
+				AA6102C2B16DC332FFA2C4AB /* UpdatePhoneNumberInput.h */,
+				AA7F1BC5A21FC37ADF579C65 /* UpdatePhoneNumberInput.m */,
+				AAA45FB84BC0D9F1D8EEA655 /* CreateListInvalidInput.h */,
+				AABE3DD0C6F3E77ACCCAA127 /* CreateListInvalidInput.m */,
+				AA9BE42EF96331D56C07F5C7 /* CreateListRecordingInput.h */,
+				AAEF35E1A43E1CC1E4D60ADF /* CreateListRecordingInput.m */,
+				AA83842373CDE2C3BBF4CFDF /* CreateCarrierLookupListInput.h */,
+				AAB72F674A744DF134972EBD /* CreateCarrierLookupListInput.m */,
+				AAF2614FCDF945BE3940869A /* CreateInterruptedCallInput.h */,
+				AA9E5AB27D68D76C438FB120 /* CreateInterruptedCallInput.m */,
+				AA00DC9B1D87669A845BF46F /* CreateSendDigitInput.h */,
+				AA9C1507080949D22A425926 /* CreateSendDigitInput.m */,
+				AA92893BC5BBD742565BF111 /* CreateListInboundSMSInput.h */,
+				AA6A5664E63100A36A16276A /* CreateListInboundSMSInput.m */,
+				AAF95732B542809CB7B05BB9 /* CreateListSMSInput.h */,
+				AA93F278268ED0A4FD6C00D1 /* CreateListSMSInput.m */,
+				AA0656A69744F817C8273399 /* CreateListUnsubscribesInput.h */,
+				AA2147CD25F70F49AC10EFB5 /* CreateListUnsubscribesInput.m */,
+				AA43A1E6B6B19BBA5EDFE16B /* CreateDeleteUnsubscribesInput.h */,
+				AA7BFD0EAF12FE420D84CC9F /* CreateDeleteUnsubscribesInput.m */,
+				AA24621BBE76ADAB91193866 /* CreateViewConferenceInput.h */,
+				AA1D01274712D800930347D4 /* CreateViewConferenceInput.m */,
+				AA483A13E8209689FEA6DCF0 /* AddUnsubscribesInput.h */,
+				AA6F0CFB700D3E1334FC6FEA /* AddUnsubscribesInput.m */,
+				AA287704A0FA3584518F0A76 /* CreateDeleteBlockInput.h */,
+				AA6070AAE74CD5CE5C641C98 /* CreateDeleteBlockInput.m */,
+				AAE62420763DC6363C157411 /* CreateDeleteSpamInput.h */,
+				AAE88A786FB7A669D09D7D79 /* CreateDeleteSpamInput.m */,
+				AA216BEDA9DB02B1763CBD9D /* CreateBuyNumberInput.h */,
+				AAB271752B2079A9816DF7D5 /* CreateBuyNumberInput.m */,
+				AACE13CA6A9BDD38951A7C60 /* CreateReleaseNumberInput.h */,
+				AA5FA43830ADFC2DFDB27323 /* CreateReleaseNumberInput.m */,
+				AA4E82734B9DB9058095459C /* CreateViewNumberDetailsInput.h */,
+				AA9DB900E53D4154DC605604 /* CreateViewNumberDetailsInput.m */,
+				AA9CEB7DCDE1F17191875395 /* CreateDeleteRecordingInput.h */,
+				AA542D9F92F2F70853628306 /* CreateDeleteRecordingInput.m */,
+				AAE2839790C0816564A9A316 /* CreateViewRecordingInput.h */,
+				AAFCEDB08AB97DC0C70576B1 /* CreateViewRecordingInput.m */,
+				AA81021ED7822D8D439E4453 /* CreateAudioURLTranscriptionInput.h */,
+				AAC9EEED35C6E35C63D21EBB /* CreateAudioURLTranscriptionInput.m */,
+				AA3303FAFAE13C15E9CC1B18 /* CreateRecordingTranscriptionInput.h */,
+				AA0947569DC889F8A9466912 /* CreateRecordingTranscriptionInput.m */,
+				AAB94EFB2BBF56A99CD95700 /* CreateViewTranscriptionInput.h */,
+				AAFC19F91B9C6F5327180C27 /* CreateViewTranscriptionInput.m */,
+				AAF225C411196B0E4F591730 /* CreateListUsageInput.h */,
+				AAF2E459CC86D06209C16739 /* CreateListUsageInput.m */,
+				AADCAC7465CB088FC2FC44E1 /* CreateSendSMSInput.h */,
+				AA91EC8BF36260CD082769AC /* CreateSendSMSInput.m */,
+				AAB22FD127325A81B5CAFF44 /* CreateListNumberInput.h */,
+				AAA650FA1D45CAA57373A762 /* CreateListNumberInput.m */,
+				AA3A20E2F1DAFE57990CB8A9 /* CreateAvailablePhoneNumberInput.h */,
+				AA0366A10B57D216421BBFF0 /* CreateAvailablePhoneNumberInput.m */,
+				AA6CF5647C2C6250C82B3FEB /* CreateListTranscriptionInput.h */,
+				AA7766670CAAE8A9F68414D5 /* CreateListTranscriptionInput.m */,
+				AAED7B69E9DAF05714C0D5E7 /* AddParticipantInput.h */,
+				AAF93DE68D3B9B8B47A1DE1F /* AddParticipantInput.m */,
+				AACEBD0D63D27D19677FD3AD /* CreateSendEmailInput.h */,
+				AA1FC468D69D69C79A65DA46 /* CreateSendEmailInput.m */,
+				AA77DC250F3324EDD9F9416B /* CreateListParticipantInput.h */,
+				AAFD8D292462725E9D65358D /* CreateListParticipantInput.m */,
+				AA08ED7FC1B32AED5983479D /* CreateViewParticipantInput.h */,
+				AA8DC9BC9EB5D068B579DA1B /* CreateViewParticipantInput.m */,
+				AA169E6EA5122F7922ADB6E7 /* CreateMakeCallInput.h */,
+				AAB411094EFE8A41B7351DE3 /* CreateMakeCallInput.m */,
+				AA7B1EF51B30887599560A13 /* CreateTokenInput.h */,
+				AA8FA89D54FC639472476C78 /* CreateTokenInput.m */,
+				AA8CBA4C22DDC1A9E116BB3F /* CreateSendShortCodeInput.h */,
+				AAC886F9A98449BC37DFBC37 /* CreateSendShortCodeInput.m */,
+				AADA1D2C45C014C2E8985AFA /* CreateViewAccountInput.h */,
+				AAE2A0B67B165615341926FE /* CreateViewAccountInput.m */,
+				AA5991BB72DDC35DA95D2EE5 /* CreateListInboundShortCodeInput.h */,
+				AAA102E0B073C31192EC2806 /* CreateListInboundShortCodeInput.m */,
+				AA8ABE6D9BF1F21F9752855B /* CreateListShortCodeInput.h */,
+				AA75F022EDCB05EA655C196C /* CreateListShortCodeInput.m */,
+				AAF9A1067992838E0487095B /* CreateListTemplatesInput.h */,
+				AA0837C72AE38D115F4F4B0E /* CreateListTemplatesInput.m */,
+				AA5925453B3352E3537D2869 /* CreateViewShortCodeInput.h */,
+				AA39B71B665E508697CDBE9B /* CreateViewShortCodeInput.m */,
+				AAB93B8BFDE210224E86421D /* CreateViewSMSInput.h */,
+				AAF4FED071D7D13C819D7A3B /* CreateViewSMSInput.m */,
+				AA4F305849DF1693CCF2F0E2 /* CreateListCallsInput.h */,
+				AA41F1A2425C3F930247554C /* CreateListCallsInput.m */,
+				AAE4EC5A298424F0EE23ECB9 /* CreateSendRinglessVMInput.h */,
+				AA16D083094B9F9232E48273 /* CreateSendRinglessVMInput.m */,
+				AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */,
+				AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */,
+				AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */,
+				AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */,
+				AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */,
+				AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */,
+				AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */,
+				AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */,
+				AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */,
+				AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */,
+				AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */,
+				AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */,
+				AA3332638CCB919DFB501866 /* StatusEnum.h */,
+				AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */,
+				AABF389387126F0941CB348A /* StatusEnumHelper.m */,
+				AAE1E423202DE6FD4201BB14 /* NumberTypeEnum.h */,
+				AA8CA3FA3C981B49CE0E9368 /* NumberTypeEnumHelper.h */,
+				AA5DE4B52919B966DF0D68BD /* NumberTypeEnumHelper.m */,
+				AA6E95087CB45783F783AA30 /* DirectionEnum.h */,
+				AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */,
+				AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */,
+				AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */,
+				AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */,
+				AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */,
+				AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */,
+				AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */,
+				AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */,
+				AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */,
+				AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */,
+				AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */,
+				AA12FF61B621F420040B4098 /* IfMachineEnum.h */,
+				AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */,
+				AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */,
+				AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */,
+				AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */,
+				AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */,
+            );
+            name = Models;
+            sourceTree = "<group>";
+        };
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+        AA13B6076044B4EB7050DE39 /* Headers */ = {
+            isa = PBXHeadersBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+		AAF3192B74890E3A1FC5014D /* CreateViewTemplateInput.h in Headers */,
+		AAF804AD67A821D5AFF39BB6 /* CreateDeafMuteParticipantInput.h in Headers */,
+		AAC2D3D41073E2C01B177132 /* CreateDeleteInvalidInput.h in Headers */,
+		AA898BFB57CFD38455BE4B2F /* CreateVerifyNumberInput.h in Headers */,
+		AA8679AF554E9960F5786AAD /* CreateCarrierLookupInput.h in Headers */,
+		AA80B8F122C5F9F041F18394 /* CreateViewCallInput.h in Headers */,
+		AA8015B561938D54845B7BB6 /* CreateCheckFundsInput.h in Headers */,
+		AA913D24FC595066BA3B58C2 /* CreateGroupCallInput.h in Headers */,
+		AAFFB111A53AE7286878A6A9 /* CreateSubAccountInput.h in Headers */,
+		AAEFA9FDB70264FE347BD114 /* CreateAddressInput.h in Headers */,
+		AA6E984971242DAA364F0F27 /* CreateSuspendSubAccountInput.h in Headers */,
+		AAD0DF09B793CF4EB5152E8A /* CreateDeleteSubAccountInput.h in Headers */,
+		AAF984DB08F694B8A3695ACB /* CreateListConferenceInput.h in Headers */,
+		AAD73EBCA7F079C9B4DE907B /* CreateDeleteAddressInput.h in Headers */,
+		AAEDEAE17DFD6A30E1CA565E /* CreateVoiceEffectInput.h in Headers */,
+		AA3C326313A6F24C3C9A1F8C /* CreateVerifyAddressInput.h in Headers */,
+		AA407997970F595D658B01E3 /* CreateListAddressInput.h in Headers */,
+		AACF3592EC79ECA363EFE73A /* CreateViewAddressInput.h in Headers */,
+		AA4E5408EEB5F20E97DBE557 /* CreateListBlocksInput.h in Headers */,
+		AA5B8956408236B24E2F4892 /* CreateListSpamInput.h in Headers */,
+		AA1A1A654636D65CC2D0D5B4 /* CreateListBouncesInput.h in Headers */,
+		AAB1A3303436CBF5F1097D63 /* CreateRecordCallInput.h in Headers */,
+		AA892E9960D666E020EE45BC /* CreateDeleteBouncesInput.h in Headers */,
+		AAF8C1A6887D57EB16865015 /* CreatePlayAudioInput.h in Headers */,
+		AAC9CB0F0129F92659C4A53E /* UpdatePhoneNumberInput.h in Headers */,
+		AACAFAB07FA8E019A838DB8F /* CreateListInvalidInput.h in Headers */,
+		AAC665F2C516C1D8E4E5B120 /* CreateListRecordingInput.h in Headers */,
+		AA36925850B5A7AEC21B7565 /* CreateCarrierLookupListInput.h in Headers */,
+		AA625DB755CB15F4EB4B10D6 /* CreateInterruptedCallInput.h in Headers */,
+		AAE0AA664AC56F6EB44F7EFF /* CreateSendDigitInput.h in Headers */,
+		AACABC455624D105B0CA3B69 /* CreateListInboundSMSInput.h in Headers */,
+		AAA442B1249ED2CBEFD80675 /* CreateListSMSInput.h in Headers */,
+		AAA3D829C2800BC9117A88E2 /* CreateListUnsubscribesInput.h in Headers */,
+		AABE17E1311337AC4C15713E /* CreateDeleteUnsubscribesInput.h in Headers */,
+		AAB6AAA218B41BD9C8035031 /* CreateViewConferenceInput.h in Headers */,
+		AA84C64554BFA4DAA6815711 /* AddUnsubscribesInput.h in Headers */,
+		AA163712A42D9C1E7EAC1499 /* CreateDeleteBlockInput.h in Headers */,
+		AAB3D99BFEA3622AA6317E9C /* CreateDeleteSpamInput.h in Headers */,
+		AA4E297CC167292336BC4798 /* CreateBuyNumberInput.h in Headers */,
+		AA102D95A30F393F7EC4FD15 /* CreateReleaseNumberInput.h in Headers */,
+		AAEDDFCE2C2ACF2F76C791B9 /* CreateViewNumberDetailsInput.h in Headers */,
+		AAF4FA27813E1850D3B05E42 /* CreateDeleteRecordingInput.h in Headers */,
+		AA8CC2C2008BA160DD4E7B27 /* CreateViewRecordingInput.h in Headers */,
+		AA061CC9FB9B882D608FEE91 /* CreateAudioURLTranscriptionInput.h in Headers */,
+		AAFA5A2D5AF6867D30F5C1CA /* CreateRecordingTranscriptionInput.h in Headers */,
+		AA09BB1FE7B9C70A497D9074 /* CreateViewTranscriptionInput.h in Headers */,
+		AA77C32D7116849F3005EC65 /* CreateListUsageInput.h in Headers */,
+		AA057788376C1CB57B71BAB5 /* CreateSendSMSInput.h in Headers */,
+		AA40222E6226233163A1E3FF /* CreateListNumberInput.h in Headers */,
+		AA5C7FB8441F8EEBAF3245E6 /* CreateAvailablePhoneNumberInput.h in Headers */,
+		AAEB7C551F05E234F109CE37 /* CreateListTranscriptionInput.h in Headers */,
+		AAF13BAA4545A42DF92AF302 /* AddParticipantInput.h in Headers */,
+		AA0157A2F7E2FD9BF5A39152 /* CreateSendEmailInput.h in Headers */,
+		AAA96FDCFC8ADB2CA8A5059D /* CreateListParticipantInput.h in Headers */,
+		AA407C56C85D13E4520C108C /* CreateViewParticipantInput.h in Headers */,
+		AA9794AEA168B030822A38D6 /* CreateMakeCallInput.h in Headers */,
+		AA00F3951B4CDB00627B1EEC /* CreateTokenInput.h in Headers */,
+		AA3DD3D8B19114326677149E /* CreateSendShortCodeInput.h in Headers */,
+		AAB3AF3A6B0021B11EE9E8B8 /* CreateViewAccountInput.h in Headers */,
+		AAE4CEC3E10246194ABFA4E2 /* CreateListInboundShortCodeInput.h in Headers */,
+		AA68F52CDB71330932274EF2 /* CreateListShortCodeInput.h in Headers */,
+		AAD34D9F25FC0F22A7CC931C /* CreateListTemplatesInput.h in Headers */,
+		AAF73618DD3CF1ACCBB501B5 /* CreateViewShortCodeInput.h in Headers */,
+		AA783FD4BB8BCB6F9074D70B /* CreateViewSMSInput.h in Headers */,
+		AA05FCE4C1A15CD5F4366611 /* CreateListCallsInput.h in Headers */,
+		AA972379BAC7E2C8ADE98910 /* CreateSendRinglessVMInput.h in Headers */,
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */,
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */,
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */,
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */,
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */,
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */,
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */,
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */,
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */,
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */,
+		AA8F60D49DEC0BEAA7448820 /* NumberTypeEnum.h in Headers */,
+		AAF8A0891DE29C7B96113BEA /* NumberTypeEnumHelper.h in Headers */,
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */,
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */,
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */,
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */,
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */,
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */,
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */,
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */,
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */,
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */,
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */,
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */,
+		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */,
+		AAE320CACEAA31D6DE4CC5A0 /* ConferenceController.h in Headers */,
+		AAEE86A14DF6D55C496B157D /* EmailController.h in Headers */,
+		AA04506C5152F6E4EF33627B /* NumberVerificationController.h in Headers */,
+		AAD7546C82BE41672C9D58B0 /* CarrierController.h in Headers */,
+		AA4E0229E250AA06838C78D0 /* CallController.h in Headers */,
+		AAA42D6DC9835520EA160E26 /* WebRTCController.h in Headers */,
+		AA87CF247168694FAC2AF75B /* SubAccountController.h in Headers */,
+		AAB77FA1D52FA85F2EE0FBF3 /* AddressController.h in Headers */,
+		AA0C06B2B55864E2F18F9DD9 /* PhoneNumberController.h in Headers */,
+		AA4BC2149A809FA9AE433E90 /* RecordingController.h in Headers */,
+		AA51BA983EA6DD47EADD767D /* SMSController.h in Headers */,
+		AAC534682174EDBD3880A0A8 /* TranscriptionController.h in Headers */,
+		AA5BEED5489112A144F60335 /* UsageController.h in Headers */,
+		AABB26DA752AB72F432C52D0 /* AccountController.h in Headers */,
+        AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */,
+        AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */,
+        AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */,
+        AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */,
+        AA9A82CCE1219D4C5910FE3B /* APIError.h in Headers */,
+        AA9E17FED3B6812D11EB1F51 /* TestHelper.h in Headers */,
+        AAD8F51F714DD5966CCD659B /* HttpBodyRequest.h in Headers */,
+        AA727179A75A81C7BFF5708F /* HttpRequest.h in Headers */,
+        AA561654D3DF3A6B4926FBE4 /* IHttpClient.h in Headers */,
+        AAA4DBB5CE589B5B0303FD74 /* HttpContext.h in Headers */,
+
+        AABB789B7FACBAA15967C8E9 /* BaseController.h in Headers */,
+        AAFBD14918A6E076A0BF62B7 /* HttpResponse.h in Headers */,
+        AADD0D6E9D0D2ECB46296055 /* UnirestClient.h in Headers */,
+        AA9312BDFDCA04EB5F7358C2 /* HttpStringResponse.h in Headers */,
+        AA033D32966F32BFBD65DD34 /* HttpMethod.h in Headers */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+        AA28707B011D40DC5FCAABD7 /* Message360 */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = AA82ACA3B71B3D8AC53528FE /* Build configuration list for PBXNativeTarget "Message360" */;
+            buildPhases = (
+                AAAD8BEDE6C04F26CD9A967F /* Sources */,
+                AAC01B07AF245CB0CDD170FA /* Frameworks */,
+                AA6976EEF676DCB4C0327BF2 /* CopyFiles */,
+                AA13B6076044B4EB7050DE39 /* Headers */,
+                AA26BF6507704A6409F338B9 /* Build Framework */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = Message360;
+            productName = Message360;
+            productReference = AAFFB6F12C34BFAB07465B52 /* libMessage360.a */;
+            productType = "com.apple.product-type.library.static";
+        };		
+/* End PBXNativeTarget section */
+
+
+
+/* Begin PBXProject section */
+        AAD86B0C4A909E780CCAF44D /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 0500;
+                ORGANIZATIONNAME = APIMatic;
+                TargetAttributes = {
+                    AA2DCD1EBC15E61EA692C99F = {
+                        CreatedOnToolsVersion = 7.3.1;
+                    };
+                };
+            };
+            buildConfigurationList = AA3D5C81EBA16BCDBA6678EE /* Build configuration list for PBXProject "Message360" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+            );
+            mainGroup = AAD4984ADF584177665EB2F2;
+            productRefGroup = AA8858C16C1B7799495DB67C /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                AA28707B011D40DC5FCAABD7 /* Message360 */,
+                AAEE5E87CAD05D168656264B /* Framework */,
+                AA2DCD1EBC15E61EA692C99F /* Tests */,
+            );
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+    AAF4E93AD0B9510E6CB456B5 /* Resources */ = {
+      isa = PBXResourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+        AA26BF6507704A6409F338B9 /* Build Framework */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "Build Framework";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "#Credit: http://www.raywenderlich.com/65964/create-a-framework-for-ios\nset -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${PODS_ROOT}/Headers/Public/JSONModel/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${PODS_ROOT}/Headers/Public/Unirest-APIMATIC/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+        };
+        AACF2FCBE910DF27909EEA33 /* MultiBuild Framework */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "MultiBuild Framework";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "# Taken from Ray Wenderlich tutorial: http://www.raywenderlich.com/65964/create-a-framework-for-ios\n\nset -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nOUTPUT_LOCATION=\"${HOME}/Desktop\"\nif [ ! -w ${OUTPUT_LOCATION} ] ; then OUTPUT_LOCATION=\"${XCS_OUTPUT_DIR}\" ; fi\nif [ ! -w ${OUTPUT_LOCATION} ] ; then OUTPUT_LOCATION=\"/tmp\" ; fi\nif [ ! -w ${OUTPUT_LOCATION} ] ; then echo \"Couldn't find anywhere to write! Dying.\"; exit 1 ; fi\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\necho \"RW_SDK_PLATFORM is ${RW_SDK_PLATFORM}\"\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\necho \"RW_SDK_VERSION is ${RW_SDK_VERSION}\"\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\necho \"RW_OTHER_PLATFORM is ${RW_OTHER_PLATFORM}\"\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\necho \"BUILT_PRODUCTS_DIR is ${BUILT_PRODUCTS_DIR}\"\necho \"RW_OTHER_BUILT_PRODUCTS_DIR is ${RW_OTHER_BUILT_PRODUCTS_DIR}\"\n\n# remove alias and copy, if it's archive\nUNINSTALLED_PRODUCTS_DIRECTORY=\"${BUILT_PRODUCTS_DIR}/../../IntermediateBuildFilesPath/UninstalledProducts\"\n\nif [ -d \"$UNINSTALLED_PRODUCTS_DIRECTORY\" ]; then\necho \"Looks like we're archiving, fixing aliases...\"\nrm \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\ncp \"${UNINSTALLED_PRODUCTS_DIRECTORY}/${RW_INPUT_STATIC_LIB}\" \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\nif [ -d \"$UNINSTALLED_PRODUCTS_DIRECTORY\" ]; then\necho \"Looks like we're archiving, fixing aliases...\"\nrm \"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\ncp \"${UNINSTALLED_PRODUCTS_DIRECTORY}/${RW_INPUT_STATIC_LIB}\" \"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\nfi\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"";
+        };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        AAE0F287B400F63C88C756EB /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        AAAD8BEDE6C04F26CD9A967F /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA2F009821D5B379D796665A /* APIHelper.m in Sources */,
+                AA3FC84281C8B49DAC26F961 /* APIError.m in Sources */,
+                AA0C599E7D4F200F8897AFF7 /* NSDate+extension.m in Sources */,
+                AABE48236E273EF1DB3275E0 /* Configuration.m in Sources */,
+                AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */,
+				AA2B207350E54ACE6EF1E340 /* CreateViewTemplateInput.m in Sources */,
+				AAA503B9EF29BF67097EC4A9 /* CreateDeafMuteParticipantInput.m in Sources */,
+				AA514311EDBCC36B5D16F812 /* CreateDeleteInvalidInput.m in Sources */,
+				AABEE2975809FF3BA70CEB63 /* CreateVerifyNumberInput.m in Sources */,
+				AA864D06CABA3B7B16B8AD25 /* CreateCarrierLookupInput.m in Sources */,
+				AACC953077E4F5700B813CF7 /* CreateViewCallInput.m in Sources */,
+				AA2D62295B4D9E76A57B80CD /* CreateCheckFundsInput.m in Sources */,
+				AAA2837D44CB0CC2CC94BA0E /* CreateGroupCallInput.m in Sources */,
+				AA25BBE217B3F32DF5AF6612 /* CreateSubAccountInput.m in Sources */,
+				AADBBBB785536496AD9DC67F /* CreateAddressInput.m in Sources */,
+				AAE5920DB62DDAFAF3F08EC0 /* CreateSuspendSubAccountInput.m in Sources */,
+				AA5614DA2007E5C3ACAD7650 /* CreateDeleteSubAccountInput.m in Sources */,
+				AA8FBA9509D817F1455A6E77 /* CreateListConferenceInput.m in Sources */,
+				AAB2873B2C2C9998DCF7A69B /* CreateDeleteAddressInput.m in Sources */,
+				AACA3F1002DEDACE19F25860 /* CreateVoiceEffectInput.m in Sources */,
+				AA95C8C294F5CFD730C68992 /* CreateVerifyAddressInput.m in Sources */,
+				AA65CA41618BAD382529CF5A /* CreateListAddressInput.m in Sources */,
+				AAB200FAAA0B674E02C4A81C /* CreateViewAddressInput.m in Sources */,
+				AA85FDB73530E8D72E96D733 /* CreateListBlocksInput.m in Sources */,
+				AA0B9CA81E75E8B2DF2A2E89 /* CreateListSpamInput.m in Sources */,
+				AAA710491C27733E16955E0E /* CreateListBouncesInput.m in Sources */,
+				AA5EDC4E6CB1A97171FB5B0D /* CreateRecordCallInput.m in Sources */,
+				AA0A35DDD58B28C068330C8F /* CreateDeleteBouncesInput.m in Sources */,
+				AA0906F0D4B99669674C88D4 /* CreatePlayAudioInput.m in Sources */,
+				AAD1FCBBCC8EFB9C402D94F5 /* UpdatePhoneNumberInput.m in Sources */,
+				AA3E23E8844EDB52088898B9 /* CreateListInvalidInput.m in Sources */,
+				AA52301C6548791ED4F82987 /* CreateListRecordingInput.m in Sources */,
+				AA71BDE6CFD9DC9171FD2CDA /* CreateCarrierLookupListInput.m in Sources */,
+				AA7D9466FA087F8982E0D4DB /* CreateInterruptedCallInput.m in Sources */,
+				AAE31213746C503FC390E5B9 /* CreateSendDigitInput.m in Sources */,
+				AA5680748B49C21BF6F49C2A /* CreateListInboundSMSInput.m in Sources */,
+				AA7152613F60F754716349CC /* CreateListSMSInput.m in Sources */,
+				AAEE7834FB33F20C109DF6E2 /* CreateListUnsubscribesInput.m in Sources */,
+				AA8600708B24503F675AA7E4 /* CreateDeleteUnsubscribesInput.m in Sources */,
+				AAA50EFABBEE0A17F6ADAD54 /* CreateViewConferenceInput.m in Sources */,
+				AAF36C93BEB4CF80F90D8DD1 /* AddUnsubscribesInput.m in Sources */,
+				AA034F91CE76F7B6D92338B0 /* CreateDeleteBlockInput.m in Sources */,
+				AA704C2423A93568E201BA15 /* CreateDeleteSpamInput.m in Sources */,
+				AA4508525CAEC5C2DECC4459 /* CreateBuyNumberInput.m in Sources */,
+				AADBAE835ACB7AFA723F52A5 /* CreateReleaseNumberInput.m in Sources */,
+				AADBEC3C2A3AB5CF18EC9E28 /* CreateViewNumberDetailsInput.m in Sources */,
+				AA2A0C1F11414BD1B8AF163C /* CreateDeleteRecordingInput.m in Sources */,
+				AAA9F7F5BCC2E74EFBF0C8BB /* CreateViewRecordingInput.m in Sources */,
+				AA1A3D119C2A38FCDDEE8AEA /* CreateAudioURLTranscriptionInput.m in Sources */,
+				AA5017BAC9B5C49A283F8C16 /* CreateRecordingTranscriptionInput.m in Sources */,
+				AAF71FFEDD266F7A4530854B /* CreateViewTranscriptionInput.m in Sources */,
+				AAD021800E6735082527A387 /* CreateListUsageInput.m in Sources */,
+				AAE54556D38A3FB0795F15D2 /* CreateSendSMSInput.m in Sources */,
+				AA5500FCD15FB9BF0E1B93BC /* CreateListNumberInput.m in Sources */,
+				AA8F3231397DDB2D876BE2B8 /* CreateAvailablePhoneNumberInput.m in Sources */,
+				AAEA7061A7C1BEBA3DB14C7E /* CreateListTranscriptionInput.m in Sources */,
+				AA0FCEB0CC7150E54C16A4BF /* AddParticipantInput.m in Sources */,
+				AAC6C533808260DC23B2E91F /* CreateSendEmailInput.m in Sources */,
+				AA25A4FCDA03428319340932 /* CreateListParticipantInput.m in Sources */,
+				AA792E0D295058992B084986 /* CreateViewParticipantInput.m in Sources */,
+				AA5BB93D538FCE4F6A11A1F5 /* CreateMakeCallInput.m in Sources */,
+				AAE38B821DF77B43CBA63D38 /* CreateTokenInput.m in Sources */,
+				AA40A24D2940B3CE9E7F0A4C /* CreateSendShortCodeInput.m in Sources */,
+				AA06B9F265D92B8CE84142B2 /* CreateViewAccountInput.m in Sources */,
+				AA275A193C20455E24D02530 /* CreateListInboundShortCodeInput.m in Sources */,
+				AA624F8C141EDAA131B54FF7 /* CreateListShortCodeInput.m in Sources */,
+				AA8EBD5C94E9D17DEC8FD436 /* CreateListTemplatesInput.m in Sources */,
+				AAC14F58A4F554433AC7215D /* CreateViewShortCodeInput.m in Sources */,
+				AA4B67CE513012BE8BB91F38 /* CreateViewSMSInput.m in Sources */,
+				AA5ABCE33CE6845207FAF624 /* CreateListCallsInput.m in Sources */,
+				AA6140C1C4EA5A3C04AAB8B1 /* CreateSendRinglessVMInput.m in Sources */,
+				AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */,
+				AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */,
+				AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */,
+				AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */,
+				AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */,
+				AAF4CE54726A439B256AAF58 /* NumberTypeEnumHelper.m in Sources */,
+				AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */,
+				AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */,
+				AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */,
+				AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */,
+				AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */,
+				AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */,
+				AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */,
+				AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */,
+				AA19FD45FA709EFA78988E66 /* ConferenceController.m in Sources */,
+				AA1ABE4537E611FD7556989B /* EmailController.m in Sources */,
+				AA105BBB3843A54BB7A155AC /* NumberVerificationController.m in Sources */,
+				AA9F5B4B193CAB558C4EC30F /* CarrierController.m in Sources */,
+				AA45A1451C52D002FC5B8FEA /* CallController.m in Sources */,
+				AA2F8283C28DE5A55FCD9D7A /* WebRTCController.m in Sources */,
+				AACD93C5737404A7EB61E1BA /* SubAccountController.m in Sources */,
+				AAD12DE65BE2213FC11B6C0E /* AddressController.m in Sources */,
+				AA86CBBF76237B9FDB448955 /* PhoneNumberController.m in Sources */,
+				AA70C85AB2B055B28FA877D4 /* RecordingController.m in Sources */,
+				AA53BF2F574700239CEE91C0 /* SMSController.m in Sources */,
+				AAAE3427710161D8CF0778FE /* TranscriptionController.m in Sources */,
+				AA179B90D667B8EF94E6C0DD /* UsageController.m in Sources */,
+				AA2FB7E2A2747B93BB99E302 /* AccountController.m in Sources */,
+                 AA751EC3D8D1E1F02BC41D50 /* HttpBodyRequest.m in Sources */,
+                 AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */,
+                 AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */,
+                 AADE4B211C778689E60B2D58 /* UnirestClient.m in Sources */,
+                 AA19178EE1D12F29A92B4F31 /* HttpResponse.m in Sources */,
+                 AA9B8CABE328A66C2F9C101E /* HttpStringResponse.m in Sources */,
+                 AA1A7ED3A893EFFCD4DDD12E /* HttpRequest.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+        AA64289540A97CFC567617A7 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = AA28707B011D40DC5FCAABD7 /* Message360 */;
+            targetProxy = AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */;
+        };
+        AAE710D60AF9FA72F99ADA05 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = AA28707B011D40DC5FCAABD7 /* Message360 */;
+            targetProxy = AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */;
+        };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+
+        AA424ECAE71F053C848A780A /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Debug;
+        };
+        AACEA0FFC440D77D3D224A1D /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Release;
+        };
+        AAD9F6B0D7ABAB09FF5859BE /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = NO;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+            };
+            name = Debug;
+        };
+        AA05B27B66E0C62144B5D5CC /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = YES;
+                ENABLE_NS_ASSERTIONS = NO;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                SDKROOT = iphoneos;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        AA297EF2FAFA3A4730512B1A /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                DEAD_CODE_STRIPPING = NO;
+                DSTROOT = /tmp/Message360.dst;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "Message360/Message360-Prefix.pch";
+                OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+                SKIP_INSTALL = YES;
+                STRIP_INSTALLED_PRODUCT = NO;
+                STRIP_STYLE = "non-global";
+            };
+            name = Debug;
+        };
+        AA898798C13E56D992CE646A /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                COPY_PHASE_STRIP = NO;
+                DEAD_CODE_STRIPPING = NO;
+                DSTROOT = /tmp/Message360.dst;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "Message360/Message360-Prefix.pch";
+                OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+                SKIP_INSTALL = YES;
+                STRIP_INSTALLED_PRODUCT = NO;
+                STRIP_STYLE = "non-global";
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        AA6B40043ACECBE13E13500A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA424ECAE71F053C848A780A /* Debug */,
+                AACEA0FFC440D77D3D224A1D /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+        };
+        AA3D5C81EBA16BCDBA6678EE /* Build configuration list for PBXProject "Message360" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AAD9F6B0D7ABAB09FF5859BE /* Debug */,
+                AA05B27B66E0C62144B5D5CC /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        AA82ACA3B71B3D8AC53528FE /* Build configuration list for PBXNativeTarget "Message360" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA297EF2FAFA3A4730512B1A /* Debug */,
+                AA898798C13E56D992CE646A /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+    };
+    rootObject = AAD86B0C4A909E780CCAF44D /* Project object */;
+}
