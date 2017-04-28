@@ -34,6 +34,11 @@
 @synthesize message;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * CC Email address
 */
 @synthesize cc;
@@ -47,11 +52,6 @@
 * File to be attached.File must be less than 7MB.
 */
 @synthesize attachment;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

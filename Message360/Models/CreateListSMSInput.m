@@ -9,6 +9,11 @@
 @implementation CreateListSMSInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @synthesize page;
@@ -32,11 +37,6 @@
 * Only list SMS messages sent in the specified date range
 */
 @synthesize datesent;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

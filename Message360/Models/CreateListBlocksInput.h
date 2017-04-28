@@ -20,6 +20,11 @@
 @interface CreateListBlocksInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Where to start in the output list
 */
 @property NSString* offset;
@@ -28,11 +33,6 @@
 * Maximum number of records to return
 */
 @property NSString* limit;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

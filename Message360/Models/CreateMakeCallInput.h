@@ -49,6 +49,11 @@
 @property NSString* url;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Specifies the HTTP method used to request the required URL once call connects.
 */
 @property enum HttpActionEnum method;
@@ -127,11 +132,6 @@
 * How Message360 should handle the receiving numbers voicemail machine
 */
 @property enum IfMachineEnum ifMachine;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

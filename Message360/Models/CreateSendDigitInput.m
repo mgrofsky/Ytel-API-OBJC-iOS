@@ -19,14 +19,14 @@
 @synthesize playDtmf;
 
 /**
-* The leg of the call DTMF digits should be sent to
-*/
-@synthesize playDtmfDirection;
-
-/**
 * Response type format xml or json
 */
 @synthesize responseType;
+
+/**
+* The leg of the call DTMF digits should be sent to
+*/
+@synthesize playDtmfDirection;
 
 -(id)init
 {

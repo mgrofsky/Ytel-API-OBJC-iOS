@@ -19,21 +19,21 @@
 @synthesize areaCode;
 
 /**
-* Page Size
-*/
-@synthesize pageSize;
-
-/**
 * Response type format xml or json
 */
 @synthesize responseType;
+
+/**
+* Page Size
+*/
+@synthesize pageSize;
 
 -(id)init
 {
     if (self = [super init])
     {
-        self.pageSize = 10;
         self.responseType = @"json";
+        self.pageSize = 10;
     }
     return self;
 }

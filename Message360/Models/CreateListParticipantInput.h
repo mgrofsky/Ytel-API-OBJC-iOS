@@ -25,6 +25,11 @@
 @property NSString* conferenceSid;
 
 /**
+* Response format, xml or json
+*/
+@property NSString* responseType;
+
+/**
 * page number
 */
 @property NSNumber* page;
@@ -43,11 +48,6 @@
 * TODO: Write general description for this field
 */
 @property NSNumber* deaf;
-
-/**
-* Response format, xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

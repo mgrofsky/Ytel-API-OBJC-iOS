@@ -20,6 +20,11 @@
 @interface CreateListSMSInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @property NSNumber* page;
@@ -43,11 +48,6 @@
 * Only list SMS messages sent in the specified date range
 */
 @property NSString* datesent;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

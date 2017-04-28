@@ -109,10 +109,8 @@
 /**
 * Send an SMS from a message360 ShortCode
 * @param  CreateSendShortCodeInput     Object with all parameters
-* @param    fieldParameters    Additional optional form parameters are supported by this endpoint
 * @return	Returns the void response from the API call */
 - (void) createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCodeInput*) input
-                fieldParameters:(NSDictionary*) fieldParameters
                 completionBlock:(CompletedPostSendShortCode) onCompleted
 {
     //validating required parameters
@@ -126,11 +124,14 @@
     else if (input.to == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'to' in the input object cannot be nil."
                                                     andContext:nil];
-    else if (input.method == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'method' in the input object cannot be nil."
-                                                    andContext:nil];
     else if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.data == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'data' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.method == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'method' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
         onCompleted(NO,nil,nil,_validationError);
@@ -159,12 +160,10 @@
         @"tocountrycode": input.tocountrycode,
         @"to": input.to,
         @"templateid": input.templateid,
+        @"data": input.data,
         @"Method": input.method,
         @"MessageStatusCallback": (nil != input.messageStatusCallback) ? input.messageStatusCallback : [NSNull null]
     }];
-
-    //optional form parameters
-    [_parameters addEntriesFromDictionary: fieldParameters];
 
     //convert to form parameters
     _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
@@ -443,11 +442,11 @@
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.type == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'type' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
+    if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.type == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'type' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
         onCompleted(NO,nil,nil,_validationError);

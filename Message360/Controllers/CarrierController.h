@@ -11,21 +11,10 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateCarrierLookupInput.h"
 #import "CreateCarrierLookupListInput.h"
+#import "CreateCarrierLookupInput.h"
 
 @interface CarrierController : BaseController
-
-/**
-* Completion block definition for asynchronous call to Carrier Lookup */
-typedef void (^CompletedPostCarrierLookup)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Get the Carrier Lookup
-* @param  CreateCarrierLookupInput     Object with all parameters
-*/
-- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
-                completionBlock:(CompletedPostCarrierLookup) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Carrier Lookup List */
@@ -37,5 +26,16 @@ typedef void (^CompletedPostCarrierLookupList)(BOOL success, HttpContext* contex
 */
 - (void) createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
                 completionBlock:(CompletedPostCarrierLookupList) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Carrier Lookup */
+typedef void (^CompletedPostCarrierLookup)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Get the Carrier Lookup
+* @param  CreateCarrierLookupInput     Object with all parameters
+*/
+- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
+                completionBlock:(CompletedPostCarrierLookup) onCompleted;
 
 @end

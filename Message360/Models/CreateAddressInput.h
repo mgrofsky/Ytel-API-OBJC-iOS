@@ -50,6 +50,11 @@
 @property NSString* zip;
 
 /**
+* Response type either json or xml
+*/
+@property NSString* responseType;
+
+/**
 * Description of addresses.
 */
 @property NSString* description;
@@ -63,11 +68,6 @@
 * Phone number of user.
 */
 @property NSString* phone;
-
-/**
-* Response type either json or xml
-*/
-@property NSString* responseType;
 
 @end
 #endif

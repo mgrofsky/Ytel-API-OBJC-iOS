@@ -20,6 +20,11 @@
 @interface CreateListInboundSMSInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @property NSNumber* page;
@@ -38,11 +43,6 @@
 * To Number to get Inbound SMS
 */
 @property NSString* to;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

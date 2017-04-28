@@ -38,10 +38,8 @@ typedef void (^CompletedPostSendShortCode)(BOOL success, HttpContext* context, N
 /**
 * Send an SMS from a message360 ShortCode
 * @param  CreateSendShortCodeInput     Object with all parameters
-* @param    fieldParameters    Additional optional form parameters are supported by this endpoint
 */
 - (void) createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCodeInput*) input
-                fieldParameters:(NSDictionary*) fieldParameters
                 completionBlock:(CompletedPostSendShortCode) onCompleted;
 
 /**

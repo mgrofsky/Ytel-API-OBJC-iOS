@@ -39,6 +39,11 @@
 @synthesize zip;
 
 /**
+* Response type either json or xml
+*/
+@synthesize responseType;
+
+/**
 * Description of addresses.
 */
 @synthesize description;
@@ -52,11 +57,6 @@
 * Phone number of user.
 */
 @synthesize phone;
-
-/**
-* Response type either json or xml
-*/
-@synthesize responseType;
 
 -(id)init
 {

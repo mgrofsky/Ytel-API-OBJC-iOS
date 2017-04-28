@@ -11,9 +11,6 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "HttpActionEnum.h"
-#import "HttpActionEnumHelper.h"
-#import "UpdatePhoneNumberInput.h"
 #import "CreateBuyNumberInput.h"
 #import "CreateReleaseNumberInput.h"
 #import "CreateViewNumberDetailsInput.h"
@@ -21,19 +18,11 @@
 #import "NumberTypeEnumHelper.h"
 #import "CreateListNumberInput.h"
 #import "CreateAvailablePhoneNumberInput.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
+#import "UpdatePhoneNumberInput.h"
 
 @interface PhoneNumberController : BaseController
-
-/**
-* Completion block definition for asynchronous call to Update Phone Number */
-typedef void (^CompletedPostUpdatePhoneNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Update Phone Number Details
-* @param  UpdatePhoneNumberInput     Object with all parameters
-*/
-- (void) updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInput*) input
-                completionBlock:(CompletedPostUpdatePhoneNumber) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Buy Number */
@@ -89,5 +78,16 @@ typedef void (^CompletedPostAvailablePhoneNumber)(BOOL success, HttpContext* con
 */
 - (void) createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(CreateAvailablePhoneNumberInput*) input
                 completionBlock:(CompletedPostAvailablePhoneNumber) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Update Phone Number */
+typedef void (^CompletedPostUpdatePhoneNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Update Phone Number Details
+* @param  UpdatePhoneNumberInput     Object with all parameters
+*/
+- (void) updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInput*) input
+                completionBlock:(CompletedPostUpdatePhoneNumber) onCompleted;
 
 @end

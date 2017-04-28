@@ -11,7 +11,6 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateDeleteInvalidInput.h"
 #import "CreateListBlocksInput.h"
 #import "CreateListSpamInput.h"
 #import "CreateListBouncesInput.h"
@@ -25,19 +24,9 @@
 #import "SendEmailAsEnum.h"
 #import "SendEmailAsEnumHelper.h"
 #import "CreateSendEmailInput.h"
+#import "CreateDeleteInvalidInput.h"
 
 @interface EmailController : BaseController
-
-/**
-* Completion block definition for asynchronous call to Delete Invalid */
-typedef void (^CompletedPostDeleteInvalid)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* This endpoint allows you to delete entries in the Invalid Emails list.
-* @param  CreateDeleteInvalidInput     Object with all parameters
-*/
-- (void) createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInvalidInput*) input
-                completionBlock:(CompletedPostDeleteInvalid) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to List Blocks */
@@ -159,5 +148,16 @@ typedef void (^CompletedPostSendEmail)(BOOL success, HttpContext* context, NSStr
 */
 - (void) createSendEmailAsyncWithCreateSendEmailInput:(CreateSendEmailInput*) input
                 completionBlock:(CompletedPostSendEmail) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Delete Invalid */
+typedef void (^CompletedPostDeleteInvalid)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* This endpoint allows you to delete entries in the Invalid Emails list.
+* @param  CreateDeleteInvalidInput     Object with all parameters
+*/
+- (void) createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInvalidInput*) input
+                completionBlock:(CompletedPostDeleteInvalid) onCompleted;
 
 @end

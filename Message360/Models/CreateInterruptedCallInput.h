@@ -29,6 +29,11 @@
 @property NSString* callSid;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * URL the in-progress call will be redirected to
 */
 @property NSString* url;
@@ -42,11 +47,6 @@
 * Status to set the in-progress call to
 */
 @property enum InterruptedCallStatusEnum status;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

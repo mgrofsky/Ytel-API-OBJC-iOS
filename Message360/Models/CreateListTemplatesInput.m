@@ -9,6 +9,11 @@
 @implementation CreateListTemplatesInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * The type (category) of template Valid values: marketing, authorization
 */
 @synthesize type;
@@ -23,18 +28,13 @@
 */
 @synthesize pagesize;
 
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
-
 -(id)init
 {
     if (self = [super init])
     {
+        self.responseType = @"json";
         self.type = @"authorization";
         self.pagesize = 10;
-        self.responseType = @"json";
     }
     return self;
 }

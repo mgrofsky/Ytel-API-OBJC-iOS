@@ -24,6 +24,11 @@
 @synthesize tocountrycode;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * TODO: Write general description for this method
 */
 @synthesize muted;
@@ -32,11 +37,6 @@
 * TODO: Write general description for this method
 */
 @synthesize deaf;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

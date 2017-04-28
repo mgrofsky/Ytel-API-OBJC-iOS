@@ -9,6 +9,11 @@
 @implementation CreateListTranscriptionInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * TODO: Write general description for this method
 */
 @synthesize page;
@@ -27,11 +32,6 @@
 * TODO: Write general description for this method
 */
 @synthesize dateTranscribed;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

@@ -22,6 +22,11 @@
 @interface CreateListConferenceInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @property NSNumber* page;
@@ -50,11 +55,6 @@
 * TODO: Write general description for this field
 */
 @property NSString* dateUpdated;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

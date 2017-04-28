@@ -19,6 +19,11 @@
 @synthesize participantSid;
 
 /**
+* Response Type either json or xml
+*/
+@synthesize responseType;
+
+/**
 * TODO: Write general description for this method
 */
 @synthesize muted;
@@ -27,11 +32,6 @@
 * TODO: Write general description for this method
 */
 @synthesize deaf;
-
-/**
-* Response Type either json or xml
-*/
-@synthesize responseType;
 
 -(id)init
 {

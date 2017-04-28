@@ -27,6 +27,11 @@
 @property NSString* phoneNumber;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * TODO: Write general description for this field
 */
 @property NSString* friendlyName;
@@ -90,11 +95,6 @@
 * URL requested if the sms URL is not available
 */
 @property enum HttpActionEnum smsFallbackMethod;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

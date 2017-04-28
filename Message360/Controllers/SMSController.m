@@ -9,11 +9,11 @@
 @implementation SMSController
 
 /**
-* List All Inbound SMS
-* @param  CreateListInboundSMSInput     Object with all parameters
+* List All SMS
+* @param  CreateListSMSInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInboundSMSInput*) input
-                completionBlock:(CompletedPostListInboundSMS) onCompleted
+- (void) createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
+                completionBlock:(CompletedPostListSMS) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -28,7 +28,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/sms/getInboundsms.{ResponseType}"];
+    [_queryBuilder appendString: @"/sms/listsms.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -46,7 +46,8 @@
         @"page": (nil != input.page) ? input.page : [NSNull null],
         @"pagesize": (nil != input.pagesize) ? input.pagesize : [NSNull null],
         @"from": (nil != input.from) ? input.from : [NSNull null],
-        @"to": (nil != input.to) ? input.to : [NSNull null]
+        @"to": (nil != input.to) ? input.to : [NSNull null],
+        @"datesent": (nil != input.datesent) ? input.datesent : [NSNull null]
     }];
 
     //convert to form parameters
@@ -110,11 +111,11 @@
 }
 
 /**
-* List All SMS
-* @param  CreateListSMSInput     Object with all parameters
+* List All Inbound SMS
+* @param  CreateListInboundSMSInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
-                completionBlock:(CompletedPostListSMS) onCompleted
+- (void) createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInboundSMSInput*) input
+                completionBlock:(CompletedPostListInboundSMS) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -129,7 +130,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/sms/listsms.{ResponseType}"];
+    [_queryBuilder appendString: @"/sms/getInboundsms.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -147,8 +148,7 @@
         @"page": (nil != input.page) ? input.page : [NSNull null],
         @"pagesize": (nil != input.pagesize) ? input.pagesize : [NSNull null],
         @"from": (nil != input.from) ? input.from : [NSNull null],
-        @"to": (nil != input.to) ? input.to : [NSNull null],
-        @"datesent": (nil != input.datesent) ? input.datesent : [NSNull null]
+        @"to": (nil != input.to) ? input.to : [NSNull null]
     }];
 
     //convert to form parameters

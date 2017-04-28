@@ -32,14 +32,14 @@
 @property NSString* playDtmf;
 
 /**
-* The leg of the call DTMF digits should be sent to
-*/
-@property enum DirectionEnum playDtmfDirection;
-
-/**
 * Response type format xml or json
 */
 @property NSString* responseType;
+
+/**
+* The leg of the call DTMF digits should be sent to
+*/
+@property enum DirectionEnum playDtmfDirection;
 
 @end
 #endif

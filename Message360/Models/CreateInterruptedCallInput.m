@@ -14,6 +14,11 @@
 @synthesize callSid;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * URL the in-progress call will be redirected to
 */
 @synthesize url;
@@ -27,11 +32,6 @@
 * Status to set the in-progress call to
 */
 @synthesize status;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

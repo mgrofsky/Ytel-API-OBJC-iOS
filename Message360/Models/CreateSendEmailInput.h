@@ -47,6 +47,11 @@
 @property NSString* message;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * CC Email address
 */
 @property NSString* cc;
@@ -60,11 +65,6 @@
 * File to be attached.File must be less than 7MB.
 */
 @property NSString* attachment;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

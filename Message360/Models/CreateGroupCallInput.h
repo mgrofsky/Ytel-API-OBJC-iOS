@@ -49,6 +49,11 @@
 /**
 * TODO: Write general description for this field
 */
+@property NSString* responseType;
+
+/**
+* TODO: Write general description for this field
+*/
 @property enum HttpActionEnum method;
 
 /**
@@ -120,11 +125,6 @@
 * TODO: Write general description for this field
 */
 @property NSString* transcribeCallBackUrl;
-
-/**
-* TODO: Write general description for this field
-*/
-@property NSString* responseType;
 
 @end
 #endif

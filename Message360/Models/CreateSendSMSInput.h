@@ -47,6 +47,11 @@
 @property NSString* body;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Specifies the HTTP method used to request the required URL once SMS sent.
 */
 @property enum HttpActionEnum method;
@@ -55,11 +60,6 @@
 * URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished.
 */
 @property NSString* messagestatuscallback;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

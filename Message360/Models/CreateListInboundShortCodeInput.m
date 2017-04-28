@@ -9,6 +9,11 @@
 @implementation CreateListInboundShortCodeInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @synthesize page;
@@ -33,17 +38,12 @@
 */
 @synthesize dateReceived;
 
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
-
 -(id)init
 {
     if (self = [super init])
     {
-        self.pagesize = 10;
         self.responseType = @"json";
+        self.pagesize = 10;
     }
     return self;
 }
