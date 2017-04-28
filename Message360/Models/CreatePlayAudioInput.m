@@ -19,6 +19,11 @@
 @synthesize audioUrl;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Time limit in seconds for audio play back
 */
 @synthesize length;
@@ -37,11 +42,6 @@
 * If false, all other audio will be muted
 */
 @synthesize mix;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

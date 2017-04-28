@@ -14,6 +14,11 @@
 @synthesize conferenceSid;
 
 /**
+* Response format, xml or json
+*/
+@synthesize responseType;
+
+/**
 * page number
 */
 @synthesize page;
@@ -32,11 +37,6 @@
 * TODO: Write general description for this method
 */
 @synthesize deaf;
-
-/**
-* Response format, xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

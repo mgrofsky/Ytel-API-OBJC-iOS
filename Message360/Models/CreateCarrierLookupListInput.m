@@ -9,6 +9,11 @@
 @implementation CreateCarrierLookupListInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Page Number
 */
 @synthesize page;
@@ -17,11 +22,6 @@
 * Page Size
 */
 @synthesize pagesize;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

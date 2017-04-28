@@ -11,7 +11,6 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateViewCallInput.h"
 #import "HttpActionEnum.h"
 #import "HttpActionEnumHelper.h"
 #import "CreateGroupCallInput.h"
@@ -33,19 +32,9 @@
 #import "CreateMakeCallInput.h"
 #import "CreateListCallsInput.h"
 #import "CreateSendRinglessVMInput.h"
+#import "CreateViewCallInput.h"
 
 @interface CallController : BaseController
-
-/**
-* Completion block definition for asynchronous call to View Call */
-typedef void (^CompletedPostViewCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* View Call Response
-* @param  CreateViewCallInput     Object with all parameters
-*/
-- (void) createViewCallAsyncWithCreateViewCallInput:(CreateViewCallInput*) input
-                completionBlock:(CompletedPostViewCall) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Group Call */
@@ -145,5 +134,16 @@ typedef void (^CompletedPostSendRinglessVM)(BOOL success, HttpContext* context, 
 */
 - (void) createSendRinglessVMAsyncWithCreateSendRinglessVMInput:(CreateSendRinglessVMInput*) input
                 completionBlock:(CompletedPostSendRinglessVM) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to View Call */
+typedef void (^CompletedPostViewCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* View Call Response
+* @param  CreateViewCallInput     Object with all parameters
+*/
+- (void) createViewCallAsyncWithCreateViewCallInput:(CreateViewCallInput*) input
+                completionBlock:(CompletedPostViewCall) onCompleted;
 
 @end

@@ -34,6 +34,11 @@
 @synthesize url;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Specifies the HTTP method used to request the required URL once call connects.
 */
 @synthesize method;
@@ -112,11 +117,6 @@
 * How Message360 should handle the receiving numbers voicemail machine
 */
 @synthesize ifMachine;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

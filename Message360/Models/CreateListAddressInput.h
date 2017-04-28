@@ -20,6 +20,11 @@
 @interface CreateListAddressInput : NSObject
 
 /**
+* Response Type either json or xml
+*/
+@property NSString* responseType;
+
+/**
 * Return requested # of items starting the value, default=0, must be an integer
 */
 @property int page;
@@ -38,11 +43,6 @@
 * date created address.
 */
 @property NSString* dateCreated;
-
-/**
-* Response Type either json or xml
-*/
-@property NSString* responseType;
 
 @end
 #endif

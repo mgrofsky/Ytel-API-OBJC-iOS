@@ -20,6 +20,11 @@
 @interface CreateCarrierLookupListInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Page Number
 */
 @property NSNumber* page;
@@ -28,11 +33,6 @@
 * Page Size
 */
 @property NSNumber* pagesize;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

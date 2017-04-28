@@ -32,6 +32,11 @@
 @property NSString* audioUrl;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Time limit in seconds for audio play back
 */
 @property NSNumber* length;
@@ -50,11 +55,6 @@
 * If false, all other audio will be muted
 */
 @property NSNumber* mix;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

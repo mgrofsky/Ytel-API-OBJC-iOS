@@ -36,6 +36,11 @@
 /**
 * TODO: Write general description for this method
 */
+@synthesize responseType;
+
+/**
+* TODO: Write general description for this method
+*/
 @synthesize method;
 
 /**
@@ -107,11 +112,6 @@
 * TODO: Write general description for this method
 */
 @synthesize transcribeCallBackUrl;
-
-/**
-* TODO: Write general description for this method
-*/
-@synthesize responseType;
 
 -(id)init
 {

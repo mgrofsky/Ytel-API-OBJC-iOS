@@ -9,6 +9,11 @@
 @implementation CreateListAddressInput
 
 /**
+* Response Type either json or xml
+*/
+@synthesize responseType;
+
+/**
 * Return requested # of items starting the value, default=0, must be an integer
 */
 @synthesize page;
@@ -28,18 +33,13 @@
 */
 @synthesize dateCreated;
 
-/**
-* Response Type either json or xml
-*/
-@synthesize responseType;
-
 -(id)init
 {
     if (self = [super init])
     {
+        self.responseType = @"json";
         self.page = 1;
         self.pageSize = 10;
-        self.responseType = @"json";
     }
     return self;
 }

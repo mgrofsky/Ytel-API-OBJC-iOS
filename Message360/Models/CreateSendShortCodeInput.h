@@ -40,6 +40,16 @@
 @property NSUUID* templateid;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
+* format of your data, example: {companyname}:test,{otpcode}:1234
+*/
+@property NSString* data;
+
+/**
 * Specifies the HTTP method used to request the required URL once the Short Code message is sent.
 */
 @property NSString* method;
@@ -48,11 +58,6 @@
 * URL that can be requested to receive notification when Short Code message was sent.
 */
 @property NSString* messageStatusCallback;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

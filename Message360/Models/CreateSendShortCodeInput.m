@@ -29,6 +29,16 @@
 @synthesize templateid;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
+* format of your data, example: {companyname}:test,{otpcode}:1234
+*/
+@synthesize data;
+
+/**
 * Specifies the HTTP method used to request the required URL once the Short Code message is sent.
 */
 @synthesize method;
@@ -38,18 +48,13 @@
 */
 @synthesize messageStatusCallback;
 
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
-
 -(id)init
 {
     if (self = [super init])
     {
         self.tocountrycode = @"1";
-        self.method = @"GET";
         self.responseType = @"json";
+        self.method = @"GET";
     }
     return self;
 }

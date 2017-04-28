@@ -34,6 +34,11 @@
 @property BOOL record;
 
 /**
+* Response format, xml or json
+*/
+@property NSString* responseType;
+
+/**
 * The leg of the call to record
 */
 @property enum DirectionEnum direction;
@@ -52,11 +57,6 @@
 * Format of the recording file. Can be .mp3 or .wav
 */
 @property enum AudioFormatEnum fileformat;
-
-/**
-* Response format, xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

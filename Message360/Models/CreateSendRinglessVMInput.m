@@ -39,6 +39,11 @@
 @synthesize method;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * URL to post the status of the Ringless request
 */
 @synthesize statusCallBackUrl;
@@ -47,11 +52,6 @@
 * POST or GET
 */
 @synthesize statsCallBackMethod;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

@@ -19,6 +19,11 @@
 @synthesize record;
 
 /**
+* Response format, xml or json
+*/
+@synthesize responseType;
+
+/**
 * The leg of the call to record
 */
 @synthesize direction;
@@ -37,11 +42,6 @@
 * Format of the recording file. Can be .mp3 or .wav
 */
 @synthesize fileformat;
-
-/**
-* Response format, xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

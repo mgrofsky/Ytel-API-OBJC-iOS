@@ -9,18 +9,15 @@
 @implementation CarrierController
 
 /**
-* Get the Carrier Lookup
-* @param  CreateCarrierLookupInput     Object with all parameters
+* Get the All Purchase Number's Carrier lookup
+* @param  CreateCarrierLookupListInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
-                completionBlock:(CompletedPostCarrierLookup) onCompleted
+- (void) createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
+                completionBlock:(CompletedPostCarrierLookupList) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.phonenumber == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'phonenumber' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
+    if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
@@ -31,7 +28,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/carrier/lookup.{ResponseType}"];
+    [_queryBuilder appendString: @"/carrier/lookuplist.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -46,7 +43,8 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"phonenumber": input.phonenumber
+        @"page": (nil != input.page) ? input.page : [NSNull null],
+        @"pagesize": (nil != input.pagesize) ? input.pagesize : [NSNull null]
     }];
 
     //convert to form parameters
@@ -110,15 +108,18 @@
 }
 
 /**
-* Get the All Purchase Number's Carrier lookup
-* @param  CreateCarrierLookupListInput     Object with all parameters
+* Get the Carrier Lookup
+* @param  CreateCarrierLookupInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
-                completionBlock:(CompletedPostCarrierLookupList) onCompleted
+- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
+                completionBlock:(CompletedPostCarrierLookup) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.responseType == nil)
+    if (input.phonenumber == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'phonenumber' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
@@ -129,7 +130,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/carrier/lookuplist.{ResponseType}"];
+    [_queryBuilder appendString: @"/carrier/lookup.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -144,8 +145,7 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"page": (nil != input.page) ? input.page : [NSNull null],
-        @"pagesize": (nil != input.pagesize) ? input.pagesize : [NSNull null]
+        @"phonenumber": input.phonenumber
     }];
 
     //convert to form parameters

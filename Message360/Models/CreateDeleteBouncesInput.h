@@ -20,14 +20,14 @@
 @interface CreateDeleteBouncesInput : NSObject
 
 /**
-* The email address to remove from the bounce list
-*/
-@property NSString* email;
-
-/**
 * Response type format xml or json
 */
 @property NSString* responseType;
+
+/**
+* The email address to remove from the bounce list
+*/
+@property NSString* email;
 
 @end
 #endif

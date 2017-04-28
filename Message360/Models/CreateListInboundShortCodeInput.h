@@ -20,6 +20,11 @@
 @interface CreateListInboundShortCodeInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @property NSNumber* page;
@@ -43,11 +48,6 @@
 * Only list messages sent with the specified date
 */
 @property NSString* dateReceived;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

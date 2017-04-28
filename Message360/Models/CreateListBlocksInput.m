@@ -9,6 +9,11 @@
 @implementation CreateListBlocksInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Where to start in the output list
 */
 @synthesize offset;
@@ -17,11 +22,6 @@
 * Maximum number of records to return
 */
 @synthesize limit;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

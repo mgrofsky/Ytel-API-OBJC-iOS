@@ -20,6 +20,11 @@
 @interface CreateListTemplatesInput : NSObject
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * The type (category) of template Valid values: marketing, authorization
 */
 @property NSString* type;
@@ -33,11 +38,6 @@
 * The count of objects to return per page.
 */
 @property int pagesize;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

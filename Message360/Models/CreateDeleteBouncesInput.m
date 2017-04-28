@@ -9,14 +9,14 @@
 @implementation CreateDeleteBouncesInput
 
 /**
-* The email address to remove from the bounce list
-*/
-@synthesize email;
-
-/**
 * Response type format xml or json
 */
 @synthesize responseType;
+
+/**
+* The email address to remove from the bounce list
+*/
+@synthesize email;
 
 -(id)init
 {

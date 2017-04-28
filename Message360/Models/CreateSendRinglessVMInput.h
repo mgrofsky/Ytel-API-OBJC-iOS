@@ -50,6 +50,11 @@
 @property NSString* method;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * URL to post the status of the Ringless request
 */
 @property NSString* statusCallBackUrl;
@@ -58,11 +63,6 @@
 * POST or GET
 */
 @property NSString* statsCallBackMethod;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

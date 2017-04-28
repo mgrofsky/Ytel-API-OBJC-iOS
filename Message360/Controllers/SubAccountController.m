@@ -129,6 +129,9 @@
     if (input.subAccountSID == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'subAccountSID' in the input object cannot be nil."
                                                     andContext:nil];
+    else if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
     if(_validationError != nil)
         onCompleted(NO,nil,nil,_validationError);
 
@@ -141,7 +144,7 @@
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": (nil != input.responseType) ? input.responseType : [NSNull null]
+                    @"ResponseType": input.responseType
                 }];
 
     //validate and preprocess url

@@ -20,14 +20,14 @@
 @interface CreateDeleteSpamInput : NSObject
 
 /**
-* Email address
-*/
-@property NSString* email;
-
-/**
 * Response type format xml or json
 */
 @property NSString* responseType;
+
+/**
+* Email address
+*/
+@property NSString* email;
 
 @end
 #endif

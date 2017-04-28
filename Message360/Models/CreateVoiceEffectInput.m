@@ -14,6 +14,11 @@
 @synthesize callSid;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * TODO: Write general description for this method
 */
 @synthesize audioDirection;
@@ -42,11 +47,6 @@
 * value greater than 0
 */
 @synthesize tempo;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

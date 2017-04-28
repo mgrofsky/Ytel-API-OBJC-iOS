@@ -35,6 +35,11 @@
 @property int tocountrycode;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * TODO: Write general description for this field
 */
 @property NSNumber* muted;
@@ -43,11 +48,6 @@
 * TODO: Write general description for this field
 */
 @property NSNumber* deaf;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

@@ -27,6 +27,11 @@
 @property NSString* callSid;
 
 /**
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
 * TODO: Write general description for this field
 */
 @property enum AudioDirectionEnum audioDirection;
@@ -55,11 +60,6 @@
 * value greater than 0
 */
 @property NSNumber* tempo;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
 
 @end
 #endif

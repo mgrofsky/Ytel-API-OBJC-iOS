@@ -32,14 +32,14 @@
 @property NSString* areaCode;
 
 /**
-* Page Size
-*/
-@property int pageSize;
-
-/**
 * Response type format xml or json
 */
 @property NSString* responseType;
+
+/**
+* Page Size
+*/
+@property int pageSize;
 
 @end
 #endif

@@ -9,14 +9,14 @@
 @implementation CreateDeleteSpamInput
 
 /**
-* Email address
-*/
-@synthesize email;
-
-/**
 * Response type format xml or json
 */
 @synthesize responseType;
+
+/**
+* Email address
+*/
+@synthesize email;
 
 -(id)init
 {

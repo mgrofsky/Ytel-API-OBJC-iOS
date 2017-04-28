@@ -83,16 +83,16 @@ Configuration_BasicAuthPassword = "Configuration_BasicAuthPassword"; // The pass
 
 * [ShortCodeController](#short_code_controller)
 * [ConferenceController](#conference_controller)
-* [EmailController](#email_controller)
 * [NumberVerificationController](#number_verification_controller)
-* [CarrierController](#carrier_controller)
-* [CallController](#call_controller)
 * [WebRTCController](#web_rtc_controller)
+* [CallController](#call_controller)
 * [SubAccountController](#sub_account_controller)
 * [AddressController](#address_controller)
-* [PhoneNumberController](#phone_number_controller)
-* [RecordingController](#recording_controller)
+* [EmailController](#email_controller)
 * [SMSController](#sms_controller)
+* [RecordingController](#recording_controller)
+* [CarrierController](#carrier_controller)
+* [PhoneNumberController](#phone_number_controller)
 * [TranscriptionController](#transcription_controller)
 * [UsageController](#usage_controller)
 * [AccountController](#account_controller)
@@ -146,8 +146,7 @@ function createViewTemplateAsyncWithCreateViewTemplateInput:(CreateViewTemplateI
 
 ```objc
 function createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCodeInput*) input
-                fieldParameters:(NSDictionary*) fieldParameters
-                completionBlock:(CompletedPostSendShortCode) onCompleted(input formParameters : formParams)
+                completionBlock:(CompletedPostSendShortCode) onCompleted(input)
 ```
 
 #### Parameters
@@ -158,10 +157,10 @@ function createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCo
 | tocountrycode |  ``` Required ```  ``` DefaultValue ```  | The country code for sending this message |
 | to |  ``` Required ```  | A valid 10-digit number that should receive the message+ |
 | templateid |  ``` Required ```  | The unique identifier for the template used for the message |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| data |  ``` Required ```  | format of your data, example: {companyname}:test,{otpcode}:1234 |
 | method |  ``` Required ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent. |
 | messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| fieldParameters | ``` Optional ``` | Additional optional form parameters are supported by this method |
 
 
 
@@ -176,14 +175,12 @@ function createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCo
     input.tocountrycode = @"tocountrycode";
     input.to = @"to";
     input.templateid = 123456789;
+    input.responseType = @"ResponseType";
+    input.data = @"data";
     input.method = @"Method";
     input.messageStatusCallback = @"MessageStatusCallback";
-    input.responseType = @"ResponseType";
-    // Dictionary for optional form parameters
-    NSMutableDictionary* formParamsMutable = [[NSMutableDictionary alloc] init];
-    NSDictionary *formParams= [formParamsMutable copy];
 
-    [self.shortCode createSendShortCodeAsyncWithCreateSendShortCodeInput: input formParameters : formParams  completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.shortCode createSendShortCodeAsyncWithCreateSendShortCodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -203,12 +200,12 @@ function createListInboundShortCodeAsyncWithCreateListInboundShortCodeInput:(Cre
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | From Number to Inbound ShortCode |
 | shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
 | dateReceived |  ``` Optional ```  | Only list messages sent with the specified date |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -219,12 +216,12 @@ function createListInboundShortCodeAsyncWithCreateListInboundShortCodeInput:(Cre
 ```objc
     // Parameters for the API call
     CreateListInboundShortCodeInput *input = [[CreateListInboundShortCodeInput alloc]init];
-    input.page = 95;
-    input.pagesize = 95;
+    input.responseType = @"ResponseType";
+    input.page = 96;
+    input.pagesize = 96;
     input.from = @"from";
     input.shortcode = @"Shortcode";
     input.dateReceived = @"DateReceived";
-    input.responseType = @"ResponseType";
 
     [self.shortCode createListInboundShortCodeAsyncWithCreateListInboundShortCodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -246,12 +243,12 @@ function createListShortCodeAsyncWithCreateListShortCodeInput:(CreateListShortCo
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | Messages sent from this number |
 | to |  ``` Optional ```  | Messages sent to this number |
 | datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -262,12 +259,12 @@ function createListShortCodeAsyncWithCreateListShortCodeInput:(CreateListShortCo
 ```objc
     // Parameters for the API call
     CreateListShortCodeInput *input = [[CreateListShortCodeInput alloc]init];
-    input.page = 95;
-    input.pagesize = 95;
+    input.responseType = @"ResponseType";
+    input.page = 96;
+    input.pagesize = 96;
     input.from = @"from";
     input.to = @"to";
     input.datesent = @"datesent";
-    input.responseType = @"ResponseType";
 
     [self.shortCode createListShortCodeAsyncWithCreateListShortCodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -289,10 +286,10 @@ function createListTemplatesAsyncWithCreateListTemplatesInput:(CreateListTemplat
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | type |  ``` Required ```  ``` DefaultValue ```  | The type (category) of template Valid values: marketing, authorization |
 | page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
 | pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -303,10 +300,10 @@ function createListTemplatesAsyncWithCreateListTemplatesInput:(CreateListTemplat
 ```objc
     // Parameters for the API call
     CreateListTemplatesInput *input = [[CreateListTemplatesInput alloc]init];
-    input.type = @"type";
-    input.page = 95;
-    input.pagesize = 95;
     input.responseType = @"ResponseType";
+    input.type = @"type";
+    input.page = 96;
+    input.pagesize = 96;
 
     [self.shortCode createListTemplatesAsyncWithCreateListTemplatesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -374,9 +371,9 @@ function createDeafMuteParticipantAsyncWithCreateDeafMuteParticipantInput:(Creat
 |-----------|------|-------------|
 | conferenceSid |  ``` Required ```  | TODO: Add a parameter description |
 | participantSid |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 
@@ -389,9 +386,9 @@ function createDeafMuteParticipantAsyncWithCreateDeafMuteParticipantInput:(Creat
     CreateDeafMuteParticipantInput *input = [[CreateDeafMuteParticipantInput alloc]init];
     input.conferenceSid = @"conferenceSid";
     input.participantSid = @"ParticipantSid";
+    input.responseType = @"ResponseType";
     input.muted = false;
     input.deaf = false;
-    input.responseType = @"ResponseType";
 
     [self.conference createDeafMuteParticipantAsyncWithCreateDeafMuteParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -413,13 +410,13 @@ function createListConferenceAsyncWithCreateListConferenceInput:(CreateListConfe
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
 | friendlyName |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
 | status |  ``` Optional ```  | TODO: Add a parameter description |
 | dateCreated |  ``` Optional ```  | TODO: Add a parameter description |
 | dateUpdated |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -430,13 +427,13 @@ function createListConferenceAsyncWithCreateListConferenceInput:(CreateListConfe
 ```objc
     // Parameters for the API call
     CreateListConferenceInput *input = [[CreateListConferenceInput alloc]init];
-    input.page = 95;
-    input.pageSize = 95;
+    input.responseType = @"ResponseType";
+    input.page = 96;
+    input.pageSize = 96;
     input.friendlyName = @"FriendlyName";
     input.status = CANCELED;
     input.dateCreated = @"DateCreated";
     input.dateUpdated = @"DateUpdated";
-    input.responseType = @"ResponseType";
 
     [self.conference createListConferenceAsyncWithCreateListConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -496,9 +493,9 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
 | conferencesid |  ``` Required ```  | Unique Conference Sid |
 | participantnumber |  ``` Required ```  | Particiant Number |
 | tocountrycode |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -511,10 +508,10 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
     AddParticipantInput *input = [[AddParticipantInput alloc]init];
     input.conferencesid = @"conferencesid";
     input.participantnumber = @"participantnumber";
-    input.tocountrycode = 187;
+    input.tocountrycode = 188;
+    input.responseType = @"ResponseType";
     input.muted = true;
     input.deaf = true;
-    input.responseType = @"ResponseType";
 
     [self.conference addParticipantAsyncWithAddParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -537,11 +534,11 @@ function createListParticipantAsyncWithCreateListParticipantInput:(CreateListPar
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | conferenceSid |  ``` Required ```  | unique conference sid |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
 | page |  ``` Optional ```  | page number |
 | pagesize |  ``` Optional ```  | TODO: Add a parameter description |
 | muted |  ``` Optional ```  | TODO: Add a parameter description |
 | deaf |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
 
 
 
@@ -553,11 +550,11 @@ function createListParticipantAsyncWithCreateListParticipantInput:(CreateListPar
     // Parameters for the API call
     CreateListParticipantInput *input = [[CreateListParticipantInput alloc]init];
     input.conferenceSid = @"ConferenceSid";
-    input.page = 187;
-    input.pagesize = 187;
+    input.responseType = @"ResponseType";
+    input.page = 188;
+    input.pagesize = 188;
     input.muted = true;
     input.deaf = true;
-    input.responseType = @"ResponseType";
 
     [self.conference createListParticipantAsyncWithCreateListParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -604,29 +601,30 @@ function createViewParticipantAsyncWithCreateViewParticipantInput:(CreateViewPar
 
 [Back to List of Controllers](#list_of_controllers)
 
-### <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EmailController") EmailController
+### <a name="number_verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NumberVerificationController") NumberVerificationController
 
 #### Get singleton instance
 ```objc
-Email* email = [[Email alloc]init] ;
+NumberVerification* numberVerification = [[NumberVerification alloc]init] ;
 ```
 
-#### <a name="create_delete_invalid_async_with_create_delete_invalid_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.createDeleteInvalidAsyncWithCreateDeleteInvalidInput") createDeleteInvalidAsyncWithCreateDeleteInvalidInput
+#### <a name="create_verify_number_async_with_create_verify_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".NumberVerificationController.createVerifyNumberAsyncWithCreateVerifyNumberInput") createVerifyNumberAsyncWithCreateVerifyNumberInput
 
-> This endpoint allows you to delete entries in the Invalid Emails list.
+> Number Verification
 
 
 ```objc
-function createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInvalidInput*) input
-                completionBlock:(CompletedPostDeleteInvalid) onCompleted(input)
+function createVerifyNumberAsyncWithCreateVerifyNumberInput:(CreateVerifyNumberInput*) input
+                completionBlock:(CompletedPostVerifyNumber) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| phonenumber |  ``` Required ```  | TODO: Add a parameter description |
+| type |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 
@@ -636,15 +634,937 @@ function createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInval
 
 ```objc
     // Parameters for the API call
-    CreateDeleteInvalidInput *input = [[CreateDeleteInvalidInput alloc]init];
-    input.email = @"email";
+    CreateVerifyNumberInput *input = [[CreateVerifyNumberInput alloc]init];
+    input.phonenumber = @"phonenumber";
+    input.type = @"type";
     input.responseType = @"ResponseType";
 
-    [self.email createDeleteInvalidAsyncWithCreateDeleteInvalidInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.numberVerification createVerifyNumberAsyncWithCreateVerifyNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
 
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="web_rtc_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebRTCController") WebRTCController
+
+#### Get singleton instance
+```objc
+WebRTC* webRTC = [[WebRTC alloc]init] ;
+```
+
+#### <a name="create_check_funds_async_with_create_check_funds_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createCheckFundsAsyncWithCreateCheckFundsInput") createCheckFundsAsyncWithCreateCheckFundsInput
+
+> TODO: Add a method description
+
+
+```objc
+function createCheckFundsAsyncWithCreateCheckFundsInput:(CreateCheckFundsInput*) input
+                completionBlock:(CompletedPostCheckFunds) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSid |  ``` Required ```  | Your message360 Account SID |
+| authToken |  ``` Required ```  | Your message360 Token |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateCheckFundsInput *input = [[CreateCheckFundsInput alloc]init];
+    input.accountSid = @"account_sid";
+    input.authToken = @"auth_token";
+
+    [self.webRTC createCheckFundsAsyncWithCreateCheckFundsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_token_async_with_create_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createTokenAsyncWithCreateTokenInput") createTokenAsyncWithCreateTokenInput
+
+> message360 webrtc
+
+
+```objc
+function createTokenAsyncWithCreateTokenInput:(CreateTokenInput*) input
+                completionBlock:(CompletedPostCreateToken) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSid |  ``` Required ```  | Your message360 Account SID |
+| authToken |  ``` Required ```  | Your message360 Token |
+| username |  ``` Required ```  | WebRTC username authentication |
+| password |  ``` Required ```  | WebRTC password authentication |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateTokenInput *input = [[CreateTokenInput alloc]init];
+    input.accountSid = @"account_sid";
+    input.authToken = @"auth_token";
+    input.username = @"username";
+    input.password = @"password";
+
+    [self.webRTC createTokenAsyncWithCreateTokenInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CallController") CallController
+
+#### Get singleton instance
+```objc
+Call* call = [[Call alloc]init] ;
+```
+
+#### <a name="create_group_call_async_with_create_group_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createGroupCallAsyncWithCreateGroupCallInput") createGroupCallAsyncWithCreateGroupCallInput
+
+> Group Call
+
+
+```objc
+function createGroupCallAsyncWithCreateGroupCallInput:(CreateGroupCallInput*) input
+                completionBlock:(CompletedPostGroupCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| from |  ``` Required ```  | TODO: Add a parameter description |
+| toCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| to |  ``` Required ```  | TODO: Add a parameter description |
+| url |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
+| method |  ``` Optional ```  | TODO: Add a parameter description |
+| statusCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| statusCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| fallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| fallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| heartBeatUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| heartBeatMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| timeout |  ``` Optional ```  | TODO: Add a parameter description |
+| playDtmf |  ``` Optional ```  | TODO: Add a parameter description |
+| hideCallerId |  ``` Optional ```  | TODO: Add a parameter description |
+| record |  ``` Optional ```  | TODO: Add a parameter description |
+| recordCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+| recordCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| transcribe |  ``` Optional ```  | TODO: Add a parameter description |
+| transcribeCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateGroupCallInput *input = [[CreateGroupCallInput alloc]init];
+    input.fromCountryCode = @"FromCountryCode";
+    input.from = @"From";
+    input.toCountryCode = @"ToCountryCode";
+    input.to = @"To";
+    input.url = @"Url";
+    input.responseType = @"ResponseType";
+    input.method = GET;
+    input.statusCallBackUrl = @"StatusCallBackUrl";
+    input.statusCallBackMethod = GET;
+    input.fallBackUrl = @"FallBackUrl";
+    input.fallBackMethod = GET;
+    input.heartBeatUrl = @"HeartBeatUrl";
+    input.heartBeatMethod = GET;
+    input.timeout = 188;
+    input.playDtmf = @"PlayDtmf";
+    input.hideCallerId = @"HideCallerId";
+    input.record = true;
+    input.recordCallBackUrl = @"RecordCallBackUrl";
+    input.recordCallBackMethod = GET;
+    input.transcribe = true;
+    input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
+
+    [self.call createGroupCallAsyncWithCreateGroupCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_voice_effect_async_with_create_voice_effect_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createVoiceEffectAsyncWithCreateVoiceEffectInput") createVoiceEffectAsyncWithCreateVoiceEffectInput
+
+> Voice Effect
+
+
+```objc
+function createVoiceEffectAsyncWithCreateVoiceEffectInput:(CreateVoiceEffectInput*) input
+                completionBlock:(CompletedPostVoiceEffect) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| audioDirection |  ``` Optional ```  | TODO: Add a parameter description |
+| pitchSemiTones |  ``` Optional ```  | value between -14 and 14 |
+| pitchOctaves |  ``` Optional ```  | value between -1 and 1 |
+| pitch |  ``` Optional ```  | value greater than 0 |
+| rate |  ``` Optional ```  | value greater than 0 |
+| tempo |  ``` Optional ```  | value greater than 0 |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateVoiceEffectInput *input = [[CreateVoiceEffectInput alloc]init];
+    input.callSid = @"CallSid";
+    input.responseType = @"ResponseType";
+    input.audioDirection = IN;
+    input.pitchSemiTones = 188.06897584259;
+    input.pitchOctaves = 188.06897584259;
+    input.pitch = 188.06897584259;
+    input.rate = 188.06897584259;
+    input.tempo = 188.06897584259;
+
+    [self.call createVoiceEffectAsyncWithCreateVoiceEffectInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_record_call_async_with_create_record_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createRecordCallAsyncWithCreateRecordCallInput") createRecordCallAsyncWithCreateRecordCallInput
+
+> Record a Call
+
+
+```objc
+function createRecordCallAsyncWithCreateRecordCallInput:(CreateRecordCallInput*) input
+                completionBlock:(CompletedPostRecordCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
+| direction |  ``` Optional ```  | The leg of the call to record |
+| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
+| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
+| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateRecordCallInput *input = [[CreateRecordCallInput alloc]init];
+    input.callSid = @"CallSid";
+    input.record = true;
+    input.responseType = @"ResponseType";
+    input.direction = IN;
+    input.timeLimit = 188;
+    input.callBackUrl = @"CallBackUrl";
+    input.fileformat = MP3;
+
+    [self.call createRecordCallAsyncWithCreateRecordCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_play_audio_async_with_create_play_audio_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createPlayAudioAsyncWithCreatePlayAudioInput") createPlayAudioAsyncWithCreatePlayAudioInput
+
+> Play Dtmf and send the Digit
+
+
+```objc
+function createPlayAudioAsyncWithCreatePlayAudioInput:(CreatePlayAudioInput*) input
+                completionBlock:(CompletedPostPlayAudio) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| length |  ``` Optional ```  | Time limit in seconds for audio play back |
+| direction |  ``` Optional ```  | The leg of the call audio will be played to |
+| loop |  ``` Optional ```  | Repeat audio playback indefinitely |
+| mix |  ``` Optional ```  | If false, all other audio will be muted |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreatePlayAudioInput *input = [[CreatePlayAudioInput alloc]init];
+    input.callSid = @"CallSid";
+    input.audioUrl = @"AudioUrl";
+    input.responseType = @"ResponseType";
+    input.length = 188;
+    input.direction = IN;
+    input.loop = true;
+    input.mix = true;
+
+    [self.call createPlayAudioAsyncWithCreatePlayAudioInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_interrupted_call_async_with_create_interrupted_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createInterruptedCallAsyncWithCreateInterruptedCallInput") createInterruptedCallAsyncWithCreateInterruptedCallInput
+
+> Interrupt the Call by Call Sid
+
+
+```objc
+function createInterruptedCallAsyncWithCreateInterruptedCallInput:(CreateInterruptedCallInput*) input
+                completionBlock:(CompletedPostInterruptedCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | Call SId |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
+| method |  ``` Optional ```  | The method used to request the above Url parameter |
+| status |  ``` Optional ```  | Status to set the in-progress call to |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateInterruptedCallInput *input = [[CreateInterruptedCallInput alloc]init];
+    input.callSid = @"CallSid";
+    input.responseType = @"ResponseType";
+    input.url = @"Url";
+    input.method = GET;
+    input.status = CANCELED;
+
+    [self.call createInterruptedCallAsyncWithCreateInterruptedCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_send_digit_async_with_create_send_digit_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createSendDigitAsyncWithCreateSendDigitInput") createSendDigitAsyncWithCreateSendDigitInput
+
+> Play Dtmf and send the Digit
+
+
+```objc
+function createSendDigitAsyncWithCreateSendDigitInput:(CreateSendDigitInput*) input
+                completionBlock:(CompletedPostSendDigit) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier of each call resource |
+| playDtmf |  ``` Required ```  | DTMF digits to play to the call. 0-9, #, *, W, or w |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| playDtmfDirection |  ``` Optional ```  | The leg of the call DTMF digits should be sent to |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateSendDigitInput *input = [[CreateSendDigitInput alloc]init];
+    input.callSid = @"CallSid";
+    input.playDtmf = @"PlayDtmf";
+    input.responseType = @"ResponseType";
+    input.playDtmfDirection = IN;
+
+    [self.call createSendDigitAsyncWithCreateSendDigitInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_make_call_async_with_create_make_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createMakeCallAsyncWithCreateMakeCallInput") createMakeCallAsyncWithCreateMakeCallInput
+
+> You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
+
+
+```objc
+function createMakeCallAsyncWithCreateMakeCallInput:(CreateMakeCallInput*) input
+                completionBlock:(CompletedPostMakeCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  | from country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| toCountryCode |  ``` Required ```  | To cuntry code number |
+| to |  ``` Required ```  | To number |
+| url |  ``` Required ```  | URL requested once the call connects |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
+| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
+| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
+| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
+| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
+| record |  ``` Optional ```  | Specifies if the call should be recorded |
+| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
+| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
+| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
+| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
+| ifMachine |  ``` Optional ```  | How Message360 should handle the receiving numbers voicemail machine |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateMakeCallInput *input = [[CreateMakeCallInput alloc]init];
+    input.fromCountryCode = @"FromCountryCode";
+    input.from = @"From";
+    input.toCountryCode = @"ToCountryCode";
+    input.to = @"To";
+    input.url = @"Url";
+    input.responseType = @"ResponseType";
+    input.method = GET;
+    input.statusCallBackUrl = @"StatusCallBackUrl";
+    input.statusCallBackMethod = GET;
+    input.fallBackUrl = @"FallBackUrl";
+    input.fallBackMethod = GET;
+    input.heartBeatUrl = @"HeartBeatUrl";
+    input.heartBeatMethod = true;
+    input.timeout = 188;
+    input.playDtmf = @"PlayDtmf";
+    input.hideCallerId = true;
+    input.record = true;
+    input.recordCallBackUrl = @"RecordCallBackUrl";
+    input.recordCallBackMethod = GET;
+    input.transcribe = true;
+    input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
+    input.ifMachine = CONTINUE;
+
+    [self.call createMakeCallAsyncWithCreateMakeCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_list_calls_async_with_create_list_calls_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createListCallsAsyncWithCreateListCallsInput") createListCallsAsyncWithCreateListCallsInput
+
+> A list of calls associated with your Message360 account
+
+
+```objc
+function createListCallsAsyncWithCreateListCallsInput:(CreateListCallsInput*) input
+                completionBlock:(CompletedPostListCalls) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Only list calls to this number |
+| from |  ``` Optional ```  | Only list calls from this number |
+| dateCreated |  ``` Optional ```  | Only list calls starting within the specified date range |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateListCallsInput *input = [[CreateListCallsInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 188;
+    input.pageSize = 188;
+    input.to = @"To";
+    input.from = @"From";
+    input.dateCreated = @"DateCreated";
+
+    [self.call createListCallsAsyncWithCreateListCallsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_send_ringless_vm_async_with_create_send_ringless_vm_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createSendRinglessVMAsyncWithCreateSendRinglessVMInput") createSendRinglessVMAsyncWithCreateSendRinglessVMInput
+
+> API endpoint used to send a Ringless Voicemail
+
+
+```objc
+function createSendRinglessVMAsyncWithCreateSendRinglessVMInput:(CreateSendRinglessVMInput*) input
+                completionBlock:(CompletedPostSendRinglessVM) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromCountryCode |  ``` Required ```  | From country code |
+| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| toCountryCode |  ``` Required ```  | To country code |
+| to |  ``` Required ```  | To number |
+| voiceMailURL |  ``` Required ```  | URL to an audio file |
+| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
+| statsCallBackMethod |  ``` Optional ```  | POST or GET |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateSendRinglessVMInput *input = [[CreateSendRinglessVMInput alloc]init];
+    input.fromCountryCode = @"FromCountryCode";
+    input.from = @"From";
+    input.toCountryCode = @"ToCountryCode";
+    input.to = @"To";
+    input.voiceMailURL = @"VoiceMailURL";
+    input.method = @"Method";
+    input.responseType = @"ResponseType";
+    input.statusCallBackUrl = @"StatusCallBackUrl";
+    input.statsCallBackMethod = @"StatsCallBackMethod";
+
+    [self.call createSendRinglessVMAsyncWithCreateSendRinglessVMInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_view_call_async_with_create_view_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createViewCallAsyncWithCreateViewCallInput") createViewCallAsyncWithCreateViewCallInput
+
+> View Call Response
+
+
+```objc
+function createViewCallAsyncWithCreateViewCallInput:(CreateViewCallInput*) input
+                completionBlock:(CompletedPostViewCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callsid |  ``` Required ```  | Call Sid id for particular Call |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateViewCallInput *input = [[CreateViewCallInput alloc]init];
+    input.callsid = @"callsid";
+    input.responseType = @"ResponseType";
+
+    [self.call createViewCallAsyncWithCreateViewCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SubAccountController") SubAccountController
+
+#### Get singleton instance
+```objc
+SubAccount* subAccount = [[SubAccount alloc]init] ;
+```
+
+#### <a name="create_sub_account_async_with_create_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createSubAccountAsyncWithCreateSubAccountInput") createSubAccountAsyncWithCreateSubAccountInput
+
+> Create a sub user account under the parent account
+
+
+```objc
+function createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*) input
+                completionBlock:(CompletedPostCreateSubAccount) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| firstName |  ``` Required ```  | Sub account user first name |
+| lastName |  ``` Required ```  | sub account user last name |
+| email |  ``` Required ```  | Sub account email address |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateSubAccountInput *input = [[CreateSubAccountInput alloc]init];
+    input.firstName = @"FirstName";
+    input.lastName = @"LastName";
+    input.email = @"Email";
+    input.responseType = @"ResponseType";
+
+    [self.subAccount createSubAccountAsyncWithCreateSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_suspend_sub_account_async_with_create_suspend_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput") createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput
+
+> Suspend or unsuspend
+
+
+```objc
+function createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput:(CreateSuspendSubAccountInput*) input
+                completionBlock:(CompletedPostSuspendSubAccount) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| subAccountSID |  ``` Required ```  | The SubaccountSid to be activated or suspended |
+| activate |  ``` Required ```  ``` DefaultValue ```  | 0 to suspend or 1 to activate |
+| responseType |  ``` Required ```  | TODO: Add a parameter description |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateSuspendSubAccountInput *input = [[CreateSuspendSubAccountInput alloc]init];
+    input.subAccountSID = @"SubAccountSID";
+    input.activate = DEACTIVATE;
+    input.responseType = @"ResponseType";
+
+    [self.subAccount createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_delete_sub_account_async_with_create_delete_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput") createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput
+
+> Delete sub account or merge numbers into parent
+
+
+```objc
+function createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput:(CreateDeleteSubAccountInput*) input
+                completionBlock:(CompletedPostDeleteSubAccount) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| subAccountSID |  ``` Required ```  | The SubaccountSid to be deleted |
+| mergeNumber |  ``` Required ```  ``` DefaultValue ```  | 0 to delete or 1 to merge numbers to parent account. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateDeleteSubAccountInput *input = [[CreateDeleteSubAccountInput alloc]init];
+    input.subAccountSID = @"SubAccountSID";
+    input.mergeNumber = DELETE;
+    input.responseType = @"ResponseType";
+
+    [self.subAccount createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="address_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AddressController") AddressController
+
+#### Get singleton instance
+```objc
+Address* address = [[Address alloc]init] ;
+```
+
+#### <a name="create_address_async_with_create_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createAddressAsyncWithCreateAddressInput") createAddressAsyncWithCreateAddressInput
+
+> To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+
+
+```objc
+function createAddressAsyncWithCreateAddressInput:(CreateAddressInput*) input
+                completionBlock:(CompletedPostCreateAddress) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| name |  ``` Required ```  | Name of user |
+| address |  ``` Required ```  | Address of user. |
+| country |  ``` Required ```  | Must be a 2 letter country short-name code (ISO 3166) |
+| state |  ``` Required ```  | Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters. |
+| city |  ``` Required ```  | City Name. |
+| zip |  ``` Required ```  | Zip code of city. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
+| description |  ``` Optional ```  | Description of addresses. |
+| email |  ``` Optional ```  | Email Id of user. |
+| phone |  ``` Optional ```  | Phone number of user. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateAddressInput *input = [[CreateAddressInput alloc]init];
+    input.name = @"Name";
+    input.address = @"Address";
+    input.country = @"Country";
+    input.state = @"State";
+    input.city = @"City";
+    input.zip = @"Zip";
+    input.responseType = @"ResponseType";
+    input.description = @"Description";
+    input.email = @"email";
+    input.phone = @"Phone";
+
+    [self.address createAddressAsyncWithCreateAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_delete_address_async_with_create_delete_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createDeleteAddressAsyncWithCreateDeleteAddressInput") createDeleteAddressAsyncWithCreateDeleteAddressInput
+
+> To delete Address to your address book
+
+
+```objc
+function createDeleteAddressAsyncWithCreateDeleteAddressInput:(CreateDeleteAddressInput*) input
+                completionBlock:(CompletedPostDeleteAddress) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| addressSID |  ``` Required ```  | The identifier of the address to be deleted. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateDeleteAddressInput *input = [[CreateDeleteAddressInput alloc]init];
+    input.addressSID = @"AddressSID";
+    input.responseType = @"ResponseType";
+
+    [self.address createDeleteAddressAsyncWithCreateDeleteAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_verify_address_async_with_create_verify_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createVerifyAddressAsyncWithCreateVerifyAddressInput") createVerifyAddressAsyncWithCreateVerifyAddressInput
+
+> Validates an address given.
+
+
+```objc
+function createVerifyAddressAsyncWithCreateVerifyAddressInput:(CreateVerifyAddressInput*) input
+                completionBlock:(CompletedPostVerifyAddress) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| addressSID |  ``` Required ```  | The identifier of the address to be verified. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateVerifyAddressInput *input = [[CreateVerifyAddressInput alloc]init];
+    input.addressSID = @"AddressSID";
+    input.responseType = @"ResponseType";
+
+    [self.address createVerifyAddressAsyncWithCreateVerifyAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_list_address_async_with_create_list_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createListAddressAsyncWithCreateListAddressInput") createListAddressAsyncWithCreateListAddressInput
+
+> List All Address 
+
+
+```objc
+function createListAddressAsyncWithCreateListAddressInput:(CreateListAddressInput*) input
+                completionBlock:(CompletedPostListAddress) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| page |  ``` Required ```  ``` DefaultValue ```  | Return requested # of items starting the value, default=0, must be an integer |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
+| addressSID |  ``` Optional ```  | addresses Sid |
+| dateCreated |  ``` Optional ```  | date created address. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateListAddressInput *input = [[CreateListAddressInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 188;
+    input.pageSize = 188;
+    input.addressSID = @"AddressSID";
+    input.dateCreated = @"DateCreated";
+
+    [self.address createListAddressAsyncWithCreateListAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_view_address_async_with_create_view_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createViewAddressAsyncWithCreateViewAddressInput") createViewAddressAsyncWithCreateViewAddressInput
+
+> View Address Specific address Book by providing the address id
+
+
+```objc
+function createViewAddressAsyncWithCreateViewAddressInput:(CreateViewAddressInput*) input
+                completionBlock:(CompletedPostViewAddress) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| addressSID |  ``` Required ```  | The identifier of the address to be retrieved. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateViewAddressInput *input = [[CreateViewAddressInput alloc]init];
+    input.addressSID = @"AddressSID";
+    input.responseType = @"ResponseType";
+
+    [self.address createViewAddressAsyncWithCreateViewAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EmailController") EmailController
+
+#### Get singleton instance
+```objc
+Email* email = [[Email alloc]init] ;
+```
 
 #### <a name="create_list_blocks_async_with_create_list_blocks_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.createListBlocksAsyncWithCreateListBlocksInput") createListBlocksAsyncWithCreateListBlocksInput
 
@@ -660,9 +1580,9 @@ function createListBlocksAsyncWithCreateListBlocksInput:(CreateListBlocksInput*)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | offset |  ``` Optional ```  | Where to start in the output list |
 | limit |  ``` Optional ```  | Maximum number of records to return |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -673,9 +1593,9 @@ function createListBlocksAsyncWithCreateListBlocksInput:(CreateListBlocksInput*)
 ```objc
     // Parameters for the API call
     CreateListBlocksInput *input = [[CreateListBlocksInput alloc]init];
+    input.responseType = @"ResponseType";
     input.offset = @"offset";
     input.limit = @"limit";
-    input.responseType = @"ResponseType";
 
     [self.email createListBlocksAsyncWithCreateListBlocksInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -771,8 +1691,8 @@ function createDeleteBouncesAsyncWithCreateDeleteBouncesInput:(CreateDeleteBounc
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | The email address to remove from the bounce list |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| email |  ``` Required ```  | The email address to remove from the bounce list |
 
 
 
@@ -783,8 +1703,8 @@ function createDeleteBouncesAsyncWithCreateDeleteBouncesInput:(CreateDeleteBounc
 ```objc
     // Parameters for the API call
     CreateDeleteBouncesInput *input = [[CreateDeleteBouncesInput alloc]init];
-    input.email = @"email";
     input.responseType = @"ResponseType";
+    input.email = @"email";
 
     [self.email createDeleteBouncesAsyncWithCreateDeleteBouncesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -985,8 +1905,8 @@ function createDeleteSpamAsyncWithCreateDeleteSpamInput:(CreateDeleteSpamInput*)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | Email address |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| email |  ``` Required ```  | Email address |
 
 
 
@@ -997,8 +1917,8 @@ function createDeleteSpamAsyncWithCreateDeleteSpamInput:(CreateDeleteSpamInput*)
 ```objc
     // Parameters for the API call
     CreateDeleteSpamInput *input = [[CreateDeleteSpamInput alloc]init];
-    input.email = @"email";
     input.responseType = @"ResponseType";
+    input.email = @"email";
 
     [self.email createDeleteSpamAsyncWithCreateDeleteSpamInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1025,10 +1945,10 @@ function createSendEmailAsyncWithCreateSendEmailInput:(CreateSendEmailInput*) in
 | type |  ``` Required ```  ``` DefaultValue ```  | email format type, html or text |
 | subject |  ``` Required ```  | Email subject |
 | message |  ``` Required ```  | The body of the email message |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | cc |  ``` Optional ```  | CC Email address |
 | bcc |  ``` Optional ```  | BCC Email address |
 | attachment |  ``` Optional ```  | File to be attached.File must be less than 7MB. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -1044,10 +1964,10 @@ function createSendEmailAsyncWithCreateSendEmailInput:(CreateSendEmailInput*) in
     input.type = HTML;
     input.subject = @"subject";
     input.message = @"message";
+    input.responseType = @"ResponseType";
     input.cc = @"cc";
     input.bcc = @"bcc";
     input.attachment = @"attachment";
-    input.responseType = @"ResponseType";
 
     [self.email createSendEmailAsyncWithCreateSendEmailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1055,32 +1975,22 @@ function createSendEmailAsyncWithCreateSendEmailInput:(CreateSendEmailInput*) in
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+#### <a name="create_delete_invalid_async_with_create_delete_invalid_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.createDeleteInvalidAsyncWithCreateDeleteInvalidInput") createDeleteInvalidAsyncWithCreateDeleteInvalidInput
 
-### <a name="number_verification_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NumberVerificationController") NumberVerificationController
-
-#### Get singleton instance
-```objc
-NumberVerification* numberVerification = [[NumberVerification alloc]init] ;
-```
-
-#### <a name="create_verify_number_async_with_create_verify_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".NumberVerificationController.createVerifyNumberAsyncWithCreateVerifyNumberInput") createVerifyNumberAsyncWithCreateVerifyNumberInput
-
-> Number Verification
+> This endpoint allows you to delete entries in the Invalid Emails list.
 
 
 ```objc
-function createVerifyNumberAsyncWithCreateVerifyNumberInput:(CreateVerifyNumberInput*) input
-                completionBlock:(CompletedPostVerifyNumber) onCompleted(input)
+function createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInvalidInput*) input
+                completionBlock:(CompletedPostDeleteInvalid) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phonenumber |  ``` Required ```  | TODO: Add a parameter description |
-| type |  ``` Required ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| email |  ``` Required ```  | TODO: Add a parameter description |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
 
 
 
@@ -1090,12 +2000,306 @@ function createVerifyNumberAsyncWithCreateVerifyNumberInput:(CreateVerifyNumberI
 
 ```objc
     // Parameters for the API call
-    CreateVerifyNumberInput *input = [[CreateVerifyNumberInput alloc]init];
-    input.phonenumber = @"phonenumber";
-    input.type = @"type";
+    CreateDeleteInvalidInput *input = [[CreateDeleteInvalidInput alloc]init];
+    input.email = @"email";
     input.responseType = @"ResponseType";
 
-    [self.numberVerification createVerifyNumberAsyncWithCreateVerifyNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.email createDeleteInvalidAsyncWithCreateDeleteInvalidInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SMSController") SMSController
+
+#### Get singleton instance
+```objc
+SMS* sMS = [[SMS alloc]init] ;
+```
+
+#### <a name="create_list_sms_async_with_create_list_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createListSMSAsyncWithCreateListSMSInput") createListSMSAsyncWithCreateListSMSInput
+
+> List All SMS
+
+
+```objc
+function createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
+                completionBlock:(CompletedPostListSMS) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Messages sent from this number |
+| to |  ``` Optional ```  | Messages sent to this number |
+| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateListSMSInput *input = [[CreateListSMSInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pagesize = 24;
+    input.from = @"from";
+    input.to = @"to";
+    input.datesent = @"datesent";
+
+    [self.sMS createListSMSAsyncWithCreateListSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_list_inbound_sms_async_with_create_list_inbound_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createListInboundSMSAsyncWithCreateListInboundSMSInput") createListInboundSMSAsyncWithCreateListInboundSMSInput
+
+> List All Inbound SMS
+
+
+```objc
+function createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInboundSMSInput*) input
+                completionBlock:(CompletedPostListInboundSMS) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | From Number to Inbound SMS |
+| to |  ``` Optional ```  | To Number to get Inbound SMS |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateListInboundSMSInput *input = [[CreateListInboundSMSInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pagesize = @"pagesize";
+    input.from = @"from";
+    input.to = @"to";
+
+    [self.sMS createListInboundSMSAsyncWithCreateListInboundSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_send_sms_async_with_create_send_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createSendSMSAsyncWithCreateSendSMSInput") createSendSMSAsyncWithCreateSendSMSInput
+
+> Send an SMS from a message360 number
+
+
+```objc
+function createSendSMSAsyncWithCreateSendSMSInput:(CreateSendSMSInput*) input
+                completionBlock:(CompletedPostSendSMS) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
+| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
+| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
+| to |  ``` Required ```  | Number to send the SMS to |
+| body |  ``` Required ```  | Text Message To Send |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateSendSMSInput *input = [[CreateSendSMSInput alloc]init];
+    input.fromcountrycode = 24;
+    input.from = @"from";
+    input.tocountrycode = 24;
+    input.to = @"to";
+    input.body = @"body";
+    input.responseType = @"ResponseType";
+    input.method = GET;
+    input.messagestatuscallback = @"messagestatuscallback";
+
+    [self.sMS createSendSMSAsyncWithCreateSendSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_view_sms_async_with_create_view_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createViewSMSAsyncWithCreateViewSMSInput") createViewSMSAsyncWithCreateViewSMSInput
+
+> View a Particular SMS
+
+
+```objc
+function createViewSMSAsyncWithCreateViewSMSInput:(CreateViewSMSInput*) input
+                completionBlock:(CompletedPostViewSMS) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messagesid |  ``` Required ```  | Message sid |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateViewSMSInput *input = [[CreateViewSMSInput alloc]init];
+    input.messagesid = @"messagesid";
+    input.responseType = @"ResponseType";
+
+    [self.sMS createViewSMSAsyncWithCreateViewSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+### <a name="recording_controller"></a>![Class: ](https://apidocs.io/img/class.png ".RecordingController") RecordingController
+
+#### Get singleton instance
+```objc
+Recording* recording = [[Recording alloc]init] ;
+```
+
+#### <a name="create_list_recording_async_with_create_list_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createListRecordingAsyncWithCreateListRecordingInput") createListRecordingAsyncWithCreateListRecordingInput
+
+> List out Recordings
+
+
+```objc
+function createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordingInput*) input
+                completionBlock:(CompletedPostListRecording) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
+| pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
+| dateCreated |  ``` Optional ```  | TODO: Add a parameter description |
+| callSid |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateListRecordingInput *input = [[CreateListRecordingInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pageSize = 24;
+    input.dateCreated = @"DateCreated";
+    input.callSid = @"CallSid";
+
+    [self.recording createListRecordingAsyncWithCreateListRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_delete_recording_async_with_create_delete_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createDeleteRecordingAsyncWithCreateDeleteRecordingInput") createDeleteRecordingAsyncWithCreateDeleteRecordingInput
+
+> Delete Recording Record
+
+
+```objc
+function createDeleteRecordingAsyncWithCreateDeleteRecordingInput:(CreateDeleteRecordingInput*) input
+                completionBlock:(CompletedPostDeleteRecording) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| recordingSid |  ``` Required ```  | Unique Recording Sid to be delete |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateDeleteRecordingInput *input = [[CreateDeleteRecordingInput alloc]init];
+    input.recordingSid = @"RecordingSid";
+    input.responseType = @"ResponseType";
+
+    [self.recording createDeleteRecordingAsyncWithCreateDeleteRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+#### <a name="create_view_recording_async_with_create_view_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createViewRecordingAsyncWithCreateViewRecordingInput") createViewRecordingAsyncWithCreateViewRecordingInput
+
+> View a specific Recording
+
+
+```objc
+function createViewRecordingAsyncWithCreateViewRecordingInput:(CreateViewRecordingInput*) input
+                completionBlock:(CompletedPostViewRecording) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| recordingSid |  ``` Required ```  | Search Recording sid |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateViewRecordingInput *input = [[CreateViewRecordingInput alloc]init];
+    input.recordingSid = @"RecordingSid";
+    input.responseType = @"ResponseType";
+
+    [self.recording createViewRecordingAsyncWithCreateViewRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1109,6 +2313,43 @@ function createVerifyNumberAsyncWithCreateVerifyNumberInput:(CreateVerifyNumberI
 ```objc
 Carrier* carrier = [[Carrier alloc]init] ;
 ```
+
+#### <a name="create_carrier_lookup_list_async_with_create_carrier_lookup_list_input"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.createCarrierLookupListAsyncWithCreateCarrierLookupListInput") createCarrierLookupListAsyncWithCreateCarrierLookupListInput
+
+> Get the All Purchase Number's Carrier lookup
+
+
+```objc
+function createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
+                completionBlock:(CompletedPostCarrierLookupList) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Optional ```  | Page Number |
+| pagesize |  ``` Optional ```  | Page Size |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateCarrierLookupListInput *input = [[CreateCarrierLookupListInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pagesize = 24;
+
+    [self.carrier createCarrierLookupListAsyncWithCreateCarrierLookupListInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
 
 #### <a name="create_carrier_lookup_async_with_create_carrier_lookup_input"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.createCarrierLookupAsyncWithCreateCarrierLookupInput") createCarrierLookupAsyncWithCreateCarrierLookupInput
 
@@ -1145,955 +2386,6 @@ function createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLook
 ```
 
 
-#### <a name="create_carrier_lookup_list_async_with_create_carrier_lookup_list_input"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.createCarrierLookupListAsyncWithCreateCarrierLookupListInput") createCarrierLookupListAsyncWithCreateCarrierLookupListInput
-
-> Get the All Purchase Number's Carrier lookup
-
-
-```objc
-function createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
-                completionBlock:(CompletedPostCarrierLookupList) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Page Number |
-| pagesize |  ``` Optional ```  | Page Size |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateCarrierLookupListInput *input = [[CreateCarrierLookupListInput alloc]init];
-    input.page = 187;
-    input.pagesize = 187;
-    input.responseType = @"ResponseType";
-
-    [self.carrier createCarrierLookupListAsyncWithCreateCarrierLookupListInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="call_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CallController") CallController
-
-#### Get singleton instance
-```objc
-Call* call = [[Call alloc]init] ;
-```
-
-#### <a name="create_view_call_async_with_create_view_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createViewCallAsyncWithCreateViewCallInput") createViewCallAsyncWithCreateViewCallInput
-
-> View Call Response
-
-
-```objc
-function createViewCallAsyncWithCreateViewCallInput:(CreateViewCallInput*) input
-                completionBlock:(CompletedPostViewCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callsid |  ``` Required ```  | Call Sid id for particular Call |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateViewCallInput *input = [[CreateViewCallInput alloc]init];
-    input.callsid = @"callsid";
-    input.responseType = @"ResponseType";
-
-    [self.call createViewCallAsyncWithCreateViewCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_group_call_async_with_create_group_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createGroupCallAsyncWithCreateGroupCallInput") createGroupCallAsyncWithCreateGroupCallInput
-
-> Group Call
-
-
-```objc
-function createGroupCallAsyncWithCreateGroupCallInput:(CreateGroupCallInput*) input
-                completionBlock:(CompletedPostGroupCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-| from |  ``` Required ```  | TODO: Add a parameter description |
-| toCountryCode |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-| to |  ``` Required ```  | TODO: Add a parameter description |
-| url |  ``` Required ```  | TODO: Add a parameter description |
-| method |  ``` Optional ```  | TODO: Add a parameter description |
-| statusCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| statusCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| fallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| fallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| heartBeatUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| heartBeatMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| timeout |  ``` Optional ```  | TODO: Add a parameter description |
-| playDtmf |  ``` Optional ```  | TODO: Add a parameter description |
-| hideCallerId |  ``` Optional ```  | TODO: Add a parameter description |
-| record |  ``` Optional ```  | TODO: Add a parameter description |
-| recordCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| recordCallBackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| transcribe |  ``` Optional ```  | TODO: Add a parameter description |
-| transcribeCallBackUrl |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateGroupCallInput *input = [[CreateGroupCallInput alloc]init];
-    input.fromCountryCode = @"FromCountryCode";
-    input.from = @"From";
-    input.toCountryCode = @"ToCountryCode";
-    input.to = @"To";
-    input.url = @"Url";
-    input.method = GET;
-    input.statusCallBackUrl = @"StatusCallBackUrl";
-    input.statusCallBackMethod = GET;
-    input.fallBackUrl = @"FallBackUrl";
-    input.fallBackMethod = GET;
-    input.heartBeatUrl = @"HeartBeatUrl";
-    input.heartBeatMethod = GET;
-    input.timeout = 187;
-    input.playDtmf = @"PlayDtmf";
-    input.hideCallerId = @"HideCallerId";
-    input.record = true;
-    input.recordCallBackUrl = @"RecordCallBackUrl";
-    input.recordCallBackMethod = GET;
-    input.transcribe = true;
-    input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
-    input.responseType = @"ResponseType";
-
-    [self.call createGroupCallAsyncWithCreateGroupCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_voice_effect_async_with_create_voice_effect_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createVoiceEffectAsyncWithCreateVoiceEffectInput") createVoiceEffectAsyncWithCreateVoiceEffectInput
-
-> Voice Effect
-
-
-```objc
-function createVoiceEffectAsyncWithCreateVoiceEffectInput:(CreateVoiceEffectInput*) input
-                completionBlock:(CompletedPostVoiceEffect) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | TODO: Add a parameter description |
-| audioDirection |  ``` Optional ```  | TODO: Add a parameter description |
-| pitchSemiTones |  ``` Optional ```  | value between -14 and 14 |
-| pitchOctaves |  ``` Optional ```  | value between -1 and 1 |
-| pitch |  ``` Optional ```  | value greater than 0 |
-| rate |  ``` Optional ```  | value greater than 0 |
-| tempo |  ``` Optional ```  | value greater than 0 |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateVoiceEffectInput *input = [[CreateVoiceEffectInput alloc]init];
-    input.callSid = @"CallSid";
-    input.audioDirection = IN;
-    input.pitchSemiTones = 187.205690072014;
-    input.pitchOctaves = 187.205690072014;
-    input.pitch = 187.205690072014;
-    input.rate = 187.205690072014;
-    input.tempo = 187.205690072014;
-    input.responseType = @"ResponseType";
-
-    [self.call createVoiceEffectAsyncWithCreateVoiceEffectInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_record_call_async_with_create_record_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createRecordCallAsyncWithCreateRecordCallInput") createRecordCallAsyncWithCreateRecordCallInput
-
-> Record a Call
-
-
-```objc
-function createRecordCallAsyncWithCreateRecordCallInput:(CreateRecordCallInput*) input
-                completionBlock:(CompletedPostRecordCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| record |  ``` Required ```  | Set true to initiate recording or false to terminate recording |
-| direction |  ``` Optional ```  | The leg of the call to record |
-| timeLimit |  ``` Optional ```  | Time in seconds the recording duration should not exceed |
-| callBackUrl |  ``` Optional ```  | URL consulted after the recording completes |
-| fileformat |  ``` Optional ```  | Format of the recording file. Can be .mp3 or .wav |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateRecordCallInput *input = [[CreateRecordCallInput alloc]init];
-    input.callSid = @"CallSid";
-    input.record = true;
-    input.direction = IN;
-    input.timeLimit = 187;
-    input.callBackUrl = @"CallBackUrl";
-    input.fileformat = MP3;
-    input.responseType = @"ResponseType";
-
-    [self.call createRecordCallAsyncWithCreateRecordCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_play_audio_async_with_create_play_audio_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createPlayAudioAsyncWithCreatePlayAudioInput") createPlayAudioAsyncWithCreatePlayAudioInput
-
-> Play Dtmf and send the Digit
-
-
-```objc
-function createPlayAudioAsyncWithCreatePlayAudioInput:(CreatePlayAudioInput*) input
-                completionBlock:(CompletedPostPlayAudio) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| audioUrl |  ``` Required ```  | URL to sound that should be played. You also can add more than one audio file using semicolons e.g. http://example.com/audio1.mp3;http://example.com/audio2.wav |
-| length |  ``` Optional ```  | Time limit in seconds for audio play back |
-| direction |  ``` Optional ```  | The leg of the call audio will be played to |
-| loop |  ``` Optional ```  | Repeat audio playback indefinitely |
-| mix |  ``` Optional ```  | If false, all other audio will be muted |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreatePlayAudioInput *input = [[CreatePlayAudioInput alloc]init];
-    input.callSid = @"CallSid";
-    input.audioUrl = @"AudioUrl";
-    input.length = 187;
-    input.direction = IN;
-    input.loop = true;
-    input.mix = true;
-    input.responseType = @"ResponseType";
-
-    [self.call createPlayAudioAsyncWithCreatePlayAudioInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_interrupted_call_async_with_create_interrupted_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createInterruptedCallAsyncWithCreateInterruptedCallInput") createInterruptedCallAsyncWithCreateInterruptedCallInput
-
-> Interrupt the Call by Call Sid
-
-
-```objc
-function createInterruptedCallAsyncWithCreateInterruptedCallInput:(CreateInterruptedCallInput*) input
-                completionBlock:(CompletedPostInterruptedCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | Call SId |
-| url |  ``` Optional ```  | URL the in-progress call will be redirected to |
-| method |  ``` Optional ```  | The method used to request the above Url parameter |
-| status |  ``` Optional ```  | Status to set the in-progress call to |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateInterruptedCallInput *input = [[CreateInterruptedCallInput alloc]init];
-    input.callSid = @"CallSid";
-    input.url = @"Url";
-    input.method = GET;
-    input.status = CANCELED;
-    input.responseType = @"ResponseType";
-
-    [self.call createInterruptedCallAsyncWithCreateInterruptedCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_send_digit_async_with_create_send_digit_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createSendDigitAsyncWithCreateSendDigitInput") createSendDigitAsyncWithCreateSendDigitInput
-
-> Play Dtmf and send the Digit
-
-
-```objc
-function createSendDigitAsyncWithCreateSendDigitInput:(CreateSendDigitInput*) input
-                completionBlock:(CompletedPostSendDigit) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callSid |  ``` Required ```  | The unique identifier of each call resource |
-| playDtmf |  ``` Required ```  | DTMF digits to play to the call. 0-9, #, *, W, or w |
-| playDtmfDirection |  ``` Optional ```  | The leg of the call DTMF digits should be sent to |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateSendDigitInput *input = [[CreateSendDigitInput alloc]init];
-    input.callSid = @"CallSid";
-    input.playDtmf = @"PlayDtmf";
-    input.playDtmfDirection = IN;
-    input.responseType = @"ResponseType";
-
-    [self.call createSendDigitAsyncWithCreateSendDigitInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_make_call_async_with_create_make_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createMakeCallAsyncWithCreateMakeCallInput") createMakeCallAsyncWithCreateMakeCallInput
-
-> You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
-
-
-```objc
-function createMakeCallAsyncWithCreateMakeCallInput:(CreateMakeCallInput*) input
-                completionBlock:(CompletedPostMakeCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  | from country code |
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| toCountryCode |  ``` Required ```  | To cuntry code number |
-| to |  ``` Required ```  | To number |
-| url |  ``` Required ```  | URL requested once the call connects |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
-| heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
-| playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
-| hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
-| record |  ``` Optional ```  | Specifies if the call should be recorded |
-| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion |
-| recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
-| transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
-| transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
-| ifMachine |  ``` Optional ```  | How Message360 should handle the receiving numbers voicemail machine |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateMakeCallInput *input = [[CreateMakeCallInput alloc]init];
-    input.fromCountryCode = @"FromCountryCode";
-    input.from = @"From";
-    input.toCountryCode = @"ToCountryCode";
-    input.to = @"To";
-    input.url = @"Url";
-    input.method = GET;
-    input.statusCallBackUrl = @"StatusCallBackUrl";
-    input.statusCallBackMethod = GET;
-    input.fallBackUrl = @"FallBackUrl";
-    input.fallBackMethod = GET;
-    input.heartBeatUrl = @"HeartBeatUrl";
-    input.heartBeatMethod = true;
-    input.timeout = 187;
-    input.playDtmf = @"PlayDtmf";
-    input.hideCallerId = true;
-    input.record = true;
-    input.recordCallBackUrl = @"RecordCallBackUrl";
-    input.recordCallBackMethod = GET;
-    input.transcribe = true;
-    input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
-    input.ifMachine = CONTINUE;
-    input.responseType = @"ResponseType";
-
-    [self.call createMakeCallAsyncWithCreateMakeCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_list_calls_async_with_create_list_calls_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createListCallsAsyncWithCreateListCallsInput") createListCallsAsyncWithCreateListCallsInput
-
-> A list of calls associated with your Message360 account
-
-
-```objc
-function createListCallsAsyncWithCreateListCallsInput:(CreateListCallsInput*) input
-                completionBlock:(CompletedPostListCalls) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Only list calls to this number |
-| from |  ``` Optional ```  | Only list calls from this number |
-| dateCreated |  ``` Optional ```  | Only list calls starting within the specified date range |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateListCallsInput *input = [[CreateListCallsInput alloc]init];
-    input.page = 187;
-    input.pageSize = 187;
-    input.to = @"To";
-    input.from = @"From";
-    input.dateCreated = @"DateCreated";
-    input.responseType = @"ResponseType";
-
-    [self.call createListCallsAsyncWithCreateListCallsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_send_ringless_vm_async_with_create_send_ringless_vm_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.createSendRinglessVMAsyncWithCreateSendRinglessVMInput") createSendRinglessVMAsyncWithCreateSendRinglessVMInput
-
-> API endpoint used to send a Ringless Voicemail
-
-
-```objc
-function createSendRinglessVMAsyncWithCreateSendRinglessVMInput:(CreateSendRinglessVMInput*) input
-                completionBlock:(CompletedPostSendRinglessVM) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromCountryCode |  ``` Required ```  | From country code |
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| toCountryCode |  ``` Required ```  | To country code |
-| to |  ``` Required ```  | To number |
-| voiceMailURL |  ``` Required ```  | URL to an audio file |
-| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
-| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
-| statsCallBackMethod |  ``` Optional ```  | POST or GET |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateSendRinglessVMInput *input = [[CreateSendRinglessVMInput alloc]init];
-    input.fromCountryCode = @"FromCountryCode";
-    input.from = @"From";
-    input.toCountryCode = @"ToCountryCode";
-    input.to = @"To";
-    input.voiceMailURL = @"VoiceMailURL";
-    input.method = @"Method";
-    input.statusCallBackUrl = @"StatusCallBackUrl";
-    input.statsCallBackMethod = @"StatsCallBackMethod";
-    input.responseType = @"ResponseType";
-
-    [self.call createSendRinglessVMAsyncWithCreateSendRinglessVMInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="web_rtc_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebRTCController") WebRTCController
-
-#### Get singleton instance
-```objc
-WebRTC* webRTC = [[WebRTC alloc]init] ;
-```
-
-#### <a name="create_check_funds_async_with_create_check_funds_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createCheckFundsAsyncWithCreateCheckFundsInput") createCheckFundsAsyncWithCreateCheckFundsInput
-
-> TODO: Add a method description
-
-
-```objc
-function createCheckFundsAsyncWithCreateCheckFundsInput:(CreateCheckFundsInput*) input
-                completionBlock:(CompletedPostCheckFunds) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| accountSid |  ``` Required ```  | Your message360 Account SID |
-| authToken |  ``` Required ```  | Your message360 Token |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateCheckFundsInput *input = [[CreateCheckFundsInput alloc]init];
-    input.accountSid = @"account_sid";
-    input.authToken = @"auth_token";
-
-    [self.webRTC createCheckFundsAsyncWithCreateCheckFundsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_token_async_with_create_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createTokenAsyncWithCreateTokenInput") createTokenAsyncWithCreateTokenInput
-
-> message360 webrtc
-
-
-```objc
-function createTokenAsyncWithCreateTokenInput:(CreateTokenInput*) input
-                completionBlock:(CompletedPostCreateToken) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| accountSid |  ``` Required ```  | Your message360 Account SID |
-| authToken |  ``` Required ```  | Your message360 Token |
-| username |  ``` Required ```  | WebRTC username authentication |
-| password |  ``` Required ```  | WebRTC password authentication |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateTokenInput *input = [[CreateTokenInput alloc]init];
-    input.accountSid = @"account_sid";
-    input.authToken = @"auth_token";
-    input.username = @"username";
-    input.password = @"password";
-
-    [self.webRTC createTokenAsyncWithCreateTokenInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="sub_account_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SubAccountController") SubAccountController
-
-#### Get singleton instance
-```objc
-SubAccount* subAccount = [[SubAccount alloc]init] ;
-```
-
-#### <a name="create_sub_account_async_with_create_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createSubAccountAsyncWithCreateSubAccountInput") createSubAccountAsyncWithCreateSubAccountInput
-
-> Create a sub user account under the parent account
-
-
-```objc
-function createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*) input
-                completionBlock:(CompletedPostCreateSubAccount) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| firstName |  ``` Required ```  | Sub account user first name |
-| lastName |  ``` Required ```  | sub account user last name |
-| email |  ``` Required ```  | Sub account email address |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateSubAccountInput *input = [[CreateSubAccountInput alloc]init];
-    input.firstName = @"FirstName";
-    input.lastName = @"LastName";
-    input.email = @"Email";
-    input.responseType = @"ResponseType";
-
-    [self.subAccount createSubAccountAsyncWithCreateSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_suspend_sub_account_async_with_create_suspend_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput") createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput
-
-> Suspend or unsuspend
-
-
-```objc
-function createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput:(CreateSuspendSubAccountInput*) input
-                completionBlock:(CompletedPostSuspendSubAccount) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| subAccountSID |  ``` Required ```  | The SubaccountSid to be activated or suspended |
-| activate |  ``` Required ```  ``` DefaultValue ```  | 0 to suspend or 1 to activate |
-| responseType |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateSuspendSubAccountInput *input = [[CreateSuspendSubAccountInput alloc]init];
-    input.subAccountSID = @"SubAccountSID";
-    input.activate = DEACTIVATE;
-    input.responseType = @"ResponseType";
-
-    [self.subAccount createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_delete_sub_account_async_with_create_delete_sub_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".SubAccountController.createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput") createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput
-
-> Delete sub account or merge numbers into parent
-
-
-```objc
-function createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput:(CreateDeleteSubAccountInput*) input
-                completionBlock:(CompletedPostDeleteSubAccount) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| subAccountSID |  ``` Required ```  | The SubaccountSid to be deleted |
-| mergeNumber |  ``` Required ```  ``` DefaultValue ```  | 0 to delete or 1 to merge numbers to parent account. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateDeleteSubAccountInput *input = [[CreateDeleteSubAccountInput alloc]init];
-    input.subAccountSID = @"SubAccountSID";
-    input.mergeNumber = DELETE;
-    input.responseType = @"ResponseType";
-
-    [self.subAccount createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="address_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AddressController") AddressController
-
-#### Get singleton instance
-```objc
-Address* address = [[Address alloc]init] ;
-```
-
-#### <a name="create_address_async_with_create_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createAddressAsyncWithCreateAddressInput") createAddressAsyncWithCreateAddressInput
-
-> To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
-
-
-```objc
-function createAddressAsyncWithCreateAddressInput:(CreateAddressInput*) input
-                completionBlock:(CompletedPostCreateAddress) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| name |  ``` Required ```  | Name of user |
-| address |  ``` Required ```  | Address of user. |
-| country |  ``` Required ```  | Must be a 2 letter country short-name code (ISO 3166) |
-| state |  ``` Required ```  | Must be a 2 letter State eg. CA for US. For Some Countries it can be greater than 2 letters. |
-| city |  ``` Required ```  | City Name. |
-| zip |  ``` Required ```  | Zip code of city. |
-| description |  ``` Optional ```  | Description of addresses. |
-| email |  ``` Optional ```  | Email Id of user. |
-| phone |  ``` Optional ```  | Phone number of user. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateAddressInput *input = [[CreateAddressInput alloc]init];
-    input.name = @"Name";
-    input.address = @"Address";
-    input.country = @"Country";
-    input.state = @"State";
-    input.city = @"City";
-    input.zip = @"Zip";
-    input.description = @"Description";
-    input.email = @"email";
-    input.phone = @"Phone";
-    input.responseType = @"ResponseType";
-
-    [self.address createAddressAsyncWithCreateAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_delete_address_async_with_create_delete_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createDeleteAddressAsyncWithCreateDeleteAddressInput") createDeleteAddressAsyncWithCreateDeleteAddressInput
-
-> To delete Address to your address book
-
-
-```objc
-function createDeleteAddressAsyncWithCreateDeleteAddressInput:(CreateDeleteAddressInput*) input
-                completionBlock:(CompletedPostDeleteAddress) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be deleted. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateDeleteAddressInput *input = [[CreateDeleteAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
-    input.responseType = @"ResponseType";
-
-    [self.address createDeleteAddressAsyncWithCreateDeleteAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_verify_address_async_with_create_verify_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createVerifyAddressAsyncWithCreateVerifyAddressInput") createVerifyAddressAsyncWithCreateVerifyAddressInput
-
-> Validates an address given.
-
-
-```objc
-function createVerifyAddressAsyncWithCreateVerifyAddressInput:(CreateVerifyAddressInput*) input
-                completionBlock:(CompletedPostVerifyAddress) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be verified. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateVerifyAddressInput *input = [[CreateVerifyAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
-    input.responseType = @"ResponseType";
-
-    [self.address createVerifyAddressAsyncWithCreateVerifyAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_list_address_async_with_create_list_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createListAddressAsyncWithCreateListAddressInput") createListAddressAsyncWithCreateListAddressInput
-
-> List All Address 
-
-
-```objc
-function createListAddressAsyncWithCreateListAddressInput:(CreateListAddressInput*) input
-                completionBlock:(CompletedPostListAddress) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Required ```  ``` DefaultValue ```  | Return requested # of items starting the value, default=0, must be an integer |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
-| addressSID |  ``` Optional ```  | addresses Sid |
-| dateCreated |  ``` Optional ```  | date created address. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateListAddressInput *input = [[CreateListAddressInput alloc]init];
-    input.page = 23;
-    input.pageSize = 23;
-    input.addressSID = @"AddressSID";
-    input.dateCreated = @"DateCreated";
-    input.responseType = @"ResponseType";
-
-    [self.address createListAddressAsyncWithCreateListAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_view_address_async_with_create_view_address_input"></a>![Method: ](https://apidocs.io/img/method.png ".AddressController.createViewAddressAsyncWithCreateViewAddressInput") createViewAddressAsyncWithCreateViewAddressInput
-
-> View Address Specific address Book by providing the address id
-
-
-```objc
-function createViewAddressAsyncWithCreateViewAddressInput:(CreateViewAddressInput*) input
-                completionBlock:(CompletedPostViewAddress) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be retrieved. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateViewAddressInput *input = [[CreateViewAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
-    input.responseType = @"ResponseType";
-
-    [self.address createViewAddressAsyncWithCreateViewAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
 [Back to List of Controllers](#list_of_controllers)
 
 ### <a name="phone_number_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PhoneNumberController") PhoneNumberController
@@ -2102,67 +2394,6 @@ function createViewAddressAsyncWithCreateViewAddressInput:(CreateViewAddressInpu
 ```objc
 PhoneNumber* phoneNumber = [[PhoneNumber alloc]init] ;
 ```
-
-#### <a name="update_phone_number_async_with_update_phone_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.updatePhoneNumberAsyncWithUpdatePhoneNumberInput") updatePhoneNumberAsyncWithUpdatePhoneNumberInput
-
-> Update Phone Number Details
-
-
-```objc
-function updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInput*) input
-                completionBlock:(CompletedPostUpdatePhoneNumber) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | TODO: Add a parameter description |
-| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
-| voiceUrl |  ``` Optional ```  | URL requested once the call connects |
-| voiceMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| voiceFallbackUrl |  ``` Optional ```  | URL requested if the voice URL is not available |
-| voiceFallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| hangupCallback |  ``` Optional ```  | TODO: Add a parameter description |
-| hangupCallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| heartbeatUrl |  ``` Optional ```  | URL requested once the call connects |
-| heartbeatMethod |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time |
-| smsUrl |  ``` Optional ```  | URL requested when an SMS is received |
-| smsMethod |  ``` Optional ```  | TODO: Add a parameter description |
-| smsFallbackUrl |  ``` Optional ```  | URL requested once the call connects |
-| smsFallbackMethod |  ``` Optional ```  | URL requested if the sms URL is not available |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    UpdatePhoneNumberInput *input = [[UpdatePhoneNumberInput alloc]init];
-    input.phoneNumber = @"PhoneNumber";
-    input.friendlyName = @"FriendlyName";
-    input.voiceUrl = @"VoiceUrl";
-    input.voiceMethod = GET;
-    input.voiceFallbackUrl = @"VoiceFallbackUrl";
-    input.voiceFallbackMethod = GET;
-    input.hangupCallback = @"HangupCallback";
-    input.hangupCallbackMethod = GET;
-    input.heartbeatUrl = @"HeartbeatUrl";
-    input.heartbeatMethod = GET;
-    input.smsUrl = @"SmsUrl";
-    input.smsMethod = GET;
-    input.smsFallbackUrl = @"SmsFallbackUrl";
-    input.smsFallbackMethod = GET;
-    input.responseType = @"ResponseType";
-
-    [self.phoneNumber updatePhoneNumberAsyncWithUpdatePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
 
 #### <a name="create_buy_number_async_with_create_buy_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.createBuyNumberAsyncWithCreateBuyNumberInput") createBuyNumberAsyncWithCreateBuyNumberInput
 
@@ -2283,11 +2514,11 @@ function createListNumberAsyncWithCreateListNumberInput:(CreateListNumberInput*)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
 | pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | numberType |  ``` Optional ```  | TODO: Add a parameter description |
 | friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -2298,11 +2529,11 @@ function createListNumberAsyncWithCreateListNumberInput:(CreateListNumberInput*)
 ```objc
     // Parameters for the API call
     CreateListNumberInput *input = [[CreateListNumberInput alloc]init];
-    input.page = 23;
-    input.pageSize = 23;
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pageSize = 24;
     input.numberType = ALL;
     input.friendlyName = @"FriendlyName";
-    input.responseType = @"ResponseType";
 
     [self.phoneNumber createListNumberAsyncWithCreateListNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2326,8 +2557,8 @@ function createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(Cre
 |-----------|------|-------------|
 | numberType |  ``` Required ```  | Number type either SMS,Voice or all |
 | areaCode |  ``` Required ```  | Phone Number Area Code |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Page Size |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | Page Size |
 
 
 
@@ -2340,8 +2571,8 @@ function createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(Cre
     CreateAvailablePhoneNumberInput *input = [[CreateAvailablePhoneNumberInput alloc]init];
     input.numberType = ALL;
     input.areaCode = @"AreaCode";
-    input.pageSize = 23;
     input.responseType = @"ResponseType";
+    input.pageSize = 24;
 
     [self.phoneNumber createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2349,34 +2580,35 @@ function createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(Cre
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+#### <a name="update_phone_number_async_with_update_phone_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.updatePhoneNumberAsyncWithUpdatePhoneNumberInput") updatePhoneNumberAsyncWithUpdatePhoneNumberInput
 
-### <a name="recording_controller"></a>![Class: ](https://apidocs.io/img/class.png ".RecordingController") RecordingController
-
-#### Get singleton instance
-```objc
-Recording* recording = [[Recording alloc]init] ;
-```
-
-#### <a name="create_list_recording_async_with_create_list_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createListRecordingAsyncWithCreateListRecordingInput") createListRecordingAsyncWithCreateListRecordingInput
-
-> List out Recordings
+> Update Phone Number Details
 
 
 ```objc
-function createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordingInput*) input
-                completionBlock:(CompletedPostListRecording) onCompleted(input)
+function updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInput*) input
+                completionBlock:(CompletedPostUpdatePhoneNumber) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| dateCreated |  ``` Optional ```  | TODO: Add a parameter description |
-| callSid |  ``` Optional ```  | TODO: Add a parameter description |
+| phoneNumber |  ``` Required ```  | TODO: Add a parameter description |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| friendlyName |  ``` Optional ```  | TODO: Add a parameter description |
+| voiceUrl |  ``` Optional ```  | URL requested once the call connects |
+| voiceMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| voiceFallbackUrl |  ``` Optional ```  | URL requested if the voice URL is not available |
+| voiceFallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| hangupCallback |  ``` Optional ```  | TODO: Add a parameter description |
+| hangupCallbackMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| heartbeatUrl |  ``` Optional ```  | URL requested once the call connects |
+| heartbeatMethod |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time |
+| smsUrl |  ``` Optional ```  | URL requested when an SMS is received |
+| smsMethod |  ``` Optional ```  | TODO: Add a parameter description |
+| smsFallbackUrl |  ``` Optional ```  | URL requested once the call connects |
+| smsFallbackMethod |  ``` Optional ```  | URL requested if the sms URL is not available |
 
 
 
@@ -2386,259 +2618,24 @@ function createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordi
 
 ```objc
     // Parameters for the API call
-    CreateListRecordingInput *input = [[CreateListRecordingInput alloc]init];
-    input.page = 23;
-    input.pageSize = 23;
-    input.dateCreated = @"DateCreated";
-    input.callSid = @"CallSid";
+    UpdatePhoneNumberInput *input = [[UpdatePhoneNumberInput alloc]init];
+    input.phoneNumber = @"PhoneNumber";
     input.responseType = @"ResponseType";
-
-    [self.recording createListRecordingAsyncWithCreateListRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_delete_recording_async_with_create_delete_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createDeleteRecordingAsyncWithCreateDeleteRecordingInput") createDeleteRecordingAsyncWithCreateDeleteRecordingInput
-
-> Delete Recording Record
-
-
-```objc
-function createDeleteRecordingAsyncWithCreateDeleteRecordingInput:(CreateDeleteRecordingInput*) input
-                completionBlock:(CompletedPostDeleteRecording) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recordingSid |  ``` Required ```  | Unique Recording Sid to be delete |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateDeleteRecordingInput *input = [[CreateDeleteRecordingInput alloc]init];
-    input.recordingSid = @"RecordingSid";
-    input.responseType = @"ResponseType";
-
-    [self.recording createDeleteRecordingAsyncWithCreateDeleteRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_view_recording_async_with_create_view_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.createViewRecordingAsyncWithCreateViewRecordingInput") createViewRecordingAsyncWithCreateViewRecordingInput
-
-> View a specific Recording
-
-
-```objc
-function createViewRecordingAsyncWithCreateViewRecordingInput:(CreateViewRecordingInput*) input
-                completionBlock:(CompletedPostViewRecording) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recordingSid |  ``` Required ```  | Search Recording sid |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateViewRecordingInput *input = [[CreateViewRecordingInput alloc]init];
-    input.recordingSid = @"RecordingSid";
-    input.responseType = @"ResponseType";
-
-    [self.recording createViewRecordingAsyncWithCreateViewRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-### <a name="sms_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SMSController") SMSController
-
-#### Get singleton instance
-```objc
-SMS* sMS = [[SMS alloc]init] ;
-```
-
-#### <a name="create_list_inbound_sms_async_with_create_list_inbound_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createListInboundSMSAsyncWithCreateListInboundSMSInput") createListInboundSMSAsyncWithCreateListInboundSMSInput
-
-> List All Inbound SMS
-
-
-```objc
-function createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInboundSMSInput*) input
-                completionBlock:(CompletedPostListInboundSMS) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound SMS |
-| to |  ``` Optional ```  | To Number to get Inbound SMS |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateListInboundSMSInput *input = [[CreateListInboundSMSInput alloc]init];
-    input.page = 23;
-    input.pagesize = @"pagesize";
-    input.from = @"from";
-    input.to = @"to";
-    input.responseType = @"ResponseType";
-
-    [self.sMS createListInboundSMSAsyncWithCreateListInboundSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_list_sms_async_with_create_list_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createListSMSAsyncWithCreateListSMSInput") createListSMSAsyncWithCreateListSMSInput
-
-> List All SMS
-
-
-```objc
-function createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
-                completionBlock:(CompletedPostListSMS) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| page |  ``` Optional ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Optional ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Messages sent from this number |
-| to |  ``` Optional ```  | Messages sent to this number |
-| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateListSMSInput *input = [[CreateListSMSInput alloc]init];
-    input.page = 23;
-    input.pagesize = 23;
-    input.from = @"from";
-    input.to = @"to";
-    input.datesent = @"datesent";
-    input.responseType = @"ResponseType";
-
-    [self.sMS createListSMSAsyncWithCreateListSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_send_sms_async_with_create_send_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createSendSMSAsyncWithCreateSendSMSInput") createSendSMSAsyncWithCreateSendSMSInput
-
-> Send an SMS from a message360 number
-
-
-```objc
-function createSendSMSAsyncWithCreateSendSMSInput:(CreateSendSMSInput*) input
-                completionBlock:(CompletedPostSendSMS) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| fromcountrycode |  ``` Required ```  ``` DefaultValue ```  | From Country Code |
-| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
-| tocountrycode |  ``` Required ```  ``` DefaultValue ```  | To country code |
-| to |  ``` Required ```  | Number to send the SMS to |
-| body |  ``` Required ```  | Text Message To Send |
-| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateSendSMSInput *input = [[CreateSendSMSInput alloc]init];
-    input.fromcountrycode = 23;
-    input.from = @"from";
-    input.tocountrycode = 23;
-    input.to = @"to";
-    input.body = @"body";
-    input.method = GET;
-    input.messagestatuscallback = @"messagestatuscallback";
-    input.responseType = @"ResponseType";
-
-    [self.sMS createSendSMSAsyncWithCreateSendSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-#### <a name="create_view_sms_async_with_create_view_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.createViewSMSAsyncWithCreateViewSMSInput") createViewSMSAsyncWithCreateViewSMSInput
-
-> View a Particular SMS
-
-
-```objc
-function createViewSMSAsyncWithCreateViewSMSInput:(CreateViewSMSInput*) input
-                completionBlock:(CompletedPostViewSMS) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| messagesid |  ``` Required ```  | Message sid |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    CreateViewSMSInput *input = [[CreateViewSMSInput alloc]init];
-    input.messagesid = @"messagesid";
-    input.responseType = @"ResponseType";
-
-    [self.sMS createViewSMSAsyncWithCreateViewSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    input.friendlyName = @"FriendlyName";
+    input.voiceUrl = @"VoiceUrl";
+    input.voiceMethod = GET;
+    input.voiceFallbackUrl = @"VoiceFallbackUrl";
+    input.voiceFallbackMethod = GET;
+    input.hangupCallback = @"HangupCallback";
+    input.hangupCallbackMethod = GET;
+    input.heartbeatUrl = @"HeartbeatUrl";
+    input.heartbeatMethod = GET;
+    input.smsUrl = @"SmsUrl";
+    input.smsMethod = GET;
+    input.smsFallbackUrl = @"SmsFallbackUrl";
+    input.smsFallbackMethod = GET;
+
+    [self.phoneNumber updatePhoneNumberAsyncWithUpdatePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -2772,11 +2769,11 @@ function createListTranscriptionAsyncWithCreateListTranscriptionInput:(CreateLis
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | page |  ``` Optional ```  | TODO: Add a parameter description |
 | pageSize |  ``` Optional ```  | TODO: Add a parameter description |
 | status |  ``` Optional ```  | TODO: Add a parameter description |
 | dateTranscribed |  ``` Optional ```  | TODO: Add a parameter description |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -2787,11 +2784,11 @@ function createListTranscriptionAsyncWithCreateListTranscriptionInput:(CreateLis
 ```objc
     // Parameters for the API call
     CreateListTranscriptionInput *input = [[CreateListTranscriptionInput alloc]init];
-    input.page = 23;
-    input.pageSize = 23;
+    input.responseType = @"ResponseType";
+    input.page = 24;
+    input.pageSize = 24;
     input.status = INPROGRESS;
     input.dateTranscribed = @"DateTranscribed";
-    input.responseType = @"ResponseType";
 
     [self.transcription createListTranscriptionAsyncWithCreateListTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here

@@ -30,6 +30,11 @@
 @property NSString* participantSid;
 
 /**
+* Response Type either json or xml
+*/
+@property NSString* responseType;
+
+/**
 * TODO: Write general description for this field
 */
 @property NSNumber* muted;
@@ -38,11 +43,6 @@
 * TODO: Write general description for this field
 */
 @property NSNumber* deaf;
-
-/**
-* Response Type either json or xml
-*/
-@property NSString* responseType;
 
 @end
 #endif

@@ -14,6 +14,11 @@
 @synthesize phoneNumber;
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * TODO: Write general description for this method
 */
 @synthesize friendlyName;
@@ -77,11 +82,6 @@
 * URL requested if the sms URL is not available
 */
 @synthesize smsFallbackMethod;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {

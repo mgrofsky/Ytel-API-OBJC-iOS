@@ -9,6 +9,11 @@
 @implementation CreateListInboundSMSInput
 
 /**
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
 * Which page of the overall response will be returned. Zero indexed
 */
 @synthesize page;
@@ -27,11 +32,6 @@
 * To Number to get Inbound SMS
 */
 @synthesize to;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
 
 -(id)init
 {
