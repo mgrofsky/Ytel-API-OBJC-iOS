@@ -217,8 +217,8 @@ function createListInboundShortCodeAsyncWithCreateListInboundShortCodeInput:(Cre
     // Parameters for the API call
     CreateListInboundShortCodeInput *input = [[CreateListInboundShortCodeInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 96;
-    input.pagesize = 96;
+    input.page = 105;
+    input.pagesize = 105;
     input.from = @"from";
     input.shortcode = @"Shortcode";
     input.dateReceived = @"DateReceived";
@@ -260,8 +260,8 @@ function createListShortCodeAsyncWithCreateListShortCodeInput:(CreateListShortCo
     // Parameters for the API call
     CreateListShortCodeInput *input = [[CreateListShortCodeInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 96;
-    input.pagesize = 96;
+    input.page = 105;
+    input.pagesize = 105;
     input.from = @"from";
     input.to = @"to";
     input.datesent = @"datesent";
@@ -302,8 +302,8 @@ function createListTemplatesAsyncWithCreateListTemplatesInput:(CreateListTemplat
     CreateListTemplatesInput *input = [[CreateListTemplatesInput alloc]init];
     input.responseType = @"ResponseType";
     input.type = @"type";
-    input.page = 96;
-    input.pagesize = 96;
+    input.page = 105;
+    input.pagesize = 105;
 
     [self.shortCode createListTemplatesAsyncWithCreateListTemplatesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -428,8 +428,8 @@ function createListConferenceAsyncWithCreateListConferenceInput:(CreateListConfe
     // Parameters for the API call
     CreateListConferenceInput *input = [[CreateListConferenceInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 96;
-    input.pageSize = 96;
+    input.page = 105;
+    input.pageSize = 105;
     input.friendlyName = @"FriendlyName";
     input.status = CANCELED;
     input.dateCreated = @"DateCreated";
@@ -508,10 +508,10 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
     AddParticipantInput *input = [[AddParticipantInput alloc]init];
     input.conferencesid = @"conferencesid";
     input.participantnumber = @"participantnumber";
-    input.tocountrycode = 188;
+    input.tocountrycode = 105;
     input.responseType = @"ResponseType";
-    input.muted = true;
-    input.deaf = true;
+    input.muted = false;
+    input.deaf = false;
 
     [self.conference addParticipantAsyncWithAddParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -551,10 +551,10 @@ function createListParticipantAsyncWithCreateListParticipantInput:(CreateListPar
     CreateListParticipantInput *input = [[CreateListParticipantInput alloc]init];
     input.conferenceSid = @"ConferenceSid";
     input.responseType = @"ResponseType";
-    input.page = 188;
-    input.pagesize = 188;
-    input.muted = true;
-    input.deaf = true;
+    input.page = 105;
+    input.pagesize = 105;
+    input.muted = false;
+    input.deaf = false;
 
     [self.conference createListParticipantAsyncWithCreateListParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -795,13 +795,13 @@ function createGroupCallAsyncWithCreateGroupCallInput:(CreateGroupCallInput*) in
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = GET;
-    input.timeout = 188;
+    input.timeout = 105;
     input.playDtmf = @"PlayDtmf";
     input.hideCallerId = @"HideCallerId";
-    input.record = true;
+    input.record = false;
     input.recordCallBackUrl = @"RecordCallBackUrl";
     input.recordCallBackMethod = GET;
-    input.transcribe = true;
+    input.transcribe = false;
     input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
 
     [self.call createGroupCallAsyncWithCreateGroupCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -845,11 +845,11 @@ function createVoiceEffectAsyncWithCreateVoiceEffectInput:(CreateVoiceEffectInpu
     input.callSid = @"CallSid";
     input.responseType = @"ResponseType";
     input.audioDirection = IN;
-    input.pitchSemiTones = 188.06897584259;
-    input.pitchOctaves = 188.06897584259;
-    input.pitch = 188.06897584259;
-    input.rate = 188.06897584259;
-    input.tempo = 188.06897584259;
+    input.pitchSemiTones = 105.749699855572;
+    input.pitchOctaves = 105.749699855572;
+    input.pitch = 105.749699855572;
+    input.rate = 105.749699855572;
+    input.tempo = 105.749699855572;
 
     [self.call createVoiceEffectAsyncWithCreateVoiceEffectInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -889,10 +889,10 @@ function createRecordCallAsyncWithCreateRecordCallInput:(CreateRecordCallInput*)
     // Parameters for the API call
     CreateRecordCallInput *input = [[CreateRecordCallInput alloc]init];
     input.callSid = @"CallSid";
-    input.record = true;
+    input.record = false;
     input.responseType = @"ResponseType";
     input.direction = IN;
-    input.timeLimit = 188;
+    input.timeLimit = 105;
     input.callBackUrl = @"CallBackUrl";
     input.fileformat = MP3;
 
@@ -936,10 +936,10 @@ function createPlayAudioAsyncWithCreatePlayAudioInput:(CreatePlayAudioInput*) in
     input.callSid = @"CallSid";
     input.audioUrl = @"AudioUrl";
     input.responseType = @"ResponseType";
-    input.length = 188;
+    input.length = 105;
     input.direction = IN;
-    input.loop = true;
-    input.mix = true;
+    input.loop = false;
+    input.mix = false;
 
     [self.call createPlayAudioAsyncWithCreatePlayAudioInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1086,7 +1086,7 @@ function createMakeCallAsyncWithCreateMakeCallInput:(CreateMakeCallInput*) input
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = true;
-    input.timeout = 188;
+    input.timeout = 197;
     input.playDtmf = @"PlayDtmf";
     input.hideCallerId = true;
     input.record = true;
@@ -1133,8 +1133,8 @@ function createListCallsAsyncWithCreateListCallsInput:(CreateListCallsInput*) in
     // Parameters for the API call
     CreateListCallsInput *input = [[CreateListCallsInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 188;
-    input.pageSize = 188;
+    input.page = 197;
+    input.pageSize = 197;
     input.to = @"To";
     input.from = @"From";
     input.dateCreated = @"DateCreated";
@@ -1511,8 +1511,8 @@ function createListAddressAsyncWithCreateListAddressInput:(CreateListAddressInpu
     // Parameters for the API call
     CreateListAddressInput *input = [[CreateListAddressInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 188;
-    input.pageSize = 188;
+    input.page = 197;
+    input.pageSize = 197;
     input.addressSID = @"AddressSID";
     input.dateCreated = @"DateCreated";
 
@@ -2050,8 +2050,8 @@ function createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
     // Parameters for the API call
     CreateListSMSInput *input = [[CreateListSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
-    input.pagesize = 24;
+    input.page = 197;
+    input.pagesize = 197;
     input.from = @"from";
     input.to = @"to";
     input.datesent = @"datesent";
@@ -2092,7 +2092,7 @@ function createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInbou
     // Parameters for the API call
     CreateListInboundSMSInput *input = [[CreateListInboundSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
+    input.page = 197;
     input.pagesize = @"pagesize";
     input.from = @"from";
     input.to = @"to";
@@ -2135,9 +2135,9 @@ function createSendSMSAsyncWithCreateSendSMSInput:(CreateSendSMSInput*) input
 ```objc
     // Parameters for the API call
     CreateSendSMSInput *input = [[CreateSendSMSInput alloc]init];
-    input.fromcountrycode = 24;
+    input.fromcountrycode = 197;
     input.from = @"from";
-    input.tocountrycode = 24;
+    input.tocountrycode = 197;
     input.to = @"to";
     input.body = @"body";
     input.responseType = @"ResponseType";
@@ -2224,8 +2224,8 @@ function createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordi
     // Parameters for the API call
     CreateListRecordingInput *input = [[CreateListRecordingInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
-    input.pageSize = 24;
+    input.page = 197;
+    input.pageSize = 197;
     input.dateCreated = @"DateCreated";
     input.callSid = @"CallSid";
 
@@ -2342,8 +2342,8 @@ function createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCar
     // Parameters for the API call
     CreateCarrierLookupListInput *input = [[CreateCarrierLookupListInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
-    input.pagesize = 24;
+    input.page = 155;
+    input.pagesize = 155;
 
     [self.carrier createCarrierLookupListAsyncWithCreateCarrierLookupListInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2530,8 +2530,8 @@ function createListNumberAsyncWithCreateListNumberInput:(CreateListNumberInput*)
     // Parameters for the API call
     CreateListNumberInput *input = [[CreateListNumberInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
-    input.pageSize = 24;
+    input.page = 155;
+    input.pageSize = 155;
     input.numberType = ALL;
     input.friendlyName = @"FriendlyName";
 
@@ -2572,7 +2572,7 @@ function createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(Cre
     input.numberType = ALL;
     input.areaCode = @"AreaCode";
     input.responseType = @"ResponseType";
-    input.pageSize = 24;
+    input.pageSize = 155;
 
     [self.phoneNumber createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2785,8 +2785,8 @@ function createListTranscriptionAsyncWithCreateListTranscriptionInput:(CreateLis
     // Parameters for the API call
     CreateListTranscriptionInput *input = [[CreateListTranscriptionInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 24;
-    input.pageSize = 24;
+    input.page = 155;
+    input.pageSize = 155;
     input.status = INPROGRESS;
     input.dateTranscribed = @"DateTranscribed";
 
