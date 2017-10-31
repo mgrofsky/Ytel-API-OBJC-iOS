@@ -11,79 +11,58 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateViewTemplateInput.h"
-#import "CreateSendShortCodeInput.h"
-#import "CreateListInboundShortCodeInput.h"
-#import "CreateListShortCodeInput.h"
-#import "CreateListTemplatesInput.h"
-#import "CreateViewShortCodeInput.h"
+#import "NSDate+extension.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
+#import "SendDedicatedShortcodeInput.h"
+#import "ViewShortcodeInput.h"
+#import "ListShortcodeInput.h"
+#import "ListInboundShortcodeInput.h"
 
 @interface ShortCodeController : BaseController
 
 /**
-* Completion block definition for asynchronous call to View Template */
-typedef void (^CompletedPostViewTemplate)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to Send Dedicated Shortcode */
+typedef void (^CompletedPostSendDedicatedShortcode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* View a Shared ShortCode Template
-* @param  CreateViewTemplateInput     Object with all parameters
+* TODO: type endpoint description here
+* @param  SendDedicatedShortcodeInput     Object with all parameters
 */
-- (void) createViewTemplateAsyncWithCreateViewTemplateInput:(CreateViewTemplateInput*) input
-                completionBlock:(CompletedPostViewTemplate) onCompleted;
+- (void) sendDedicatedShortcodeAsyncWithSendDedicatedShortcodeInput:(SendDedicatedShortcodeInput*) input
+                completionBlock:(CompletedPostSendDedicatedShortcode) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to Send ShortCode */
-typedef void (^CompletedPostSendShortCode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to View Shortcode */
+typedef void (^CompletedPostViewShortcode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* Send an SMS from a message360 ShortCode
-* @param  CreateSendShortCodeInput     Object with all parameters
+* View a single Sms Short Code message.
+* @param  ViewShortcodeInput     Object with all parameters
 */
-- (void) createSendShortCodeAsyncWithCreateSendShortCodeInput:(CreateSendShortCodeInput*) input
-                completionBlock:(CompletedPostSendShortCode) onCompleted;
+- (void) viewShortcodeAsyncWithViewShortcodeInput:(ViewShortcodeInput*) input
+                completionBlock:(CompletedPostViewShortcode) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to List Inbound ShortCode */
-typedef void (^CompletedPostListInboundShortCode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to List Shortcode */
+typedef void (^CompletedPostListShortcode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* List All Inbound ShortCode
-* @param  CreateListInboundShortCodeInput     Object with all parameters
+* Retrieve a list of Short Code message objects.
+* @param  ListShortcodeInput     Object with all parameters
 */
-- (void) createListInboundShortCodeAsyncWithCreateListInboundShortCodeInput:(CreateListInboundShortCodeInput*) input
-                completionBlock:(CompletedPostListInboundShortCode) onCompleted;
+- (void) listShortcodeAsyncWithListShortcodeInput:(ListShortcodeInput*) input
+                completionBlock:(CompletedPostListShortcode) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to List ShortCode */
-typedef void (^CompletedPostListShortCode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to List Inbound Shortcode */
+typedef void (^CompletedPostListInboundShortcode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* List ShortCode Messages
-* @param  CreateListShortCodeInput     Object with all parameters
+* Retrive a list of inbound Sms Short Code messages associated with your message360 account.
+* @param  ListInboundShortcodeInput     Object with all parameters
 */
-- (void) createListShortCodeAsyncWithCreateListShortCodeInput:(CreateListShortCodeInput*) input
-                completionBlock:(CompletedPostListShortCode) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to List Templates */
-typedef void (^CompletedPostListTemplates)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* List Shortcode Templates by Type
-* @param  CreateListTemplatesInput     Object with all parameters
-*/
-- (void) createListTemplatesAsyncWithCreateListTemplatesInput:(CreateListTemplatesInput*) input
-                completionBlock:(CompletedPostListTemplates) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to View ShortCode */
-typedef void (^CompletedPostViewShortCode)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* View a ShortCode Message
-* @param  CreateViewShortCodeInput     Object with all parameters
-*/
-- (void) createViewShortCodeAsyncWithCreateViewShortCodeInput:(CreateViewShortCodeInput*) input
-                completionBlock:(CompletedPostViewShortCode) onCompleted;
+- (void) listInboundShortcodeAsyncWithListInboundShortcodeInput:(ListInboundShortcodeInput*) input
+                completionBlock:(CompletedPostListInboundShortcode) onCompleted;
 
 @end

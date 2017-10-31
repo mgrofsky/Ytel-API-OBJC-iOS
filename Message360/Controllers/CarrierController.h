@@ -11,8 +11,8 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateCarrierLookupListInput.h"
-#import "CreateCarrierLookupInput.h"
+#import "CarrierLookupListInput.h"
+#import "CarrierLookupInput.h"
 
 @interface CarrierController : BaseController
 
@@ -22,9 +22,9 @@ typedef void (^CompletedPostCarrierLookupList)(BOOL success, HttpContext* contex
 
 /**
 * Get the All Purchase Number's Carrier lookup
-* @param  CreateCarrierLookupListInput     Object with all parameters
+* @param  CarrierLookupListInput     Object with all parameters
 */
-- (void) createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
+- (void) carrierLookupListAsyncWithCarrierLookupListInput:(CarrierLookupListInput*) input
                 completionBlock:(CompletedPostCarrierLookupList) onCompleted;
 
 /**
@@ -33,9 +33,9 @@ typedef void (^CompletedPostCarrierLookup)(BOOL success, HttpContext* context, N
 
 /**
 * Get the Carrier Lookup
-* @param  CreateCarrierLookupInput     Object with all parameters
+* @param  CarrierLookupInput     Object with all parameters
 */
-- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
+- (void) carrierLookupAsyncWithCarrierLookupInput:(CarrierLookupInput*) input
                 completionBlock:(CompletedPostCarrierLookup) onCompleted;
 
 @end

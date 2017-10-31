@@ -9,308 +9,11 @@
 @implementation EmailController
 
 /**
-* Outputs email addresses on your blocklist
-* @param  CreateListBlocksInput     Object with all parameters
+* Deletes a email address marked as spam from the spam list
+* @param  DeleteSpamInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListBlocksAsyncWithCreateListBlocksInput:(CreateListBlocksInput*) input
-                completionBlock:(CompletedPostListBlocks) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/listblockemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
-        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* List out all email addresses marked as spam
-* @param  CreateListSpamInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createListSpamAsyncWithCreateListSpamInput:(CreateListSpamInput*) input
-                completionBlock:(CompletedPostListSpam) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/listspamemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
-        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* List out all email addresses that have bounced
-* @param  CreateListBouncesInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createListBouncesAsyncWithCreateListBouncesInput:(CreateListBouncesInput*) input
-                completionBlock:(CompletedPostListBounces) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/listbounceemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
-        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* Delete an email address from the bounced address list
-* @param  CreateDeleteBouncesInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createDeleteBouncesAsyncWithCreateDeleteBouncesInput:(CreateDeleteBouncesInput*) input
-                completionBlock:(CompletedPostDeleteBounces) onCompleted
+- (void) deleteSpamAsyncWithDeleteSpamInput:(DeleteSpamInput*) input
+                completionBlock:(CompletedPostDeleteSpam) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -328,7 +31,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/deletebouncesemail.{ResponseType}"];
+    [_queryBuilder appendString: @"/email/deletespamemail.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -407,209 +110,11 @@
 }
 
 /**
-* List out all invalid email addresses
-* @param  CreateListInvalidInput     Object with all parameters
+* Deletes a blocked email
+* @param  DeleteBlockInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListInvalidAsyncWithCreateListInvalidInput:(CreateListInvalidInput*) input
-                completionBlock:(CompletedPostListInvalid) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/listinvalidemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"offet": (nil != input.offet) ? input.offet : [NSNull null],
-        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* List all unsubscribed email addresses
-* @param  CreateListUnsubscribesInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createListUnsubscribesAsyncWithCreateListUnsubscribesInput:(CreateListUnsubscribesInput*) input
-                completionBlock:(CompletedPostListUnsubscribes) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/listunsubscribedemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
-        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* Delete emails from the unsubscribe list
-* @param  CreateDeleteUnsubscribesInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createDeleteUnsubscribesAsyncWithCreateDeleteUnsubscribesInput:(CreateDeleteUnsubscribesInput*) input
-                completionBlock:(CompletedPostDeleteUnsubscribes) onCompleted
+- (void) deleteBlockAsyncWithDeleteBlockInput:(DeleteBlockInput*) input
+                completionBlock:(CompletedPostDeleteBlock) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -627,7 +132,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/deleteunsubscribedemail.{ResponseType}"];
+    [_queryBuilder appendString: @"/email/deleteblocksemail.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -807,212 +312,10 @@
 }
 
 /**
-* Deletes a blocked email
-* @param  CreateDeleteBlockInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createDeleteBlockAsyncWithCreateDeleteBlockInput:(CreateDeleteBlockInput*) input
-                completionBlock:(CompletedPostDeleteBlock) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.email == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/deleteblocksemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"email": input.email
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* Deletes a email address marked as spam from the spam list
-* @param  CreateDeleteSpamInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createDeleteSpamAsyncWithCreateDeleteSpamInput:(CreateDeleteSpamInput*) input
-                completionBlock:(CompletedPostDeleteSpam) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.email == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/email/deletespamemail.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"email": input.email
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
 * Send out an email
-* @param  CreateSendEmailInput     Object with all parameters
+* @param  SendEmailInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createSendEmailAsyncWithCreateSendEmailInput:(CreateSendEmailInput*) input
+- (void) sendEmailAsyncWithSendEmailInput:(SendEmailInput*) input
                 completionBlock:(CompletedPostSendEmail) onCompleted
 {
     //validating required parameters
@@ -1126,10 +429,707 @@
 }
 
 /**
-* This endpoint allows you to delete entries in the Invalid Emails list.
-* @param  CreateDeleteInvalidInput     Object with all parameters
+* Delete emails from the unsubscribe list
+* @param  DeleteUnsubscribesInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createDeleteInvalidAsyncWithCreateDeleteInvalidInput:(CreateDeleteInvalidInput*) input
+- (void) deleteUnsubscribesAsyncWithDeleteUnsubscribesInput:(DeleteUnsubscribesInput*) input
+                completionBlock:(CompletedPostDeleteUnsubscribes) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.email == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/deleteunsubscribedemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"email": input.email
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* List all unsubscribed email addresses
+* @param  ListUnsubscribesInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) listUnsubscribesAsyncWithListUnsubscribesInput:(ListUnsubscribesInput*) input
+                completionBlock:(CompletedPostListUnsubscribes) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/listunsubscribedemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
+        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* List out all invalid email addresses
+* @param  ListInvalidInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) listInvalidAsyncWithListInvalidInput:(ListInvalidInput*) input
+                completionBlock:(CompletedPostListInvalid) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/listinvalidemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"offet": (nil != input.offet) ? input.offet : [NSNull null],
+        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* Delete an email address from the bounced address list
+* @param  DeleteBouncesInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) deleteBouncesAsyncWithDeleteBouncesInput:(DeleteBouncesInput*) input
+                completionBlock:(CompletedPostDeleteBounces) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.email == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/deletebouncesemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"email": input.email
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* List out all email addresses that have bounced
+* @param  ListBouncesInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) listBouncesAsyncWithListBouncesInput:(ListBouncesInput*) input
+                completionBlock:(CompletedPostListBounces) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/listbounceemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
+        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* List out all email addresses marked as spam
+* @param  ListSpamInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) listSpamAsyncWithListSpamInput:(ListSpamInput*) input
+                completionBlock:(CompletedPostListSpam) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/listspamemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
+        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* Outputs email addresses on your blocklist
+* @param  ListBlocksInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) listBlocksAsyncWithListBlocksInput:(ListBlocksInput*) input
+                completionBlock:(CompletedPostListBlocks) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/email/listblockemail.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"offset": (nil != input.offset) ? input.offset : [NSNull null],
+        @"limit": (nil != input.limit) ? input.limit : [NSNull null]
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* This endpoint allows you to delete entries in the Invalid Emails list.
+* @param  DeleteInvalidInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) deleteInvalidAsyncWithDeleteInvalidInput:(DeleteInvalidInput*) input
                 completionBlock:(CompletedPostDeleteInvalid) onCompleted
 {
     //validating required parameters

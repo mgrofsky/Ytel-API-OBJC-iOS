@@ -11,7 +11,7 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateCheckFundsInput.h"
+#import "CheckFundsInput.h"
 #import "CreateTokenInput.h"
 
 @interface WebRTCController : BaseController
@@ -22,9 +22,9 @@ typedef void (^CompletedPostCheckFunds)(BOOL success, HttpContext* context, NSSt
 
 /**
 * TODO: type endpoint description here
-* @param  CreateCheckFundsInput     Object with all parameters
+* @param  CheckFundsInput     Object with all parameters
 */
-- (void) createCheckFundsAsyncWithCreateCheckFundsInput:(CreateCheckFundsInput*) input
+- (void) checkFundsAsyncWithCheckFundsInput:(CheckFundsInput*) input
                 completionBlock:(CompletedPostCheckFunds) onCompleted;
 
 /**

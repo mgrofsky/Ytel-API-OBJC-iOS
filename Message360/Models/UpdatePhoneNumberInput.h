@@ -22,19 +22,9 @@
 @interface UpdatePhoneNumberInput : NSObject
 
 /**
-* TODO: Write general description for this field
+* The phone number to update
 */
 @property NSString* phoneNumber;
-
-/**
-* Response type format xml or json
-*/
-@property NSString* responseType;
-
-/**
-* TODO: Write general description for this field
-*/
-@property NSString* friendlyName;
 
 /**
 * URL requested once the call connects
@@ -42,7 +32,17 @@
 @property NSString* voiceUrl;
 
 /**
-* TODO: Write general description for this field
+* Response type format xml or json
+*/
+@property NSString* responseType;
+
+/**
+* Phone number friendly name description
+*/
+@property NSString* friendlyName;
+
+/**
+* Post or Get
 */
 @property enum HttpActionEnum voiceMethod;
 
@@ -52,17 +52,17 @@
 @property NSString* voiceFallbackUrl;
 
 /**
-* TODO: Write general description for this field
+* Post or Get
 */
 @property enum HttpActionEnum voiceFallbackMethod;
 
 /**
-* TODO: Write general description for this field
+* callback url after a hangup occurs
 */
 @property NSString* hangupCallback;
 
 /**
-* TODO: Write general description for this field
+* Post or Get
 */
 @property enum HttpActionEnum hangupCallbackMethod;
 
@@ -82,7 +82,7 @@
 @property NSString* smsUrl;
 
 /**
-* TODO: Write general description for this field
+* Post or Get
 */
 @property enum HttpActionEnum smsMethod;
 

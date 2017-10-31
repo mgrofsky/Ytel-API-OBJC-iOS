@@ -11,36 +11,14 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateListSMSInput.h"
-#import "CreateListInboundSMSInput.h"
 #import "HttpActionEnum.h"
 #import "HttpActionEnumHelper.h"
-#import "CreateSendSMSInput.h"
-#import "CreateViewSMSInput.h"
+#import "SendSMSInput.h"
+#import "ViewSMSInput.h"
+#import "ListSMSInput.h"
+#import "ListInboundSMSInput.h"
 
 @interface SMSController : BaseController
-
-/**
-* Completion block definition for asynchronous call to List SMS */
-typedef void (^CompletedPostListSMS)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* List All SMS
-* @param  CreateListSMSInput     Object with all parameters
-*/
-- (void) createListSMSAsyncWithCreateListSMSInput:(CreateListSMSInput*) input
-                completionBlock:(CompletedPostListSMS) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to List Inbound SMS */
-typedef void (^CompletedPostListInboundSMS)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* List All Inbound SMS
-* @param  CreateListInboundSMSInput     Object with all parameters
-*/
-- (void) createListInboundSMSAsyncWithCreateListInboundSMSInput:(CreateListInboundSMSInput*) input
-                completionBlock:(CompletedPostListInboundSMS) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Send SMS */
@@ -48,9 +26,9 @@ typedef void (^CompletedPostSendSMS)(BOOL success, HttpContext* context, NSStrin
 
 /**
 * Send an SMS from a message360 number
-* @param  CreateSendSMSInput     Object with all parameters
+* @param  SendSMSInput     Object with all parameters
 */
-- (void) createSendSMSAsyncWithCreateSendSMSInput:(CreateSendSMSInput*) input
+- (void) sendSMSAsyncWithSendSMSInput:(SendSMSInput*) input
                 completionBlock:(CompletedPostSendSMS) onCompleted;
 
 /**
@@ -59,9 +37,31 @@ typedef void (^CompletedPostViewSMS)(BOOL success, HttpContext* context, NSStrin
 
 /**
 * View a Particular SMS
-* @param  CreateViewSMSInput     Object with all parameters
+* @param  ViewSMSInput     Object with all parameters
 */
-- (void) createViewSMSAsyncWithCreateViewSMSInput:(CreateViewSMSInput*) input
+- (void) viewSMSAsyncWithViewSMSInput:(ViewSMSInput*) input
                 completionBlock:(CompletedPostViewSMS) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to List SMS */
+typedef void (^CompletedPostListSMS)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* List All SMS
+* @param  ListSMSInput     Object with all parameters
+*/
+- (void) listSMSAsyncWithListSMSInput:(ListSMSInput*) input
+                completionBlock:(CompletedPostListSMS) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to List Inbound SMS */
+typedef void (^CompletedPostListInboundSMS)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* List All Inbound SMS
+* @param  ListInboundSMSInput     Object with all parameters
+*/
+- (void) listInboundSMSAsyncWithListInboundSMSInput:(ListInboundSMSInput*) input
+                completionBlock:(CompletedPostListInboundSMS) onCompleted;
 
 @end

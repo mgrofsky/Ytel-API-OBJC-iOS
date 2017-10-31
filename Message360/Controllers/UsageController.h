@@ -13,7 +13,7 @@
 #import "HttpContext.h"
 #import "ProductCodeEnum.h"
 #import "ProductCodeEnumHelper.h"
-#import "CreateListUsageInput.h"
+#import "ListUsageInput.h"
 
 @interface UsageController : BaseController
 
@@ -23,9 +23,9 @@ typedef void (^CompletedPostListUsage)(BOOL success, HttpContext* context, NSStr
 
 /**
 * Get all usage 
-* @param  CreateListUsageInput     Object with all parameters
+* @param  ListUsageInput     Object with all parameters
 */
-- (void) createListUsageAsyncWithCreateListUsageInput:(CreateListUsageInput*) input
+- (void) listUsageAsyncWithListUsageInput:(ListUsageInput*) input
                 completionBlock:(CompletedPostListUsage) onCompleted;
 
 @end

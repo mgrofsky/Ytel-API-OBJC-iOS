@@ -9,22 +9,16 @@
 @implementation SubAccountController
 
 /**
-* Create a sub user account under the parent account
-* @param  CreateSubAccountInput     Object with all parameters
+* Delete sub account or merge numbers into parent
+* @param  DeleteSubAccountInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*) input
-                completionBlock:(CompletedPostCreateSubAccount) onCompleted
+- (void) deleteSubAccountAsyncWithDeleteSubAccountInput:(DeleteSubAccountInput*) input
+                completionBlock:(CompletedPostDeleteSubAccount) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.firstName == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'firstName' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.lastName == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'lastName' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.email == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
+    if (input.subAccountSID == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'subAccountSID' in the input object cannot be nil."
                                                     andContext:nil];
     else if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
@@ -37,7 +31,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/user/createsubaccount.{ResponseType}"];
+    [_queryBuilder appendString: @"/user/deletesubaccount.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -52,9 +46,8 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"FirstName": input.firstName,
-        @"LastName": input.lastName,
-        @"Email": input.email
+        @"SubAccountSID": input.subAccountSID,
+        @"MergeNumber": [MergeNumberStatusEnumHelper stringFromMergeNumberStatusEnum: (enum MergeNumberStatusEnum) input.mergeNumber withDefault: @"0"]
     }];
 
     //convert to form parameters
@@ -119,9 +112,9 @@
 
 /**
 * Suspend or unsuspend
-* @param  CreateSuspendSubAccountInput     Object with all parameters
+* @param  SuspendSubAccountInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createSuspendSubAccountAsyncWithCreateSuspendSubAccountInput:(CreateSuspendSubAccountInput*) input
+- (void) suspendSubAccountAsyncWithSuspendSubAccountInput:(SuspendSubAccountInput*) input
                 completionBlock:(CompletedPostSuspendSubAccount) onCompleted
 {
     //validating required parameters
@@ -220,16 +213,22 @@
 }
 
 /**
-* Delete sub account or merge numbers into parent
-* @param  CreateDeleteSubAccountInput     Object with all parameters
+* Create a sub user account under the parent account
+* @param  CreateSubAccountInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createDeleteSubAccountAsyncWithCreateDeleteSubAccountInput:(CreateDeleteSubAccountInput*) input
-                completionBlock:(CompletedPostDeleteSubAccount) onCompleted
+- (void) createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*) input
+                completionBlock:(CompletedPostCreateSubAccount) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.subAccountSID == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'subAccountSID' in the input object cannot be nil."
+    if (input.firstName == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'firstName' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.lastName == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'lastName' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.email == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'email' in the input object cannot be nil."
                                                     andContext:nil];
     else if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
@@ -242,7 +241,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/user/deletesubaccount.{ResponseType}"];
+    [_queryBuilder appendString: @"/user/createsubaccount.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -257,8 +256,9 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"SubAccountSID": input.subAccountSID,
-        @"MergeNumber": [MergeNumberStatusEnumHelper stringFromMergeNumberStatusEnum: (enum MergeNumberStatusEnum) input.mergeNumber withDefault: @"0"]
+        @"FirstName": input.firstName,
+        @"LastName": input.lastName,
+        @"Email": input.email
     }];
 
     //convert to form parameters

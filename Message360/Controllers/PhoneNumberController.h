@@ -11,13 +11,13 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateBuyNumberInput.h"
-#import "CreateReleaseNumberInput.h"
-#import "CreateViewNumberDetailsInput.h"
 #import "NumberTypeEnum.h"
 #import "NumberTypeEnumHelper.h"
-#import "CreateListNumberInput.h"
-#import "CreateAvailablePhoneNumberInput.h"
+#import "AvailablePhoneNumberInput.h"
+#import "ListNumberInput.h"
+#import "ViewNumberDetailsInput.h"
+#import "ReleaseNumberInput.h"
+#import "BuyNumberInput.h"
 #import "HttpActionEnum.h"
 #import "HttpActionEnumHelper.h"
 #import "UpdatePhoneNumberInput.h"
@@ -25,37 +25,15 @@
 @interface PhoneNumberController : BaseController
 
 /**
-* Completion block definition for asynchronous call to Buy Number */
-typedef void (^CompletedPostBuyNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to Available Phone Number */
+typedef void (^CompletedPostAvailablePhoneNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* Buy Phone Number 
-* @param  CreateBuyNumberInput     Object with all parameters
+* Available Phone Number
+* @param  AvailablePhoneNumberInput     Object with all parameters
 */
-- (void) createBuyNumberAsyncWithCreateBuyNumberInput:(CreateBuyNumberInput*) input
-                completionBlock:(CompletedPostBuyNumber) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Release Number */
-typedef void (^CompletedPostReleaseNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Release number from account
-* @param  CreateReleaseNumberInput     Object with all parameters
-*/
-- (void) createReleaseNumberAsyncWithCreateReleaseNumberInput:(CreateReleaseNumberInput*) input
-                completionBlock:(CompletedPostReleaseNumber) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to View Number Details */
-typedef void (^CompletedPostViewNumberDetails)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Get Phone Number Details
-* @param  CreateViewNumberDetailsInput     Object with all parameters
-*/
-- (void) createViewNumberDetailsAsyncWithCreateViewNumberDetailsInput:(CreateViewNumberDetailsInput*) input
-                completionBlock:(CompletedPostViewNumberDetails) onCompleted;
+- (void) availablePhoneNumberAsyncWithAvailablePhoneNumberInput:(AvailablePhoneNumberInput*) input
+                completionBlock:(CompletedPostAvailablePhoneNumber) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to List Number */
@@ -63,21 +41,43 @@ typedef void (^CompletedPostListNumber)(BOOL success, HttpContext* context, NSSt
 
 /**
 * List Account's Phone number details
-* @param  CreateListNumberInput     Object with all parameters
+* @param  ListNumberInput     Object with all parameters
 */
-- (void) createListNumberAsyncWithCreateListNumberInput:(CreateListNumberInput*) input
+- (void) listNumberAsyncWithListNumberInput:(ListNumberInput*) input
                 completionBlock:(CompletedPostListNumber) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to Available Phone Number */
-typedef void (^CompletedPostAvailablePhoneNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to View Number Details */
+typedef void (^CompletedPostViewNumberDetails)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* Available Phone Number
-* @param  CreateAvailablePhoneNumberInput     Object with all parameters
+* Get Phone Number Details
+* @param  ViewNumberDetailsInput     Object with all parameters
 */
-- (void) createAvailablePhoneNumberAsyncWithCreateAvailablePhoneNumberInput:(CreateAvailablePhoneNumberInput*) input
-                completionBlock:(CompletedPostAvailablePhoneNumber) onCompleted;
+- (void) viewNumberDetailsAsyncWithViewNumberDetailsInput:(ViewNumberDetailsInput*) input
+                completionBlock:(CompletedPostViewNumberDetails) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Release Number */
+typedef void (^CompletedPostReleaseNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Release number from account
+* @param  ReleaseNumberInput     Object with all parameters
+*/
+- (void) releaseNumberAsyncWithReleaseNumberInput:(ReleaseNumberInput*) input
+                completionBlock:(CompletedPostReleaseNumber) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Buy Number */
+typedef void (^CompletedPostBuyNumber)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Buy Phone Number 
+* @param  BuyNumberInput     Object with all parameters
+*/
+- (void) buyNumberAsyncWithBuyNumberInput:(BuyNumberInput*) input
+                completionBlock:(CompletedPostBuyNumber) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Update Phone Number */

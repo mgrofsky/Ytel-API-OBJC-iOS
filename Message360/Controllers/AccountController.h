@@ -11,7 +11,7 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateViewAccountInput.h"
+#import "ViewAccountInput.h"
 
 @interface AccountController : BaseController
 
@@ -21,9 +21,9 @@ typedef void (^CompletedPostViewAccount)(BOOL success, HttpContext* context, NSS
 
 /**
 * Display Account Description
-* @param  CreateViewAccountInput     Object with all parameters
+* @param  ViewAccountInput     Object with all parameters
 */
-- (void) createViewAccountAsyncWithCreateViewAccountInput:(CreateViewAccountInput*) input
+- (void) viewAccountAsyncWithViewAccountInput:(ViewAccountInput*) input
                 completionBlock:(CompletedPostViewAccount) onCompleted;
 
 @end

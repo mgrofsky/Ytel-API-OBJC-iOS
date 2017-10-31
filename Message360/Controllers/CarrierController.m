@@ -10,9 +10,9 @@
 
 /**
 * Get the All Purchase Number's Carrier lookup
-* @param  CreateCarrierLookupListInput     Object with all parameters
+* @param  CarrierLookupListInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createCarrierLookupListAsyncWithCreateCarrierLookupListInput:(CreateCarrierLookupListInput*) input
+- (void) carrierLookupListAsyncWithCarrierLookupListInput:(CarrierLookupListInput*) input
                 completionBlock:(CompletedPostCarrierLookupList) onCompleted
 {
     //validating required parameters
@@ -43,8 +43,8 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"page": (nil != input.page) ? input.page : [NSNull null],
-        @"pagesize": (nil != input.pagesize) ? input.pagesize : [NSNull null]
+        @"page": [NSNumber numberWithInteger: input.page],
+        @"pagesize": [NSNumber numberWithInteger: input.pagesize]
     }];
 
     //convert to form parameters
@@ -109,9 +109,9 @@
 
 /**
 * Get the Carrier Lookup
-* @param  CreateCarrierLookupInput     Object with all parameters
+* @param  CarrierLookupInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createCarrierLookupAsyncWithCreateCarrierLookupInput:(CreateCarrierLookupInput*) input
+- (void) carrierLookupAsyncWithCarrierLookupInput:(CarrierLookupInput*) input
                 completionBlock:(CompletedPostCarrierLookup) onCompleted
 {
     //validating required parameters

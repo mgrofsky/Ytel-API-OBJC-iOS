@@ -10,9 +10,9 @@
 
 /**
 * TODO: type endpoint description here
-* @param  CreateCheckFundsInput     Object with all parameters
+* @param  CheckFundsInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createCheckFundsAsyncWithCreateCheckFundsInput:(CreateCheckFundsInput*) input
+- (void) checkFundsAsyncWithCheckFundsInput:(CheckFundsInput*) input
                 completionBlock:(CompletedPostCheckFunds) onCompleted
 {
     //validating required parameters

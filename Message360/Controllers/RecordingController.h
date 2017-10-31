@@ -11,33 +11,11 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateListRecordingInput.h"
-#import "CreateDeleteRecordingInput.h"
-#import "CreateViewRecordingInput.h"
+#import "ViewRecordingInput.h"
+#import "DeleteRecordingInput.h"
+#import "ListRecordingInput.h"
 
 @interface RecordingController : BaseController
-
-/**
-* Completion block definition for asynchronous call to List Recording */
-typedef void (^CompletedPostListRecording)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* List out Recordings
-* @param  CreateListRecordingInput     Object with all parameters
-*/
-- (void) createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordingInput*) input
-                completionBlock:(CompletedPostListRecording) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Delete Recording */
-typedef void (^CompletedPostDeleteRecording)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Delete Recording Record
-* @param  CreateDeleteRecordingInput     Object with all parameters
-*/
-- (void) createDeleteRecordingAsyncWithCreateDeleteRecordingInput:(CreateDeleteRecordingInput*) input
-                completionBlock:(CompletedPostDeleteRecording) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to View Recording */
@@ -45,9 +23,31 @@ typedef void (^CompletedPostViewRecording)(BOOL success, HttpContext* context, N
 
 /**
 * View a specific Recording
-* @param  CreateViewRecordingInput     Object with all parameters
+* @param  ViewRecordingInput     Object with all parameters
 */
-- (void) createViewRecordingAsyncWithCreateViewRecordingInput:(CreateViewRecordingInput*) input
+- (void) viewRecordingAsyncWithViewRecordingInput:(ViewRecordingInput*) input
                 completionBlock:(CompletedPostViewRecording) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Delete Recording */
+typedef void (^CompletedPostDeleteRecording)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Delete Recording Record
+* @param  DeleteRecordingInput     Object with all parameters
+*/
+- (void) deleteRecordingAsyncWithDeleteRecordingInput:(DeleteRecordingInput*) input
+                completionBlock:(CompletedPostDeleteRecording) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to List Recording */
+typedef void (^CompletedPostListRecording)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* List out Recordings
+* @param  ListRecordingInput     Object with all parameters
+*/
+- (void) listRecordingAsyncWithListRecordingInput:(ListRecordingInput*) input
+                completionBlock:(CompletedPostListRecording) onCompleted;
 
 @end

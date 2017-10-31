@@ -12,10 +12,10 @@
 #import "UnirestClient.h"
 #import "HttpContext.h"
 #import "CreateAddressInput.h"
-#import "CreateDeleteAddressInput.h"
-#import "CreateVerifyAddressInput.h"
-#import "CreateListAddressInput.h"
-#import "CreateViewAddressInput.h"
+#import "ViewAddressInput.h"
+#import "ListAddressInput.h"
+#import "VerifyAddressInput.h"
+#import "DeleteAddressInput.h"
 
 @interface AddressController : BaseController
 
@@ -31,26 +31,15 @@ typedef void (^CompletedPostCreateAddress)(BOOL success, HttpContext* context, N
                 completionBlock:(CompletedPostCreateAddress) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to Delete Address */
-typedef void (^CompletedPostDeleteAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to View Address */
+typedef void (^CompletedPostViewAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* To delete Address to your address book
-* @param  CreateDeleteAddressInput     Object with all parameters
+* View Address Specific address Book by providing the address id
+* @param  ViewAddressInput     Object with all parameters
 */
-- (void) createDeleteAddressAsyncWithCreateDeleteAddressInput:(CreateDeleteAddressInput*) input
-                completionBlock:(CompletedPostDeleteAddress) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Verify Address */
-typedef void (^CompletedPostVerifyAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Validates an address given.
-* @param  CreateVerifyAddressInput     Object with all parameters
-*/
-- (void) createVerifyAddressAsyncWithCreateVerifyAddressInput:(CreateVerifyAddressInput*) input
-                completionBlock:(CompletedPostVerifyAddress) onCompleted;
+- (void) viewAddressAsyncWithViewAddressInput:(ViewAddressInput*) input
+                completionBlock:(CompletedPostViewAddress) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to List Address */
@@ -58,20 +47,31 @@ typedef void (^CompletedPostListAddress)(BOOL success, HttpContext* context, NSS
 
 /**
 * List All Address 
-* @param  CreateListAddressInput     Object with all parameters
+* @param  ListAddressInput     Object with all parameters
 */
-- (void) createListAddressAsyncWithCreateListAddressInput:(CreateListAddressInput*) input
+- (void) listAddressAsyncWithListAddressInput:(ListAddressInput*) input
                 completionBlock:(CompletedPostListAddress) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to View Address */
-typedef void (^CompletedPostViewAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to Verify Address */
+typedef void (^CompletedPostVerifyAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* View Address Specific address Book by providing the address id
-* @param  CreateViewAddressInput     Object with all parameters
+* Validates an address given.
+* @param  VerifyAddressInput     Object with all parameters
 */
-- (void) createViewAddressAsyncWithCreateViewAddressInput:(CreateViewAddressInput*) input
-                completionBlock:(CompletedPostViewAddress) onCompleted;
+- (void) verifyAddressAsyncWithVerifyAddressInput:(VerifyAddressInput*) input
+                completionBlock:(CompletedPostVerifyAddress) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Delete Address */
+typedef void (^CompletedPostDeleteAddress)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* To delete Address to your address book
+* @param  DeleteAddressInput     Object with all parameters
+*/
+- (void) deleteAddressAsyncWithDeleteAddressInput:(DeleteAddressInput*) input
+                completionBlock:(CompletedPostDeleteAddress) onCompleted;
 
 @end

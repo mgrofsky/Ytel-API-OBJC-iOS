@@ -13,94 +13,28 @@
 #import "HttpContext.h"
 #import "HttpActionEnum.h"
 #import "HttpActionEnumHelper.h"
-#import "CreateGroupCallInput.h"
-#import "AudioDirectionEnum.h"
-#import "AudioDirectionEnumHelper.h"
-#import "CreateVoiceEffectInput.h"
-#import "DirectionEnum.h"
-#import "DirectionEnumHelper.h"
-#import "AudioFormatEnum.h"
-#import "AudioFormatEnumHelper.h"
-#import "CreateRecordCallInput.h"
-#import "CreatePlayAudioInput.h"
-#import "InterruptedCallStatusEnum.h"
-#import "InterruptedCallStatusEnumHelper.h"
-#import "CreateInterruptedCallInput.h"
-#import "CreateSendDigitInput.h"
 #import "IfMachineEnum.h"
 #import "IfMachineEnumHelper.h"
-#import "CreateMakeCallInput.h"
-#import "CreateListCallsInput.h"
-#import "CreateSendRinglessVMInput.h"
-#import "CreateViewCallInput.h"
+#import "MakeCallInput.h"
+#import "DirectionEnum.h"
+#import "DirectionEnumHelper.h"
+#import "PlayAudioInput.h"
+#import "AudioFormatEnum.h"
+#import "AudioFormatEnumHelper.h"
+#import "RecordCallInput.h"
+#import "AudioDirectionEnum.h"
+#import "AudioDirectionEnumHelper.h"
+#import "VoiceEffectInput.h"
+#import "SendDigitInput.h"
+#import "InterruptedCallStatusEnum.h"
+#import "InterruptedCallStatusEnumHelper.h"
+#import "InterruptedCallInput.h"
+#import "GroupCallInput.h"
+#import "ListCallsInput.h"
+#import "SendRinglessVMInput.h"
+#import "ViewCallInput.h"
 
 @interface CallController : BaseController
-
-/**
-* Completion block definition for asynchronous call to Group Call */
-typedef void (^CompletedPostGroupCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Group Call
-* @param  CreateGroupCallInput     Object with all parameters
-*/
-- (void) createGroupCallAsyncWithCreateGroupCallInput:(CreateGroupCallInput*) input
-                completionBlock:(CompletedPostGroupCall) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Voice Effect */
-typedef void (^CompletedPostVoiceEffect)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Voice Effect
-* @param  CreateVoiceEffectInput     Object with all parameters
-*/
-- (void) createVoiceEffectAsyncWithCreateVoiceEffectInput:(CreateVoiceEffectInput*) input
-                completionBlock:(CompletedPostVoiceEffect) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Record Call */
-typedef void (^CompletedPostRecordCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Record a Call
-* @param  CreateRecordCallInput     Object with all parameters
-*/
-- (void) createRecordCallAsyncWithCreateRecordCallInput:(CreateRecordCallInput*) input
-                completionBlock:(CompletedPostRecordCall) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Play Audio */
-typedef void (^CompletedPostPlayAudio)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Play Dtmf and send the Digit
-* @param  CreatePlayAudioInput     Object with all parameters
-*/
-- (void) createPlayAudioAsyncWithCreatePlayAudioInput:(CreatePlayAudioInput*) input
-                completionBlock:(CompletedPostPlayAudio) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Interrupted Call */
-typedef void (^CompletedPostInterruptedCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Interrupt the Call by Call Sid
-* @param  CreateInterruptedCallInput     Object with all parameters
-*/
-- (void) createInterruptedCallAsyncWithCreateInterruptedCallInput:(CreateInterruptedCallInput*) input
-                completionBlock:(CompletedPostInterruptedCall) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to Send Digit */
-typedef void (^CompletedPostSendDigit)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* Play Dtmf and send the Digit
-* @param  CreateSendDigitInput     Object with all parameters
-*/
-- (void) createSendDigitAsyncWithCreateSendDigitInput:(CreateSendDigitInput*) input
-                completionBlock:(CompletedPostSendDigit) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Make Call */
@@ -108,10 +42,76 @@ typedef void (^CompletedPostMakeCall)(BOOL success, HttpContext* context, NSStri
 
 /**
 * You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
-* @param  CreateMakeCallInput     Object with all parameters
+* @param  MakeCallInput     Object with all parameters
 */
-- (void) createMakeCallAsyncWithCreateMakeCallInput:(CreateMakeCallInput*) input
+- (void) makeCallAsyncWithMakeCallInput:(MakeCallInput*) input
                 completionBlock:(CompletedPostMakeCall) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Play Audio */
+typedef void (^CompletedPostPlayAudio)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Play Dtmf and send the Digit
+* @param  PlayAudioInput     Object with all parameters
+*/
+- (void) playAudioAsyncWithPlayAudioInput:(PlayAudioInput*) input
+                completionBlock:(CompletedPostPlayAudio) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Record Call */
+typedef void (^CompletedPostRecordCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Record a Call
+* @param  RecordCallInput     Object with all parameters
+*/
+- (void) recordCallAsyncWithRecordCallInput:(RecordCallInput*) input
+                completionBlock:(CompletedPostRecordCall) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Voice Effect */
+typedef void (^CompletedPostVoiceEffect)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Voice Effect
+* @param  VoiceEffectInput     Object with all parameters
+*/
+- (void) voiceEffectAsyncWithVoiceEffectInput:(VoiceEffectInput*) input
+                completionBlock:(CompletedPostVoiceEffect) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Send Digit */
+typedef void (^CompletedPostSendDigit)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Play Dtmf and send the Digit
+* @param  SendDigitInput     Object with all parameters
+*/
+- (void) sendDigitAsyncWithSendDigitInput:(SendDigitInput*) input
+                completionBlock:(CompletedPostSendDigit) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Interrupted Call */
+typedef void (^CompletedPostInterruptedCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Interrupt the Call by Call Sid
+* @param  InterruptedCallInput     Object with all parameters
+*/
+- (void) interruptedCallAsyncWithInterruptedCallInput:(InterruptedCallInput*) input
+                completionBlock:(CompletedPostInterruptedCall) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Group Call */
+typedef void (^CompletedPostGroupCall)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Group Call
+* @param  GroupCallInput     Object with all parameters
+*/
+- (void) groupCallAsyncWithGroupCallInput:(GroupCallInput*) input
+                completionBlock:(CompletedPostGroupCall) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to List Calls */
@@ -119,9 +119,9 @@ typedef void (^CompletedPostListCalls)(BOOL success, HttpContext* context, NSStr
 
 /**
 * A list of calls associated with your Message360 account
-* @param  CreateListCallsInput     Object with all parameters
+* @param  ListCallsInput     Object with all parameters
 */
-- (void) createListCallsAsyncWithCreateListCallsInput:(CreateListCallsInput*) input
+- (void) listCallsAsyncWithListCallsInput:(ListCallsInput*) input
                 completionBlock:(CompletedPostListCalls) onCompleted;
 
 /**
@@ -130,9 +130,9 @@ typedef void (^CompletedPostSendRinglessVM)(BOOL success, HttpContext* context, 
 
 /**
 * API endpoint used to send a Ringless Voicemail
-* @param  CreateSendRinglessVMInput     Object with all parameters
+* @param  SendRinglessVMInput     Object with all parameters
 */
-- (void) createSendRinglessVMAsyncWithCreateSendRinglessVMInput:(CreateSendRinglessVMInput*) input
+- (void) sendRinglessVMAsyncWithSendRinglessVMInput:(SendRinglessVMInput*) input
                 completionBlock:(CompletedPostSendRinglessVM) onCompleted;
 
 /**
@@ -141,9 +141,9 @@ typedef void (^CompletedPostViewCall)(BOOL success, HttpContext* context, NSStri
 
 /**
 * View Call Response
-* @param  CreateViewCallInput     Object with all parameters
+* @param  ViewCallInput     Object with all parameters
 */
-- (void) createViewCallAsyncWithCreateViewCallInput:(CreateViewCallInput*) input
+- (void) viewCallAsyncWithViewCallInput:(ViewCallInput*) input
                 completionBlock:(CompletedPostViewCall) onCompleted;
 
 @end

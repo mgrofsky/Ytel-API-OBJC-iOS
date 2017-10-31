@@ -9,15 +9,18 @@
 @implementation RecordingController
 
 /**
-* List out Recordings
-* @param  CreateListRecordingInput     Object with all parameters
+* View a specific Recording
+* @param  ViewRecordingInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListRecordingAsyncWithCreateListRecordingInput:(CreateListRecordingInput*) input
-                completionBlock:(CompletedPostListRecording) onCompleted
+- (void) viewRecordingAsyncWithViewRecordingInput:(ViewRecordingInput*) input
+                completionBlock:(CompletedPostViewRecording) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.responseType == nil)
+    if (input.recordingSid == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'recordingSid' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
@@ -28,7 +31,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/recording/listrecording.{ResponseType}"];
+    [_queryBuilder appendString: @"/recording/viewrecording.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -43,10 +46,7 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"Page": (nil != input.page) ? input.page : [NSNull null],
-        @"PageSize": (nil != input.pageSize) ? input.pageSize : [NSNull null],
-        @"DateCreated": (nil != input.dateCreated) ? input.dateCreated : [NSNull null],
-        @"CallSid": (nil != input.callSid) ? input.callSid : [NSNull null]
+        @"RecordingSid": input.recordingSid
     }];
 
     //convert to form parameters
@@ -111,9 +111,9 @@
 
 /**
 * Delete Recording Record
-* @param  CreateDeleteRecordingInput     Object with all parameters
+* @param  DeleteRecordingInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createDeleteRecordingAsyncWithCreateDeleteRecordingInput:(CreateDeleteRecordingInput*) input
+- (void) deleteRecordingAsyncWithDeleteRecordingInput:(DeleteRecordingInput*) input
                 completionBlock:(CompletedPostDeleteRecording) onCompleted
 {
     //validating required parameters
@@ -211,18 +211,15 @@
 }
 
 /**
-* View a specific Recording
-* @param  CreateViewRecordingInput     Object with all parameters
+* List out Recordings
+* @param  ListRecordingInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createViewRecordingAsyncWithCreateViewRecordingInput:(CreateViewRecordingInput*) input
-                completionBlock:(CompletedPostViewRecording) onCompleted
+- (void) listRecordingAsyncWithListRecordingInput:(ListRecordingInput*) input
+                completionBlock:(CompletedPostListRecording) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.recordingSid == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'recordingSid' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
+    if (input.responseType == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
@@ -233,7 +230,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/recording/viewrecording.{ResponseType}"];
+    [_queryBuilder appendString: @"/recording/listrecording.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -248,7 +245,10 @@
 
     //load form parameters
     [_parameters addEntriesFromDictionary: @{
-        @"RecordingSid": input.recordingSid
+        @"Page": [NSNumber numberWithInteger: input.page],
+        @"PageSize": [NSNumber numberWithInteger: input.pageSize],
+        @"DateCreated": (nil != input.dateCreated) ? input.dateCreated : [NSNull null],
+        @"CallSid": (nil != input.callSid) ? input.callSid : [NSNull null]
     }];
 
     //convert to form parameters

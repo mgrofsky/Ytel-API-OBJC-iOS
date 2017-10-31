@@ -11,14 +11,19 @@
 #import "BaseController.h"
 #import "UnirestClient.h"
 #import "HttpContext.h"
-#import "CreateDeafMuteParticipantInput.h"
-#import "InterruptedCallStatusEnum.h"
-#import "InterruptedCallStatusEnumHelper.h"
-#import "CreateListConferenceInput.h"
-#import "CreateViewConferenceInput.h"
+#import "DeafMuteParticipantInput.h"
+#import "ViewParticipantInput.h"
 #import "AddParticipantInput.h"
-#import "CreateListParticipantInput.h"
-#import "CreateViewParticipantInput.h"
+#import "ViewConferenceInput.h"
+#import "HttpActionEnum.h"
+#import "HttpActionEnumHelper.h"
+#import "CreateConferenceInput.h"
+#import "HangupParticipantInput.h"
+#import "AudioFormatEnum.h"
+#import "AudioFormatEnumHelper.h"
+#import "PlayConferenceAudioInput.h"
+#import "ListParticipantInput.h"
+#import "ListConferenceInput.h"
 
 @interface ConferenceController : BaseController
 
@@ -28,32 +33,21 @@ typedef void (^CompletedPostDeafMuteParticipant)(BOOL success, HttpContext* cont
 
 /**
 * Deaf Mute Participant
-* @param  CreateDeafMuteParticipantInput     Object with all parameters
+* @param  DeafMuteParticipantInput     Object with all parameters
 */
-- (void) createDeafMuteParticipantAsyncWithCreateDeafMuteParticipantInput:(CreateDeafMuteParticipantInput*) input
+- (void) deafMuteParticipantAsyncWithDeafMuteParticipantInput:(DeafMuteParticipantInput*) input
                 completionBlock:(CompletedPostDeafMuteParticipant) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to List Conference */
-typedef void (^CompletedPostListConference)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to View Participant */
+typedef void (^CompletedPostViewParticipant)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* List Conference
-* @param  CreateListConferenceInput     Object with all parameters
+* View Participant
+* @param  ViewParticipantInput     Object with all parameters
 */
-- (void) createListConferenceAsyncWithCreateListConferenceInput:(CreateListConferenceInput*) input
-                completionBlock:(CompletedPostListConference) onCompleted;
-
-/**
-* Completion block definition for asynchronous call to View Conference */
-typedef void (^CompletedPostViewConference)(BOOL success, HttpContext* context, NSString* response, NSError* error);
-
-/**
-* View Conference
-* @param  CreateViewConferenceInput     Object with all parameters
-*/
-- (void) createViewConferenceAsyncWithCreateViewConferenceInput:(CreateViewConferenceInput*) input
-                completionBlock:(CompletedPostViewConference) onCompleted;
+- (void) viewParticipantAsyncWithViewParticipantInput:(ViewParticipantInput*) input
+                completionBlock:(CompletedPostViewParticipant) onCompleted;
 
 /**
 * Completion block definition for asynchronous call to Add Participant */
@@ -67,25 +61,69 @@ typedef void (^CompletedPostAddParticipant)(BOOL success, HttpContext* context, 
                 completionBlock:(CompletedPostAddParticipant) onCompleted;
 
 /**
+* Completion block definition for asynchronous call to View Conference */
+typedef void (^CompletedPostViewConference)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* View Conference
+* @param  ViewConferenceInput     Object with all parameters
+*/
+- (void) viewConferenceAsyncWithViewConferenceInput:(ViewConferenceInput*) input
+                completionBlock:(CompletedPostViewConference) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Create Conference */
+typedef void (^CompletedPostCreateConference)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Here you can experiment with initiating a conference call through message360 and view the request response generated when doing so.
+* @param  CreateConferenceInput     Object with all parameters
+*/
+- (void) createConferenceAsyncWithCreateConferenceInput:(CreateConferenceInput*) input
+                completionBlock:(CompletedPostCreateConference) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Hangup Participant */
+typedef void (^CompletedPostHangupParticipant)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Remove a participant from a conference.
+* @param  HangupParticipantInput     Object with all parameters
+*/
+- (void) hangupParticipantAsyncWithHangupParticipantInput:(HangupParticipantInput*) input
+                completionBlock:(CompletedPostHangupParticipant) onCompleted;
+
+/**
+* Completion block definition for asynchronous call to Play Conference Audio */
+typedef void (^CompletedPostPlayConferenceAudio)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+
+/**
+* Play an audio file during a conference.
+* @param  PlayConferenceAudioInput     Object with all parameters
+*/
+- (void) playConferenceAudioAsyncWithPlayConferenceAudioInput:(PlayConferenceAudioInput*) input
+                completionBlock:(CompletedPostPlayConferenceAudio) onCompleted;
+
+/**
 * Completion block definition for asynchronous call to List Participant */
 typedef void (^CompletedPostListParticipant)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
 * List Participant
-* @param  CreateListParticipantInput     Object with all parameters
+* @param  ListParticipantInput     Object with all parameters
 */
-- (void) createListParticipantAsyncWithCreateListParticipantInput:(CreateListParticipantInput*) input
+- (void) listParticipantAsyncWithListParticipantInput:(ListParticipantInput*) input
                 completionBlock:(CompletedPostListParticipant) onCompleted;
 
 /**
-* Completion block definition for asynchronous call to View Participant */
-typedef void (^CompletedPostViewParticipant)(BOOL success, HttpContext* context, NSString* response, NSError* error);
+* Completion block definition for asynchronous call to List Conference */
+typedef void (^CompletedPostListConference)(BOOL success, HttpContext* context, NSString* response, NSError* error);
 
 /**
-* View Participant
-* @param  CreateViewParticipantInput     Object with all parameters
+* List Conference
+* @param  ListConferenceInput     Object with all parameters
 */
-- (void) createViewParticipantAsyncWithCreateViewParticipantInput:(CreateViewParticipantInput*) input
-                completionBlock:(CompletedPostViewParticipant) onCompleted;
+- (void) listConferenceAsyncWithListConferenceInput:(ListConferenceInput*) input
+                completionBlock:(CompletedPostListConference) onCompleted;
 
 @end

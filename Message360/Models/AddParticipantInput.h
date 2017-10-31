@@ -30,22 +30,17 @@
 @property NSString* participantnumber;
 
 /**
-* TODO: Write general description for this field
-*/
-@property int tocountrycode;
-
-/**
 * Response type format xml or json
 */
 @property NSString* responseType;
 
 /**
-* TODO: Write general description for this field
+* add muted
 */
 @property NSNumber* muted;
 
 /**
-* TODO: Write general description for this field
+* add without volume
 */
 @property NSNumber* deaf;
 

@@ -10,9 +10,9 @@
 
 /**
 * Display Account Description
-* @param  CreateViewAccountInput     Object with all parameters
+* @param  ViewAccountInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createViewAccountAsyncWithCreateViewAccountInput:(CreateViewAccountInput*) input
+- (void) viewAccountAsyncWithViewAccountInput:(ViewAccountInput*) input
                 completionBlock:(CompletedPostViewAccount) onCompleted
 {
     //validating required parameters

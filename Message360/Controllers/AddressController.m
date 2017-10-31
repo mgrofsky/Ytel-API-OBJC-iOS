@@ -133,11 +133,11 @@
 }
 
 /**
-* To delete Address to your address book
-* @param  CreateDeleteAddressInput     Object with all parameters
+* View Address Specific address Book by providing the address id
+* @param  ViewAddressInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createDeleteAddressAsyncWithCreateDeleteAddressInput:(CreateDeleteAddressInput*) input
-                completionBlock:(CompletedPostDeleteAddress) onCompleted
+- (void) viewAddressAsyncWithViewAddressInput:(ViewAddressInput*) input
+                completionBlock:(CompletedPostViewAddress) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -155,108 +155,7 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/address/deleteaddress.{ResponseType}"];
-
-    //process optional query parameters
-    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
-                    @"ResponseType": input.responseType
-                }];
-
-    //validate and preprocess url
-    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
-
-    //preparing request parameters
-    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
-
-    //load form parameters
-    [_parameters addEntriesFromDictionary: @{
-        @"AddressSID": input.addressSID
-    }];
-
-    //convert to form parameters
-    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
-    //Remove null values from parameter collection in order to omit from request
-    [APIHelper removeNullValues: _parameters];
-
-
-    //preparing request headers
-    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
-        @"user-agent": @"message360-api"
-    }];
-
-    //Remove null values from header collection in order to omit from request
-    [APIHelper removeNullValues: _headers];
-
-
-    //prepare the request and fetch response  
-    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
-    { 
-        [_request setQueryUrl: _queryUrl]; //set request url        
-        [_request setHeaders: _headers]; //set request headers
-        [_request setParameters: _parameters]; //set request parameters
-        [_request setUsername: [Configuration BasicAuthUserName]];
-        [_request setPassword: [Configuration BasicAuthPassword]];
-
-    }];
-
-    //use the instance of the http client to make the actual call
-    [[self clientInstance]
-     executeAsString: _request
-     success: ^(id _context, HttpResponse *_response) {
-         //Error handling using HTTP status codes
-         NSError* _statusError = nil;
-
-         //Error handling using HTTP status codes 
-         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
-             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
-                                                  andContext:_context];
-
-         if(_statusError != nil)
-         {
-             //announce completion with failure due to HTTP status code checking
-             onCompleted(NO, _context, nil, _statusError);
-         }
-         else
-         {
-             //return _response to API caller
- 
-             NSString* _result = [(HttpStringResponse*)_response body];
-
- 
-             //announce completion with success
-             onCompleted(YES, _context, _result, nil);
-         }
-     } failure:^(id _context, NSError *_error) {
- 
-         //announce completion with failure
-         onCompleted(NO, _context, nil, _error);
-     }];
-}
-
-/**
-* Validates an address given.
-* @param  CreateVerifyAddressInput     Object with all parameters
-* @return	Returns the void response from the API call */
-- (void) createVerifyAddressAsyncWithCreateVerifyAddressInput:(CreateVerifyAddressInput*) input
-                completionBlock:(CompletedPostVerifyAddress) onCompleted
-{
-    //validating required parameters
-    NSError* _validationError = nil;
-    if (input.addressSID == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'addressSID' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
-                                                    andContext:nil];
-    if(_validationError != nil)
-        onCompleted(NO,nil,nil,_validationError);
-
-    //the base uri for api requests
-    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
-
-    //prepare query string for API call
-    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/address/verifyaddress.{ResponseType}"];
+    [_queryBuilder appendString: @"/address/viewaddress.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
@@ -336,9 +235,9 @@
 
 /**
 * List All Address 
-* @param  CreateListAddressInput     Object with all parameters
+* @param  ListAddressInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListAddressAsyncWithCreateListAddressInput:(CreateListAddressInput*) input
+- (void) listAddressAsyncWithListAddressInput:(ListAddressInput*) input
                 completionBlock:(CompletedPostListAddress) onCompleted
 {
     //validating required parameters
@@ -436,11 +335,11 @@
 }
 
 /**
-* View Address Specific address Book by providing the address id
-* @param  CreateViewAddressInput     Object with all parameters
+* Validates an address given.
+* @param  VerifyAddressInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createViewAddressAsyncWithCreateViewAddressInput:(CreateViewAddressInput*) input
-                completionBlock:(CompletedPostViewAddress) onCompleted
+- (void) verifyAddressAsyncWithVerifyAddressInput:(VerifyAddressInput*) input
+                completionBlock:(CompletedPostVerifyAddress) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
@@ -458,7 +357,108 @@
 
     //prepare query string for API call
     NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
-    [_queryBuilder appendString: @"/address/viewaddress.{ResponseType}"];
+    [_queryBuilder appendString: @"/address/verifyaddress.{ResponseType}"];
+
+    //process optional query parameters
+    [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{
+                    @"ResponseType": input.responseType
+                }];
+
+    //validate and preprocess url
+    NSString* _queryUrl = [APIHelper cleanUrl: _queryBuilder];
+
+    //preparing request parameters
+    NSMutableDictionary* _parameters = [[NSMutableDictionary alloc] init];
+
+    //load form parameters
+    [_parameters addEntriesFromDictionary: @{
+        @"AddressSID": input.addressSID
+    }];
+
+    //convert to form parameters
+    _parameters = [APIHelper prepareParametersAsFormFields:_parameters];
+    //Remove null values from parameter collection in order to omit from request
+    [APIHelper removeNullValues: _parameters];
+
+
+    //preparing request headers
+    NSMutableDictionary* _headers = [[NSMutableDictionary alloc] initWithDictionary: @{
+        @"user-agent": @"message360-api"
+    }];
+
+    //Remove null values from header collection in order to omit from request
+    [APIHelper removeNullValues: _headers];
+
+
+    //prepare the request and fetch response  
+    HttpRequest* _request = [[self clientInstance] post: ^(HttpRequest* _request) 
+    { 
+        [_request setQueryUrl: _queryUrl]; //set request url        
+        [_request setHeaders: _headers]; //set request headers
+        [_request setParameters: _parameters]; //set request parameters
+        [_request setUsername: [Configuration BasicAuthUserName]];
+        [_request setPassword: [Configuration BasicAuthPassword]];
+
+    }];
+
+    //use the instance of the http client to make the actual call
+    [[self clientInstance]
+     executeAsString: _request
+     success: ^(id _context, HttpResponse *_response) {
+         //Error handling using HTTP status codes
+         NSError* _statusError = nil;
+
+         //Error handling using HTTP status codes 
+         if((_response.statusCode < 200) || (_response.statusCode > 208)) //[200,208] = HTTP OK
+             _statusError = [[APIError alloc] initWithReason: @"HTTP Response Not OK"
+                                                  andContext:_context];
+
+         if(_statusError != nil)
+         {
+             //announce completion with failure due to HTTP status code checking
+             onCompleted(NO, _context, nil, _statusError);
+         }
+         else
+         {
+             //return _response to API caller
+ 
+             NSString* _result = [(HttpStringResponse*)_response body];
+
+ 
+             //announce completion with success
+             onCompleted(YES, _context, _result, nil);
+         }
+     } failure:^(id _context, NSError *_error) {
+ 
+         //announce completion with failure
+         onCompleted(NO, _context, nil, _error);
+     }];
+}
+
+/**
+* To delete Address to your address book
+* @param  DeleteAddressInput     Object with all parameters
+* @return	Returns the void response from the API call */
+- (void) deleteAddressAsyncWithDeleteAddressInput:(DeleteAddressInput*) input
+                completionBlock:(CompletedPostDeleteAddress) onCompleted
+{
+    //validating required parameters
+    NSError* _validationError = nil;
+    if (input.addressSID == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'addressSID' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    if(_validationError != nil)
+        onCompleted(NO,nil,nil,_validationError);
+
+    //the base uri for api requests
+    NSString* _baseUri = [NSString stringWithString: (NSString*) [Configuration BaseUri]];
+
+    //prepare query string for API call
+    NSMutableString* _queryBuilder = [NSMutableString stringWithString: _baseUri]; 
+    [_queryBuilder appendString: @"/address/deleteaddress.{ResponseType}"];
 
     //process optional query parameters
     [APIHelper appendUrl: _queryBuilder withTemplateParameters: @{

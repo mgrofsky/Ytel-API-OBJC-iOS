@@ -9,19 +9,9 @@
 @implementation UpdatePhoneNumberInput
 
 /**
-* TODO: Write general description for this method
+* The phone number to update
 */
 @synthesize phoneNumber;
-
-/**
-* Response type format xml or json
-*/
-@synthesize responseType;
-
-/**
-* TODO: Write general description for this method
-*/
-@synthesize friendlyName;
 
 /**
 * URL requested once the call connects
@@ -29,7 +19,17 @@
 @synthesize voiceUrl;
 
 /**
-* TODO: Write general description for this method
+* Response type format xml or json
+*/
+@synthesize responseType;
+
+/**
+* Phone number friendly name description
+*/
+@synthesize friendlyName;
+
+/**
+* Post or Get
 */
 @synthesize voiceMethod;
 
@@ -39,17 +39,17 @@
 @synthesize voiceFallbackUrl;
 
 /**
-* TODO: Write general description for this method
+* Post or Get
 */
 @synthesize voiceFallbackMethod;
 
 /**
-* TODO: Write general description for this method
+* callback url after a hangup occurs
 */
 @synthesize hangupCallback;
 
 /**
-* TODO: Write general description for this method
+* Post or Get
 */
 @synthesize hangupCallbackMethod;
 
@@ -69,7 +69,7 @@
 @synthesize smsUrl;
 
 /**
-* TODO: Write general description for this method
+* Post or Get
 */
 @synthesize smsMethod;
 

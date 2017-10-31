@@ -10,21 +10,21 @@
 
 /**
 * Get all usage 
-* @param  CreateListUsageInput     Object with all parameters
+* @param  ListUsageInput     Object with all parameters
 * @return	Returns the void response from the API call */
-- (void) createListUsageAsyncWithCreateListUsageInput:(CreateListUsageInput*) input
+- (void) listUsageAsyncWithListUsageInput:(ListUsageInput*) input
                 completionBlock:(CompletedPostListUsage) onCompleted
 {
     //validating required parameters
     NSError* _validationError = nil;
-    if (input.startDate == nil)
+    if (input.responseType == nil)
+        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
+                                                    andContext:nil];
+    else if (input.startDate == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'startDate' in the input object cannot be nil."
                                                     andContext:nil];
     else if (input.endDate == nil)
         _validationError = [[APIError alloc] initWithReason: @"The property 'endDate' in the input object cannot be nil."
-                                                    andContext:nil];
-    else if (input.responseType == nil)
-        _validationError = [[APIError alloc] initWithReason: @"The property 'responseType' in the input object cannot be nil."
                                                     andContext:nil];
     if(_validationError != nil)
         onCompleted(NO,nil,nil,_validationError);

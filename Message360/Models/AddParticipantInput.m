@@ -19,22 +19,17 @@
 @synthesize participantnumber;
 
 /**
-* TODO: Write general description for this method
-*/
-@synthesize tocountrycode;
-
-/**
 * Response type format xml or json
 */
 @synthesize responseType;
 
 /**
-* TODO: Write general description for this method
+* add muted
 */
 @synthesize muted;
 
 /**
-* TODO: Write general description for this method
+* add without volume
 */
 @synthesize deaf;
 
