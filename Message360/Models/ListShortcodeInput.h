@@ -37,7 +37,7 @@
 /**
 * Only list messages sent with the specified date
 */
-@property NSDate* dateSent;
+@property NSString* dateSent;
 
 /**
 * The page count to retrieve from the total results in the collection. Page indexing starts at 1.

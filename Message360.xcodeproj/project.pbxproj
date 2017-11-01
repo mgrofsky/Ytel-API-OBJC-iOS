@@ -262,8 +262,6 @@
         AA9A82CCE1219D4C5910FE3B /* APIError.h in Headers */ = {isa = PBXBuildFile; fileRef = AA48BFFBF934C1B6D2406E77 /* APIError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 	
         AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-        AA5C98767EC06D4E40B57A79 /* JSONValueTransformer+NSDate.h in Headers */ = {isa = PBXBuildFile; fileRef = AA575224753AD22C62664B85 /* JSONValueTransformer+NSDate.h */; };
-        AA5D573CBB0B8B855EA01619 /* JSONValueTransformer+NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA49AA68151B551DE5F5CD4F /* JSONValueTransformer+NSDate.m */; };
         AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */; };
         AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */; };		
 
@@ -333,8 +331,6 @@
         AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+extension.h"; sourceTree = "<group>"; };
         AAC241C706904812E6B3DBD1 /* NSDate+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+extension.m"; sourceTree = "<group>"; };
        
-		AA575224753AD22C62664B85 /* JSONValueTransformer+NSDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSDate.h"; sourceTree = "<group>"; };
-        AA49AA68151B551DE5F5CD4F /* JSONValueTransformer+NSDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSDate.m"; sourceTree = "<group>"; };
         AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSUUID.h"; sourceTree = "<group>"; };
         AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSUUID.m"; sourceTree = "<group>"; };
         AAFDA2A62B62D6847BB95686 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
@@ -649,9 +645,6 @@
                 AA48BFFBF934C1B6D2406E77 /* APIError.h */,
 				AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */,
                 AAC241C706904812E6B3DBD1 /* NSDate+extension.m */,
-	
-                AA575224753AD22C62664B85 /* JSONValueTransformer+NSDate.h */,
-                AA49AA68151B551DE5F5CD4F /* JSONValueTransformer+NSDate.m */,
                 AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */,
                 AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */,
                 AAFCE585F7417595F3776274 /* Configuration.m */,
@@ -1086,7 +1079,6 @@
 		AABB26DA752AB72F432C52D0 /* AccountController.h in Headers */,
 		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */,
         AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */,
-        AA5C98767EC06D4E40B57A79 /* JSONValueTransformer+NSDate.h in Headers */,
         AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */,
         AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */,
         AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */,
@@ -1219,7 +1211,6 @@
                 AA3FC84281C8B49DAC26F961 /* APIError.m in Sources */,
                 AA0C599E7D4F200F8897AFF7 /* NSDate+extension.m in Sources */,
                 AABE48236E273EF1DB3275E0 /* Configuration.m in Sources */,
-                AA5D573CBB0B8B855EA01619 /* JSONValueTransformer+NSDate.m in Sources */,
                 AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */,
 				AAEB34E34DCF3AD2EE89B2F0 /* ViewTemplateInput.m in Sources */,
 				AADA98B3ED1977E425A981B7 /* DeafMuteParticipantInput.m in Sources */,

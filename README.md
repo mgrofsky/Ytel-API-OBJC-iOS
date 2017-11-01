@@ -207,8 +207,8 @@ function listOutboundSharedShortcodesAsyncWithListOutboundSharedShortcodesInput:
     // Parameters for the API call
     ListOutboundSharedShortcodesInput *input = [[ListOutboundSharedShortcodesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 143;
-    input.pagesize = 143;
+    input.page = 141;
+    input.pagesize = 141;
     input.from = @"from";
     input.to = @"to";
     input.datesent = @"datesent";
@@ -250,8 +250,8 @@ function listInboundSharedShortcodesAsyncWithListInboundSharedShortcodesInput:(L
     // Parameters for the API call
     ListInboundSharedShortcodesInput *input = [[ListInboundSharedShortcodesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 143;
-    input.pagesize = 143;
+    input.page = 141;
+    input.pagesize = 141;
     input.from = @"from";
     input.shortcode = @"Shortcode";
     input.dateReceived = @"DateReceived";
@@ -338,8 +338,8 @@ function listTemplatesAsyncWithListTemplatesInput:(ListTemplatesInput*) input
     ListTemplatesInput *input = [[ListTemplatesInput alloc]init];
     input.responseType = @"ResponseType";
     input.type = @"type";
-    input.page = 143;
-    input.pagesize = 143;
+    input.page = 141;
+    input.pagesize = 141;
     input.shortcode = @"Shortcode";
 
     [self.sharedShortCode listTemplatesAsyncWithListTemplatesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -413,10 +413,10 @@ function listKeywordAsyncWithListKeywordInput:(ListKeywordInput*) input
     // Parameters for the API call
     ListKeywordInput *input = [[ListKeywordInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 143;
-    input.pageSize = 143;
+    input.page = 141;
+    input.pageSize = 141;
     input.keyword = @"Keyword";
-    input.shortcode = 143;
+    input.shortcode = 141;
 
     [self.sharedShortCode listKeywordAsyncWithListKeywordInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -488,8 +488,8 @@ function listAssignmentAsyncWithListAssignmentInput:(ListAssignmentInput*) input
     // Parameters for the API call
     ListAssignmentInput *input = [[ListAssignmentInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 143;
-    input.pageSize = 143;
+    input.page = 141;
+    input.pageSize = 141;
     input.shortcode = @"Shortcode";
 
     [self.sharedShortCode listAssignmentAsyncWithListAssignmentInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -757,7 +757,7 @@ function createConferenceAsyncWithCreateConferenceInput:(CreateConferenceInput*)
     input.record = true;
     input.recordCallbackMethod = GET;
     input.schdeuleTime = @"SchdeuleTime";
-    input.timeout = 143;
+    input.timeout = 141;
 
     [self.conference createConferenceAsyncWithCreateConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -873,10 +873,10 @@ function listParticipantAsyncWithListParticipantInput:(ListParticipantInput*) in
     ListParticipantInput *input = [[ListParticipantInput alloc]init];
     input.conferenceSid = @"ConferenceSid";
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pagesize = 101;
-    input.muted = false;
-    input.deaf = false;
+    input.page = 141;
+    input.pagesize = 141;
+    input.muted = true;
+    input.deaf = true;
 
     [self.conference listParticipantAsyncWithListParticipantInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -914,8 +914,8 @@ function listConferenceAsyncWithListConferenceInput:(ListConferenceInput*) input
     // Parameters for the API call
     ListConferenceInput *input = [[ListConferenceInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pageSize = 101;
+    input.page = 141;
+    input.pageSize = 141;
     input.friendlyName = @"FriendlyName";
     input.dateCreated = @"DateCreated";
 
@@ -964,8 +964,8 @@ function listTranscriptionAsyncWithListTranscriptionInput:(ListTranscriptionInpu
     // Parameters for the API call
     ListTranscriptionInput *input = [[ListTranscriptionInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pageSize = 101;
+    input.page = 141;
+    input.pageSize = 141;
     input.status = INPROGRESS;
     input.dateTranscribed = @"DateTranscribed";
 
@@ -1120,7 +1120,7 @@ function availablePhoneNumberAsyncWithAvailablePhoneNumberInput:(AvailablePhoneN
     input.numberType = ALL;
     input.areaCode = @"AreaCode";
     input.responseType = @"ResponseType";
-    input.pageSize = 101;
+    input.pageSize = 232;
 
     [self.phoneNumber availablePhoneNumberAsyncWithAvailablePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1158,8 +1158,8 @@ function listNumberAsyncWithListNumberInput:(ListNumberInput*) input
     // Parameters for the API call
     ListNumberInput *input = [[ListNumberInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pageSize = 101;
+    input.page = 232;
+    input.pageSize = 232;
     input.numberType = ALL;
     input.friendlyName = @"FriendlyName";
 
@@ -1575,8 +1575,8 @@ function listRecordingAsyncWithListRecordingInput:(ListRecordingInput*) input
     // Parameters for the API call
     ListRecordingInput *input = [[ListRecordingInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pageSize = 101;
+    input.page = 232;
+    input.pageSize = 232;
     input.dateCreated = @"DateCreated";
     input.callSid = @"CallSid";
 
@@ -2085,7 +2085,7 @@ function sendSMSAsyncWithSendSMSInput:(SendSMSInput*) input
     input.responseType = @"ResponseType";
     input.method = GET;
     input.messagestatuscallback = @"messagestatuscallback";
-    input.smartsms = false;
+    input.smartsms = true;
 
     [self.sMS sendSMSAsyncWithSendSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2159,8 +2159,8 @@ function listSMSAsyncWithListSMSInput:(ListSMSInput*) input
     // Parameters for the API call
     ListSMSInput *input = [[ListSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pagesize = 101;
+    input.page = 232;
+    input.pagesize = 232;
     input.from = @"from";
     input.to = @"to";
     input.datesent = @"datesent";
@@ -2202,8 +2202,8 @@ function listInboundSMSAsyncWithListInboundSMSInput:(ListInboundSMSInput*) input
     // Parameters for the API call
     ListInboundSMSInput *input = [[ListInboundSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pagesize = 101;
+    input.page = 232;
+    input.pagesize = 232;
     input.from = @"from";
     input.to = @"to";
     input.dateSent = @"DateSent";
@@ -2282,18 +2282,18 @@ function makeCallAsyncWithMakeCallInput:(MakeCallInput*) input
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = GET;
-    input.timeout = 101;
+    input.timeout = 232;
     input.playDtmf = @"PlayDtmf";
-    input.hideCallerId = false;
-    input.record = false;
+    input.hideCallerId = true;
+    input.record = true;
     input.recordCallBackUrl = @"RecordCallBackUrl";
     input.recordCallBackMethod = GET;
-    input.transcribe = false;
+    input.transcribe = true;
     input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
     input.ifMachine = CONTINUE;
     input.ifMachineUrl = @"IfMachineUrl";
     input.ifMachineMethod = GET;
-    input.feedback = false;
+    input.feedback = true;
     input.surveyId = @"SurveyId";
 
     [self.call makeCallAsyncWithMakeCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2337,9 +2337,9 @@ function playAudioAsyncWithPlayAudioInput:(PlayAudioInput*) input
     input.audioUrl = @"AudioUrl";
     input.sayText = @"SayText";
     input.responseType = @"ResponseType";
-    input.length = 101;
+    input.length = 232;
     input.direction = IN;
-    input.mix = false;
+    input.mix = true;
 
     [self.call playAudioAsyncWithPlayAudioInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2379,10 +2379,10 @@ function recordCallAsyncWithRecordCallInput:(RecordCallInput*) input
     // Parameters for the API call
     RecordCallInput *input = [[RecordCallInput alloc]init];
     input.callSid = @"CallSid";
-    input.record = false;
+    input.record = true;
     input.responseType = @"ResponseType";
     input.direction = IN;
-    input.timeLimit = 101;
+    input.timeLimit = 232;
     input.callBackUrl = @"CallBackUrl";
     input.fileformat = MP3;
 
@@ -2427,11 +2427,11 @@ function voiceEffectAsyncWithVoiceEffectInput:(VoiceEffectInput*) input
     input.callSid = @"CallSid";
     input.responseType = @"ResponseType";
     input.audioDirection = IN;
-    input.pitchSemiTones = 101.606774442646;
-    input.pitchOctaves = 101.606774442646;
-    input.pitch = 101.606774442646;
-    input.rate = 101.606774442646;
-    input.tempo = 101.606774442646;
+    input.pitchSemiTones = 232.765989907908;
+    input.pitchOctaves = 232.765989907908;
+    input.pitch = 232.765989907908;
+    input.rate = 232.765989907908;
+    input.tempo = 232.765989907908;
 
     [self.call voiceEffectAsyncWithVoiceEffectInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2577,13 +2577,13 @@ function groupCallAsyncWithGroupCallInput:(GroupCallInput*) input
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = GET;
-    input.timeout = 101;
+    input.timeout = 232;
     input.playDtmf = @"PlayDtmf";
     input.hideCallerId = @"HideCallerId";
-    input.record = false;
+    input.record = true;
     input.recordCallBackUrl = @"RecordCallBackUrl";
     input.recordCallBackMethod = GET;
-    input.transcribe = false;
+    input.transcribe = true;
     input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
 
     [self.call groupCallAsyncWithGroupCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2623,8 +2623,8 @@ function listCallsAsyncWithListCallsInput:(ListCallsInput*) input
     // Parameters for the API call
     ListCallsInput *input = [[ListCallsInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 101;
-    input.pageSize = 101;
+    input.page = 232;
+    input.pageSize = 232;
     input.to = @"To";
     input.from = @"From";
     input.dateCreated = @"DateCreated";
@@ -2754,8 +2754,8 @@ function carrierLookupListAsyncWithCarrierLookupListInput:(CarrierLookupListInpu
     // Parameters for the API call
     CarrierLookupListInput *input = [[CarrierLookupListInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 193;
-    input.pagesize = 193;
+    input.page = 232;
+    input.pagesize = 232;
 
     [self.carrier carrierLookupListAsyncWithCarrierLookupListInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2923,8 +2923,8 @@ function listAddressAsyncWithListAddressInput:(ListAddressInput*) input
     // Parameters for the API call
     ListAddressInput *input = [[ListAddressInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 193;
-    input.pageSize = 193;
+    input.page = 232;
+    input.pageSize = 232;
     input.addressSID = @"AddressSID";
     input.dateCreated = @"DateCreated";
 
@@ -3209,8 +3209,8 @@ function sendDedicatedShortcodeAsyncWithSendDedicatedShortcodeInput:(SendDedicat
 ```objc
     // Parameters for the API call
     SendDedicatedShortcodeInput *input = [[SendDedicatedShortcodeInput alloc]init];
-    input.shortcode = 193;
-    input.to = 193.102056334308;
+    input.shortcode = 191;
+    input.to = 191.042816681342;
     input.body = @"body";
     input.responseType = @"ResponseType";
     input.method = GET;
@@ -3290,9 +3290,9 @@ function listShortcodeAsyncWithListShortcodeInput:(ListShortcodeInput*) input
     input.responseType = @"ResponseType";
     input.shortcode = @"Shortcode";
     input.to = @"To";
-    input.dateSent = [NSDate date];
-    input.page = 193;
-    input.pageSize = 193;
+    input.dateSent = @"DateSent";
+    input.page = 191;
+    input.pageSize = 191;
 
     [self.shortCode listShortcodeAsyncWithListShortcodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -3331,8 +3331,8 @@ function listInboundShortcodeAsyncWithListInboundShortcodeInput:(ListInboundShor
     // Parameters for the API call
     ListInboundShortcodeInput *input = [[ListInboundShortcodeInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 193;
-    input.pageSize = 193;
+    input.page = 191;
+    input.pageSize = 191;
     input.from = @"From";
     input.shortcode = @"Shortcode";
     input.dateReceived = @"DateReceived";
