@@ -1,6 +1,6 @@
 # Getting started
 
-message360 API version 3
+Ytel API version 3
 
 ## How to Build
 
@@ -13,50 +13,50 @@ Open command prompt and type ```pod --version```. This should display the curren
 Using command line, navigate to the directory containing the generated files (including ```PodFile```) for the SDK. 
 Run the command ```pod install```. This should install all the required dependencies and create the ```pods``` directory in your project directory.
 
-![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Installing dependencies using Cocoapods](https://apidocs.io/illustration/objc?step=AddDependencies&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
-Open the project workspace using the (Message360.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
+Open the project workspace using the (Ytel.xcworkspace) file. Invoke the build process using `Command(⌘)+B` shortcut key or using the `Build` menu as shown below.
 
-![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Building SDK using Xcode](https://apidocs.io/illustration/objc?step=BuildSDK&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 
 ## How to Use
 
 The generated code is a Cocoa Touch Static Library which can be used in any iOS project. The support for these generated libraries go all the way back to iOS 6.
 
-The following section explains how to use the Message360 library in a new iOS project.     
+The following section explains how to use the Ytel library in a new iOS project.     
 ### 1. Starting a new project
 To start a new project, left-click on the ```Create a new Xcode project```.
-![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Create Test Project - Step 1](https://apidocs.io/illustration/objc?step=Test1&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 Next, choose **Single View Application** and click ```Next```.
-![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Create Test Project - Step 2](https://apidocs.io/illustration/objc?step=Test2&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 Provide **Test-Project** as the product name click ```Next```.
-![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Create Test Project - Step 3](https://apidocs.io/illustration/objc?step=Test3&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 Choose the desired location of your project folder and click ```Create```.
-![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Create Test Project - Step 4](https://apidocs.io/illustration/objc?step=Test4&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 ### 2. Adding the static library dependency
 To add this dependency open a terminal and navigate to your project folder. Next, input ```pod init``` and press enter.
-![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Add dependency - Step 1](https://apidocs.io/illustration/objc?step=Add0&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
-Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'Message360', :path => 'Vendor/Message360'
-![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+Next, open the newly created ```PodFile``` in your favourite text editor. Add the following line : pod 'Ytel', :path => 'Vendor/Ytel'
+![Add dependency - Step 2](https://apidocs.io/illustration/objc?step=Add1&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 Execute `pod install` from terminal to install the dependecy in your project. This would add the dependency to the newly created test project.
-![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Add dependency - Step 3](https://apidocs.io/illustration/objc?step=Add2&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 
 ## How to Test
 
 Unit tests in this SDK can be run using Xcode. 
 
-First build the SDK as shown in the steps above and naivgate to the project directory and open the Message360.xcworkspace file.
+First build the SDK as shown in the steps above and naivgate to the project directory and open the Ytel.xcworkspace file.
 
 Go to the test explorer in Xcode as shown in the picture below and click on `run tests` from the menu. 
-![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=Message360-ObjC&workspaceName=Message360&projectName=Message360&rootNamespace=Message360)
+![Run tests](https://apidocs.io/illustration/objc?step=RunTests&workspaceFolder=Ytel-ObjC&workspaceName=Ytel&projectName=Ytel&rootNamespace=Ytel)
 
 
 ## Initialization
@@ -83,12 +83,11 @@ Configuration_BasicAuthPassword = "Configuration_BasicAuthPassword"; // The pass
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
+* [WebRTCController](#web_rtc_controller)
 * [SharedShortCodeController](#shared_short_code_controller)
 * [ConferenceController](#conference_controller)
-* [TranscriptionController](#transcription_controller)
 * [PhoneNumberController](#phone_number_controller)
-* [UsageController](#usage_controller)
-* [WebRTCController](#web_rtc_controller)
+* [TranscriptionController](#transcription_controller)
 * [RecordingController](#recording_controller)
 * [EmailController](#email_controller)
 * [SMSController](#sms_controller)
@@ -97,7 +96,94 @@ Configuration_BasicAuthPassword = "Configuration_BasicAuthPassword"; // The pass
 * [AddressController](#address_controller)
 * [SubAccountController](#sub_account_controller)
 * [AccountController](#account_controller)
+* [UsageController](#usage_controller)
 * [ShortCodeController](#short_code_controller)
+* [PostCardController](#post_card_controller)
+* [LetterController](#letter_controller)
+* [AreaMailController](#area_mail_controller)
+
+## <a name="web_rtc_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebRTCController") WebRTCController
+
+### Get singleton instance
+```objc
+WebRTC* webRTC = [[WebRTC alloc]init] ;
+```
+
+### <a name="create_token_async_with_create_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createTokenAsyncWithCreateTokenInput") createTokenAsyncWithCreateTokenInput
+
+> Ytel webrtc
+
+
+```objc
+function createTokenAsyncWithCreateTokenInput:(CreateTokenInput*) input
+                completionBlock:(CompletedPostCreateToken) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSid |  ``` Required ```  | Your Ytel Account SID |
+| authToken |  ``` Required ```  | Your Ytel Token |
+| username |  ``` Required ```  | WebRTC username authentication |
+| password |  ``` Required ```  | WebRTC password authentication |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateTokenInput *input = [[CreateTokenInput alloc]init];
+    input.accountSid = @"account_sid";
+    input.authToken = @"auth_token";
+    input.username = @"username";
+    input.password = @"password";
+
+    [self.webRTC createTokenAsyncWithCreateTokenInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="check_funds_async_with_check_funds_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.checkFundsAsyncWithCheckFundsInput") checkFundsAsyncWithCheckFundsInput
+
+> TODO: Add a method description
+
+
+```objc
+function checkFundsAsyncWithCheckFundsInput:(CheckFundsInput*) input
+                completionBlock:(CompletedPostCheckFunds) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| accountSid |  ``` Required ```  | Your Ytel Account SID |
+| authToken |  ``` Required ```  | Your Ytel Token |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CheckFundsInput *input = [[CheckFundsInput alloc]init];
+    input.accountSid = @"account_sid";
+    input.authToken = @"auth_token";
+
+    [self.webRTC checkFundsAsyncWithCheckFundsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
 
 ## <a name="shared_short_code_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SharedShortCodeController") SharedShortCodeController
 
@@ -120,7 +206,7 @@ function viewTemplateAsyncWithViewTemplateInput:(ViewTemplateInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| templateid |  ``` Required ```  | The unique identifier for a template object |
+| templateId |  ``` Required ```  | The unique identifier for a template object |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -132,7 +218,7 @@ function viewTemplateAsyncWithViewTemplateInput:(ViewTemplateInput*) input
 ```objc
     // Parameters for the API call
     ViewTemplateInput *input = [[ViewTemplateInput alloc]init];
-    input.templateid = 123456789;
+    input.templateId = 123456789;
     input.responseType = @"ResponseType";
 
     [self.sharedShortCode viewTemplateAsyncWithViewTemplateInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -191,10 +277,10 @@ function listOutboundSharedShortcodesAsyncWithListOutboundSharedShortcodesInput:
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
 | pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Messages sent from this number |
-| to |  ``` Optional ```  | Messages sent to this number |
+| shortcode |  ``` Optional ```  | Only list messages sent from this Short Code |
+| to |  ``` Optional ```  | Only list messages sent to this number |
 | datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
 
 
@@ -207,9 +293,9 @@ function listOutboundSharedShortcodesAsyncWithListOutboundSharedShortcodesInput:
     // Parameters for the API call
     ListOutboundSharedShortcodesInput *input = [[ListOutboundSharedShortcodesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pagesize = 141;
-    input.from = @"from";
+    input.page = 248;
+    input.pagesize = 248;
+    input.shortcode = @"Shortcode";
     input.to = @"to";
     input.datesent = @"datesent";
 
@@ -234,11 +320,11 @@ function listInboundSharedShortcodesAsyncWithListInboundSharedShortcodesInput:(L
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
 | pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | From Number to Inbound ShortCode |
 | shortcode |  ``` Optional ```  | Only list messages sent to this Short Code |
-| dateReceived |  ``` Optional ```  | Only list messages sent with the specified date |
+| datecreated |  ``` Optional ```  | Only list messages sent with the specified date |
 
 
 
@@ -250,11 +336,11 @@ function listInboundSharedShortcodesAsyncWithListInboundSharedShortcodesInput:(L
     // Parameters for the API call
     ListInboundSharedShortcodesInput *input = [[ListInboundSharedShortcodesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pagesize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.from = @"from";
     input.shortcode = @"Shortcode";
-    input.dateReceived = @"DateReceived";
+    input.datecreated = @"Datecreated";
 
     [self.sharedShortCode listInboundSharedShortcodesAsyncWithListInboundSharedShortcodesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -264,7 +350,7 @@ function listInboundSharedShortcodesAsyncWithListInboundSharedShortcodesInput:(L
 
 ### <a name="send_shared_shortcode_async_with_send_shared_shortcode_input"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.sendSharedShortcodeAsyncWithSendSharedShortcodeInput") sendSharedShortcodeAsyncWithSendSharedShortcodeInput
 
-> Send an SMS from a message360 ShortCode
+> Send an SMS from a Ytel ShortCode
 
 
 ```objc
@@ -338,8 +424,8 @@ function listTemplatesAsyncWithListTemplatesInput:(ListTemplatesInput*) input
     ListTemplatesInput *input = [[ListTemplatesInput alloc]init];
     input.responseType = @"ResponseType";
     input.type = @"type";
-    input.page = 141;
-    input.pagesize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.shortcode = @"Shortcode";
 
     [self.sharedShortCode listTemplatesAsyncWithListTemplatesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -385,7 +471,7 @@ function viewKeywordAsyncWithViewKeywordInput:(ViewKeywordInput*) input
 
 ### <a name="list_keyword_async_with_list_keyword_input"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.listKeywordAsyncWithListKeywordInput") listKeywordAsyncWithListKeywordInput
 
-> Retrieve a list of keywords associated with your message360 account.
+> Retrieve a list of keywords associated with your Ytel account.
 
 
 ```objc
@@ -398,8 +484,8 @@ function listKeywordAsyncWithListKeywordInput:(ListKeywordInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | keyword |  ``` Optional ```  | Only list keywords of keyword |
 | shortcode |  ``` Optional ```  | Only list keywords of shortcode |
 
@@ -413,10 +499,10 @@ function listKeywordAsyncWithListKeywordInput:(ListKeywordInput*) input
     // Parameters for the API call
     ListKeywordInput *input = [[ListKeywordInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pageSize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.keyword = @"Keyword";
-    input.shortcode = 141;
+    input.shortcode = 248;
 
     [self.sharedShortCode listKeywordAsyncWithListKeywordInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -438,7 +524,7 @@ function viewAssignementAsyncWithViewAssignementInput:(ViewAssignementInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| shortcode |  ``` Required ```  | List of valid Shortcode to your message360 account |
+| shortcode |  ``` Required ```  | List of valid Shortcode to your Ytel account |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -461,7 +547,7 @@ function viewAssignementAsyncWithViewAssignementInput:(ViewAssignementInput*) in
 
 ### <a name="list_assignment_async_with_list_assignment_input"></a>![Method: ](https://apidocs.io/img/method.png ".SharedShortCodeController.listAssignmentAsyncWithListAssignmentInput") listAssignmentAsyncWithListAssignmentInput
 
-> Retrieve a list of shortcode assignment associated with your message360 account.
+> Retrieve a list of shortcode assignment associated with your Ytel account.
 
 
 ```objc
@@ -474,8 +560,8 @@ function listAssignmentAsyncWithListAssignmentInput:(ListAssignmentInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | shortcode |  ``` Optional ```  | Only list keywords of shortcode |
 
 
@@ -488,8 +574,8 @@ function listAssignmentAsyncWithListAssignmentInput:(ListAssignmentInput*) input
     // Parameters for the API call
     ListAssignmentInput *input = [[ListAssignmentInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pageSize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.shortcode = @"Shortcode";
 
     [self.sharedShortCode listAssignmentAsyncWithListAssignmentInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -512,7 +598,7 @@ function updateAssignmentAsyncWithUpdateAssignmentInput:(UpdateAssignmentInput*)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| shortcode |  ``` Required ```  | List of valid shortcode to your message360 account |
+| shortcode |  ``` Required ```  | List of valid shortcode to your Ytel account |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | friendlyName |  ``` Optional ```  | User generated name of the shortcode |
 | callbackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
@@ -595,7 +681,7 @@ function deafMuteParticipantAsyncWithDeafMuteParticipantInput:(DeafMuteParticipa
 
 ### <a name="view_participant_async_with_view_participant_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.viewParticipantAsyncWithViewParticipantInput") viewParticipantAsyncWithViewParticipantInput
 
-> View Participant
+> Retrieve information about a participant by its ParticipantSid.
 
 
 ```objc
@@ -607,8 +693,8 @@ function viewParticipantAsyncWithViewParticipantInput:(ViewParticipantInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| conferenceSid |  ``` Required ```  | unique conference sid |
-| participantSid |  ``` Required ```  | TODO: Add a parameter description |
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
+| participantSid |  ``` Required ```  | The unique identifier for a participant object. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -630,6 +716,41 @@ function viewParticipantAsyncWithViewParticipantInput:(ViewParticipantInput*) in
 ```
 
 
+### <a name="view_conference_async_with_view_conference_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.viewConferenceAsyncWithViewConferenceInput") viewConferenceAsyncWithViewConferenceInput
+
+> Retrieve information about a conference by its ConferenceSid.
+
+
+```objc
+function viewConferenceAsyncWithViewConferenceInput:(ViewConferenceInput*) input
+                completionBlock:(CompletedPostViewConference) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| conferenceSid |  ``` Required ```  | The unique identifier of each conference resource |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewConferenceInput *input = [[ViewConferenceInput alloc]init];
+    input.conferenceSid = @"ConferenceSid";
+    input.responseType = @"ResponseType";
+
+    [self.conference viewConferenceAsyncWithViewConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
 ### <a name="add_participant_async_with_add_participant_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.addParticipantAsyncWithAddParticipantInput") addParticipantAsyncWithAddParticipantInput
 
 > Add Participant in conference 
@@ -644,11 +765,11 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| conferencesid |  ``` Required ```  | Unique Conference Sid |
-| participantnumber |  ``` Required ```  | Particiant Number |
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference object. |
+| participantNumber |  ``` Required ```  | The phone number of the participant to be added. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| muted |  ``` Optional ```  | add muted |
-| deaf |  ``` Optional ```  | add without volume |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
 
 
 
@@ -659,8 +780,8 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
 ```objc
     // Parameters for the API call
     AddParticipantInput *input = [[AddParticipantInput alloc]init];
-    input.conferencesid = @"conferencesid";
-    input.participantnumber = @"participantnumber";
+    input.conferenceSid = @"ConferenceSid";
+    input.participantNumber = @"ParticipantNumber";
     input.responseType = @"ResponseType";
     input.muted = true;
     input.deaf = true;
@@ -671,44 +792,9 @@ function addParticipantAsyncWithAddParticipantInput:(AddParticipantInput*) input
 ```
 
 
-### <a name="view_conference_async_with_view_conference_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.viewConferenceAsyncWithViewConferenceInput") viewConferenceAsyncWithViewConferenceInput
-
-> View Conference
-
-
-```objc
-function viewConferenceAsyncWithViewConferenceInput:(ViewConferenceInput*) input
-                completionBlock:(CompletedPostViewConference) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| conferencesid |  ``` Required ```  | The unique identifier of each conference resource |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    ViewConferenceInput *input = [[ViewConferenceInput alloc]init];
-    input.conferencesid = @"conferencesid";
-    input.responseType = @"ResponseType";
-
-    [self.conference viewConferenceAsyncWithViewConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
 ### <a name="create_conference_async_with_create_conference_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.createConferenceAsyncWithCreateConferenceInput") createConferenceAsyncWithCreateConferenceInput
 
-> Here you can experiment with initiating a conference call through message360 and view the request response generated when doing so.
+> Here you can experiment with initiating a conference call through Ytel and view the request response generated when doing so.
 
 
 ```objc
@@ -720,19 +806,19 @@ function createConferenceAsyncWithCreateConferenceInput:(CreateConferenceInput*)
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| to |  ``` Required ```  | To number |
-| url |  ``` Required ```  | URL requested once the call connects |
-| method |  ``` Required ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| recordCallbackUrl |  ``` Required ```  | Recording parameters will be sent here upon completion. |
+| from |  ``` Required ```  | A valid 10-digit number (E.164 format) that will be initiating the conference call. |
+| to |  ``` Required ```  | A valid 10-digit number (E.164 format) that is to receive the conference call. |
+| url |  ``` Required ```  | URL requested once the conference connects |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Required ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
 | statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the conference is finished. |
 | statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
-| fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
-| fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| fallbackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
+| fallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
 | record |  ``` Optional ```  | Specifies if the conference should be recorded. |
-| recordCallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
-| schdeuleTime |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
+| recordCallBackUrl |  ``` Optional ```  | Recording parameters will be sent here upon completion. |
+| recordCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once conference connects. |
+| scheduleTime |  ``` Optional ```  | Schedule conference in future. Schedule time must be greater than current time |
 | timeout |  ``` Optional ```  | The number of seconds the call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set. |
 
 
@@ -747,17 +833,17 @@ function createConferenceAsyncWithCreateConferenceInput:(CreateConferenceInput*)
     input.from = @"From";
     input.to = @"To";
     input.url = @"Url";
-    input.method = POST;
-    input.recordCallbackUrl = @"RecordCallbackUrl";
     input.responseType = @"ResponseType";
+    input.method = POST;
     input.statusCallBackUrl = @"StatusCallBackUrl";
     input.statusCallBackMethod = GET;
-    input.fallBackUrl = @"FallBackUrl";
-    input.fallBackMethod = GET;
+    input.fallbackUrl = @"FallbackUrl";
+    input.fallbackMethod = GET;
     input.record = true;
-    input.recordCallbackMethod = GET;
-    input.schdeuleTime = @"SchdeuleTime";
-    input.timeout = 141;
+    input.recordCallBackUrl = @"RecordCallBackUrl";
+    input.recordCallBackMethod = GET;
+    input.scheduleTime = @"ScheduleTime";
+    input.timeout = 248;
 
     [self.conference createConferenceAsyncWithCreateConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -843,7 +929,7 @@ function playConferenceAudioAsyncWithPlayConferenceAudioInput:(PlayConferenceAud
 
 ### <a name="list_participant_async_with_list_participant_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.listParticipantAsyncWithListParticipantInput") listParticipantAsyncWithListParticipantInput
 
-> List Participant
+> Retrieve a list of participants for an in-progress conference.
 
 
 ```objc
@@ -855,12 +941,12 @@ function listParticipantAsyncWithListParticipantInput:(ListParticipantInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| conferenceSid |  ``` Required ```  | unique conference sid |
+| conferenceSid |  ``` Required ```  | The unique identifier for a conference. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response format, xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | page number |
-| pagesize |  ``` Required ```  ``` DefaultValue ```  | Amount of records to return per page |
-| muted |  ``` Optional ```  | Participants that are muted |
-| deaf |  ``` Optional ```  | Participants cant hear |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| muted |  ``` Optional ```  | Specifies if participant should be muted. |
+| deaf |  ``` Optional ```  | Specifies if the participant should hear audio in the conference. |
 
 
 
@@ -873,8 +959,8 @@ function listParticipantAsyncWithListParticipantInput:(ListParticipantInput*) in
     ListParticipantInput *input = [[ListParticipantInput alloc]init];
     input.conferenceSid = @"ConferenceSid";
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pagesize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.muted = true;
     input.deaf = true;
 
@@ -886,7 +972,7 @@ function listParticipantAsyncWithListParticipantInput:(ListParticipantInput*) in
 
 ### <a name="list_conference_async_with_list_conference_input"></a>![Method: ](https://apidocs.io/img/method.png ".ConferenceController.listConferenceAsyncWithListConferenceInput") listConferenceAsyncWithListConferenceInput
 
-> List Conference
+> Retrieve a list of conference objects.
 
 
 ```objc
@@ -899,8 +985,8 @@ function listConferenceAsyncWithListConferenceInput:(ListConferenceInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | friendlyName |  ``` Optional ```  | Only return conferences with the specified FriendlyName |
 | dateCreated |  ``` Optional ```  | Conference created date |
 
@@ -914,167 +1000,12 @@ function listConferenceAsyncWithListConferenceInput:(ListConferenceInput*) input
     // Parameters for the API call
     ListConferenceInput *input = [[ListConferenceInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pageSize = 141;
+    input.page = 248;
+    input.pagesize = 248;
     input.friendlyName = @"FriendlyName";
     input.dateCreated = @"DateCreated";
 
     [self.conference listConferenceAsyncWithListConferenceInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="transcription_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TranscriptionController") TranscriptionController
-
-### Get singleton instance
-```objc
-Transcription* transcription = [[Transcription alloc]init] ;
-```
-
-### <a name="list_transcription_async_with_list_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.listTranscriptionAsyncWithListTranscriptionInput") listTranscriptionAsyncWithListTranscriptionInput
-
-> Get All transcriptions
-
-
-```objc
-function listTranscriptionAsyncWithListTranscriptionInput:(ListTranscriptionInput*) input
-                completionBlock:(CompletedPostListTranscription) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | page number |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Amount of data per page |
-| status |  ``` Optional ```  | Transcription status |
-| dateTranscribed |  ``` Optional ```  | Transcription date |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    ListTranscriptionInput *input = [[ListTranscriptionInput alloc]init];
-    input.responseType = @"ResponseType";
-    input.page = 141;
-    input.pageSize = 141;
-    input.status = INPROGRESS;
-    input.dateTranscribed = @"DateTranscribed";
-
-    [self.transcription listTranscriptionAsyncWithListTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="view_transcription_async_with_view_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.viewTranscriptionAsyncWithViewTranscriptionInput") viewTranscriptionAsyncWithViewTranscriptionInput
-
-> View Specific Transcriptions
-
-
-```objc
-function viewTranscriptionAsyncWithViewTranscriptionInput:(ViewTranscriptionInput*) input
-                completionBlock:(CompletedPostViewTranscription) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| transcriptionSid |  ``` Required ```  | Unique Transcription ID |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    ViewTranscriptionInput *input = [[ViewTranscriptionInput alloc]init];
-    input.transcriptionSid = @"TranscriptionSid";
-    input.responseType = @"ResponseType";
-
-    [self.transcription viewTranscriptionAsyncWithViewTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="recording_transcription_async_with_recording_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.recordingTranscriptionAsyncWithRecordingTranscriptionInput") recordingTranscriptionAsyncWithRecordingTranscriptionInput
-
-> Recording Transcriptions
-
-
-```objc
-function recordingTranscriptionAsyncWithRecordingTranscriptionInput:(RecordingTranscriptionInput*) input
-                completionBlock:(CompletedPostRecordingTranscription) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| recordingSid |  ``` Required ```  | Unique Recording sid |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    RecordingTranscriptionInput *input = [[RecordingTranscriptionInput alloc]init];
-    input.recordingSid = @"RecordingSid";
-    input.responseType = @"ResponseType";
-
-    [self.transcription recordingTranscriptionAsyncWithRecordingTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="audio_url_transcription_async_with_audio_url_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.audioURLTranscriptionAsyncWithAudioURLTranscriptionInput") audioURLTranscriptionAsyncWithAudioURLTranscriptionInput
-
-> Audio URL Transcriptions
-
-
-```objc
-function audioURLTranscriptionAsyncWithAudioURLTranscriptionInput:(AudioURLTranscriptionInput*) input
-                completionBlock:(CompletedPostAudioURLTranscription) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| audioUrl |  ``` Required ```  | Audio url |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    AudioURLTranscriptionInput *input = [[AudioURLTranscriptionInput alloc]init];
-    input.audioUrl = @"AudioUrl";
-    input.responseType = @"ResponseType";
-
-    [self.transcription audioURLTranscriptionAsyncWithAudioURLTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1091,7 +1022,7 @@ PhoneNumber* phoneNumber = [[PhoneNumber alloc]init] ;
 
 ### <a name="available_phone_number_async_with_available_phone_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.availablePhoneNumberAsyncWithAvailablePhoneNumberInput") availablePhoneNumberAsyncWithAvailablePhoneNumberInput
 
-> Available Phone Number
+> Retrieve a list of available phone numbers that can be purchased and used for your Ytel account.
 
 
 ```objc
@@ -1103,10 +1034,10 @@ function availablePhoneNumberAsyncWithAvailablePhoneNumberInput:(AvailablePhoneN
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| numberType |  ``` Required ```  | Number type either SMS,Voice or all |
-| areaCode |  ``` Required ```  | Phone Number Area Code |
+| numbertype |  ``` Required ```  | Number type either SMS,Voice or all |
+| areacode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Page Size |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return. |
 
 
 
@@ -1117,10 +1048,10 @@ function availablePhoneNumberAsyncWithAvailablePhoneNumberInput:(AvailablePhoneN
 ```objc
     // Parameters for the API call
     AvailablePhoneNumberInput *input = [[AvailablePhoneNumberInput alloc]init];
-    input.numberType = ALL;
-    input.areaCode = @"AreaCode";
+    input.numbertype = ALL;
+    input.areacode = @"areacode";
     input.responseType = @"ResponseType";
-    input.pageSize = 232;
+    input.pagesize = 248;
 
     [self.phoneNumber availablePhoneNumberAsyncWithAvailablePhoneNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1128,25 +1059,22 @@ function availablePhoneNumberAsyncWithAvailablePhoneNumberInput:(AvailablePhoneN
 ```
 
 
-### <a name="list_number_async_with_list_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.listNumberAsyncWithListNumberInput") listNumberAsyncWithListNumberInput
+### <a name="mass_release_number_async_with_mass_release_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.massReleaseNumberAsyncWithMassReleaseNumberInput") massReleaseNumberAsyncWithMassReleaseNumberInput
 
-> List Account's Phone number details
+> Remove a purchased Ytel number from your account.
 
 
 ```objc
-function listNumberAsyncWithListNumberInput:(ListNumberInput*) input
-                completionBlock:(CompletedPostListNumber) onCompleted(input)
+function massReleaseNumberAsyncWithMassReleaseNumberInput:(MassReleaseNumberInput*) input
+                completionBlock:(CompletedPostMassReleaseNumber) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | A valid Ytel comma separated numbers (E.164 format). |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| numberType |  ``` Optional ```  | SMS or Voice |
-| friendlyName |  ``` Optional ```  | Friendly name of the number |
 
 
 
@@ -1156,14 +1084,11 @@ function listNumberAsyncWithListNumberInput:(ListNumberInput*) input
 
 ```objc
     // Parameters for the API call
-    ListNumberInput *input = [[ListNumberInput alloc]init];
+    MassReleaseNumberInput *input = [[MassReleaseNumberInput alloc]init];
+    input.phoneNumber = @"PhoneNumber";
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pageSize = 232;
-    input.numberType = ALL;
-    input.friendlyName = @"FriendlyName";
 
-    [self.phoneNumber listNumberAsyncWithListNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.phoneNumber massReleaseNumberAsyncWithMassReleaseNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1171,7 +1096,7 @@ function listNumberAsyncWithListNumberInput:(ListNumberInput*) input
 
 ### <a name="view_number_details_async_with_view_number_details_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.viewNumberDetailsAsyncWithViewNumberDetailsInput") viewNumberDetailsAsyncWithViewNumberDetailsInput
 
-> Get Phone Number Details
+> Retrieve the details for a phone number by its number.
 
 
 ```objc
@@ -1183,7 +1108,7 @@ function viewNumberDetailsAsyncWithViewNumberDetailsInput:(ViewNumberDetailsInpu
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Get Phone number Detail |
+| phoneNumber |  ``` Required ```  | A valid Ytel 10-digit phone number (E.164 format). |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1206,7 +1131,7 @@ function viewNumberDetailsAsyncWithViewNumberDetailsInput:(ViewNumberDetailsInpu
 
 ### <a name="release_number_async_with_release_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.releaseNumberAsyncWithReleaseNumberInput") releaseNumberAsyncWithReleaseNumberInput
 
-> Release number from account
+> Remove a purchased Ytel number from your account.
 
 
 ```objc
@@ -1218,7 +1143,7 @@ function releaseNumberAsyncWithReleaseNumberInput:(ReleaseNumberInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Phone number to be relase |
+| phoneNumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1241,7 +1166,7 @@ function releaseNumberAsyncWithReleaseNumberInput:(ReleaseNumberInput*) input
 
 ### <a name="buy_number_async_with_buy_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.buyNumberAsyncWithBuyNumberInput") buyNumberAsyncWithBuyNumberInput
 
-> Buy Phone Number 
+> Purchase a phone number to be used with your Ytel account
 
 
 ```objc
@@ -1253,7 +1178,7 @@ function buyNumberAsyncWithBuyNumberInput:(BuyNumberInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | Phone number to be purchase |
+| phoneNumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1276,7 +1201,7 @@ function buyNumberAsyncWithBuyNumberInput:(BuyNumberInput*) input
 
 ### <a name="update_phone_number_async_with_update_phone_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.updatePhoneNumberAsyncWithUpdatePhoneNumberInput") updatePhoneNumberAsyncWithUpdatePhoneNumberInput
 
-> Update Phone Number Details
+> Update properties for a Ytel number that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
 
 
 ```objc
@@ -1288,7 +1213,7 @@ function updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInpu
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phoneNumber |  ``` Required ```  | The phone number to update |
+| phoneNumber |  ``` Required ```  | A valid Ytel number (E.164 format). |
 | voiceUrl |  ``` Required ```  | URL requested once the call connects |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | friendlyName |  ``` Optional ```  | Phone number friendly name description |
@@ -1301,8 +1226,8 @@ function updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInpu
 | heartbeatMethod |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time |
 | smsUrl |  ``` Optional ```  | URL requested when an SMS is received |
 | smsMethod |  ``` Optional ```  | Post or Get |
-| smsFallbackUrl |  ``` Optional ```  | URL requested once the call connects |
-| smsFallbackMethod |  ``` Optional ```  | URL requested if the sms URL is not available |
+| smsFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
+| smsFallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
 
 
 
@@ -1335,23 +1260,53 @@ function updatePhoneNumberAsyncWithUpdatePhoneNumberInput:(UpdatePhoneNumberInpu
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+### <a name="transfer_number_async_with_transfer_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.transferNumberAsyncWithTransferNumberInput") transferNumberAsyncWithTransferNumberInput
 
-## <a name="usage_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UsageController") UsageController
+> Transfer phone number that has been purchased for from one account to another account.
 
-### Get singleton instance
+
 ```objc
-Usage* usage = [[Usage alloc]init] ;
+function transferNumberAsyncWithTransferNumberInput:(TransferNumberInput*) input
+                completionBlock:(CompletedPostTransferNumber) onCompleted(input)
 ```
 
-### <a name="list_usage_async_with_list_usage_input"></a>![Method: ](https://apidocs.io/img/method.png ".UsageController.listUsageAsyncWithListUsageInput") listUsageAsyncWithListUsageInput
+#### Parameters
 
-> Get all usage 
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phonenumber |  ``` Required ```  | A valid 10-digit Ytel number (E.164 format). |
+| fromaccountsid |  ``` Required ```  | A specific Accountsid from where Number is getting transfer. |
+| toaccountsid |  ``` Required ```  | A specific Accountsid to which Number is getting transfer. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    TransferNumberInput *input = [[TransferNumberInput alloc]init];
+    input.phonenumber = @"phonenumber";
+    input.fromaccountsid = @"fromaccountsid";
+    input.toaccountsid = @"toaccountsid";
+    input.responseType = @"ResponseType";
+
+    [self.phoneNumber transferNumberAsyncWithTransferNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_number_async_with_list_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.listNumberAsyncWithListNumberInput") listNumberAsyncWithListNumberInput
+
+> Retrieve a list of purchased phones numbers associated with your Ytel account.
 
 
 ```objc
-function listUsageAsyncWithListUsageInput:(ListUsageInput*) input
-                completionBlock:(CompletedPostListUsage) onCompleted(input)
+function listNumberAsyncWithListNumberInput:(ListNumberInput*) input
+                completionBlock:(CompletedPostListNumber) onCompleted(input)
 ```
 
 #### Parameters
@@ -1359,9 +1314,10 @@ function listUsageAsyncWithListUsageInput:(ListUsageInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| productCode |  ``` Required ```  ``` DefaultValue ```  | Product Code |
-| startDate |  ``` Required ```  ``` DefaultValue ```  | Start Usage Date |
-| endDate |  ``` Required ```  ``` DefaultValue ```  | End Usage Date |
+| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Page indexing starts at 1. |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| numberType |  ``` Optional ```  | The capability supported by the number.Number type either SMS,Voice or all |
+| friendlyName |  ``` Optional ```  | A human-readable label added to the number object. |
 
 
 
@@ -1371,13 +1327,151 @@ function listUsageAsyncWithListUsageInput:(ListUsageInput*) input
 
 ```objc
     // Parameters for the API call
-    ListUsageInput *input = [[ListUsageInput alloc]init];
+    ListNumberInput *input = [[ListNumberInput alloc]init];
     input.responseType = @"ResponseType";
-    input.productCode = ALL;
-    input.startDate = @"startDate";
-    input.endDate = @"endDate";
+    input.page = 248;
+    input.pageSize = 248;
+    input.numberType = ALL;
+    input.friendlyName = @"FriendlyName";
 
-    [self.usage listUsageAsyncWithListUsageInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.phoneNumber listNumberAsyncWithListNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="mass_update_number_async_with_mass_update_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.massUpdateNumberAsyncWithMassUpdateNumberInput") massUpdateNumberAsyncWithMassUpdateNumberInput
+
+> Update properties for a Ytel numbers that has been purchased for your account. Refer to the parameters list for the list of properties that can be updated.
+
+
+```objc
+function massUpdateNumberAsyncWithMassUpdateNumberInput:(MassUpdateNumberInput*) input
+                completionBlock:(CompletedPostMassUpdateNumber) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phoneNumber |  ``` Required ```  | A valid comma(,) separated Ytel numbers. (E.164 format). |
+| voiceUrl |  ``` Required ```  | The URL returning InboundXML incoming calls should execute when connected. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| friendlyName |  ``` Optional ```  | A human-readable value for labeling the number. |
+| voiceMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceUrl once incoming call connects. |
+| voiceFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML on a call or at initial request of the voice url |
+| voiceFallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the VoiceFallbackUrl once incoming call connects. |
+| hangupCallback |  ``` Optional ```  | URL that can be requested to receive notification when and how incoming call has ended. |
+| hangupCallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HangupCallback URL. |
+| heartbeatUrl |  ``` Optional ```  | URL that can be used to monitor the phone number. |
+| heartbeatMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the HeartbeatUrl. |
+| smsUrl |  ``` Optional ```  | URL requested when an SMS is received. |
+| smsMethod |  ``` Optional ```  | The HTTP method Ytel will use when requesting the SmsUrl. |
+| smsFallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML from an SMS or at initial request of the SmsUrl. |
+| smsFallbackMethod |  ``` Optional ```  | The HTTP method Ytel will use when URL requested if the SmsUrl is not available. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    MassUpdateNumberInput *input = [[MassUpdateNumberInput alloc]init];
+    input.phoneNumber = @"PhoneNumber";
+    input.voiceUrl = @"VoiceUrl";
+    input.responseType = @"ResponseType";
+    input.friendlyName = @"FriendlyName";
+    input.voiceMethod = GET;
+    input.voiceFallbackUrl = @"VoiceFallbackUrl";
+    input.voiceFallbackMethod = GET;
+    input.hangupCallback = @"HangupCallback";
+    input.hangupCallbackMethod = GET;
+    input.heartbeatUrl = @"HeartbeatUrl";
+    input.heartbeatMethod = GET;
+    input.smsUrl = @"SmsUrl";
+    input.smsMethod = GET;
+    input.smsFallbackUrl = @"SmsFallbackUrl";
+    input.smsFallbackMethod = GET;
+
+    [self.phoneNumber massUpdateNumberAsyncWithMassUpdateNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="get_did_score_number_async_with_get_did_score_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.getDIDScoreNumberAsyncWithGetDIDScoreNumberInput") getDIDScoreNumberAsyncWithGetDIDScoreNumberInput
+
+> Get DID Score Number
+
+
+```objc
+function getDIDScoreNumberAsyncWithGetDIDScoreNumberInput:(GetDIDScoreNumberInput*) input
+                completionBlock:(CompletedPostGetDIDScoreNumber) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| phonenumber |  ``` Required ```  | Specifies the multiple phone numbers for check updated spamscore . |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    GetDIDScoreNumberInput *input = [[GetDIDScoreNumberInput alloc]init];
+    input.phonenumber = @"Phonenumber";
+    input.responseType = @"ResponseType";
+
+    [self.phoneNumber getDIDScoreNumberAsyncWithGetDIDScoreNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="bulk_buy_number_async_with_bulk_buy_number_input"></a>![Method: ](https://apidocs.io/img/method.png ".PhoneNumberController.bulkBuyNumberAsyncWithBulkBuyNumberInput") bulkBuyNumberAsyncWithBulkBuyNumberInput
+
+> Purchase a selected number of DID's from specific area codes to be used with your Ytel account.
+
+
+```objc
+function bulkBuyNumberAsyncWithBulkBuyNumberInput:(BulkBuyNumberInput*) input
+                completionBlock:(CompletedPostBulkBuyNumber) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| numberType |  ``` Required ```  | The capability the number supports. |
+| areaCode |  ``` Required ```  | Specifies the area code for the returned list of available numbers. Only available for North American numbers. |
+| quantity |  ``` Required ```  | A positive integer that tells how many number you want to buy at a time. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| leftover |  ``` Optional ```  | If desired quantity is unavailable purchase what is available . |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    BulkBuyNumberInput *input = [[BulkBuyNumberInput alloc]init];
+    input.numberType = ALL;
+    input.areaCode = @"AreaCode";
+    input.quantity = @"Quantity";
+    input.responseType = @"ResponseType";
+    input.leftover = @"Leftover";
+
+    [self.phoneNumber bulkBuyNumberAsyncWithBulkBuyNumberInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1385,29 +1479,29 @@ function listUsageAsyncWithListUsageInput:(ListUsageInput*) input
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="web_rtc_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebRTCController") WebRTCController
+## <a name="transcription_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TranscriptionController") TranscriptionController
 
 ### Get singleton instance
 ```objc
-WebRTC* webRTC = [[WebRTC alloc]init] ;
+Transcription* transcription = [[Transcription alloc]init] ;
 ```
 
-### <a name="check_funds_async_with_check_funds_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.checkFundsAsyncWithCheckFundsInput") checkFundsAsyncWithCheckFundsInput
+### <a name="view_transcription_async_with_view_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.viewTranscriptionAsyncWithViewTranscriptionInput") viewTranscriptionAsyncWithViewTranscriptionInput
 
-> TODO: Add a method description
+> Retrieve information about a transaction by its TranscriptionSid.
 
 
 ```objc
-function checkFundsAsyncWithCheckFundsInput:(CheckFundsInput*) input
-                completionBlock:(CompletedPostCheckFunds) onCompleted(input)
+function viewTranscriptionAsyncWithViewTranscriptionInput:(ViewTranscriptionInput*) input
+                completionBlock:(CompletedPostViewTranscription) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accountSid |  ``` Required ```  | Your message360 Account SID |
-| authToken |  ``` Required ```  | Your message360 Token |
+| transcriptionsid |  ``` Required ```  | The unique identifier for a transcription object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -1417,34 +1511,32 @@ function checkFundsAsyncWithCheckFundsInput:(CheckFundsInput*) input
 
 ```objc
     // Parameters for the API call
-    CheckFundsInput *input = [[CheckFundsInput alloc]init];
-    input.accountSid = @"account_sid";
-    input.authToken = @"auth_token";
+    ViewTranscriptionInput *input = [[ViewTranscriptionInput alloc]init];
+    input.transcriptionsid = @"transcriptionsid";
+    input.responseType = @"ResponseType";
 
-    [self.webRTC checkFundsAsyncWithCheckFundsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.transcription viewTranscriptionAsyncWithViewTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
 
 
-### <a name="create_token_async_with_create_token_input"></a>![Method: ](https://apidocs.io/img/method.png ".WebRTCController.createTokenAsyncWithCreateTokenInput") createTokenAsyncWithCreateTokenInput
+### <a name="recording_transcription_async_with_recording_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.recordingTranscriptionAsyncWithRecordingTranscriptionInput") recordingTranscriptionAsyncWithRecordingTranscriptionInput
 
-> message360 webrtc
+> Transcribe a message360 recording by its RecordingSid.
 
 
 ```objc
-function createTokenAsyncWithCreateTokenInput:(CreateTokenInput*) input
-                completionBlock:(CompletedPostCreateToken) onCompleted(input)
+function recordingTranscriptionAsyncWithRecordingTranscriptionInput:(RecordingTranscriptionInput*) input
+                completionBlock:(CompletedPostRecordingTranscription) onCompleted(input)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| accountSid |  ``` Required ```  | Your message360 Account SID |
-| authToken |  ``` Required ```  | Your message360 Token |
-| username |  ``` Required ```  | WebRTC username authentication |
-| password |  ``` Required ```  | WebRTC password authentication |
+| recordingSid |  ``` Required ```  | The unique identifier for a recording object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
 
@@ -1454,13 +1546,87 @@ function createTokenAsyncWithCreateTokenInput:(CreateTokenInput*) input
 
 ```objc
     // Parameters for the API call
-    CreateTokenInput *input = [[CreateTokenInput alloc]init];
-    input.accountSid = @"account_sid";
-    input.authToken = @"auth_token";
-    input.username = @"username";
-    input.password = @"password";
+    RecordingTranscriptionInput *input = [[RecordingTranscriptionInput alloc]init];
+    input.recordingSid = @"recordingSid";
+    input.responseType = @"ResponseType";
 
-    [self.webRTC createTokenAsyncWithCreateTokenInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+    [self.transcription recordingTranscriptionAsyncWithRecordingTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="audio_url_transcription_async_with_audio_url_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.audioURLTranscriptionAsyncWithAudioURLTranscriptionInput") audioURLTranscriptionAsyncWithAudioURLTranscriptionInput
+
+> Transcribe an audio recording from a file.
+
+
+```objc
+function audioURLTranscriptionAsyncWithAudioURLTranscriptionInput:(AudioURLTranscriptionInput*) input
+                completionBlock:(CompletedPostAudioURLTranscription) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| audiourl |  ``` Required ```  | URL pointing to the location of the audio file that is to be transcribed. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    AudioURLTranscriptionInput *input = [[AudioURLTranscriptionInput alloc]init];
+    input.audiourl = @"audiourl";
+    input.responseType = @"ResponseType";
+
+    [self.transcription audioURLTranscriptionAsyncWithAudioURLTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_transcription_async_with_list_transcription_input"></a>![Method: ](https://apidocs.io/img/method.png ".TranscriptionController.listTranscriptionAsyncWithListTranscriptionInput") listTranscriptionAsyncWithListTranscriptionInput
+
+> Retrieve a list of transcription objects for your Ytel account.
+
+
+```objc
+function listTranscriptionAsyncWithListTranscriptionInput:(ListTranscriptionInput*) input
+                completionBlock:(CompletedPostListTranscription) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| status |  ``` Optional ```  | The state of the transcription. |
+| dateTranscribed |  ``` Optional ```  | The date the transcription took place. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListTranscriptionInput *input = [[ListTranscriptionInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 84;
+    input.pagesize = 84;
+    input.status = INPROGRESS;
+    input.dateTranscribed = @"dateTranscribed";
+
+    [self.transcription listTranscriptionAsyncWithListTranscriptionInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -1477,7 +1643,7 @@ Recording* recording = [[Recording alloc]init] ;
 
 ### <a name="view_recording_async_with_view_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.viewRecordingAsyncWithViewRecordingInput") viewRecordingAsyncWithViewRecordingInput
 
-> View a specific Recording
+> Retrieve the recording of a call by its RecordingSid. This resource will return information regarding the call such as start time, end time, duration, and so forth.
 
 
 ```objc
@@ -1489,7 +1655,7 @@ function viewRecordingAsyncWithViewRecordingInput:(ViewRecordingInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| recordingSid |  ``` Required ```  | Search Recording sid |
+| recordingsid |  ``` Required ```  | The unique identifier for the recording. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1501,7 +1667,7 @@ function viewRecordingAsyncWithViewRecordingInput:(ViewRecordingInput*) input
 ```objc
     // Parameters for the API call
     ViewRecordingInput *input = [[ViewRecordingInput alloc]init];
-    input.recordingSid = @"RecordingSid";
+    input.recordingsid = @"recordingsid";
     input.responseType = @"ResponseType";
 
     [self.recording viewRecordingAsyncWithViewRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -1512,7 +1678,7 @@ function viewRecordingAsyncWithViewRecordingInput:(ViewRecordingInput*) input
 
 ### <a name="delete_recording_async_with_delete_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.deleteRecordingAsyncWithDeleteRecordingInput") deleteRecordingAsyncWithDeleteRecordingInput
 
-> Delete Recording Record
+> Remove a recording from your Ytel account.
 
 
 ```objc
@@ -1524,7 +1690,7 @@ function deleteRecordingAsyncWithDeleteRecordingInput:(DeleteRecordingInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| recordingSid |  ``` Required ```  | Unique Recording Sid to be delete |
+| recordingsid |  ``` Required ```  | The unique identifier for a recording. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1536,7 +1702,7 @@ function deleteRecordingAsyncWithDeleteRecordingInput:(DeleteRecordingInput*) in
 ```objc
     // Parameters for the API call
     DeleteRecordingInput *input = [[DeleteRecordingInput alloc]init];
-    input.recordingSid = @"RecordingSid";
+    input.recordingsid = @"recordingsid";
     input.responseType = @"ResponseType";
 
     [self.recording deleteRecordingAsyncWithDeleteRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -1547,7 +1713,7 @@ function deleteRecordingAsyncWithDeleteRecordingInput:(DeleteRecordingInput*) in
 
 ### <a name="list_recording_async_with_list_recording_input"></a>![Method: ](https://apidocs.io/img/method.png ".RecordingController.listRecordingAsyncWithListRecordingInput") listRecordingAsyncWithListRecordingInput
 
-> List out Recordings
+> Retrieve a list of recording objects.
 
 
 ```objc
@@ -1560,10 +1726,10 @@ function listRecordingAsyncWithListRecordingInput:(ListRecordingInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| dateCreated |  ``` Optional ```  | Recording date |
-| callSid |  ``` Optional ```  | Call ID |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| datecreated |  ``` Optional ```  | Filter results by creation date |
+| callsid |  ``` Optional ```  | The unique identifier for a call. |
 
 
 
@@ -1575,10 +1741,10 @@ function listRecordingAsyncWithListRecordingInput:(ListRecordingInput*) input
     // Parameters for the API call
     ListRecordingInput *input = [[ListRecordingInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pageSize = 232;
-    input.dateCreated = @"DateCreated";
-    input.callSid = @"CallSid";
+    input.page = 84;
+    input.pagesize = 84;
+    input.datecreated = @"Datecreated";
+    input.callsid = @"callsid";
 
     [self.recording listRecordingAsyncWithListRecordingInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1597,7 +1763,7 @@ Email* email = [[Email alloc]init] ;
 
 ### <a name="delete_spam_async_with_delete_spam_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.deleteSpamAsyncWithDeleteSpamInput") deleteSpamAsyncWithDeleteSpamInput
 
-> Deletes a email address marked as spam from the spam list
+> Remove an email from the spam email list.
 
 
 ```objc
@@ -1610,7 +1776,7 @@ function deleteSpamAsyncWithDeleteSpamInput:(DeleteSpamInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| email |  ``` Required ```  | Email address |
+| email |  ``` Required ```  | A valid email address that is to be remove from the spam list. |
 
 
 
@@ -1622,7 +1788,7 @@ function deleteSpamAsyncWithDeleteSpamInput:(DeleteSpamInput*) input
     // Parameters for the API call
     DeleteSpamInput *input = [[DeleteSpamInput alloc]init];
     input.responseType = @"ResponseType";
-    input.email = @"email";
+    input.email = @"Email";
 
     [self.email deleteSpamAsyncWithDeleteSpamInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1632,7 +1798,7 @@ function deleteSpamAsyncWithDeleteSpamInput:(DeleteSpamInput*) input
 
 ### <a name="delete_block_async_with_delete_block_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.deleteBlockAsyncWithDeleteBlockInput") deleteBlockAsyncWithDeleteBlockInput
 
-> Deletes a blocked email
+> Remove an email from blocked emails list.
 
 
 ```objc
@@ -1644,7 +1810,7 @@ function deleteBlockAsyncWithDeleteBlockInput:(DeleteBlockInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | Email address to remove from block list |
+| email |  ``` Required ```  | The email address to be remove from the blocked list. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1656,7 +1822,7 @@ function deleteBlockAsyncWithDeleteBlockInput:(DeleteBlockInput*) input
 ```objc
     // Parameters for the API call
     DeleteBlockInput *input = [[DeleteBlockInput alloc]init];
-    input.email = @"email";
+    input.email = @"Email";
     input.responseType = @"ResponseType";
 
     [self.email deleteBlockAsyncWithDeleteBlockInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -1679,7 +1845,7 @@ function addUnsubscribesAsyncWithAddUnsubscribesInput:(AddUnsubscribesInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | The email to add to the unsubscribe list |
+| email |  ``` Required ```  | A valid email address that is to be added to the unsubscribe list |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1702,7 +1868,7 @@ function addUnsubscribesAsyncWithAddUnsubscribesInput:(AddUnsubscribesInput*) in
 
 ### <a name="send_email_async_with_send_email_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.sendEmailAsyncWithSendEmailInput") sendEmailAsyncWithSendEmailInput
 
-> Send out an email
+> Create and submit an email message to one or more email addresses.
 
 
 ```objc
@@ -1714,15 +1880,15 @@ function sendEmailAsyncWithSendEmailInput:(SendEmailInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| to |  ``` Required ```  | The to email address |
-| from |  ``` Required ```  | The from email address |
-| type |  ``` Required ```  ``` DefaultValue ```  | email format type, html or text |
-| subject |  ``` Required ```  | Email subject |
-| message |  ``` Required ```  | The body of the email message |
+| to |  ``` Required ```  | A valid address that will receive the email. Multiple addresses can be separated by using commas. |
+| type |  ``` Required ```  ``` DefaultValue ```  | Specifies the type of email to be sent |
+| subject |  ``` Required ```  | The subject of the mail. Must be a valid string. |
+| message |  ``` Required ```  | The email message that is to be sent in the text. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| cc |  ``` Optional ```  | CC Email address |
-| bcc |  ``` Optional ```  | BCC Email address |
-| attachment |  ``` Optional ```  | File to be attached.File must be less than 7MB. |
+| from |  ``` Optional ```  | A valid address that will send the email. |
+| cc |  ``` Optional ```  | Carbon copy. A valid address that will receive the email. Multiple addresses can be separated by using commas. |
+| bcc |  ``` Optional ```  | Blind carbon copy. A valid address that will receive the email. Multiple addresses can be separated by using commas. |
+| attachment |  ``` Optional ```  | A file that is attached to the email. Must be less than 7 MB in size. |
 
 
 
@@ -1733,15 +1899,15 @@ function sendEmailAsyncWithSendEmailInput:(SendEmailInput*) input
 ```objc
     // Parameters for the API call
     SendEmailInput *input = [[SendEmailInput alloc]init];
-    input.to = @"to";
-    input.from = @"from";
+    input.to = @"To";
     input.type = HTML;
-    input.subject = @"subject";
-    input.message = @"message";
+    input.subject = @"Subject";
+    input.message = @"Message";
     input.responseType = @"ResponseType";
-    input.cc = @"cc";
-    input.bcc = @"bcc";
-    input.attachment = @"attachment";
+    input.from = @"From";
+    input.cc = @"Cc";
+    input.bcc = @"Bcc";
+    input.attachment = @"Attachment";
 
     [self.email sendEmailAsyncWithSendEmailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1751,7 +1917,7 @@ function sendEmailAsyncWithSendEmailInput:(SendEmailInput*) input
 
 ### <a name="delete_unsubscribes_async_with_delete_unsubscribes_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.deleteUnsubscribesAsyncWithDeleteUnsubscribesInput") deleteUnsubscribesAsyncWithDeleteUnsubscribesInput
 
-> Delete emails from the unsubscribe list
+> Remove an email address from the list of unsubscribed emails.
 
 
 ```objc
@@ -1763,7 +1929,7 @@ function deleteUnsubscribesAsyncWithDeleteUnsubscribesInput:(DeleteUnsubscribesI
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | The email to remove from the unsubscribe list |
+| email |  ``` Required ```  | A valid email address that is to be remove from the unsubscribe list. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -1786,7 +1952,7 @@ function deleteUnsubscribesAsyncWithDeleteUnsubscribesInput:(DeleteUnsubscribesI
 
 ### <a name="list_unsubscribes_async_with_list_unsubscribes_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.listUnsubscribesAsyncWithListUnsubscribesInput") listUnsubscribesAsyncWithListUnsubscribesInput
 
-> List all unsubscribed email addresses
+> Retrieve a list of email addresses from the unsubscribe list.
 
 
 ```objc
@@ -1799,8 +1965,8 @@ function listUnsubscribesAsyncWithListUnsubscribesInput:(ListUnsubscribesInput*)
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | Starting record of the list |
-| limit |  ``` Optional ```  | Maximum number of records to be returned |
+| offset |  ``` Optional ```  | The starting point of the list of unsubscribed emails that should be returned. |
+| limit |  ``` Optional ```  | The count of results that should be returned. |
 
 
 
@@ -1812,8 +1978,8 @@ function listUnsubscribesAsyncWithListUnsubscribesInput:(ListUnsubscribesInput*)
     // Parameters for the API call
     ListUnsubscribesInput *input = [[ListUnsubscribesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.offset = @"offset";
-    input.limit = @"limit";
+    input.offset = @"Offset";
+    input.limit = @"Limit";
 
     [self.email listUnsubscribesAsyncWithListUnsubscribesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1823,7 +1989,7 @@ function listUnsubscribesAsyncWithListUnsubscribesInput:(ListUnsubscribesInput*)
 
 ### <a name="list_invalid_async_with_list_invalid_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.listInvalidAsyncWithListInvalidInput") listInvalidAsyncWithListInvalidInput
 
-> List out all invalid email addresses
+> Retrieve a list of invalid email addresses.
 
 
 ```objc
@@ -1836,8 +2002,8 @@ function listInvalidAsyncWithListInvalidInput:(ListInvalidInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| offet |  ``` Optional ```  | Starting record for listing out emails |
-| limit |  ``` Optional ```  | Maximum number of records to return |
+| offset |  ``` Optional ```  | The starting point of the list of invalid emails that should be returned. |
+| limit |  ``` Optional ```  | The count of results that should be returned. |
 
 
 
@@ -1849,8 +2015,8 @@ function listInvalidAsyncWithListInvalidInput:(ListInvalidInput*) input
     // Parameters for the API call
     ListInvalidInput *input = [[ListInvalidInput alloc]init];
     input.responseType = @"ResponseType";
-    input.offet = @"offet";
-    input.limit = @"limit";
+    input.offset = @"Offset";
+    input.limit = @"Limit";
 
     [self.email listInvalidAsyncWithListInvalidInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1860,7 +2026,7 @@ function listInvalidAsyncWithListInvalidInput:(ListInvalidInput*) input
 
 ### <a name="delete_bounces_async_with_delete_bounces_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.deleteBouncesAsyncWithDeleteBouncesInput") deleteBouncesAsyncWithDeleteBouncesInput
 
-> Delete an email address from the bounced address list
+> Remove an email address from the bounced list.
 
 
 ```objc
@@ -1873,7 +2039,7 @@ function deleteBouncesAsyncWithDeleteBouncesInput:(DeleteBouncesInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| email |  ``` Required ```  | The email address to remove from the bounce list |
+| email |  ``` Required ```  | The email address to be remove from the bounced email list. |
 
 
 
@@ -1885,7 +2051,7 @@ function deleteBouncesAsyncWithDeleteBouncesInput:(DeleteBouncesInput*) input
     // Parameters for the API call
     DeleteBouncesInput *input = [[DeleteBouncesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.email = @"email";
+    input.email = @"Email";
 
     [self.email deleteBouncesAsyncWithDeleteBouncesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1895,7 +2061,7 @@ function deleteBouncesAsyncWithDeleteBouncesInput:(DeleteBouncesInput*) input
 
 ### <a name="list_bounces_async_with_list_bounces_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.listBouncesAsyncWithListBouncesInput") listBouncesAsyncWithListBouncesInput
 
-> List out all email addresses that have bounced
+> Retrieve a list of emails that have bounced.
 
 
 ```objc
@@ -1908,8 +2074,8 @@ function listBouncesAsyncWithListBouncesInput:(ListBouncesInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | The record to start the list at |
-| limit |  ``` Optional ```  | The maximum number of records to return |
+| offset |  ``` Optional ```  | The starting point of the list of bounced emails that should be returned. |
+| limit |  ``` Optional ```  | The count of results that should be returned. |
 
 
 
@@ -1921,8 +2087,8 @@ function listBouncesAsyncWithListBouncesInput:(ListBouncesInput*) input
     // Parameters for the API call
     ListBouncesInput *input = [[ListBouncesInput alloc]init];
     input.responseType = @"ResponseType";
-    input.offset = @"offset";
-    input.limit = @"limit";
+    input.offset = @"Offset";
+    input.limit = @"Limit";
 
     [self.email listBouncesAsyncWithListBouncesInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1932,7 +2098,7 @@ function listBouncesAsyncWithListBouncesInput:(ListBouncesInput*) input
 
 ### <a name="list_spam_async_with_list_spam_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.listSpamAsyncWithListSpamInput") listSpamAsyncWithListSpamInput
 
-> List out all email addresses marked as spam
+> Retrieve a list of emails that are on the spam list.
 
 
 ```objc
@@ -1945,8 +2111,8 @@ function listSpamAsyncWithListSpamInput:(ListSpamInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | The record number to start the list at |
-| limit |  ``` Optional ```  | Maximum number of records to return |
+| offset |  ``` Optional ```  | The starting point of the list of spam emails that should be returned. |
+| limit |  ``` Optional ```  | The count of results that should be returned. |
 
 
 
@@ -1958,8 +2124,8 @@ function listSpamAsyncWithListSpamInput:(ListSpamInput*) input
     // Parameters for the API call
     ListSpamInput *input = [[ListSpamInput alloc]init];
     input.responseType = @"ResponseType";
-    input.offset = @"offset";
-    input.limit = @"limit";
+    input.offset = @"Offset";
+    input.limit = @"Limit";
 
     [self.email listSpamAsyncWithListSpamInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -1969,7 +2135,7 @@ function listSpamAsyncWithListSpamInput:(ListSpamInput*) input
 
 ### <a name="list_blocks_async_with_list_blocks_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.listBlocksAsyncWithListBlocksInput") listBlocksAsyncWithListBlocksInput
 
-> Outputs email addresses on your blocklist
+> Retrieve a list of emails that have been blocked.
 
 
 ```objc
@@ -1982,8 +2148,8 @@ function listBlocksAsyncWithListBlocksInput:(ListBlocksInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| offset |  ``` Optional ```  | Where to start in the output list |
-| limit |  ``` Optional ```  | Maximum number of records to return |
+| offset |  ``` Optional ```  | The starting point of the list of blocked emails that should be returned. |
+| limit |  ``` Optional ```  | The count of results that should be returned. |
 
 
 
@@ -1995,8 +2161,8 @@ function listBlocksAsyncWithListBlocksInput:(ListBlocksInput*) input
     // Parameters for the API call
     ListBlocksInput *input = [[ListBlocksInput alloc]init];
     input.responseType = @"ResponseType";
-    input.offset = @"offset";
-    input.limit = @"limit";
+    input.offset = @"Offset";
+    input.limit = @"Limit";
 
     [self.email listBlocksAsyncWithListBlocksInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2006,7 +2172,7 @@ function listBlocksAsyncWithListBlocksInput:(ListBlocksInput*) input
 
 ### <a name="delete_invalid_async_with_delete_invalid_input"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.deleteInvalidAsyncWithDeleteInvalidInput") deleteInvalidAsyncWithDeleteInvalidInput
 
-> This endpoint allows you to delete entries in the Invalid Emails list.
+> Remove an email from the invalid email list.
 
 
 ```objc
@@ -2018,8 +2184,8 @@ function deleteInvalidAsyncWithDeleteInvalidInput:(DeleteInvalidInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| email |  ``` Required ```  | Email that was marked invalid |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Json or xml |
+| email |  ``` Required ```  | A valid email address that is to be remove from the invalid email list. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
 
@@ -2030,7 +2196,7 @@ function deleteInvalidAsyncWithDeleteInvalidInput:(DeleteInvalidInput*) input
 ```objc
     // Parameters for the API call
     DeleteInvalidInput *input = [[DeleteInvalidInput alloc]init];
-    input.email = @"email";
+    input.email = @"Email";
     input.responseType = @"ResponseType";
 
     [self.email deleteInvalidAsyncWithDeleteInvalidInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2050,7 +2216,7 @@ SMS* sMS = [[SMS alloc]init] ;
 
 ### <a name="send_sms_async_with_send_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.sendSMSAsyncWithSendSMSInput") sendSMSAsyncWithSendSMSInput
 
-> Send an SMS from a message360 number
+> Send an SMS from a Ytel number
 
 
 ```objc
@@ -2062,13 +2228,14 @@ function sendSMSAsyncWithSendSMSInput:(SendSMSInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| from |  ``` Required ```  | SMS enabled Message360 number to send this message from |
-| to |  ``` Required ```  | Number to send the SMS to |
-| body |  ``` Required ```  | Text Message To Send |
+| from |  ``` Required ```  | The 10-digit SMS-enabled Ytel number (E.164 format) in which the message is sent. |
+| to |  ``` Required ```  | The 10-digit phone number (E.164 format) that will receive the message. |
+| body |  ``` Required ```  | The body message that is to be sent in the text. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once SMS sent. |
-| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
+| messageStatusCallback |  ``` Optional ```  | URL that can be requested to receive notification when SMS has Sent. A set of default parameters will be sent here once the SMS is finished. |
 | smartsms |  ``` Required ```  ``` DefaultValue ```  | Check's 'to' number can receive sms or not using Carrier API, if wireless = true then text sms is sent, else wireless = false then call is recieved to end user with audible message. |
+| deliveryStatus |  ``` Required ```  ``` DefaultValue ```  | Delivery reports are a method to tell your system if the message has arrived on the destination phone. |
 
 
 
@@ -2079,13 +2246,14 @@ function sendSMSAsyncWithSendSMSInput:(SendSMSInput*) input
 ```objc
     // Parameters for the API call
     SendSMSInput *input = [[SendSMSInput alloc]init];
-    input.from = @"from";
-    input.to = @"to";
-    input.body = @"body";
+    input.from = @"From";
+    input.to = @"To";
+    input.body = @"Body";
     input.responseType = @"ResponseType";
     input.method = GET;
-    input.messagestatuscallback = @"messagestatuscallback";
-    input.smartsms = true;
+    input.messageStatusCallback = @"MessageStatusCallback";
+    input.smartsms = false;
+    input.deliveryStatus = false;
 
     [self.sMS sendSMSAsyncWithSendSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2095,7 +2263,7 @@ function sendSMSAsyncWithSendSMSInput:(SendSMSInput*) input
 
 ### <a name="view_sms_async_with_view_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.viewSMSAsyncWithViewSMSInput") viewSMSAsyncWithViewSMSInput
 
-> View a Particular SMS
+> Retrieve a single SMS message object by its SmsSid.
 
 
 ```objc
@@ -2107,7 +2275,7 @@ function viewSMSAsyncWithViewSMSInput:(ViewSMSInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| messagesid |  ``` Required ```  | Message sid |
+| messageSid |  ``` Required ```  | The unique identifier for a sms message. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -2119,7 +2287,7 @@ function viewSMSAsyncWithViewSMSInput:(ViewSMSInput*) input
 ```objc
     // Parameters for the API call
     ViewSMSInput *input = [[ViewSMSInput alloc]init];
-    input.messagesid = @"messagesid";
+    input.messageSid = @"MessageSid";
     input.responseType = @"ResponseType";
 
     [self.sMS viewSMSAsyncWithViewSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2130,7 +2298,7 @@ function viewSMSAsyncWithViewSMSInput:(ViewSMSInput*) input
 
 ### <a name="list_sms_async_with_list_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.listSMSAsyncWithListSMSInput") listSMSAsyncWithListSMSInput
 
-> List All SMS
+> Retrieve a list of Outbound SMS message objects.
 
 
 ```objc
@@ -2143,11 +2311,11 @@ function listSMSAsyncWithListSMSInput:(ListSMSInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | Messages sent from this number |
-| to |  ``` Optional ```  | Messages sent to this number |
-| datesent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
+| dateSent |  ``` Optional ```  | Only list SMS messages sent in the specified date range |
 
 
 
@@ -2159,11 +2327,11 @@ function listSMSAsyncWithListSMSInput:(ListSMSInput*) input
     // Parameters for the API call
     ListSMSInput *input = [[ListSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pagesize = 232;
-    input.from = @"from";
-    input.to = @"to";
-    input.datesent = @"datesent";
+    input.page = 84;
+    input.pageSize = 84;
+    input.from = @"From";
+    input.to = @"To";
+    input.dateSent = @"DateSent";
 
     [self.sMS listSMSAsyncWithListSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2173,7 +2341,7 @@ function listSMSAsyncWithListSMSInput:(ListSMSInput*) input
 
 ### <a name="list_inbound_sms_async_with_list_inbound_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.listInboundSMSAsyncWithListInboundSMSInput") listInboundSMSAsyncWithListInboundSMSInput
 
-> List All Inbound SMS
+> Retrieve a list of Inbound SMS message objects.
 
 
 ```objc
@@ -2186,10 +2354,10 @@ function listInboundSMSAsyncWithListInboundSMSInput:(ListInboundSMSInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| from |  ``` Optional ```  | From Number to Inbound SMS |
-| to |  ``` Optional ```  | To Number to get Inbound SMS |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| from |  ``` Optional ```  | Filter SMS message objects from this valid 10-digit phone number (E.164 format). |
+| to |  ``` Optional ```  | Filter SMS message objects to this valid 10-digit phone number (E.164 format). |
 | dateSent |  ``` Optional ```  | Filter sms message objects by this date. |
 
 
@@ -2202,13 +2370,48 @@ function listInboundSMSAsyncWithListInboundSMSInput:(ListInboundSMSInput*) input
     // Parameters for the API call
     ListInboundSMSInput *input = [[ListInboundSMSInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pagesize = 232;
-    input.from = @"from";
-    input.to = @"to";
+    input.page = 84;
+    input.pageSize = 84;
+    input.from = @"From";
+    input.to = @"To";
     input.dateSent = @"DateSent";
 
     [self.sMS listInboundSMSAsyncWithListInboundSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="view_detail_sms_async_with_view_detail_sms_input"></a>![Method: ](https://apidocs.io/img/method.png ".SMSController.viewDetailSMSAsyncWithViewDetailSMSInput") viewDetailSMSAsyncWithViewDetailSMSInput
+
+> Retrieve a single SMS message object with details by its SmsSid.
+
+
+```objc
+function viewDetailSMSAsyncWithViewDetailSMSInput:(ViewDetailSMSInput*) input
+                completionBlock:(CompletedPostViewDetailSMS) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| messageSid |  ``` Required ```  | The unique identifier for a sms message. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewDetailSMSInput *input = [[ViewDetailSMSInput alloc]init];
+    input.messageSid = @"MessageSid";
+    input.responseType = @"ResponseType";
+
+    [self.sMS viewDetailSMSAsyncWithViewDetailSMSInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -2225,7 +2428,7 @@ Call* call = [[Call alloc]init] ;
 
 ### <a name="make_call_async_with_make_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.makeCallAsyncWithMakeCallInput") makeCallAsyncWithMakeCallInput
 
-> You can experiment with initiating a call through Message360 and view the request response generated when doing so and get the response in json
+> You can experiment with initiating a call through Ytel and view the request response generated when doing so and get the response in json
 
 
 ```objc
@@ -2237,18 +2440,18 @@ function makeCallAsyncWithMakeCallInput:(MakeCallInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
+| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
 | to |  ``` Required ```  | To number |
 | url |  ``` Required ```  | URL requested once the call connects |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
 | statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
 | fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
 | fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
 | heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
 | heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
+| timeout |  ``` Optional ```  | Time (in seconds) Ytel should wait while the call is ringing before canceling the call |
 | playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
 | hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
 | record |  ``` Optional ```  | Specifies if the call should be recorded |
@@ -2256,7 +2459,7 @@ function makeCallAsyncWithMakeCallInput:(MakeCallInput*) input
 | recordCallBackMethod |  ``` Optional ```  | Method used to request the RecordCallback URL. |
 | transcribe |  ``` Optional ```  | Specifies if the call recording should be transcribed |
 | transcribeCallBackUrl |  ``` Optional ```  | Transcription parameters will be sent here upon completion |
-| ifMachine |  ``` Optional ```  | How Message360 should handle the receiving numbers voicemail machine |
+| ifMachine |  ``` Optional ```  | How Ytel should handle the receiving numbers voicemail machine |
 | ifMachineUrl |  ``` Optional ```  | URL requested when IfMachine=continue |
 | ifMachineMethod |  ``` Optional ```  | Method used to request the IfMachineUrl. |
 | feedback |  ``` Optional ```  | Specify if survey should be enable or not |
@@ -2282,18 +2485,18 @@ function makeCallAsyncWithMakeCallInput:(MakeCallInput*) input
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = GET;
-    input.timeout = 232;
+    input.timeout = 84;
     input.playDtmf = @"PlayDtmf";
-    input.hideCallerId = true;
-    input.record = true;
+    input.hideCallerId = false;
+    input.record = false;
     input.recordCallBackUrl = @"RecordCallBackUrl";
     input.recordCallBackMethod = GET;
-    input.transcribe = true;
+    input.transcribe = false;
     input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
     input.ifMachine = CONTINUE;
     input.ifMachineUrl = @"IfMachineUrl";
     input.ifMachineMethod = GET;
-    input.feedback = true;
+    input.feedback = false;
     input.surveyId = @"SurveyId";
 
     [self.call makeCallAsyncWithMakeCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2337,9 +2540,9 @@ function playAudioAsyncWithPlayAudioInput:(PlayAudioInput*) input
     input.audioUrl = @"AudioUrl";
     input.sayText = @"SayText";
     input.responseType = @"ResponseType";
-    input.length = 232;
+    input.length = 84;
     input.direction = IN;
-    input.mix = true;
+    input.mix = false;
 
     [self.call playAudioAsyncWithPlayAudioInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2349,7 +2552,7 @@ function playAudioAsyncWithPlayAudioInput:(PlayAudioInput*) input
 
 ### <a name="record_call_async_with_record_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.recordCallAsyncWithRecordCallInput") recordCallAsyncWithRecordCallInput
 
-> Record a Call
+> Start or stop recording of an in-progress voice call.
 
 
 ```objc
@@ -2379,10 +2582,10 @@ function recordCallAsyncWithRecordCallInput:(RecordCallInput*) input
     // Parameters for the API call
     RecordCallInput *input = [[RecordCallInput alloc]init];
     input.callSid = @"CallSid";
-    input.record = true;
+    input.record = false;
     input.responseType = @"ResponseType";
     input.direction = IN;
-    input.timeLimit = 232;
+    input.timeLimit = 84;
     input.callBackUrl = @"CallBackUrl";
     input.fileformat = MP3;
 
@@ -2394,7 +2597,7 @@ function recordCallAsyncWithRecordCallInput:(RecordCallInput*) input
 
 ### <a name="voice_effect_async_with_voice_effect_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.voiceEffectAsyncWithVoiceEffectInput") voiceEffectAsyncWithVoiceEffectInput
 
-> Voice Effect
+> Add audio voice effects to the an in-progress voice call.
 
 
 ```objc
@@ -2409,11 +2612,11 @@ function voiceEffectAsyncWithVoiceEffectInput:(VoiceEffectInput*) input
 | callSid |  ``` Required ```  | The unique identifier for the in-progress voice call. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | audioDirection |  ``` Optional ```  | The direction the audio effect should be placed on. If IN, the effects will occur on the incoming audio stream. If OUT, the effects will occur on the outgoing audio stream. |
-| pitchSemiTones |  ``` Optional ```  | value between -14 and 14 |
-| pitchOctaves |  ``` Optional ```  | value between -1 and 1 |
-| pitch |  ``` Optional ```  | value greater than 0 |
-| rate |  ``` Optional ```  | value greater than 0 |
-| tempo |  ``` Optional ```  | value greater than 0 |
+| pitchSemiTones |  ``` Optional ```  | Set the pitch in semitone (half-step) intervals. Value between -14 and 14 |
+| pitchOctaves |  ``` Optional ```  | Set the pitch in octave intervals.. Value between -1 and 1 |
+| pitch |  ``` Optional ```  | Set the pitch (lowness/highness) of the audio. The higher the value, the higher the pitch. Value greater than 0 |
+| rate |  ``` Optional ```  | Set the rate for audio. The lower the value, the lower the rate. value greater than 0 |
+| tempo |  ``` Optional ```  | Set the tempo (speed) of the audio. A higher value denotes a faster tempo. Value greater than 0 |
 
 
 
@@ -2427,11 +2630,11 @@ function voiceEffectAsyncWithVoiceEffectInput:(VoiceEffectInput*) input
     input.callSid = @"CallSid";
     input.responseType = @"ResponseType";
     input.audioDirection = IN;
-    input.pitchSemiTones = 232.765989907908;
-    input.pitchOctaves = 232.765989907908;
-    input.pitch = 232.765989907908;
-    input.rate = 232.765989907908;
-    input.tempo = 232.765989907908;
+    input.pitchSemiTones = 84.8827525018168;
+    input.pitchOctaves = 84.8827525018168;
+    input.pitch = 84.8827525018168;
+    input.rate = 84.8827525018168;
+    input.tempo = 84.8827525018168;
 
     [self.call voiceEffectAsyncWithVoiceEffectInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2492,7 +2695,7 @@ function interruptedCallAsyncWithInterruptedCallInput:(InterruptedCallInput*) in
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| callSid |  ``` Required ```  | Call SId |
+| callSid |  ``` Required ```  | The unique identifier for voice call that is in progress. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 | url |  ``` Optional ```  | URL the in-progress call will be redirected to |
 | method |  ``` Optional ```  | The method used to request the above Url parameter |
@@ -2519,6 +2722,166 @@ function interruptedCallAsyncWithInterruptedCallInput:(InterruptedCallInput*) in
 ```
 
 
+### <a name="list_calls_async_with_list_calls_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.listCallsAsyncWithListCallsInput") listCallsAsyncWithListCallsInput
+
+> A list of calls associated with your Ytel account
+
+
+```objc
+function listCallsAsyncWithListCallsInput:(ListCallsInput*) input
+                completionBlock:(CompletedPostListCalls) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| to |  ``` Optional ```  | Filter calls that were sent to this 10-digit number (E.164 format). |
+| from |  ``` Optional ```  | Filter calls that were sent from this 10-digit number (E.164 format). |
+| dateCreated |  ``` Optional ```  | Return calls that are from a specified date. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListCallsInput *input = [[ListCallsInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 176;
+    input.pageSize = 176;
+    input.to = @"To";
+    input.from = @"From";
+    input.dateCreated = @"DateCreated";
+
+    [self.call listCallsAsyncWithListCallsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="send_ringless_vm_async_with_send_ringless_vm_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.sendRinglessVMAsyncWithSendRinglessVMInput") sendRinglessVMAsyncWithSendRinglessVMInput
+
+> Initiate an outbound Ringless Voicemail through Ytel.
+
+
+```objc
+function sendRinglessVMAsyncWithSendRinglessVMInput:(SendRinglessVMInput*) input
+                completionBlock:(CompletedPostSendRinglessVM) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| from |  ``` Required ```  | A valid Ytel Voice enabled number (E.164 format) that will be initiating the phone call. |
+| rVMCallerId |  ``` Required ```  | A required secondary Caller ID for RVM to work. |
+| to |  ``` Required ```  | A valid number (E.164 format) that will receive the phone call. |
+| voiceMailURL |  ``` Required ```  | The URL requested once the RVM connects. A set of default parameters will be sent here. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| method |  ``` Required ```  ``` DefaultValue ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| statsCallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    SendRinglessVMInput *input = [[SendRinglessVMInput alloc]init];
+    input.from = @"From";
+    input.rVMCallerId = @"RVMCallerId";
+    input.to = @"To";
+    input.voiceMailURL = @"VoiceMailURL";
+    input.responseType = @"ResponseType";
+    input.method = GET;
+    input.statusCallBackUrl = @"StatusCallBackUrl";
+    input.statsCallBackMethod = GET;
+
+    [self.call sendRinglessVMAsyncWithSendRinglessVMInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="view_call_async_with_view_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.viewCallAsyncWithViewCallInput") viewCallAsyncWithViewCallInput
+
+> Retrieve a single voice call’s information by its CallSid.
+
+
+```objc
+function viewCallAsyncWithViewCallInput:(ViewCallInput*) input
+                completionBlock:(CompletedPostViewCall) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callsid |  ``` Required ```  | The unique identifier for the voice call. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewCallInput *input = [[ViewCallInput alloc]init];
+    input.callsid = @"callsid";
+    input.responseType = @"ResponseType";
+
+    [self.call viewCallAsyncWithViewCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="view_call_detail_async_with_call_sid"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.viewCallDetailAsyncWithCallSid") viewCallDetailAsyncWithCallSid
+
+> Retrieve a single voice call’s information by its CallSid.
+
+
+```objc
+function viewCallDetailAsyncWithCallSid:(NSString*) callSid
+                responseType:(NSString*) responseType
+                completionBlock:(CompletedPostViewCallDetail) onCompleted(callSid responseType : responseType)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| callSid |  ``` Required ```  | The unique identifier for the voice call. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    NSString* callSid = @"callSid";
+    NSString* responseType = @"ResponseType";
+
+    [self.call viewCallDetailAsyncWithCallSid: callSid responseType : responseType  completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
 ### <a name="group_call_async_with_group_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.groupCallAsyncWithGroupCallInput") groupCallAsyncWithGroupCallInput
 
 > Group Call
@@ -2540,13 +2903,13 @@ function groupCallAsyncWithGroupCallInput:(GroupCallInput*) input
 | groupConfirmKey |  ``` Required ```  | Define the DTMF that the called party should send to bridge the call. Allowed Values : 0-9, #, * |
 | groupConfirmFile |  ``` Required ```  | Specify the audio file you want to play when the called party picks up the call |
 | method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
-| statusCallBackUrl |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once call connects. |
+| statusCallBackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
 | statusCallBackMethod |  ``` Optional ```  | Specifies the HTTP methodlinkclass used to request StatusCallbackUrl. |
 | fallBackUrl |  ``` Optional ```  | URL requested if the initial Url parameter fails or encounters an error |
 | fallBackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
-| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed tim |
+| heartBeatUrl |  ``` Optional ```  | URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information. |
 | heartBeatMethod |  ``` Optional ```  | Specifies the HTTP method used to request HeartbeatUrl. |
-| timeout |  ``` Optional ```  | Time (in seconds) Message360 should wait while the call is ringing before canceling the call |
+| timeout |  ``` Optional ```  | Time (in seconds) we should wait while the call is ringing before canceling the call |
 | playDtmf |  ``` Optional ```  | DTMF Digits to play to the call once it connects. 0-9, #, or * |
 | hideCallerId |  ``` Optional ```  | Specifies if the caller id will be hidden |
 | record |  ``` Optional ```  | Specifies if the call should be recorded |
@@ -2577,7 +2940,7 @@ function groupCallAsyncWithGroupCallInput:(GroupCallInput*) input
     input.fallBackMethod = GET;
     input.heartBeatUrl = @"HeartBeatUrl";
     input.heartBeatMethod = GET;
-    input.timeout = 232;
+    input.timeout = 176;
     input.playDtmf = @"PlayDtmf";
     input.hideCallerId = @"HideCallerId";
     input.record = true;
@@ -2587,131 +2950,6 @@ function groupCallAsyncWithGroupCallInput:(GroupCallInput*) input
     input.transcribeCallBackUrl = @"TranscribeCallBackUrl";
 
     [self.call groupCallAsyncWithGroupCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="list_calls_async_with_list_calls_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.listCallsAsyncWithListCallsInput") listCallsAsyncWithListCallsInput
-
-> A list of calls associated with your Message360 account
-
-
-```objc
-function listCallsAsyncWithListCallsInput:(ListCallsInput*) input
-                completionBlock:(CompletedPostListCalls) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
-| to |  ``` Optional ```  | Only list calls to this number |
-| from |  ``` Optional ```  | Only list calls from this number |
-| dateCreated |  ``` Optional ```  | Only list calls starting within the specified date range |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    ListCallsInput *input = [[ListCallsInput alloc]init];
-    input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pageSize = 232;
-    input.to = @"To";
-    input.from = @"From";
-    input.dateCreated = @"DateCreated";
-
-    [self.call listCallsAsyncWithListCallsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="send_ringless_vm_async_with_send_ringless_vm_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.sendRinglessVMAsyncWithSendRinglessVMInput") sendRinglessVMAsyncWithSendRinglessVMInput
-
-> API endpoint used to send a Ringless Voicemail
-
-
-```objc
-function sendRinglessVMAsyncWithSendRinglessVMInput:(SendRinglessVMInput*) input
-                completionBlock:(CompletedPostSendRinglessVM) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| from |  ``` Required ```  | This number to display on Caller ID as calling |
-| rVMCallerId |  ``` Required ```  | Alternate caller ID required for RVM |
-| to |  ``` Required ```  | To number |
-| voiceMailURL |  ``` Required ```  | URL to an audio file |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| method |  ``` Required ```  ``` DefaultValue ```  | Not currently used in this version |
-| statusCallBackUrl |  ``` Optional ```  | URL to post the status of the Ringless request |
-| statsCallBackMethod |  ``` Optional ```  | POST or GET |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    SendRinglessVMInput *input = [[SendRinglessVMInput alloc]init];
-    input.from = @"From";
-    input.rVMCallerId = @"RVMCallerId";
-    input.to = @"To";
-    input.voiceMailURL = @"VoiceMailURL";
-    input.responseType = @"ResponseType";
-    input.method = GET;
-    input.statusCallBackUrl = @"StatusCallBackUrl";
-    input.statsCallBackMethod = GET;
-
-    [self.call sendRinglessVMAsyncWithSendRinglessVMInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
-       //Add code here
-    }];
-```
-
-
-### <a name="view_call_async_with_view_call_input"></a>![Method: ](https://apidocs.io/img/method.png ".CallController.viewCallAsyncWithViewCallInput") viewCallAsyncWithViewCallInput
-
-> View Call Response
-
-
-```objc
-function viewCallAsyncWithViewCallInput:(ViewCallInput*) input
-                completionBlock:(CompletedPostViewCall) onCompleted(input)
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| callsid |  ``` Required ```  | Call Sid id for particular Call |
-| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-
-
-
-
-
-#### Example Usage
-
-```objc
-    // Parameters for the API call
-    ViewCallInput *input = [[ViewCallInput alloc]init];
-    input.callsid = @"callsid";
-    input.responseType = @"ResponseType";
-
-    [self.call viewCallAsyncWithViewCallInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -2728,7 +2966,7 @@ Carrier* carrier = [[Carrier alloc]init] ;
 
 ### <a name="carrier_lookup_list_async_with_carrier_lookup_list_input"></a>![Method: ](https://apidocs.io/img/method.png ".CarrierController.carrierLookupListAsyncWithCarrierLookupListInput") carrierLookupListAsyncWithCarrierLookupListInput
 
-> Get the All Purchase Number's Carrier lookup
+> Retrieve a list of carrier lookup objects.
 
 
 ```objc
@@ -2741,8 +2979,8 @@ function carrierLookupListAsyncWithCarrierLookupListInput:(CarrierLookupListInpu
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Page Number |
-| pagesize |  ``` Required ```  ``` DefaultValue ```  | Page Size |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pageSize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
 
 
 
@@ -2754,8 +2992,8 @@ function carrierLookupListAsyncWithCarrierLookupListInput:(CarrierLookupListInpu
     // Parameters for the API call
     CarrierLookupListInput *input = [[CarrierLookupListInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pagesize = 232;
+    input.page = 176;
+    input.pageSize = 176;
 
     [self.carrier carrierLookupListAsyncWithCarrierLookupListInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2777,7 +3015,7 @@ function carrierLookupAsyncWithCarrierLookupInput:(CarrierLookupInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| phonenumber |  ``` Required ```  | The number to lookup |
+| phoneNumber |  ``` Required ```  | A valid 10-digit number (E.164 format). |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -2789,7 +3027,7 @@ function carrierLookupAsyncWithCarrierLookupInput:(CarrierLookupInput*) input
 ```objc
     // Parameters for the API call
     CarrierLookupInput *input = [[CarrierLookupInput alloc]init];
-    input.phonenumber = @"phonenumber";
+    input.phoneNumber = @"PhoneNumber";
     input.responseType = @"ResponseType";
 
     [self.carrier carrierLookupAsyncWithCarrierLookupInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2872,7 +3110,7 @@ function viewAddressAsyncWithViewAddressInput:(ViewAddressInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be retrieved. |
+| addressid |  ``` Required ```  | The identifier of the address to be retrieved. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
 
 
@@ -2884,7 +3122,7 @@ function viewAddressAsyncWithViewAddressInput:(ViewAddressInput*) input
 ```objc
     // Parameters for the API call
     ViewAddressInput *input = [[ViewAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
+    input.addressid = @"addressid";
     input.responseType = @"ResponseType";
 
     [self.address viewAddressAsyncWithViewAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2908,9 +3146,9 @@ function listAddressAsyncWithListAddressInput:(ListAddressInput*) input
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
-| page |  ``` Required ```  ``` DefaultValue ```  | Return requested # of items starting the value, default=0, must be an integer |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
-| addressSID |  ``` Optional ```  | addresses Sid |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | How many results to return, default is 10, max is 100, must be an integer |
+| addressid |  ``` Optional ```  | addresses Sid |
 | dateCreated |  ``` Optional ```  | date created address. |
 
 
@@ -2923,10 +3161,10 @@ function listAddressAsyncWithListAddressInput:(ListAddressInput*) input
     // Parameters for the API call
     ListAddressInput *input = [[ListAddressInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 232;
-    input.pageSize = 232;
-    input.addressSID = @"AddressSID";
-    input.dateCreated = @"DateCreated";
+    input.page = 176;
+    input.pagesize = 176;
+    input.addressid = @"addressid";
+    input.dateCreated = @"dateCreated";
 
     [self.address listAddressAsyncWithListAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -2948,7 +3186,7 @@ function verifyAddressAsyncWithVerifyAddressInput:(VerifyAddressInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be verified. |
+| addressid |  ``` Required ```  | The identifier of the address to be verified. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
@@ -2960,7 +3198,7 @@ function verifyAddressAsyncWithVerifyAddressInput:(VerifyAddressInput*) input
 ```objc
     // Parameters for the API call
     VerifyAddressInput *input = [[VerifyAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
+    input.addressid = @"addressid";
     input.responseType = @"ResponseType";
 
     [self.address verifyAddressAsyncWithVerifyAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -2983,7 +3221,7 @@ function deleteAddressAsyncWithDeleteAddressInput:(DeleteAddressInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| addressSID |  ``` Required ```  | The identifier of the address to be deleted. |
+| addressid |  ``` Required ```  | The identifier of the address to be deleted. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type either json or xml |
 
 
@@ -2995,7 +3233,7 @@ function deleteAddressAsyncWithDeleteAddressInput:(DeleteAddressInput*) input
 ```objc
     // Parameters for the API call
     DeleteAddressInput *input = [[DeleteAddressInput alloc]init];
-    input.addressSID = @"AddressSID";
+    input.addressid = @"addressid";
     input.responseType = @"ResponseType";
 
     [self.address deleteAddressAsyncWithDeleteAddressInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -3104,6 +3342,8 @@ function createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*)
 | firstName |  ``` Required ```  | Sub account user first name |
 | lastName |  ``` Required ```  | sub account user last name |
 | email |  ``` Required ```  | Sub account email address |
+| friendlyName |  ``` Required ```  | Descriptive name of the sub account |
+| password |  ``` Required ```  | The password of the sub account.  Please make sure to make as password that is at least 8 characters long, contain a symbol, uppercase and a number. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -3118,6 +3358,8 @@ function createSubAccountAsyncWithCreateSubAccountInput:(CreateSubAccountInput*)
     input.firstName = @"FirstName";
     input.lastName = @"LastName";
     input.email = @"Email";
+    input.friendlyName = @"FriendlyName";
+    input.password = @"Password";
     input.responseType = @"ResponseType";
 
     [self.subAccount createSubAccountAsyncWithCreateSubAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
@@ -3137,7 +3379,7 @@ Account* account = [[Account alloc]init] ;
 
 ### <a name="view_account_async_with_view_account_input"></a>![Method: ](https://apidocs.io/img/method.png ".AccountController.viewAccountAsyncWithViewAccountInput") viewAccountAsyncWithViewAccountInput
 
-> Display Account Description
+> Retrieve information regarding your Ytel account by a specific date. The response object will contain data such as account status, balance, and account usage totals.
 
 
 ```objc
@@ -3149,7 +3391,7 @@ function viewAccountAsyncWithViewAccountInput:(ViewAccountInput*) input
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| date |  ``` Required ```  | TODO: Add a parameter description |
+| date |  ``` Required ```  | Filter account information based on date. |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
 
 
@@ -3165,6 +3407,56 @@ function viewAccountAsyncWithViewAccountInput:(ViewAccountInput*) input
     input.responseType = @"ResponseType";
 
     [self.account viewAccountAsyncWithViewAccountInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="usage_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UsageController") UsageController
+
+### Get singleton instance
+```objc
+Usage* usage = [[Usage alloc]init] ;
+```
+
+### <a name="list_usage_async_with_list_usage_input"></a>![Method: ](https://apidocs.io/img/method.png ".UsageController.listUsageAsyncWithListUsageInput") listUsageAsyncWithListUsageInput
+
+> Retrieve usage metrics regarding your Ytel account. The results includes inbound/outbound voice calls and inbound/outbound SMS messages as well as carrier lookup requests.
+
+
+```objc
+function listUsageAsyncWithListUsageInput:(ListUsageInput*) input
+                completionBlock:(CompletedPostListUsage) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| productCode |  ``` Required ```  ``` DefaultValue ```  | Filter usage results by product type. |
+| startDate |  ``` Required ```  ``` DefaultValue ```  | Filter usage objects by start date. |
+| endDate |  ``` Required ```  ``` DefaultValue ```  | Filter usage objects by end date. |
+| includeSubAccounts |  ``` Optional ```  | Will include all subaccount usage data |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListUsageInput *input = [[ListUsageInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.productCode = ALL;
+    input.startDate = @"startDate";
+    input.endDate = @"endDate";
+    input.includeSubAccounts = @"IncludeSubAccounts";
+
+    [self.usage listUsageAsyncWithListUsageInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
@@ -3197,8 +3489,8 @@ function sendDedicatedShortcodeAsyncWithSendDedicatedShortcodeInput:(SendDedicat
 | to |  ``` Required ```  | The number to send your SMS to |
 | body |  ``` Required ```  | The body of your message |
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| method |  ``` Optional ```  | Callback status method, POST or GET |
-| messagestatuscallback |  ``` Optional ```  | Callback url for SMS status |
+| method |  ``` Optional ```  | Specifies the HTTP method used to request the required URL once the Short Code message is sent.GET or POST |
+| messagestatuscallback |  ``` Optional ```  | URL that can be requested to receive notification when Short Code message was sent. |
 
 
 
@@ -3209,8 +3501,8 @@ function sendDedicatedShortcodeAsyncWithSendDedicatedShortcodeInput:(SendDedicat
 ```objc
     // Parameters for the API call
     SendDedicatedShortcodeInput *input = [[SendDedicatedShortcodeInput alloc]init];
-    input.shortcode = 191;
-    input.to = 191.042816681342;
+    input.shortcode = 176;
+    input.to = 176.378034393479;
     input.body = @"body";
     input.responseType = @"ResponseType";
     input.method = GET;
@@ -3291,8 +3583,8 @@ function listShortcodeAsyncWithListShortcodeInput:(ListShortcodeInput*) input
     input.shortcode = @"Shortcode";
     input.to = @"To";
     input.dateSent = @"DateSent";
-    input.page = 191;
-    input.pageSize = 191;
+    input.page = 176;
+    input.pageSize = 176;
 
     [self.shortCode listShortcodeAsyncWithListShortcodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
@@ -3302,7 +3594,7 @@ function listShortcodeAsyncWithListShortcodeInput:(ListShortcodeInput*) input
 
 ### <a name="list_inbound_shortcode_async_with_list_inbound_shortcode_input"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.listInboundShortcodeAsyncWithListInboundShortcodeInput") listInboundShortcodeAsyncWithListInboundShortcodeInput
 
-> Retrive a list of inbound Sms Short Code messages associated with your message360 account.
+> Retrive a list of inbound Sms Short Code messages associated with your Ytel account.
 
 
 ```objc
@@ -3315,11 +3607,11 @@ function listInboundShortcodeAsyncWithListInboundShortcodeInput:(ListInboundShor
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
-| page |  ``` Required ```  ``` DefaultValue ```  | Which page of the overall response will be returned. Zero indexed |
-| pageSize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | Number of individual resources listed in the response per page |
 | from |  ``` Optional ```  | Only list SMS messages sent from this number |
 | shortcode |  ``` Optional ```  | Only list SMS messages sent to Shortcode |
-| dateReceived |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
+| datecreated |  ``` Optional ```  | Only list SMS messages sent in the specified date MAKE REQUEST |
 
 
 
@@ -3331,13 +3623,643 @@ function listInboundShortcodeAsyncWithListInboundShortcodeInput:(ListInboundShor
     // Parameters for the API call
     ListInboundShortcodeInput *input = [[ListInboundShortcodeInput alloc]init];
     input.responseType = @"ResponseType";
-    input.page = 191;
-    input.pageSize = 191;
+    input.page = 176;
+    input.pagesize = 176;
     input.from = @"From";
     input.shortcode = @"Shortcode";
-    input.dateReceived = @"DateReceived";
+    input.datecreated = @"Datecreated";
 
     [self.shortCode listInboundShortcodeAsyncWithListInboundShortcodeInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="view_dedicated_shortcode_assignment_async_with_view_dedicated_shortcode_assignment_input"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.viewDedicatedShortcodeAssignmentAsyncWithViewDedicatedShortcodeAssignmentInput") viewDedicatedShortcodeAssignmentAsyncWithViewDedicatedShortcodeAssignmentInput
+
+> Retrieve a single Short Code object by its shortcode assignment.
+
+
+```objc
+function viewDedicatedShortcodeAssignmentAsyncWithViewDedicatedShortcodeAssignmentInput:(ViewDedicatedShortcodeAssignmentInput*) input
+                completionBlock:(CompletedPostViewDedicatedShortcodeAssignment) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | List of valid Dedicated Short Code to your Ytel account |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewDedicatedShortcodeAssignmentInput *input = [[ViewDedicatedShortcodeAssignmentInput alloc]init];
+    input.shortcode = @"Shortcode";
+    input.responseType = @"ResponseType";
+
+    [self.shortCode viewDedicatedShortcodeAssignmentAsyncWithViewDedicatedShortcodeAssignmentInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="update_dedicated_short_code_assignment_async_with_update_dedicated_short_code_assignment_input"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.updateDedicatedShortCodeAssignmentAsyncWithUpdateDedicatedShortCodeAssignmentInput") updateDedicatedShortCodeAssignmentAsyncWithUpdateDedicatedShortCodeAssignmentInput
+
+> Update a dedicated shortcode.
+
+
+```objc
+function updateDedicatedShortCodeAssignmentAsyncWithUpdateDedicatedShortCodeAssignmentInput:(UpdateDedicatedShortCodeAssignmentInput*) input
+                completionBlock:(CompletedPostUpdateDedicatedShortCodeAssignment) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| shortcode |  ``` Required ```  | List of valid dedicated shortcode to your Ytel account. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| friendlyName |  ``` Optional ```  | User generated name of the dedicated shortcode. |
+| callbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required StatusCallBackUrl once call connects. |
+| callbackUrl |  ``` Optional ```  | URL that can be requested to receive notification when call has ended. A set of default parameters will be sent here once the call is finished. |
+| fallbackMethod |  ``` Optional ```  | Specifies the HTTP method used to request the required FallbackUrl once call connects. |
+| fallbackUrl |  ``` Optional ```  | URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    UpdateDedicatedShortCodeAssignmentInput *input = [[UpdateDedicatedShortCodeAssignmentInput alloc]init];
+    input.shortcode = @"Shortcode";
+    input.responseType = @"ResponseType";
+    input.friendlyName = @"FriendlyName";
+    input.callbackMethod = @"CallbackMethod";
+    input.callbackUrl = @"CallbackUrl";
+    input.fallbackMethod = @"FallbackMethod";
+    input.fallbackUrl = @"FallbackUrl";
+
+    [self.shortCode updateDedicatedShortCodeAssignmentAsyncWithUpdateDedicatedShortCodeAssignmentInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_short_code_assignment_async_with_list_short_code_assignment_input"></a>![Method: ](https://apidocs.io/img/method.png ".ShortCodeController.listShortCodeAssignmentAsyncWithListShortCodeAssignmentInput") listShortCodeAssignmentAsyncWithListShortCodeAssignmentInput
+
+> Retrieve a list of Short Code assignment associated with your Ytel account.
+
+
+```objc
+function listShortCodeAssignmentAsyncWithListShortCodeAssignmentInput:(ListShortCodeAssignmentInput*) input
+                completionBlock:(CompletedPostListShortCodeAssignment) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response type format xml or json |
+| shortcode |  ``` Optional ```  | Only list Short Code Assignment sent from this Short Code |
+| page |  ``` Optional ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Optional ```  | The count of objects to return per page. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListShortCodeAssignmentInput *input = [[ListShortCodeAssignmentInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.shortcode = @"Shortcode";
+    input.page = @"page";
+    input.pagesize = @"pagesize";
+
+    [self.shortCode listShortCodeAssignmentAsyncWithListShortCodeAssignmentInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="post_card_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PostCardController") PostCardController
+
+### Get singleton instance
+```objc
+PostCard* postCard = [[PostCard alloc]init] ;
+```
+
+### <a name="view_postcard_async_with_view_postcard_input"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.viewPostcardAsyncWithViewPostcardInput") viewPostcardAsyncWithViewPostcardInput
+
+> Retrieve a postcard object by its PostcardId.
+
+
+```objc
+function viewPostcardAsyncWithViewPostcardInput:(ViewPostcardInput*) input
+                completionBlock:(CompletedPostViewPostcard) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| postcardid |  ``` Required ```  | The unique identifier for a postcard object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewPostcardInput *input = [[ViewPostcardInput alloc]init];
+    input.postcardid = @"postcardid";
+    input.responseType = @"ResponseType";
+
+    [self.postCard viewPostcardAsyncWithViewPostcardInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="create_postcard_async_with_create_postcard_input"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.createPostcardAsyncWithCreatePostcardInput") createPostcardAsyncWithCreatePostcardInput
+
+> Create, print, and mail a postcard to an address. The postcard front must be supplied as a PDF, image, or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom message.
+
+
+```objc
+function createPostcardAsyncWithCreatePostcardInput:(CreatePostcardInput*) input
+                completionBlock:(CompletedPostCreatePostcard) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| to |  ``` Required ```  | The AddressId or an object structured when creating an address by addresses/Create. |
+| from |  ``` Required ```  | The AddressId or an object structured when creating an address by addresses/Create. |
+| attachbyid |  ``` Required ```  | Set an existing postcard by attaching its PostcardId. |
+| front |  ``` Required ```  | A 4.25"x6.25" or 6.25"x11.25" image to use as the front of the postcard.  This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG. |
+| back |  ``` Required ```  | A 4.25"x6.25" or 6.25"x11.25" image to use as the back of the postcard, supplied as a URL, local file, or HTML string.  This allows you to customize your back design, but we will still insert the recipient address for you. |
+| message |  ``` Required ```  | The message for the back of the postcard with a maximum of 350 characters. |
+| setting |  ``` Required ```  | Code for the dimensions of the media to be printed. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| description |  ``` Optional ```  | A description for the postcard. |
+| htmldata |  ``` Optional ```  | A string value that contains HTML markup. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreatePostcardInput *input = [[CreatePostcardInput alloc]init];
+    input.to = @"to";
+    input.from = @"from";
+    input.attachbyid = @"attachbyid";
+    input.front = @"front";
+    input.back = @"back";
+    input.message = @"message";
+    input.setting = @"setting";
+    input.responseType = @"ResponseType";
+    input.description = @"description";
+    input.htmldata = @"htmldata";
+
+    [self.postCard createPostcardAsyncWithCreatePostcardInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_postcards_async_with_list_postcards_input"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.listPostcardsAsyncWithListPostcardsInput") listPostcardsAsyncWithListPostcardsInput
+
+> Retrieve a list of postcard objects. The postcards objects are sorted by creation date, with the most recently created postcards appearing first.
+
+
+```objc
+function listPostcardsAsyncWithListPostcardsInput:(ListPostcardsInput*) input
+                completionBlock:(CompletedPostListPostcards) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| postcardid |  ``` Optional ```  | The unique identifier for a postcard object. |
+| dateCreated |  ``` Optional ```  | The date the postcard was created. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListPostcardsInput *input = [[ListPostcardsInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 176;
+    input.pagesize = 176;
+    input.postcardid = @"postcardid";
+    input.dateCreated = @"dateCreated";
+
+    [self.postCard listPostcardsAsyncWithListPostcardsInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="delete_postcard_async_with_delete_postcard_input"></a>![Method: ](https://apidocs.io/img/method.png ".PostCardController.deletePostcardAsyncWithDeletePostcardInput") deletePostcardAsyncWithDeletePostcardInput
+
+> Remove a postcard object.
+
+
+```objc
+function deletePostcardAsyncWithDeletePostcardInput:(DeletePostcardInput*) input
+                completionBlock:(CompletedPostDeletePostcard) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| postcardid |  ``` Required ```  | The unique identifier of a postcard object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    DeletePostcardInput *input = [[DeletePostcardInput alloc]init];
+    input.postcardid = @"postcardid";
+    input.responseType = @"ResponseType";
+
+    [self.postCard deletePostcardAsyncWithDeletePostcardInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="letter_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LetterController") LetterController
+
+### Get singleton instance
+```objc
+Letter* letter = [[Letter alloc]init] ;
+```
+
+### <a name="view_letter_async_with_view_letter_input"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.viewLetterAsyncWithViewLetterInput") viewLetterAsyncWithViewLetterInput
+
+> Retrieve a letter object by its LetterSid.
+
+
+```objc
+function viewLetterAsyncWithViewLetterInput:(ViewLetterInput*) input
+                completionBlock:(CompletedPostViewLetter) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| lettersid |  ``` Required ```  | The unique identifier for a letter object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewLetterInput *input = [[ViewLetterInput alloc]init];
+    input.lettersid = @"lettersid";
+    input.responseType = @"ResponseType";
+
+    [self.letter viewLetterAsyncWithViewLetterInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="create_letter_async_with_create_letter_input"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.createLetterAsyncWithCreateLetterInput") createLetterAsyncWithCreateLetterInput
+
+> Create, print, and mail a letter to an address. The letter file must be supplied as a PDF or an HTML string.
+
+
+```objc
+function createLetterAsyncWithCreateLetterInput:(CreateLetterInput*) input
+                completionBlock:(CompletedPostCreateLetter) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| to |  ``` Required ```  | The AddressId or an object structured when creating an address by addresses/Create. |
+| from |  ``` Required ```  | The AddressId or an object structured when creating an address by addresses/Create. |
+| attachbyid |  ``` Required ```  | Set an existing letter by attaching its LetterId. |
+| file |  ``` Required ```  | File can be a 8.5"x11" PDF uploaded file or URL that links to a file. |
+| color |  ``` Required ```  | Specify if letter should be printed in color. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| description |  ``` Optional ```  | A description for the letter. |
+| extraservice |  ``` Optional ```  | Add an extra service to your letter. Options are "certified" or "registered". Certified provides tracking and delivery confirmation for domestic destinations and is an additional $5.00. Registered provides tracking and confirmation for international addresses and is an additional $16.50. |
+| doublesided |  ``` Optional ```  | Specify if letter should be printed on both sides. |
+| template |  ``` Optional ```  | Boolean that defaults to true. When set to false, this specifies that your letter does not follow the m360 address template. In this case, a blank address page will be inserted at the beginning of your file and you will be charged for the extra page. |
+| htmldata |  ``` Optional ```  | A string value that contains HTML markup. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateLetterInput *input = [[CreateLetterInput alloc]init];
+    input.to = @"to";
+    input.from = @"from";
+    input.attachbyid = @"attachbyid";
+    input.file = @"file";
+    input.color = @"color";
+    input.responseType = @"ResponseType";
+    input.description = @"description";
+    input.extraservice = @"extraservice";
+    input.doublesided = @"doublesided";
+    input.template = @"template";
+    input.htmldata = @"htmldata";
+
+    [self.letter createLetterAsyncWithCreateLetterInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_letters_async_with_list_letters_input"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.listLettersAsyncWithListLettersInput") listLettersAsyncWithListLettersInput
+
+> Retrieve a list of letter objects. The letter objects are sorted by creation date, with the most recently created letters appearing first.
+
+
+```objc
+function listLettersAsyncWithListLettersInput:(ListLettersInput*) input
+                completionBlock:(CompletedPostListLetters) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| lettersid |  ``` Optional ```  | The unique identifier for a letter object. |
+| dateCreated |  ``` Optional ```  | The date the letter was created. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListLettersInput *input = [[ListLettersInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 176;
+    input.pagesize = 176;
+    input.lettersid = @"lettersid";
+    input.dateCreated = @"dateCreated";
+
+    [self.letter listLettersAsyncWithListLettersInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="delete_letter_async_with_delete_letter_input"></a>![Method: ](https://apidocs.io/img/method.png ".LetterController.deleteLetterAsyncWithDeleteLetterInput") deleteLetterAsyncWithDeleteLetterInput
+
+> Remove a letter object by its LetterId.
+
+
+```objc
+function deleteLetterAsyncWithDeleteLetterInput:(DeleteLetterInput*) input
+                completionBlock:(CompletedPostDeleteLetter) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| lettersid |  ``` Required ```  | The unique identifier for a letter object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    DeleteLetterInput *input = [[DeleteLetterInput alloc]init];
+    input.lettersid = @"lettersid";
+    input.responseType = @"ResponseType";
+
+    [self.letter deleteLetterAsyncWithDeleteLetterInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="area_mail_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AreaMailController") AreaMailController
+
+### Get singleton instance
+```objc
+AreaMail* areaMail = [[AreaMail alloc]init] ;
+```
+
+### <a name="create_area_mail_async_with_create_area_mail_input"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.createAreaMailAsyncWithCreateAreaMailInput") createAreaMailAsyncWithCreateAreaMailInput
+
+> Create a new AreaMail object.
+
+
+```objc
+function createAreaMailAsyncWithCreateAreaMailInput:(CreateAreaMailInput*) input
+                completionBlock:(CompletedPostCreateAreaMail) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| routes |  ``` Required ```  | List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route.List of routes that AreaMail should be delivered to.  A single route can be either a zipcode or a carrier route. A carrier route is in the form of 92610-C043 where the carrier route is composed of 5 numbers for zipcode, 1 letter for carrier route type, and 3 numbers for carrier route code. Delivery can be sent to mutliple routes by separating them with a commas. Valid Values: 92656, 92610-C043 |
+| attachbyid |  ``` Required ```  | Set an existing areamail by attaching its AreamailId. |
+| front |  ``` Required ```  | The front of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG. Back required |
+| back |  ``` Required ```  | The back of the AreaMail item to be created. This can be a URL, local file, or an HTML string. Supported file types are PDF, PNG, and JPEG. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| description |  ``` Optional ```  | A string value to use as a description for this AreaMail item. |
+| targettype |  ``` Optional ```  | The delivery location type. |
+| htmldata |  ``` Optional ```  | A string value that contains HTML markup. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    CreateAreaMailInput *input = [[CreateAreaMailInput alloc]init];
+    input.routes = @"routes";
+    input.attachbyid = @"attachbyid";
+    input.front = @"front";
+    input.back = @"back";
+    input.responseType = @"ResponseType";
+    input.description = @"description";
+    input.targettype = @"targettype";
+    input.htmldata = @"htmldata";
+
+    [self.areaMail createAreaMailAsyncWithCreateAreaMailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="view_area_mail_async_with_view_area_mail_input"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.viewAreaMailAsyncWithViewAreaMailInput") viewAreaMailAsyncWithViewAreaMailInput
+
+> Retrieve an AreaMail object by its AreaMailId.
+
+
+```objc
+function viewAreaMailAsyncWithViewAreaMailInput:(ViewAreaMailInput*) input
+                completionBlock:(CompletedPostViewAreaMail) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ViewAreaMailInput *input = [[ViewAreaMailInput alloc]init];
+    input.areamailid = @"areamailid";
+    input.responseType = @"ResponseType";
+
+    [self.areaMail viewAreaMailAsyncWithViewAreaMailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="list_area_mail_async_with_list_area_mail_input"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.listAreaMailAsyncWithListAreaMailInput") listAreaMailAsyncWithListAreaMailInput
+
+> Retrieve a list of AreaMail objects.
+
+
+```objc
+function listAreaMailAsyncWithListAreaMailInput:(ListAreaMailInput*) input
+                completionBlock:(CompletedPostListAreaMail) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+| page |  ``` Required ```  ``` DefaultValue ```  | The page count to retrieve from the total results in the collection. Page indexing starts at 1. |
+| pagesize |  ``` Required ```  ``` DefaultValue ```  | The count of objects to return per page. |
+| areamailsid |  ``` Optional ```  | The unique identifier for an AreaMail object. |
+| dateCreated |  ``` Optional ```  | The date the AreaMail was created. |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    ListAreaMailInput *input = [[ListAreaMailInput alloc]init];
+    input.responseType = @"ResponseType";
+    input.page = 176;
+    input.pagesize = 176;
+    input.areamailsid = @"areamailsid";
+    input.dateCreated = @"dateCreated";
+
+    [self.areaMail listAreaMailAsyncWithListAreaMailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
+       //Add code here
+    }];
+```
+
+
+### <a name="delete_area_mail_async_with_delete_area_mail_input"></a>![Method: ](https://apidocs.io/img/method.png ".AreaMailController.deleteAreaMailAsyncWithDeleteAreaMailInput") deleteAreaMailAsyncWithDeleteAreaMailInput
+
+> Remove an AreaMail object by its AreaMailId.
+
+
+```objc
+function deleteAreaMailAsyncWithDeleteAreaMailInput:(DeleteAreaMailInput*) input
+                completionBlock:(CompletedPostDeleteAreaMail) onCompleted(input)
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| areamailid |  ``` Required ```  | The unique identifier for an AreaMail object. |
+| responseType |  ``` Required ```  ``` DefaultValue ```  | Response Type either json or xml |
+
+
+
+
+
+#### Example Usage
+
+```objc
+    // Parameters for the API call
+    DeleteAreaMailInput *input = [[DeleteAreaMailInput alloc]init];
+    input.areamailid = @"areamailid";
+    input.responseType = @"ResponseType";
+
+    [self.areaMail deleteAreaMailAsyncWithDeleteAreaMailInput: input completionBlock:^(BOOL success, HttpContext* context, NSString* response, NSError* error) { 
        //Add code here
     }];
 ```
