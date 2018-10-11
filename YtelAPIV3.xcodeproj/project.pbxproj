@@ -1,0 +1,1406 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
+     
+/* Begin PBXAggregateTarget section */
+        AAEE5E87CAD05D168656264B /* Framework */ = {
+            isa = PBXAggregateTarget;
+            buildConfigurationList = AA6B40043ACECBE13E13500A /* Build configuration list for PBXAggregateTarget "Framework" */;
+            buildPhases = (
+                AACF2FCBE910DF27909EEA33 /* MultiBuild Framework */,
+            );
+            dependencies = (
+                AA64289540A97CFC567617A7 /* PBXTargetDependency */,
+            );
+            name = Framework;
+            productName = Framework;
+        };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+        AA156D6B8C98CDFEC6517A86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6C52504A381F7C41B67182 /* Foundation.framework */; };
+        AAB95DE29AE69E555D2350F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6C52504A381F7C41B67182 /* Foundation.framework */; };
+        AAB6FF0AA3C1D0F2B493849F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA12F8206E62E7B415ACF0E1 /* UIKit.framework */; };
+        AAEC3975AAF8AA1308CB9DB7 /* libYtelAPIV3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAFFB6F12C34BFAB07465B52 /* libYtelAPIV3.a */; };
+        AA2F009821D5B379D796665A /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6FB783652324EFB3E7BA31 /* APIHelper.m */; };
+        AA3FC84281C8B49DAC26F961 /* APIError.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1C1510C4F3D56A3A951CFD /* APIError.m */; };
+        AABE48236E273EF1DB3275E0 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFCE585F7417595F3776274 /* Configuration.m */; };
+		AAE3B94FA19A595C3F604173 /* TestBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA1214C7376AAAB2D01C5DAD /* TestBaseController.m */; };
+		AAEBEA969AC5C8A953A37217 /* TestBaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA38D29922B47B63236174CA /* TestBaseController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB09A5CCE8F415901C65989 /* TestShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA149A6A2C803FA6BBB3236C /* TestShortCodeController.m */; };
+		AA87A7870FAEA224E1F84DC2 /* TestAreaMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2BC5F402D3DDF6581389CF /* TestAreaMailController.m */; };
+		AA2DA4B7E62C1DF3F735F51F /* TestPostCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B9137F79EA54E8A8AE609 /* TestPostCardController.m */; };
+		AAF8F385C769EDF87FCCCA06 /* TestLetterController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA568B2911E16EF7CE7A9613 /* TestLetterController.m */; };
+		AAD107539111C4CE13AD1E29 /* TestCallController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7DCAAD4A7C6220C27E26D8 /* TestCallController.m */; };
+		AA8607F4619053E2D1940390 /* TestPhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7C3D809C8395069AA8C8BD /* TestPhoneNumberController.m */; };
+		AAA3ED41237BDB7FE7735A1C /* TestSMSController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA190804FFA738CAEF25D2D2 /* TestSMSController.m */; };
+		AADF8D6FE84239A5F91BE428 /* TestSharedShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA7ECBEC7A89FD7A071941A /* TestSharedShortCodeController.m */; };
+		AA63C7E0B1B6AD19824C38ED /* TestConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB754A065F4D3A279652ADF /* TestConferenceController.m */; };
+		AAD3E654137F1D8F55409D31 /* TestCarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADCE97F2ED42B3F7B862F7C /* TestCarrierController.m */; };
+		AA051472876A907FD64D5D5F /* TestEmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA89B6DD754436FC9B682837 /* TestEmailController.m */; };
+		AA6EE775B596D96F7CC1F5D4 /* TestAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = AABBDAE7375DAD62065E364C /* TestAddressController.m */; };
+		AAE207C18BD9EBBE2E427381 /* TestRecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE6376EA04487277687AF41 /* TestRecordingController.m */; };
+		AA3358EE3F9C1A2865277003 /* TestTranscriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3CF1E92DA05A0D07B762EF /* TestTranscriptionController.m */; };
+		AA58BB85AEC4F541BC1DB508 /* TestUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFEA364DDD0ADAA9E5FBDF3 /* TestUsageController.m */; };
+		AA96CF438B3FE7A49BD8447F /* Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB333F56E00C4447572EE4C /* Errors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAFC541FFA45F43EBAFDC88E /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA908B8D796BBD33D7E7BB0 /* Errors.m */; };
+		AA547938C594C01B6F62090A /* GroupConfirmFile44Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4C2962814240B7D945257C /* GroupConfirmFile44Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA093F46E32EE70F73EB3F40 /* GroupConfirmFile44EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4A61D95ECDBF6FB34D100B /* GroupConfirmFile44EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA20434721909C9FFFE92E31 /* GroupConfirmFile44EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA30F5850CBDEB84AFCF54D6 /* GroupConfirmFile44EnumHelper.m */; };
+		AA8AF6BFE10A879EB0F835EB /* AudioUrl43Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA496CDAB621C0973749079F /* AudioUrl43Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5469C96F5AF72DE6206016 /* AudioUrl43EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD4A3AE70218E095FF14E10 /* AudioUrl43EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA03CF2C9D2668EF67E245CC /* AudioUrl43EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAABD361C9891A3D949547CA /* AudioUrl43EnumHelper.m */; };
+		AA7CA1CEC8EA195D551FFB3E /* Status24Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AACEF265EAA554095A4A2191 /* Status24Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC881FF3E8912E08DDF8DC0 /* Status24EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA459233E18159052836F1A7 /* Status24EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACB48A25A090E15DD9F1755 /* Status24EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2A1401E1694A38CD2FD5D6 /* Status24EnumHelper.m */; };
+		AACFD0554D35B7764A30C2B9 /* Fileformat37Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA52871F88F60BB405895060 /* Fileformat37Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9C66061CE5B3EC92AB8BB4 /* Fileformat37EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA98621C97E476913E741004 /* Fileformat37EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA52F02D911D34A7EAE7876 /* Fileformat37EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA6E45E8FA61F04A364E8354 /* Fileformat37EnumHelper.m */; };
+		AA0109CFB30D445BE0220144 /* Type36Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0EB0A8CFCC7059568406F1 /* Type36Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA75BBAD155DCDFD6211C985 /* Type36EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2ABC9FB7E973BC2CDE2CE7 /* Type36EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA124901D3DD0CFF0F6FD073 /* Type36EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD1DEB59FFC3ADD9F0B31FD /* Type36EnumHelper.m */; };
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */; };
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */; };
+		AA9493B09BBE9309B44BE74A /* IfMachine32Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3568B8569A1A6780EAD7AF /* IfMachine32Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE38C42D3368B8947517AD4 /* IfMachine32EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA49D105715879402DDA87FF /* IfMachine32EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9A8C81EA17174E0EF3F43F /* IfMachine32EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA907AD1EFF9674C73399D2D /* IfMachine32EnumHelper.m */; };
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */; };
+		AA5528EF6B911F49A6343792 /* AudioDirection29Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0CC5B19317EC31197F5374 /* AudioDirection29Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD295D0D4519686CF21C544 /* AudioDirection29EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0797CDCE031C6A771EFC81 /* AudioDirection29EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA670A49A9D9F16AF0195077 /* AudioDirection29EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B457CD3BEEB95D38C5E79 /* AudioDirection29EnumHelper.m */; };
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */; };
+		AAF4C446EE755B251D120ED8 /* TemplateData.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFD3C34D7DBCC4407F865BB /* TemplateData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACAFCC0AA519F2A633B0136 /* TemplateData.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC4DA20608F0E69C5E32720 /* TemplateData.m */; };
+		AA9C7AA77EAA44F0AE8FF8F1 /* GroupConfirmFileEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA20B22824E5476E2428C6BA /* GroupConfirmFileEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2F8637FB6BC9C0BF2E4B81 /* GroupConfirmFileEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA8C464451D7257091D059F7 /* GroupConfirmFileEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC04C586CFCBB1764579FA5 /* GroupConfirmFileEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB1E4E2E402832D0F6EB3CD /* GroupConfirmFileEnumHelper.m */; };
+		AA1314A329B441A5560611E3 /* AudioUrlEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF56CAFE2F12A466B64F8F5 /* AudioUrlEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE1B75AA537FC57DF37A75F /* AudioUrlEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9B01CA11AEE1FAE60FC3D9 /* AudioUrlEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABD20E60957235D884B4DAA /* AudioUrlEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9F974D7D5BCA1581B40639 /* AudioUrlEnumHelper.m */; };
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3332638CCB919DFB501866 /* StatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF389387126F0941CB348A /* StatusEnumHelper.m */; };
+		AA238AB799BEFBB995F719F1 /* FileformatEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA590BA5C5FA524C68760B3D /* FileformatEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6436D3738C335C2F5928BD /* FileformatEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6887AFD5649E967E09341F /* FileformatEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9BBBBD535E0B028A091853 /* FileformatEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA5CD8D73725C4C7D2A1BD3 /* FileformatEnumHelper.m */; };
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA12FF61B621F420040B4098 /* IfMachineEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */; };
+		AA927F2D2B52D6E4494AA82C /* TypeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA852E4A8839A49583B9634F /* TypeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA36DDDEE62C5EA89608A09F /* TypeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFB1E55EC9C4F4B1B1C382D /* TypeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0124480B41A84693E2B417 /* TypeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA974C063B498A9A9D4E645 /* TypeEnumHelper.m */; };
+		AA4D472DDEAEE876A977097B /* NumbertypeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB16251C73198D3692E1D38 /* NumbertypeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC7234AB43EEB8FD66D8236 /* NumbertypeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5B586D41DCF465B4F86ABB /* NumbertypeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAA2CDE578DC30C560EF23FB /* NumbertypeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE153B5650E064C6A382F5E /* NumbertypeEnumHelper.m */; };
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6E95087CB45783F783AA30 /* DirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */; };
+		AA758AC35E1A66654DE9A6F7 /* Direction4Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5794A13421C9A04834A3ED /* Direction4Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC32C9C99DA74DF0C0B5C2E /* Direction4EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB078A02B17093DEFDD7AE1 /* Direction4EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA45654DA38026589A55E986 /* Direction4EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7F06189FEB7CD4DD2A93BF /* Direction4EnumHelper.m */; };
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */; };
+		AA61594AE27C3A98C1AE5A29 /* PlayDtmfDirectionEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC4DB808816B128B52811B0 /* PlayDtmfDirectionEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABBC7017BC0553926EFA588 /* PlayDtmfDirectionEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0B90220D5A30CC3DCFEA5B /* PlayDtmfDirectionEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF77F5BE40A23AAC6569F13 /* PlayDtmfDirectionEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA8084EA57CDCC7E4740E53 /* PlayDtmfDirectionEnumHelper.m */; };
+		AA9E0732738E07CB0F3817BE /* MergeNumberEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA523DE43A9F1EB6227470E6 /* MergeNumberEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA931E07D05B92C0C10E146B /* MergeNumberEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA924C46E7C041616DAE8E1E /* MergeNumberEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD223257E90E0E46F7920FB /* MergeNumberEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAFB26C681FDEAFCA4093B6 /* MergeNumberEnumHelper.m */; };
+		AACC5EB68D769D1CD4A429B1 /* MActivateEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AACA2F9EC29596E957D65A45 /* MActivateEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1C65B7266141CD25C1DE18 /* MActivateEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA07752BAF9D0784694175FE /* MActivateEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA36C24A681D9F3F6FFD0BEF /* MActivateEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA233EFEEE588AB2F3985B61 /* MActivateEnumHelper.m */; };
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */; };
+		AA704E5431B54582BE893F1F /* Status12Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB99B84D65CA035ECF13ABA /* Status12Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD8699CC604601EA70D0CAD /* Status12EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAEDF59B2A63014D1DA0D28 /* Status12EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC9C8B9E8C84163BFB9E688 /* Status12EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2B3C47E9C8F914FFF055C2 /* Status12EnumHelper.m */; };
+		AA929ACC1EC20CAB9A2BDEF2 /* NumberType14Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AABAFF5B5A433C7A0CBD84A2 /* NumberType14Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6C0D48C0BD26E725583AB7 /* NumberType14EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3945BEC84F821A45CB2C00 /* NumberType14EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5105A0855ED6DF2FA6A762 /* NumberType14EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA267A5E48750F81CB3F8C67 /* NumberType14EnumHelper.m */; };
+		AA0E2202FC9D1D9ACF3023A3 /* NumberType15Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA68038DAFCF6414E172419A /* NumberType15Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA05B9E3695FDE6F33BCE11D /* NumberType15EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA543D9CCA88D5CA5E951FA5 /* NumberType15EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3A629DE42CBE5E05892418 /* NumberType15EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA741F31B64DB514E0962CB7 /* NumberType15EnumHelper.m */; };
+		AAD45660CF59F260BB780C20 /* Error.h in Headers */ = {isa = PBXBuildFile; fileRef = AABC1A6AA2C060B415FC5494 /* Error.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7059940E10E8BBB873B6AC /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9D2557AB3AEB866FDCFE99 /* Error.m */; };
+		AAFD8B60E27ED781A87CA266 /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = AA00C1F91D4799370685F903 /* Message.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAC6135E16CA3B2B1D2A8DE7 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7903A574AA3FE7DB8AD92F /* Message.m */; };
+		AAC00353E904C0AB1491C145 /* Direction23Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA77213CA7056534CFE06F4E /* Direction23Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA976DDFD117A677B2E56222 /* Direction23EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA44B50991563FDAD4EE60ED /* Direction23EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8D4D90EE2CBBA79CC657C7 /* Direction23EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD84289FF95492D28D3ACEE /* Direction23EnumHelper.m */; };
+		AA6F611DB2E2176B79A2DB85 /* NumberType24Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA40D1D8D2C2910F59B60742 /* NumberType24Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA59D0B0131938E222CD525E /* NumberType24EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3CF12319A4465984CEFC90 /* NumberType24EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACB1D592C617E60A4213B2A /* NumberType24EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD47FA4B0883ED307443A00 /* NumberType24EnumHelper.m */; };
+		AA4E1A4FC4F05B94D8DAB025 /* Status25Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD7F5E8CC0333C6FA94A647 /* Status25Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AADBEC00BAF50262CE802508 /* Status25EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA442791DE3D66DF0B6D7182 /* Status25EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA0FF4546259DE2BB7562B87 /* Status25EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD0D3035C995B396577C763 /* Status25EnumHelper.m */; };
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */; };
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */; };
+		AA8A3830E6AEE6B63FD780C2 /* ProductCode30Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1840F9D0CCC613C2B409D6 /* ProductCode30Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6DB41E27D7E8626A949D1C /* ProductCode30EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA9FCA0D4DED0DA3D37A641 /* ProductCode30EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA97DF570C714686834A17A9 /* ProductCode30EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3560EEF244CAED604D056F /* ProductCode30EnumHelper.m */; };
+		AA27A2EA9A01E1C2A861ADB6 /* Numbertype16Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA05384EBCB2BAAD56B19FD7 /* Numbertype16Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA07323966DAA9CB2782AC19 /* Numbertype16EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD611FD41F906264B88D852 /* Numbertype16EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1641F20A36B4EF40336E52 /* Numbertype16EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AABAD7AA504038F5BC226B9A /* Numbertype16EnumHelper.m */; };
+		AA616B5C823644A221445875 /* PlayDtmfDirection38Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC4F0FEAF5FD3555BCE6B60 /* PlayDtmfDirection38Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1B65EB1C1DD7C3D10C9FE8 /* PlayDtmfDirection38EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD7B66BD3347734D512DA78 /* PlayDtmfDirection38EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA60FBECFBE87B80BD4FD163 /* PlayDtmfDirection38EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA012E92D06BC103EA12BDB9 /* PlayDtmfDirection38EnumHelper.m */; };
+		AA0DC51EFFD26C9223361C72 /* MergeNumber40Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA14BE7FC3C537AC30FE8866 /* MergeNumber40Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5BBC3EE05AC946132BBF17 /* MergeNumber40EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AADA3CB511233A50892B5E64 /* MergeNumber40EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA684FFEB87776D626DF215D /* MergeNumber40EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA58A903DD37BA4BADC06675 /* MergeNumber40EnumHelper.m */; };
+		AA964E070A766E16F827F10A /* ActivateEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9CBC04CDDDDBA3D5544ABB /* ActivateEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA65BE6AE308C4B209A6EACB /* ActivateEnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA670B71C7B1ABAA6550790 /* ActivateEnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD0634C1D6FF8D2D8CD1CB2 /* ActivateEnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA54FFF6DB5C5D7852AAC73D /* ActivateEnumHelper.m */; };
+		AAACA97CAB567DBD77F49863 /* ProductCode27Enum.h in Headers */ = {isa = PBXBuildFile; fileRef = AA17206703659FEFD3ABB87F /* ProductCode27Enum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA5940793CC386E3622BC4ED /* ProductCode27EnumHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA4773E5ADDFA3263AC90169 /* ProductCode27EnumHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD58215B97D0257F813AD2C /* ProductCode27EnumHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB6D180B2245576A422FB46 /* ProductCode27EnumHelper.m */; };
+		AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4AF826B686E34D8C722F89 /* BaseController.m */; };
+		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */; };
+		AAA4340D6A1C9A2BA21256D8 /* AreaMailController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7AD1C3DD5C8E87796684E0 /* AreaMailController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD1825A765C4197063A6D6B /* AreaMailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD332E44D5AD22729F9B3AA /* AreaMailController.m */; };
+		AA7E4732897CEC2DFC7058B7 /* PostCardController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA49DAFFBDF8262368FF857A /* PostCardController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6C36B3F46A243F4C0D32D0 /* PostCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADDB21DEB875FA7D69584C1 /* PostCardController.m */; };
+		AACF34EF33E368D0A5B9182C /* LetterController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA15914C52017459F85F83BD /* LetterController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAF29F142C9DA0354DD8C44D /* LetterController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA29DF13B89796FD45264C8C /* LetterController.m */; };
+		AA4E0229E250AA06838C78D0 /* CallController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0D03E9A2213E7EB3BC33F3 /* CallController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA45A1451C52D002FC5B8FEA /* CallController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA903D7FB6C91C80995EA301 /* CallController.m */; };
+		AA0C06B2B55864E2F18F9DD9 /* PhoneNumberController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA86CBBF76237B9FDB448955 /* PhoneNumberController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA408FD4D42B04A34E34261C /* PhoneNumberController.m */; };
+		AA51BA983EA6DD47EADD767D /* SMSController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA7A1081BD407E66ED9F8475 /* SMSController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA53BF2F574700239CEE91C0 /* SMSController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA67A0E0319ACE13F97F3892 /* SMSController.m */; };
+		AA9E7A0D69A6B919BE1A37F8 /* SharedShortCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA51CCAFE517D0020659B22F /* SharedShortCodeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1B043E9BCD1CE6761C74C4 /* SharedShortCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE903B5B89362A90F1C9C36 /* SharedShortCodeController.m */; };
+		AAE320CACEAA31D6DE4CC5A0 /* ConferenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA81F92408B7C55C821BB4D3 /* ConferenceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA19FD45FA709EFA78988E66 /* ConferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */; };
+		AAD7546C82BE41672C9D58B0 /* CarrierController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA2657510856339A58BD110F /* CarrierController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA9F5B4B193CAB558C4EC30F /* CarrierController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9128986187196F56167741 /* CarrierController.m */; };
+		AAEE86A14DF6D55C496B157D /* EmailController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA318A9E219748C8ECFCABAE /* EmailController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA1ABE4537E611FD7556989B /* EmailController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9ED896F435094DB0E5AA54 /* EmailController.m */; };
+		AABB26DA752AB72F432C52D0 /* AccountController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAEBEC9B69A8F7B5117AE60C /* AccountController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA2FB7E2A2747B93BB99E302 /* AccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */; };
+		AA87CF247168694FAC2AF75B /* SubAccountController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AACD93C5737404A7EB61E1BA /* SubAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD42F72B0811B33CDE47456 /* SubAccountController.m */; };
+		AAB77FA1D52FA85F2EE0FBF3 /* AddressController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA11460EF3700A7F7018A3DC /* AddressController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD12DE65BE2213FC11B6C0E /* AddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5ED7FFA015973685AAC46F /* AddressController.m */; };
+		AA4BC2149A809FA9AE433E90 /* RecordingController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAB468F09960CF5D081F9E7 /* RecordingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA70C85AB2B055B28FA877D4 /* RecordingController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADDDC6CAB773E881C322698 /* RecordingController.m */; };
+		AAC534682174EDBD3880A0A8 /* TranscriptionController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAAE3427710161D8CF0778FE /* TranscriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA855C6D96B42602C073F3B1 /* TranscriptionController.m */; };
+		AA5BEED5489112A144F60335 /* UsageController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1709549528F49F39603685 /* UsageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA179B90D667B8EF94E6C0DD /* UsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA45AC54E9989F859BAC238B /* UsageController.m */; };
+        AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFDA2A62B62D6847BB95686 /* Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA9A82CCE1219D4C5910FE3B /* APIError.h in Headers */ = {isa = PBXBuildFile; fileRef = AA48BFFBF934C1B6D2406E77 /* APIError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+   
+        AA9E17FED3B6812D11EB1F51 /* TestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD3E776A95AA25C34B1CED8 /* TestHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };        
+        AAD23B63A95A1922D975BDD7 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED5F1ABE468E7059C07921 /* TestHelper.m */; };
+	
+        AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */; };
+        AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */; };		
+
+        AA561654D3DF3A6B4926FBE4 /* IHttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AA1173ED2E32674C48620A64 /* IHttpClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAA4DBB5CE589B5B0303FD74 /* HttpContext.h in Headers */ = {isa = PBXBuildFile; fileRef = AA406D274803136B567B1E87 /* HttpContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AADE4B211C778689E60B2D58 /* HttpContext.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFF0E81765DC544641E6641 /* HttpContext.m */; };
+   	
+        AA9E17FED3B6812D11EB1F51 /* TestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD3E776A95AA25C34B1CED8 /* TestHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAD23B63A95A1922D975BDD7 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED5F1ABE468E7059C07921 /* TestHelper.m */; };
+		AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */ = {isa = PBXBuildFile; fileRef = AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA0C599E7D4F200F8897AFF7 /* NSDate+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC241C706904812E6B3DBD1 /* NSDate+extension.m */; };
+        
+        AADD0D6E9D0D2ECB46296055 /* UnirestClient.h in Headers */ = {isa = PBXBuildFile; fileRef = AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */; };
+        AAD8F51F714DD5966CCD659B /* HttpBodyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA751EC3D8D1E1F02BC41D50 /* HttpBodyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */; };
+        AA033D32966F32BFBD65DD34 /* HttpMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = AA31975203C7EAF86B56F415 /* HttpMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA727179A75A81C7BFF5708F /* HttpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA1A7ED3A893EFFCD4DDD12E /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */; };
+        AAFBD14918A6E076A0BF62B7 /* HttpResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AAF67FE2ADA5B77379090F09 /* HttpResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA19178EE1D12F29A92B4F31 /* HttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE099E73BF6EE469D4AB217 /* HttpResponse.m */; };
+        AA9312BDFDCA04EB5F7358C2 /* HttpStringResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AA9B8CABE328A66C2F9C101E /* HttpStringResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AA78889B46E63B2815E8A97C /* HttpStringResponse.m */; };
+        AABB789B7FACBAA15967C8E9 /* BaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5D18C97F1ED2716A752AA8 /* BaseController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+        AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA940686A027FAC0683E87AE /* BaseController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+        AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = AA9E028AD27263E3C2D60210 /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = AA28707B011D40DC5FCAABD7;
+            remoteInfo = YtelAPIV3;
+        };
+        AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */ = {
+            isa = PBXContainerItemProxy;
+            containerPortal = AAD86B0C4A909E780CCAF44D /* Project object */;
+            proxyType = 1;
+            remoteGlobalIDString = AA28707B011D40DC5FCAABD7;
+            remoteInfo = YtelAPIV3;
+        };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+        AA6976EEF676DCB4C0327BF2 /* CopyFiles */ = {
+            isa = PBXCopyFilesBuildPhase;
+            buildActionMask = 2147483647;
+            dstPath = "include/$(PRODUCT_NAME)";
+            dstSubfolderSpec = 16;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+        
+        AAFFB6F12C34BFAB07465B52 /* libYtelAPIV3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0;  path = libYtelAPIV3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+        AA6C52504A381F7C41B67182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+        AAD0DA7640475994DA60613B /* YtelAPIV3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YtelAPIV3-Prefix.pch"; sourceTree = "<group>"; };
+        AA5CAA5BE3DEB378387D5842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml;name = Info.plist; path = YtelAPIV3/Tests/Info.plist; sourceTree = "<group>"; };
+        AA12F8206E62E7B415ACF0E1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+        AA6FB783652324EFB3E7BA31 /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
+        AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };		
+ 
+        AA7821CD0DA92EF87789C61D /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };       
+        AAED5F1ABE468E7059C07921 /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc;name = TestHelper.m; path = TestHelper/TestHelper.m; sourceTree = "<group>"; };    
+        AAD3E776A95AA25C34B1CED8 /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h;name = TestHelper.h; path = TestHelper/TestHelper.h; sourceTree = "<group>"; };		
+     
+        AA1C1510C4F3D56A3A951CFD /* APIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIError.m; sourceTree = "<group>"; };
+        AA48BFFBF934C1B6D2406E77 /* APIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIError.h; sourceTree = "<group>"; };
+        AAFCE585F7417595F3776274 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+        AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+extension.h"; sourceTree = "<group>"; };
+        AAC241C706904812E6B3DBD1 /* NSDate+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+extension.m"; sourceTree = "<group>"; };
+       
+        AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+NSUUID.h"; sourceTree = "<group>"; };
+        AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+NSUUID.m"; sourceTree = "<group>"; };
+        AAFDA2A62B62D6847BB95686 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		AA1214C7376AAAB2D01C5DAD /* TestBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestBaseController.m; path = YtelAPIV3/Tests/TestBaseController.m; sourceTree = "<group>"; };
+		AA38D29922B47B63236174CA /* TestBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestBaseController.h; path = YtelAPIV3/Tests/TestBaseController.h; sourceTree = "<group>"; };
+		AA149A6A2C803FA6BBB3236C /* TestShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestShortCodeController.m; path = YtelAPIV3/Tests/TestShortCodeController.m; sourceTree = "<group>"; };
+		AA2BC5F402D3DDF6581389CF /* TestAreaMailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestAreaMailController.m; path = YtelAPIV3/Tests/TestAreaMailController.m; sourceTree = "<group>"; };
+		AA9B9137F79EA54E8A8AE609 /* TestPostCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPostCardController.m; path = YtelAPIV3/Tests/TestPostCardController.m; sourceTree = "<group>"; };
+		AA568B2911E16EF7CE7A9613 /* TestLetterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestLetterController.m; path = YtelAPIV3/Tests/TestLetterController.m; sourceTree = "<group>"; };
+		AA7DCAAD4A7C6220C27E26D8 /* TestCallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestCallController.m; path = YtelAPIV3/Tests/TestCallController.m; sourceTree = "<group>"; };
+		AA7C3D809C8395069AA8C8BD /* TestPhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPhoneNumberController.m; path = YtelAPIV3/Tests/TestPhoneNumberController.m; sourceTree = "<group>"; };
+		AA190804FFA738CAEF25D2D2 /* TestSMSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSMSController.m; path = YtelAPIV3/Tests/TestSMSController.m; sourceTree = "<group>"; };
+		AAA7ECBEC7A89FD7A071941A /* TestSharedShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestSharedShortCodeController.m; path = YtelAPIV3/Tests/TestSharedShortCodeController.m; sourceTree = "<group>"; };
+		AAB754A065F4D3A279652ADF /* TestConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestConferenceController.m; path = YtelAPIV3/Tests/TestConferenceController.m; sourceTree = "<group>"; };
+		AADCE97F2ED42B3F7B862F7C /* TestCarrierController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestCarrierController.m; path = YtelAPIV3/Tests/TestCarrierController.m; sourceTree = "<group>"; };
+		AA89B6DD754436FC9B682837 /* TestEmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestEmailController.m; path = YtelAPIV3/Tests/TestEmailController.m; sourceTree = "<group>"; };
+		AABBDAE7375DAD62065E364C /* TestAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestAddressController.m; path = YtelAPIV3/Tests/TestAddressController.m; sourceTree = "<group>"; };
+		AAE6376EA04487277687AF41 /* TestRecordingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestRecordingController.m; path = YtelAPIV3/Tests/TestRecordingController.m; sourceTree = "<group>"; };
+		AA3CF1E92DA05A0D07B762EF /* TestTranscriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTranscriptionController.m; path = YtelAPIV3/Tests/TestTranscriptionController.m; sourceTree = "<group>"; };
+		AAFEA364DDD0ADAA9E5FBDF3 /* TestUsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestUsageController.m; path = YtelAPIV3/Tests/TestUsageController.m; sourceTree = "<group>"; };
+		AAB333F56E00C4447572EE4C /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Errors.h; path = Models/Errors.h; sourceTree = "<group>"; };
+		AAA908B8D796BBD33D7E7BB0 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Errors.m; path = Models/Errors.m; sourceTree = "<group>"; };
+		AA4C2962814240B7D945257C /* GroupConfirmFile44Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupConfirmFile44Enum.h; path = Models/GroupConfirmFile44Enum.h; sourceTree = "<group>"; };
+		AA4A61D95ECDBF6FB34D100B /* GroupConfirmFile44EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupConfirmFile44EnumHelper.h; path = Models/GroupConfirmFile44EnumHelper.h; sourceTree = "<group>"; };
+		AA30F5850CBDEB84AFCF54D6 /* GroupConfirmFile44EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupConfirmFile44EnumHelper.m; path = Models/GroupConfirmFile44EnumHelper.m; sourceTree = "<group>"; };
+		AA496CDAB621C0973749079F /* AudioUrl43Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioUrl43Enum.h; path = Models/AudioUrl43Enum.h; sourceTree = "<group>"; };
+		AAD4A3AE70218E095FF14E10 /* AudioUrl43EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioUrl43EnumHelper.h; path = Models/AudioUrl43EnumHelper.h; sourceTree = "<group>"; };
+		AAABD361C9891A3D949547CA /* AudioUrl43EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioUrl43EnumHelper.m; path = Models/AudioUrl43EnumHelper.m; sourceTree = "<group>"; };
+		AACEF265EAA554095A4A2191 /* Status24Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status24Enum.h; path = Models/Status24Enum.h; sourceTree = "<group>"; };
+		AA459233E18159052836F1A7 /* Status24EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status24EnumHelper.h; path = Models/Status24EnumHelper.h; sourceTree = "<group>"; };
+		AA2A1401E1694A38CD2FD5D6 /* Status24EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Status24EnumHelper.m; path = Models/Status24EnumHelper.m; sourceTree = "<group>"; };
+		AA52871F88F60BB405895060 /* Fileformat37Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fileformat37Enum.h; path = Models/Fileformat37Enum.h; sourceTree = "<group>"; };
+		AA98621C97E476913E741004 /* Fileformat37EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fileformat37EnumHelper.h; path = Models/Fileformat37EnumHelper.h; sourceTree = "<group>"; };
+		AA6E45E8FA61F04A364E8354 /* Fileformat37EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Fileformat37EnumHelper.m; path = Models/Fileformat37EnumHelper.m; sourceTree = "<group>"; };
+		AA0EB0A8CFCC7059568406F1 /* Type36Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Type36Enum.h; path = Models/Type36Enum.h; sourceTree = "<group>"; };
+		AA2ABC9FB7E973BC2CDE2CE7 /* Type36EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Type36EnumHelper.h; path = Models/Type36EnumHelper.h; sourceTree = "<group>"; };
+		AAD1DEB59FFC3ADD9F0B31FD /* Type36EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Type36EnumHelper.m; path = Models/Type36EnumHelper.m; sourceTree = "<group>"; };
+		AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnum.h; path = Models/AudioFormatEnum.h; sourceTree = "<group>"; };
+		AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioFormatEnumHelper.h; path = Models/AudioFormatEnumHelper.h; sourceTree = "<group>"; };
+		AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioFormatEnumHelper.m; path = Models/AudioFormatEnumHelper.m; sourceTree = "<group>"; };
+		AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnum.h; path = Models/InterruptedCallStatusEnum.h; sourceTree = "<group>"; };
+		AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterruptedCallStatusEnumHelper.h; path = Models/InterruptedCallStatusEnumHelper.h; sourceTree = "<group>"; };
+		AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterruptedCallStatusEnumHelper.m; path = Models/InterruptedCallStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA3568B8569A1A6780EAD7AF /* IfMachine32Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachine32Enum.h; path = Models/IfMachine32Enum.h; sourceTree = "<group>"; };
+		AA49D105715879402DDA87FF /* IfMachine32EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachine32EnumHelper.h; path = Models/IfMachine32EnumHelper.h; sourceTree = "<group>"; };
+		AA907AD1EFF9674C73399D2D /* IfMachine32EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IfMachine32EnumHelper.m; path = Models/IfMachine32EnumHelper.m; sourceTree = "<group>"; };
+		AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnum.h; path = Models/HttpActionEnum.h; sourceTree = "<group>"; };
+		AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpActionEnumHelper.h; path = Models/HttpActionEnumHelper.h; sourceTree = "<group>"; };
+		AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpActionEnumHelper.m; path = Models/HttpActionEnumHelper.m; sourceTree = "<group>"; };
+		AA0CC5B19317EC31197F5374 /* AudioDirection29Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirection29Enum.h; path = Models/AudioDirection29Enum.h; sourceTree = "<group>"; };
+		AA0797CDCE031C6A771EFC81 /* AudioDirection29EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirection29EnumHelper.h; path = Models/AudioDirection29EnumHelper.h; sourceTree = "<group>"; };
+		AA5B457CD3BEEB95D38C5E79 /* AudioDirection29EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDirection29EnumHelper.m; path = Models/AudioDirection29EnumHelper.m; sourceTree = "<group>"; };
+		AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnum.h; path = Models/SendEmailAsEnum.h; sourceTree = "<group>"; };
+		AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendEmailAsEnumHelper.h; path = Models/SendEmailAsEnumHelper.h; sourceTree = "<group>"; };
+		AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendEmailAsEnumHelper.m; path = Models/SendEmailAsEnumHelper.m; sourceTree = "<group>"; };
+		AAFD3C34D7DBCC4407F865BB /* TemplateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TemplateData.h; path = Models/TemplateData.h; sourceTree = "<group>"; };
+		AAC4DA20608F0E69C5E32720 /* TemplateData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TemplateData.m; path = Models/TemplateData.m; sourceTree = "<group>"; };
+		AA20B22824E5476E2428C6BA /* GroupConfirmFileEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupConfirmFileEnum.h; path = Models/GroupConfirmFileEnum.h; sourceTree = "<group>"; };
+		AA8C464451D7257091D059F7 /* GroupConfirmFileEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupConfirmFileEnumHelper.h; path = Models/GroupConfirmFileEnumHelper.h; sourceTree = "<group>"; };
+		AAB1E4E2E402832D0F6EB3CD /* GroupConfirmFileEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupConfirmFileEnumHelper.m; path = Models/GroupConfirmFileEnumHelper.m; sourceTree = "<group>"; };
+		AAF56CAFE2F12A466B64F8F5 /* AudioUrlEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioUrlEnum.h; path = Models/AudioUrlEnum.h; sourceTree = "<group>"; };
+		AA9B01CA11AEE1FAE60FC3D9 /* AudioUrlEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioUrlEnumHelper.h; path = Models/AudioUrlEnumHelper.h; sourceTree = "<group>"; };
+		AA9F974D7D5BCA1581B40639 /* AudioUrlEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioUrlEnumHelper.m; path = Models/AudioUrlEnumHelper.m; sourceTree = "<group>"; };
+		AA3332638CCB919DFB501866 /* StatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnum.h; path = Models/StatusEnum.h; sourceTree = "<group>"; };
+		AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusEnumHelper.h; path = Models/StatusEnumHelper.h; sourceTree = "<group>"; };
+		AABF389387126F0941CB348A /* StatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusEnumHelper.m; path = Models/StatusEnumHelper.m; sourceTree = "<group>"; };
+		AA590BA5C5FA524C68760B3D /* FileformatEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileformatEnum.h; path = Models/FileformatEnum.h; sourceTree = "<group>"; };
+		AA6887AFD5649E967E09341F /* FileformatEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileformatEnumHelper.h; path = Models/FileformatEnumHelper.h; sourceTree = "<group>"; };
+		AAA5CD8D73725C4C7D2A1BD3 /* FileformatEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileformatEnumHelper.m; path = Models/FileformatEnumHelper.m; sourceTree = "<group>"; };
+		AA12FF61B621F420040B4098 /* IfMachineEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnum.h; path = Models/IfMachineEnum.h; sourceTree = "<group>"; };
+		AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IfMachineEnumHelper.h; path = Models/IfMachineEnumHelper.h; sourceTree = "<group>"; };
+		AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IfMachineEnumHelper.m; path = Models/IfMachineEnumHelper.m; sourceTree = "<group>"; };
+		AA852E4A8839A49583B9634F /* TypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeEnum.h; path = Models/TypeEnum.h; sourceTree = "<group>"; };
+		AAFB1E55EC9C4F4B1B1C382D /* TypeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TypeEnumHelper.h; path = Models/TypeEnumHelper.h; sourceTree = "<group>"; };
+		AAA974C063B498A9A9D4E645 /* TypeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TypeEnumHelper.m; path = Models/TypeEnumHelper.m; sourceTree = "<group>"; };
+		AAB16251C73198D3692E1D38 /* NumbertypeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumbertypeEnum.h; path = Models/NumbertypeEnum.h; sourceTree = "<group>"; };
+		AA5B586D41DCF465B4F86ABB /* NumbertypeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumbertypeEnumHelper.h; path = Models/NumbertypeEnumHelper.h; sourceTree = "<group>"; };
+		AAE153B5650E064C6A382F5E /* NumbertypeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumbertypeEnumHelper.m; path = Models/NumbertypeEnumHelper.m; sourceTree = "<group>"; };
+		AA6E95087CB45783F783AA30 /* DirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnum.h; path = Models/DirectionEnum.h; sourceTree = "<group>"; };
+		AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DirectionEnumHelper.h; path = Models/DirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DirectionEnumHelper.m; path = Models/DirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA5794A13421C9A04834A3ED /* Direction4Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction4Enum.h; path = Models/Direction4Enum.h; sourceTree = "<group>"; };
+		AAB078A02B17093DEFDD7AE1 /* Direction4EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction4EnumHelper.h; path = Models/Direction4EnumHelper.h; sourceTree = "<group>"; };
+		AA7F06189FEB7CD4DD2A93BF /* Direction4EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Direction4EnumHelper.m; path = Models/Direction4EnumHelper.m; sourceTree = "<group>"; };
+		AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnum.h; path = Models/AudioDirectionEnum.h; sourceTree = "<group>"; };
+		AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioDirectionEnumHelper.h; path = Models/AudioDirectionEnumHelper.h; sourceTree = "<group>"; };
+		AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioDirectionEnumHelper.m; path = Models/AudioDirectionEnumHelper.m; sourceTree = "<group>"; };
+		AAC4DB808816B128B52811B0 /* PlayDtmfDirectionEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayDtmfDirectionEnum.h; path = Models/PlayDtmfDirectionEnum.h; sourceTree = "<group>"; };
+		AA0B90220D5A30CC3DCFEA5B /* PlayDtmfDirectionEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayDtmfDirectionEnumHelper.h; path = Models/PlayDtmfDirectionEnumHelper.h; sourceTree = "<group>"; };
+		AAA8084EA57CDCC7E4740E53 /* PlayDtmfDirectionEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayDtmfDirectionEnumHelper.m; path = Models/PlayDtmfDirectionEnumHelper.m; sourceTree = "<group>"; };
+		AA523DE43A9F1EB6227470E6 /* MergeNumberEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberEnum.h; path = Models/MergeNumberEnum.h; sourceTree = "<group>"; };
+		AA924C46E7C041616DAE8E1E /* MergeNumberEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberEnumHelper.h; path = Models/MergeNumberEnumHelper.h; sourceTree = "<group>"; };
+		AAAFB26C681FDEAFCA4093B6 /* MergeNumberEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumberEnumHelper.m; path = Models/MergeNumberEnumHelper.m; sourceTree = "<group>"; };
+		AACA2F9EC29596E957D65A45 /* MActivateEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MActivateEnum.h; path = Models/MActivateEnum.h; sourceTree = "<group>"; };
+		AA07752BAF9D0784694175FE /* MActivateEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MActivateEnumHelper.h; path = Models/MActivateEnumHelper.h; sourceTree = "<group>"; };
+		AA233EFEEE588AB2F3985B61 /* MActivateEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MActivateEnumHelper.m; path = Models/MActivateEnumHelper.m; sourceTree = "<group>"; };
+		AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnum.h; path = Models/ProductCodeEnum.h; sourceTree = "<group>"; };
+		AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCodeEnumHelper.h; path = Models/ProductCodeEnumHelper.h; sourceTree = "<group>"; };
+		AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCodeEnumHelper.m; path = Models/ProductCodeEnumHelper.m; sourceTree = "<group>"; };
+		AAB99B84D65CA035ECF13ABA /* Status12Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status12Enum.h; path = Models/Status12Enum.h; sourceTree = "<group>"; };
+		AAAEDF59B2A63014D1DA0D28 /* Status12EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status12EnumHelper.h; path = Models/Status12EnumHelper.h; sourceTree = "<group>"; };
+		AA2B3C47E9C8F914FFF055C2 /* Status12EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Status12EnumHelper.m; path = Models/Status12EnumHelper.m; sourceTree = "<group>"; };
+		AABAFF5B5A433C7A0CBD84A2 /* NumberType14Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType14Enum.h; path = Models/NumberType14Enum.h; sourceTree = "<group>"; };
+		AA3945BEC84F821A45CB2C00 /* NumberType14EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType14EnumHelper.h; path = Models/NumberType14EnumHelper.h; sourceTree = "<group>"; };
+		AA267A5E48750F81CB3F8C67 /* NumberType14EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberType14EnumHelper.m; path = Models/NumberType14EnumHelper.m; sourceTree = "<group>"; };
+		AA68038DAFCF6414E172419A /* NumberType15Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType15Enum.h; path = Models/NumberType15Enum.h; sourceTree = "<group>"; };
+		AA543D9CCA88D5CA5E951FA5 /* NumberType15EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType15EnumHelper.h; path = Models/NumberType15EnumHelper.h; sourceTree = "<group>"; };
+		AA741F31B64DB514E0962CB7 /* NumberType15EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberType15EnumHelper.m; path = Models/NumberType15EnumHelper.m; sourceTree = "<group>"; };
+		AABC1A6AA2C060B415FC5494 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Error.h; path = Models/Error.h; sourceTree = "<group>"; };
+		AA9D2557AB3AEB866FDCFE99 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Error.m; path = Models/Error.m; sourceTree = "<group>"; };
+		AA00C1F91D4799370685F903 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Models/Message.h; sourceTree = "<group>"; };
+		AA7903A574AA3FE7DB8AD92F /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Models/Message.m; sourceTree = "<group>"; };
+		AA77213CA7056534CFE06F4E /* Direction23Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction23Enum.h; path = Models/Direction23Enum.h; sourceTree = "<group>"; };
+		AA44B50991563FDAD4EE60ED /* Direction23EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Direction23EnumHelper.h; path = Models/Direction23EnumHelper.h; sourceTree = "<group>"; };
+		AAD84289FF95492D28D3ACEE /* Direction23EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Direction23EnumHelper.m; path = Models/Direction23EnumHelper.m; sourceTree = "<group>"; };
+		AA40D1D8D2C2910F59B60742 /* NumberType24Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType24Enum.h; path = Models/NumberType24Enum.h; sourceTree = "<group>"; };
+		AA3CF12319A4465984CEFC90 /* NumberType24EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberType24EnumHelper.h; path = Models/NumberType24EnumHelper.h; sourceTree = "<group>"; };
+		AAD47FA4B0883ED307443A00 /* NumberType24EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberType24EnumHelper.m; path = Models/NumberType24EnumHelper.m; sourceTree = "<group>"; };
+		AAD7F5E8CC0333C6FA94A647 /* Status25Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status25Enum.h; path = Models/Status25Enum.h; sourceTree = "<group>"; };
+		AA442791DE3D66DF0B6D7182 /* Status25EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Status25EnumHelper.h; path = Models/Status25EnumHelper.h; sourceTree = "<group>"; };
+		AAD0D3035C995B396577C763 /* Status25EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Status25EnumHelper.m; path = Models/Status25EnumHelper.m; sourceTree = "<group>"; };
+		AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnum.h; path = Models/ActivateStatusEnum.h; sourceTree = "<group>"; };
+		AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateStatusEnumHelper.h; path = Models/ActivateStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivateStatusEnumHelper.m; path = Models/ActivateStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnum.h; path = Models/MergeNumberStatusEnum.h; sourceTree = "<group>"; };
+		AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumberStatusEnumHelper.h; path = Models/MergeNumberStatusEnumHelper.h; sourceTree = "<group>"; };
+		AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumberStatusEnumHelper.m; path = Models/MergeNumberStatusEnumHelper.m; sourceTree = "<group>"; };
+		AA1840F9D0CCC613C2B409D6 /* ProductCode30Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCode30Enum.h; path = Models/ProductCode30Enum.h; sourceTree = "<group>"; };
+		AAA9FCA0D4DED0DA3D37A641 /* ProductCode30EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCode30EnumHelper.h; path = Models/ProductCode30EnumHelper.h; sourceTree = "<group>"; };
+		AA3560EEF244CAED604D056F /* ProductCode30EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCode30EnumHelper.m; path = Models/ProductCode30EnumHelper.m; sourceTree = "<group>"; };
+		AA05384EBCB2BAAD56B19FD7 /* Numbertype16Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Numbertype16Enum.h; path = Models/Numbertype16Enum.h; sourceTree = "<group>"; };
+		AAD611FD41F906264B88D852 /* Numbertype16EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Numbertype16EnumHelper.h; path = Models/Numbertype16EnumHelper.h; sourceTree = "<group>"; };
+		AABAD7AA504038F5BC226B9A /* Numbertype16EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Numbertype16EnumHelper.m; path = Models/Numbertype16EnumHelper.m; sourceTree = "<group>"; };
+		AAC4F0FEAF5FD3555BCE6B60 /* PlayDtmfDirection38Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayDtmfDirection38Enum.h; path = Models/PlayDtmfDirection38Enum.h; sourceTree = "<group>"; };
+		AAD7B66BD3347734D512DA78 /* PlayDtmfDirection38EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayDtmfDirection38EnumHelper.h; path = Models/PlayDtmfDirection38EnumHelper.h; sourceTree = "<group>"; };
+		AA012E92D06BC103EA12BDB9 /* PlayDtmfDirection38EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayDtmfDirection38EnumHelper.m; path = Models/PlayDtmfDirection38EnumHelper.m; sourceTree = "<group>"; };
+		AA14BE7FC3C537AC30FE8866 /* MergeNumber40Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumber40Enum.h; path = Models/MergeNumber40Enum.h; sourceTree = "<group>"; };
+		AADA3CB511233A50892B5E64 /* MergeNumber40EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MergeNumber40EnumHelper.h; path = Models/MergeNumber40EnumHelper.h; sourceTree = "<group>"; };
+		AA58A903DD37BA4BADC06675 /* MergeNumber40EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MergeNumber40EnumHelper.m; path = Models/MergeNumber40EnumHelper.m; sourceTree = "<group>"; };
+		AA9CBC04CDDDDBA3D5544ABB /* ActivateEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateEnum.h; path = Models/ActivateEnum.h; sourceTree = "<group>"; };
+		AAA670B71C7B1ABAA6550790 /* ActivateEnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivateEnumHelper.h; path = Models/ActivateEnumHelper.h; sourceTree = "<group>"; };
+		AA54FFF6DB5C5D7852AAC73D /* ActivateEnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivateEnumHelper.m; path = Models/ActivateEnumHelper.m; sourceTree = "<group>"; };
+		AA17206703659FEFD3ABB87F /* ProductCode27Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCode27Enum.h; path = Models/ProductCode27Enum.h; sourceTree = "<group>"; };
+		AA4773E5ADDFA3263AC90169 /* ProductCode27EnumHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCode27EnumHelper.h; path = Models/ProductCode27EnumHelper.h; sourceTree = "<group>"; };
+		AAB6D180B2245576A422FB46 /* ProductCode27EnumHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCode27EnumHelper.m; path = Models/ProductCode27EnumHelper.m; sourceTree = "<group>"; };
+		AA4AF826B686E34D8C722F89 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
+		AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShortCodeController.h; path = Controllers/ShortCodeController.h; sourceTree = "<group>"; };
+		AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShortCodeController.m; path = Controllers/ShortCodeController.m; sourceTree = "<group>"; };
+		AA7AD1C3DD5C8E87796684E0 /* AreaMailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AreaMailController.h; path = Controllers/AreaMailController.h; sourceTree = "<group>"; };
+		AAD332E44D5AD22729F9B3AA /* AreaMailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AreaMailController.m; path = Controllers/AreaMailController.m; sourceTree = "<group>"; };
+		AA49DAFFBDF8262368FF857A /* PostCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostCardController.h; path = Controllers/PostCardController.h; sourceTree = "<group>"; };
+		AADDB21DEB875FA7D69584C1 /* PostCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostCardController.m; path = Controllers/PostCardController.m; sourceTree = "<group>"; };
+		AA15914C52017459F85F83BD /* LetterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LetterController.h; path = Controllers/LetterController.h; sourceTree = "<group>"; };
+		AA29DF13B89796FD45264C8C /* LetterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LetterController.m; path = Controllers/LetterController.m; sourceTree = "<group>"; };
+		AA0D03E9A2213E7EB3BC33F3 /* CallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CallController.h; path = Controllers/CallController.h; sourceTree = "<group>"; };
+		AA903D7FB6C91C80995EA301 /* CallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CallController.m; path = Controllers/CallController.m; sourceTree = "<group>"; };
+		AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneNumberController.h; path = Controllers/PhoneNumberController.h; sourceTree = "<group>"; };
+		AA408FD4D42B04A34E34261C /* PhoneNumberController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberController.m; path = Controllers/PhoneNumberController.m; sourceTree = "<group>"; };
+		AA7A1081BD407E66ED9F8475 /* SMSController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMSController.h; path = Controllers/SMSController.h; sourceTree = "<group>"; };
+		AA67A0E0319ACE13F97F3892 /* SMSController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMSController.m; path = Controllers/SMSController.m; sourceTree = "<group>"; };
+		AA51CCAFE517D0020659B22F /* SharedShortCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedShortCodeController.h; path = Controllers/SharedShortCodeController.h; sourceTree = "<group>"; };
+		AAE903B5B89362A90F1C9C36 /* SharedShortCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharedShortCodeController.m; path = Controllers/SharedShortCodeController.m; sourceTree = "<group>"; };
+		AA81F92408B7C55C821BB4D3 /* ConferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConferenceController.h; path = Controllers/ConferenceController.h; sourceTree = "<group>"; };
+		AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConferenceController.m; path = Controllers/ConferenceController.m; sourceTree = "<group>"; };
+		AA2657510856339A58BD110F /* CarrierController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CarrierController.h; path = Controllers/CarrierController.h; sourceTree = "<group>"; };
+		AA9128986187196F56167741 /* CarrierController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CarrierController.m; path = Controllers/CarrierController.m; sourceTree = "<group>"; };
+		AA318A9E219748C8ECFCABAE /* EmailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailController.h; path = Controllers/EmailController.h; sourceTree = "<group>"; };
+		AA9ED896F435094DB0E5AA54 /* EmailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailController.m; path = Controllers/EmailController.m; sourceTree = "<group>"; };
+		AAEBEC9B69A8F7B5117AE60C /* AccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountController.h; path = Controllers/AccountController.h; sourceTree = "<group>"; };
+		AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountController.m; path = Controllers/AccountController.m; sourceTree = "<group>"; };
+		AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubAccountController.h; path = Controllers/SubAccountController.h; sourceTree = "<group>"; };
+		AAD42F72B0811B33CDE47456 /* SubAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubAccountController.m; path = Controllers/SubAccountController.m; sourceTree = "<group>"; };
+		AA11460EF3700A7F7018A3DC /* AddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressController.h; path = Controllers/AddressController.h; sourceTree = "<group>"; };
+		AA5ED7FFA015973685AAC46F /* AddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressController.m; path = Controllers/AddressController.m; sourceTree = "<group>"; };
+		AAAB468F09960CF5D081F9E7 /* RecordingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordingController.h; path = Controllers/RecordingController.h; sourceTree = "<group>"; };
+		AADDDC6CAB773E881C322698 /* RecordingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordingController.m; path = Controllers/RecordingController.m; sourceTree = "<group>"; };
+		AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TranscriptionController.h; path = Controllers/TranscriptionController.h; sourceTree = "<group>"; };
+		AA855C6D96B42602C073F3B1 /* TranscriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TranscriptionController.m; path = Controllers/TranscriptionController.m; sourceTree = "<group>"; };
+		AA1709549528F49F39603685 /* UsageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsageController.h; path = Controllers/UsageController.h; sourceTree = "<group>"; };
+		AA45AC54E9989F859BAC238B /* UsageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsageController.m; path = Controllers/UsageController.m; sourceTree = "<group>"; };
+
+        AA1173ED2E32674C48620A64 /* IHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IHttpClient.h; path = Http/Client/IHttpClient.h; sourceTree = "<group>"; };
+        AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnirestClient.h; path = Http/Client/UnirestClient.h; sourceTree = "<group>"; };
+        AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnirestClient.m; path = Http/Client/UnirestClient.m; sourceTree = "<group>"; };
+        AA406D274803136B567B1E87 /* HttpContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpContext.h; path = Http/Client/HttpContext.h; sourceTree = "<group>"; };
+        AAFF0E81765DC544641E6641 /* HttpContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc;name = HttpContext.m;  path = Http/Client/HttpContext.m; sourceTree = "<group>"; };
+
+        AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpBodyRequest.h; path = Http/Request/HttpBodyRequest.h; sourceTree = "<group>"; };
+        AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpBodyRequest.m; path = Http/Request/HttpBodyRequest.m; sourceTree = "<group>"; };
+        AA31975203C7EAF86B56F415 /* HttpMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpMethod.h; path = Http/Request/HttpMethod.h; sourceTree = "<group>"; };
+        AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpRequest.h; path = Http/Request/HttpRequest.h; sourceTree = "<group>"; };
+        AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpRequest.m; path = Http/Request/HttpRequest.m; sourceTree = "<group>"; };
+        AAF67FE2ADA5B77379090F09 /* HttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpResponse.h; path = Http/Response/HttpResponse.h; sourceTree = "<group>"; };
+        AAE099E73BF6EE469D4AB217 /* HttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpResponse.m; path = Http/Response/HttpResponse.m; sourceTree = "<group>"; };
+        AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HttpStringResponse.h; path = Http/Response/HttpStringResponse.h; sourceTree = "<group>"; };
+        AA78889B46E63B2815E8A97C /* HttpStringResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HttpStringResponse.m; path = Http/Response/HttpStringResponse.m; sourceTree = "<group>"; };
+        AA5D18C97F1ED2716A752AA8 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseController.h; path = Controllers/BaseController.h; sourceTree = "<group>"; };
+        AA940686A027FAC0683E87AE /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseController.m; path = Controllers/BaseController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        AAC01B07AF245CB0CDD170FA /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA156D6B8C98CDFEC6517A86 /* Foundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        AA6953230CA509B32593BC7C /* Tests Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AAB6FF0AA3C1D0F2B493849F /* UIKit.framework in Frameworks */,
+                AAEC3975AAF8AA1308CB9DB7 /* libYtelAPIV3.a in Frameworks */,
+                AAB95DE29AE69E555D2350F1 /* Foundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        AAFA9A16D872F6A26FA42D16 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AAB6FF0AA3C1D0F2B493849F /* UIKit.framework in Frameworks */,
+                AAEC3975AAF8AA1308CB9DB7 /* libYtelAPIV3.a in Frameworks */,
+                AAB95DE29AE69E555D2350F1 /* Foundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        AAD4984ADF584177665EB2F2 = {
+            isa = PBXGroup;
+            children = (
+                AAE5FE10AA73B8B0BF58D30E /* YtelAPIV3 */,
+                AA9EA450E464263161F6BD14 /* Frameworks */,
+                AA8858C16C1B7799495DB67C /* Products */,
+   
+                AA71073E67D83B062E3169C9 /* Tests */,
+            );
+            sourceTree = "<group>";
+        };
+        AA8858C16C1B7799495DB67C /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                AA7821CD0DA92EF87789C61D /* Tests.xctest */,
+                AAFFB6F12C34BFAB07465B52 /* libYtelAPIV3.a */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        AA9EA450E464263161F6BD14 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                AA6C52504A381F7C41B67182 /* Foundation.framework */,
+                AA12F8206E62E7B415ACF0E1 /* UIKit.framework */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
+        AAE5FE10AA73B8B0BF58D30E /* YtelAPIV3 */ = {
+            isa = PBXGroup;
+            children = (
+                AA01453D8EB8DA40D84E17AB /* Models */,
+                AAAB4E1BA682F714FFFE50E0 /* Http */,
+				AABB66C6B414A46151F694C8 /* Test Helper */,
+                AA56C8CB120D74D9FD3C57DB /* Controllers */,
+                AA15EC52DAFD549AA1AE2F7F /* Supporting Files */,
+                AA6FB783652324EFB3E7BA31 /* APIHelper.m */,
+                AA49A4D678BA2CF98CE5E8A7 /* APIHelper.h */,
+                AA1C1510C4F3D56A3A951CFD /* APIError.m */,
+                AA48BFFBF934C1B6D2406E77 /* APIError.h */,
+				AA87B0D5C82751CDDB81A704 /* NSDate+extension.h */,
+                AAC241C706904812E6B3DBD1 /* NSDate+extension.m */,
+                AA930E00F351FD01B7CC14EE /* JSONValueTransformer+NSUUID.h */,
+                AA5342942B6EEF0CFCF596BB /* JSONValueTransformer+NSUUID.m */,
+                AAFCE585F7417595F3776274 /* Configuration.m */,
+                AAFDA2A62B62D6847BB95686 /* Configuration.h */,
+            );
+            path = YtelAPIV3;
+            sourceTree = "<group>";
+        };
+        AA15EC52DAFD549AA1AE2F7F /* Supporting Files */ = {
+            isa = PBXGroup;
+            children = (
+                AAD0DA7640475994DA60613B /* YtelAPIV3-Prefix.pch */,
+            );
+            name = "Supporting Files";
+            sourceTree = "<group>";
+        };
+   
+         AA71073E67D83B062E3169C9 /* Tests */ = {
+            isa = PBXGroup;
+            children = (
+            AA5CAA5BE3DEB378387D5842 /*info.plist*/,
+				AA1214C7376AAAB2D01C5DAD /* TestBaseController.m */,
+				AA38D29922B47B63236174CA /* TestBaseController.h */,
+				AA149A6A2C803FA6BBB3236C /* TestShortCodeController.m */,
+				AA2BC5F402D3DDF6581389CF /* TestAreaMailController.m */,
+				AA9B9137F79EA54E8A8AE609 /* TestPostCardController.m */,
+				AA568B2911E16EF7CE7A9613 /* TestLetterController.m */,
+				AA7DCAAD4A7C6220C27E26D8 /* TestCallController.m */,
+				AA7C3D809C8395069AA8C8BD /* TestPhoneNumberController.m */,
+				AA190804FFA738CAEF25D2D2 /* TestSMSController.m */,
+				AAA7ECBEC7A89FD7A071941A /* TestSharedShortCodeController.m */,
+				AAB754A065F4D3A279652ADF /* TestConferenceController.m */,
+				AADCE97F2ED42B3F7B862F7C /* TestCarrierController.m */,
+				AA89B6DD754436FC9B682837 /* TestEmailController.m */,
+				AABBDAE7375DAD62065E364C /* TestAddressController.m */,
+				AAE6376EA04487277687AF41 /* TestRecordingController.m */,
+				AA3CF1E92DA05A0D07B762EF /* TestTranscriptionController.m */,
+				AAFEA364DDD0ADAA9E5FBDF3 /* TestUsageController.m */,
+            );
+            name = "Tests";
+            sourceTree = "<group>";
+        };
+        AA56C8CB120D74D9FD3C57DB /* Controllers */ = {
+            isa = PBXGroup;
+            children = (
+                AA5D18C97F1ED2716A752AA8 /* BaseController.h */,
+                AA940686A027FAC0683E87AE /* BaseController.m */,
+				AA4AF826B686E34D8C722F89 /* BaseController.m */,
+				AA45C5048F78DE7A233BDFBA /* ShortCodeController.h */,
+				AAAAFDCD0A8FCC2D0DDFE25C /* ShortCodeController.m */,
+				AA7AD1C3DD5C8E87796684E0 /* AreaMailController.h */,
+				AAD332E44D5AD22729F9B3AA /* AreaMailController.m */,
+				AA49DAFFBDF8262368FF857A /* PostCardController.h */,
+				AADDB21DEB875FA7D69584C1 /* PostCardController.m */,
+				AA15914C52017459F85F83BD /* LetterController.h */,
+				AA29DF13B89796FD45264C8C /* LetterController.m */,
+				AA0D03E9A2213E7EB3BC33F3 /* CallController.h */,
+				AA903D7FB6C91C80995EA301 /* CallController.m */,
+				AAAAC4E3BA913527466D2747 /* PhoneNumberController.h */,
+				AA408FD4D42B04A34E34261C /* PhoneNumberController.m */,
+				AA7A1081BD407E66ED9F8475 /* SMSController.h */,
+				AA67A0E0319ACE13F97F3892 /* SMSController.m */,
+				AA51CCAFE517D0020659B22F /* SharedShortCodeController.h */,
+				AAE903B5B89362A90F1C9C36 /* SharedShortCodeController.m */,
+				AA81F92408B7C55C821BB4D3 /* ConferenceController.h */,
+				AA4390C0B1A9AE3ABE2E167F /* ConferenceController.m */,
+				AA2657510856339A58BD110F /* CarrierController.h */,
+				AA9128986187196F56167741 /* CarrierController.m */,
+				AA318A9E219748C8ECFCABAE /* EmailController.h */,
+				AA9ED896F435094DB0E5AA54 /* EmailController.m */,
+				AAEBEC9B69A8F7B5117AE60C /* AccountController.h */,
+				AAEA9300E6FD5F3F4BE8C549 /* AccountController.m */,
+				AA70753EED3D2B0ED0E5FE20 /* SubAccountController.h */,
+				AAD42F72B0811B33CDE47456 /* SubAccountController.m */,
+				AA11460EF3700A7F7018A3DC /* AddressController.h */,
+				AA5ED7FFA015973685AAC46F /* AddressController.m */,
+				AAAB468F09960CF5D081F9E7 /* RecordingController.h */,
+				AADDDC6CAB773E881C322698 /* RecordingController.m */,
+				AA65AC59F98ECE907FBD7521 /* TranscriptionController.h */,
+				AA855C6D96B42602C073F3B1 /* TranscriptionController.m */,
+				AA1709549528F49F39603685 /* UsageController.h */,
+				AA45AC54E9989F859BAC238B /* UsageController.m */,
+            );
+            name = Controllers;
+            sourceTree = "<group>";
+        };
+        AA6945303944BAD4445B8A6F /* Client */ = {
+            isa = PBXGroup;
+            children = (
+                AA1173ED2E32674C48620A64 /* IHttpClient.h */,
+                AACAA536E84B6D2BF2CDE608 /* UnirestClient.h */,
+                AA4D7A678B8A985E2C50CBFF /* UnirestClient.m */,
+                AA406D274803136B567B1E87 /* HttpContext.h */,
+                AAFF0E81765DC544641E6641 /* HttpContext.m */,
+            );
+            name = Client;
+            sourceTree = "<group>";
+        };
+   
+        AAAB4E1BA682F714FFFE50E0 /* Http */ = {
+            isa = PBXGroup;
+            children = (
+                
+                AAED5F1ABE468E7059C07921 /* TestHelper.m */,
+                AAD3E776A95AA25C34B1CED8 /* TestHelper.h */,
+            );
+            name = TestHelper;
+            sourceTree = "<group>";
+        };
+        AABB66C6B414A46151F694C8 /* Test Helper */ = {
+            isa = PBXGroup;
+            children = (
+                AA613A713697E8E9E6AB31AB /* Request */,
+                AA6945303944BAD4445B8A6F /* Client */,
+                AAD6140F9EE3518738ACC212 /* Response */,
+            );
+            name = Http;
+            sourceTree = "<group>";
+        };
+        AA613A713697E8E9E6AB31AB /* Request */ = {
+            isa = PBXGroup;
+            children = (
+                AA6B29F99CA666FECC5C487E /* HttpBodyRequest.h */,
+                AA956F01D2F5D670DC35B362 /* HttpBodyRequest.m */,
+                AA31975203C7EAF86B56F415 /* HttpMethod.h */,
+                AA98C9716BFF8AE5BFC28898 /* HttpRequest.h */,
+                AA87A2CD71372D1DB3FF6520 /* HttpRequest.m */,
+            );
+            name = Request;
+            sourceTree = "<group>";
+        };
+        AAD6140F9EE3518738ACC212 /* Response */ = {
+            isa = PBXGroup;
+            children = (
+                AAF67FE2ADA5B77379090F09 /* HttpResponse.h */,
+                AAE099E73BF6EE469D4AB217 /* HttpResponse.m */,
+                AA43B3EAF2E61EDA56E566C3 /* HttpStringResponse.h */,
+                AA78889B46E63B2815E8A97C /* HttpStringResponse.m */,
+            );
+            name = Response;
+            sourceTree = "<group>";
+        };
+        AA01453D8EB8DA40D84E17AB /* Models */ = {
+            isa = PBXGroup;
+            children = (
+				AAB333F56E00C4447572EE4C /* Errors.h */,
+				AAA908B8D796BBD33D7E7BB0 /* Errors.m */,
+				AA4C2962814240B7D945257C /* GroupConfirmFile44Enum.h */,
+				AA4A61D95ECDBF6FB34D100B /* GroupConfirmFile44EnumHelper.h */,
+				AA30F5850CBDEB84AFCF54D6 /* GroupConfirmFile44EnumHelper.m */,
+				AA496CDAB621C0973749079F /* AudioUrl43Enum.h */,
+				AAD4A3AE70218E095FF14E10 /* AudioUrl43EnumHelper.h */,
+				AAABD361C9891A3D949547CA /* AudioUrl43EnumHelper.m */,
+				AACEF265EAA554095A4A2191 /* Status24Enum.h */,
+				AA459233E18159052836F1A7 /* Status24EnumHelper.h */,
+				AA2A1401E1694A38CD2FD5D6 /* Status24EnumHelper.m */,
+				AA52871F88F60BB405895060 /* Fileformat37Enum.h */,
+				AA98621C97E476913E741004 /* Fileformat37EnumHelper.h */,
+				AA6E45E8FA61F04A364E8354 /* Fileformat37EnumHelper.m */,
+				AA0EB0A8CFCC7059568406F1 /* Type36Enum.h */,
+				AA2ABC9FB7E973BC2CDE2CE7 /* Type36EnumHelper.h */,
+				AAD1DEB59FFC3ADD9F0B31FD /* Type36EnumHelper.m */,
+				AA1A2E7FC8A65E392A740089 /* AudioFormatEnum.h */,
+				AA785383713C3CC484BCF804 /* AudioFormatEnumHelper.h */,
+				AA22134EF1E882A491A87586 /* AudioFormatEnumHelper.m */,
+				AA5E94253B7857AAEFF1EA24 /* InterruptedCallStatusEnum.h */,
+				AAD02E0C89AECC676C944848 /* InterruptedCallStatusEnumHelper.h */,
+				AAA36B073CD110063D91AF41 /* InterruptedCallStatusEnumHelper.m */,
+				AA3568B8569A1A6780EAD7AF /* IfMachine32Enum.h */,
+				AA49D105715879402DDA87FF /* IfMachine32EnumHelper.h */,
+				AA907AD1EFF9674C73399D2D /* IfMachine32EnumHelper.m */,
+				AA3026B09E58E1BFE6D554AD /* HttpActionEnum.h */,
+				AA1EE4B07C5B2EFB3CB4922B /* HttpActionEnumHelper.h */,
+				AA713A92362774C92A5F326F /* HttpActionEnumHelper.m */,
+				AA0CC5B19317EC31197F5374 /* AudioDirection29Enum.h */,
+				AA0797CDCE031C6A771EFC81 /* AudioDirection29EnumHelper.h */,
+				AA5B457CD3BEEB95D38C5E79 /* AudioDirection29EnumHelper.m */,
+				AA67C57816FC9CE62A733DA2 /* SendEmailAsEnum.h */,
+				AAB6FD88C22C927FE6F5A42E /* SendEmailAsEnumHelper.h */,
+				AA5BA8659695514442E1EB47 /* SendEmailAsEnumHelper.m */,
+				AAFD3C34D7DBCC4407F865BB /* TemplateData.h */,
+				AAC4DA20608F0E69C5E32720 /* TemplateData.m */,
+				AA20B22824E5476E2428C6BA /* GroupConfirmFileEnum.h */,
+				AA8C464451D7257091D059F7 /* GroupConfirmFileEnumHelper.h */,
+				AAB1E4E2E402832D0F6EB3CD /* GroupConfirmFileEnumHelper.m */,
+				AAF56CAFE2F12A466B64F8F5 /* AudioUrlEnum.h */,
+				AA9B01CA11AEE1FAE60FC3D9 /* AudioUrlEnumHelper.h */,
+				AA9F974D7D5BCA1581B40639 /* AudioUrlEnumHelper.m */,
+				AA3332638CCB919DFB501866 /* StatusEnum.h */,
+				AACDF5BA81EF7278851ECE5E /* StatusEnumHelper.h */,
+				AABF389387126F0941CB348A /* StatusEnumHelper.m */,
+				AA590BA5C5FA524C68760B3D /* FileformatEnum.h */,
+				AA6887AFD5649E967E09341F /* FileformatEnumHelper.h */,
+				AAA5CD8D73725C4C7D2A1BD3 /* FileformatEnumHelper.m */,
+				AA12FF61B621F420040B4098 /* IfMachineEnum.h */,
+				AAB19ADCE5683E59D683C200 /* IfMachineEnumHelper.h */,
+				AA2B66AC1D762ABC3528AF4F /* IfMachineEnumHelper.m */,
+				AA852E4A8839A49583B9634F /* TypeEnum.h */,
+				AAFB1E55EC9C4F4B1B1C382D /* TypeEnumHelper.h */,
+				AAA974C063B498A9A9D4E645 /* TypeEnumHelper.m */,
+				AAB16251C73198D3692E1D38 /* NumbertypeEnum.h */,
+				AA5B586D41DCF465B4F86ABB /* NumbertypeEnumHelper.h */,
+				AAE153B5650E064C6A382F5E /* NumbertypeEnumHelper.m */,
+				AA6E95087CB45783F783AA30 /* DirectionEnum.h */,
+				AA1C4643E41FE6B453C41570 /* DirectionEnumHelper.h */,
+				AA604ACA5462EDAA959DF22E /* DirectionEnumHelper.m */,
+				AA5794A13421C9A04834A3ED /* Direction4Enum.h */,
+				AAB078A02B17093DEFDD7AE1 /* Direction4EnumHelper.h */,
+				AA7F06189FEB7CD4DD2A93BF /* Direction4EnumHelper.m */,
+				AAEEECBBFC4E6EA225E9D550 /* AudioDirectionEnum.h */,
+				AA675909E0C50DAC6E40B92F /* AudioDirectionEnumHelper.h */,
+				AA3B544A15B38EE39D618B16 /* AudioDirectionEnumHelper.m */,
+				AAC4DB808816B128B52811B0 /* PlayDtmfDirectionEnum.h */,
+				AA0B90220D5A30CC3DCFEA5B /* PlayDtmfDirectionEnumHelper.h */,
+				AAA8084EA57CDCC7E4740E53 /* PlayDtmfDirectionEnumHelper.m */,
+				AA523DE43A9F1EB6227470E6 /* MergeNumberEnum.h */,
+				AA924C46E7C041616DAE8E1E /* MergeNumberEnumHelper.h */,
+				AAAFB26C681FDEAFCA4093B6 /* MergeNumberEnumHelper.m */,
+				AACA2F9EC29596E957D65A45 /* MActivateEnum.h */,
+				AA07752BAF9D0784694175FE /* MActivateEnumHelper.h */,
+				AA233EFEEE588AB2F3985B61 /* MActivateEnumHelper.m */,
+				AA6A6B96141A8A3264EB811A /* ProductCodeEnum.h */,
+				AA748F2ABEF1442C17EEC33D /* ProductCodeEnumHelper.h */,
+				AA9BD53DC1B2783689671621 /* ProductCodeEnumHelper.m */,
+				AAB99B84D65CA035ECF13ABA /* Status12Enum.h */,
+				AAAEDF59B2A63014D1DA0D28 /* Status12EnumHelper.h */,
+				AA2B3C47E9C8F914FFF055C2 /* Status12EnumHelper.m */,
+				AABAFF5B5A433C7A0CBD84A2 /* NumberType14Enum.h */,
+				AA3945BEC84F821A45CB2C00 /* NumberType14EnumHelper.h */,
+				AA267A5E48750F81CB3F8C67 /* NumberType14EnumHelper.m */,
+				AA68038DAFCF6414E172419A /* NumberType15Enum.h */,
+				AA543D9CCA88D5CA5E951FA5 /* NumberType15EnumHelper.h */,
+				AA741F31B64DB514E0962CB7 /* NumberType15EnumHelper.m */,
+				AABC1A6AA2C060B415FC5494 /* Error.h */,
+				AA9D2557AB3AEB866FDCFE99 /* Error.m */,
+				AA00C1F91D4799370685F903 /* Message.h */,
+				AA7903A574AA3FE7DB8AD92F /* Message.m */,
+				AA77213CA7056534CFE06F4E /* Direction23Enum.h */,
+				AA44B50991563FDAD4EE60ED /* Direction23EnumHelper.h */,
+				AAD84289FF95492D28D3ACEE /* Direction23EnumHelper.m */,
+				AA40D1D8D2C2910F59B60742 /* NumberType24Enum.h */,
+				AA3CF12319A4465984CEFC90 /* NumberType24EnumHelper.h */,
+				AAD47FA4B0883ED307443A00 /* NumberType24EnumHelper.m */,
+				AAD7F5E8CC0333C6FA94A647 /* Status25Enum.h */,
+				AA442791DE3D66DF0B6D7182 /* Status25EnumHelper.h */,
+				AAD0D3035C995B396577C763 /* Status25EnumHelper.m */,
+				AAB7DD86748C5D154C36EB79 /* ActivateStatusEnum.h */,
+				AAB7922EF29CF58BF41A8D9C /* ActivateStatusEnumHelper.h */,
+				AA9B88B40ACBAC0DB9DC8502 /* ActivateStatusEnumHelper.m */,
+				AA3F59C83BE36086CAD1A5C2 /* MergeNumberStatusEnum.h */,
+				AAACFCC337B741B3D2943BE0 /* MergeNumberStatusEnumHelper.h */,
+				AA8110D95850A57457573D8B /* MergeNumberStatusEnumHelper.m */,
+				AA1840F9D0CCC613C2B409D6 /* ProductCode30Enum.h */,
+				AAA9FCA0D4DED0DA3D37A641 /* ProductCode30EnumHelper.h */,
+				AA3560EEF244CAED604D056F /* ProductCode30EnumHelper.m */,
+				AA05384EBCB2BAAD56B19FD7 /* Numbertype16Enum.h */,
+				AAD611FD41F906264B88D852 /* Numbertype16EnumHelper.h */,
+				AABAD7AA504038F5BC226B9A /* Numbertype16EnumHelper.m */,
+				AAC4F0FEAF5FD3555BCE6B60 /* PlayDtmfDirection38Enum.h */,
+				AAD7B66BD3347734D512DA78 /* PlayDtmfDirection38EnumHelper.h */,
+				AA012E92D06BC103EA12BDB9 /* PlayDtmfDirection38EnumHelper.m */,
+				AA14BE7FC3C537AC30FE8866 /* MergeNumber40Enum.h */,
+				AADA3CB511233A50892B5E64 /* MergeNumber40EnumHelper.h */,
+				AA58A903DD37BA4BADC06675 /* MergeNumber40EnumHelper.m */,
+				AA9CBC04CDDDDBA3D5544ABB /* ActivateEnum.h */,
+				AAA670B71C7B1ABAA6550790 /* ActivateEnumHelper.h */,
+				AA54FFF6DB5C5D7852AAC73D /* ActivateEnumHelper.m */,
+				AA17206703659FEFD3ABB87F /* ProductCode27Enum.h */,
+				AA4773E5ADDFA3263AC90169 /* ProductCode27EnumHelper.h */,
+				AAB6D180B2245576A422FB46 /* ProductCode27EnumHelper.m */,
+            );
+            name = Models;
+            sourceTree = "<group>";
+        };
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+        AA13B6076044B4EB7050DE39 /* Headers */ = {
+            isa = PBXHeadersBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+		AAEBEA969AC5C8A953A37217 /* TestBaseController.h in Headers */,
+		AA96CF438B3FE7A49BD8447F /* Errors.h in Headers */,
+		AA547938C594C01B6F62090A /* GroupConfirmFile44Enum.h in Headers */,
+		AA093F46E32EE70F73EB3F40 /* GroupConfirmFile44EnumHelper.h in Headers */,
+		AA8AF6BFE10A879EB0F835EB /* AudioUrl43Enum.h in Headers */,
+		AA5469C96F5AF72DE6206016 /* AudioUrl43EnumHelper.h in Headers */,
+		AA7CA1CEC8EA195D551FFB3E /* Status24Enum.h in Headers */,
+		AAC881FF3E8912E08DDF8DC0 /* Status24EnumHelper.h in Headers */,
+		AACFD0554D35B7764A30C2B9 /* Fileformat37Enum.h in Headers */,
+		AA9C66061CE5B3EC92AB8BB4 /* Fileformat37EnumHelper.h in Headers */,
+		AA0109CFB30D445BE0220144 /* Type36Enum.h in Headers */,
+		AA75BBAD155DCDFD6211C985 /* Type36EnumHelper.h in Headers */,
+		AAB7C9B6D7EF5BC95CAC4997 /* AudioFormatEnum.h in Headers */,
+		AA1A812428C03BA35577CFC9 /* AudioFormatEnumHelper.h in Headers */,
+		AA2204C4F1675D5343C058B8 /* InterruptedCallStatusEnum.h in Headers */,
+		AA7C17B4FCE5D1B2AF75A3AD /* InterruptedCallStatusEnumHelper.h in Headers */,
+		AA9493B09BBE9309B44BE74A /* IfMachine32Enum.h in Headers */,
+		AAE38C42D3368B8947517AD4 /* IfMachine32EnumHelper.h in Headers */,
+		AAFB23D3EB257FEB8574BD92 /* HttpActionEnum.h in Headers */,
+		AAD2F9B34D529E2198641B1E /* HttpActionEnumHelper.h in Headers */,
+		AA5528EF6B911F49A6343792 /* AudioDirection29Enum.h in Headers */,
+		AAD295D0D4519686CF21C544 /* AudioDirection29EnumHelper.h in Headers */,
+		AA24BCFADB6BC49255991B5B /* SendEmailAsEnum.h in Headers */,
+		AAE67F2FDD8C2A18F0B0D079 /* SendEmailAsEnumHelper.h in Headers */,
+		AAF4C446EE755B251D120ED8 /* TemplateData.h in Headers */,
+		AA9C7AA77EAA44F0AE8FF8F1 /* GroupConfirmFileEnum.h in Headers */,
+		AA2F8637FB6BC9C0BF2E4B81 /* GroupConfirmFileEnumHelper.h in Headers */,
+		AA1314A329B441A5560611E3 /* AudioUrlEnum.h in Headers */,
+		AAE1B75AA537FC57DF37A75F /* AudioUrlEnumHelper.h in Headers */,
+		AA6863891AD7E9948E0BF677 /* StatusEnum.h in Headers */,
+		AAE4E468166A0DBC131D493B /* StatusEnumHelper.h in Headers */,
+		AA238AB799BEFBB995F719F1 /* FileformatEnum.h in Headers */,
+		AA6436D3738C335C2F5928BD /* FileformatEnumHelper.h in Headers */,
+		AAF2C2EAAFF3047AD75A1C1E /* IfMachineEnum.h in Headers */,
+		AA8A42733314C8F41B603D23 /* IfMachineEnumHelper.h in Headers */,
+		AA927F2D2B52D6E4494AA82C /* TypeEnum.h in Headers */,
+		AA36DDDEE62C5EA89608A09F /* TypeEnumHelper.h in Headers */,
+		AA4D472DDEAEE876A977097B /* NumbertypeEnum.h in Headers */,
+		AAC7234AB43EEB8FD66D8236 /* NumbertypeEnumHelper.h in Headers */,
+		AA758624933A531B28FE8B5B /* DirectionEnum.h in Headers */,
+		AA0571D7FA8CF40DB39CC3C8 /* DirectionEnumHelper.h in Headers */,
+		AA758AC35E1A66654DE9A6F7 /* Direction4Enum.h in Headers */,
+		AAC32C9C99DA74DF0C0B5C2E /* Direction4EnumHelper.h in Headers */,
+		AAF67933CE9D4D34A5142BE6 /* AudioDirectionEnum.h in Headers */,
+		AADBFCA45786BBA50ED26C9D /* AudioDirectionEnumHelper.h in Headers */,
+		AA61594AE27C3A98C1AE5A29 /* PlayDtmfDirectionEnum.h in Headers */,
+		AABBC7017BC0553926EFA588 /* PlayDtmfDirectionEnumHelper.h in Headers */,
+		AA9E0732738E07CB0F3817BE /* MergeNumberEnum.h in Headers */,
+		AA931E07D05B92C0C10E146B /* MergeNumberEnumHelper.h in Headers */,
+		AACC5EB68D769D1CD4A429B1 /* MActivateEnum.h in Headers */,
+		AA1C65B7266141CD25C1DE18 /* MActivateEnumHelper.h in Headers */,
+		AACBC24D37F89C8BAEC056F6 /* ProductCodeEnum.h in Headers */,
+		AAB94A3EAA344E516DBC4A2D /* ProductCodeEnumHelper.h in Headers */,
+		AA704E5431B54582BE893F1F /* Status12Enum.h in Headers */,
+		AAD8699CC604601EA70D0CAD /* Status12EnumHelper.h in Headers */,
+		AA929ACC1EC20CAB9A2BDEF2 /* NumberType14Enum.h in Headers */,
+		AA6C0D48C0BD26E725583AB7 /* NumberType14EnumHelper.h in Headers */,
+		AA0E2202FC9D1D9ACF3023A3 /* NumberType15Enum.h in Headers */,
+		AA05B9E3695FDE6F33BCE11D /* NumberType15EnumHelper.h in Headers */,
+		AAD45660CF59F260BB780C20 /* Error.h in Headers */,
+		AAFD8B60E27ED781A87CA266 /* Message.h in Headers */,
+		AAC00353E904C0AB1491C145 /* Direction23Enum.h in Headers */,
+		AA976DDFD117A677B2E56222 /* Direction23EnumHelper.h in Headers */,
+		AA6F611DB2E2176B79A2DB85 /* NumberType24Enum.h in Headers */,
+		AA59D0B0131938E222CD525E /* NumberType24EnumHelper.h in Headers */,
+		AA4E1A4FC4F05B94D8DAB025 /* Status25Enum.h in Headers */,
+		AADBEC00BAF50262CE802508 /* Status25EnumHelper.h in Headers */,
+		AA9E0B855E97FEC7FC064C8D /* ActivateStatusEnum.h in Headers */,
+		AABA89DCA50C883312D24680 /* ActivateStatusEnumHelper.h in Headers */,
+		AA51E3F5A79B4DDA3D3A0AF1 /* MergeNumberStatusEnum.h in Headers */,
+		AAED5B743B380901ED243300 /* MergeNumberStatusEnumHelper.h in Headers */,
+		AA8A3830E6AEE6B63FD780C2 /* ProductCode30Enum.h in Headers */,
+		AA6DB41E27D7E8626A949D1C /* ProductCode30EnumHelper.h in Headers */,
+		AA27A2EA9A01E1C2A861ADB6 /* Numbertype16Enum.h in Headers */,
+		AA07323966DAA9CB2782AC19 /* Numbertype16EnumHelper.h in Headers */,
+		AA616B5C823644A221445875 /* PlayDtmfDirection38Enum.h in Headers */,
+		AA1B65EB1C1DD7C3D10C9FE8 /* PlayDtmfDirection38EnumHelper.h in Headers */,
+		AA0DC51EFFD26C9223361C72 /* MergeNumber40Enum.h in Headers */,
+		AA5BBC3EE05AC946132BBF17 /* MergeNumber40EnumHelper.h in Headers */,
+		AA964E070A766E16F827F10A /* ActivateEnum.h in Headers */,
+		AA65BE6AE308C4B209A6EACB /* ActivateEnumHelper.h in Headers */,
+		AAACA97CAB567DBD77F49863 /* ProductCode27Enum.h in Headers */,
+		AA5940793CC386E3622BC4ED /* ProductCode27EnumHelper.h in Headers */,
+		AAB66F6485C03CADC72A01FE /* ShortCodeController.h in Headers */,
+		AAA4340D6A1C9A2BA21256D8 /* AreaMailController.h in Headers */,
+		AA7E4732897CEC2DFC7058B7 /* PostCardController.h in Headers */,
+		AACF34EF33E368D0A5B9182C /* LetterController.h in Headers */,
+		AA4E0229E250AA06838C78D0 /* CallController.h in Headers */,
+		AA0C06B2B55864E2F18F9DD9 /* PhoneNumberController.h in Headers */,
+		AA51BA983EA6DD47EADD767D /* SMSController.h in Headers */,
+		AA9E7A0D69A6B919BE1A37F8 /* SharedShortCodeController.h in Headers */,
+		AAE320CACEAA31D6DE4CC5A0 /* ConferenceController.h in Headers */,
+		AAD7546C82BE41672C9D58B0 /* CarrierController.h in Headers */,
+		AAEE86A14DF6D55C496B157D /* EmailController.h in Headers */,
+		AABB26DA752AB72F432C52D0 /* AccountController.h in Headers */,
+		AA87CF247168694FAC2AF75B /* SubAccountController.h in Headers */,
+		AAB77FA1D52FA85F2EE0FBF3 /* AddressController.h in Headers */,
+		AA4BC2149A809FA9AE433E90 /* RecordingController.h in Headers */,
+		AAC534682174EDBD3880A0A8 /* TranscriptionController.h in Headers */,
+		AA5BEED5489112A144F60335 /* UsageController.h in Headers */,
+        AAB3AA4B658C5443700D0C0C /* APIHelper.h in Headers */,
+        AA612AFCB2AC40AAF9C9BACA /* JSONValueTransformer+NSUUID.h in Headers */,
+        AAC9784606712E2F510C5892 /* NSDate+extension.h in Headers */,
+        AAD9244039DF31452C9D7C2B /* Configuration.h in Headers */,
+        AA9A82CCE1219D4C5910FE3B /* APIError.h in Headers */,
+        AA9E17FED3B6812D11EB1F51 /* TestHelper.h in Headers */,
+        AAD8F51F714DD5966CCD659B /* HttpBodyRequest.h in Headers */,
+        AA727179A75A81C7BFF5708F /* HttpRequest.h in Headers */,
+        AA561654D3DF3A6B4926FBE4 /* IHttpClient.h in Headers */,
+        AAA4DBB5CE589B5B0303FD74 /* HttpContext.h in Headers */,
+
+        AABB789B7FACBAA15967C8E9 /* BaseController.h in Headers */,
+        AAFBD14918A6E076A0BF62B7 /* HttpResponse.h in Headers */,
+        AADD0D6E9D0D2ECB46296055 /* UnirestClient.h in Headers */,
+        AA9312BDFDCA04EB5F7358C2 /* HttpStringResponse.h in Headers */,
+        AA033D32966F32BFBD65DD34 /* HttpMethod.h in Headers */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+   
+        AA2DCD1EBC15E61EA692C99F /* Tests */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = AAADD1EA9E00AF9B9F8CDFC0 /* Build configuration list for PBXNativeTarget "Tests" */;
+            buildPhases = (
+                AAE0F287B400F63C88C756EB /* Sources */,
+                AA6953230CA509B32593BC7C /* Frameworks */,
+                AAF4E93AD0B9510E6CB456B5 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            AAE710D60AF9FA72F99ADA05  /* PBXTargetDependency */,
+            );
+            name = Tests;
+            productName = Tests;
+            productReference = AA7821CD0DA92EF87789C61D /* Tests.xctest */;
+            productType = "com.apple.product-type.bundle.unit-test";
+        };
+        AA28707B011D40DC5FCAABD7 /* YtelAPIV3 */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = AA82ACA3B71B3D8AC53528FE /* Build configuration list for PBXNativeTarget "YtelAPIV3" */;
+            buildPhases = (
+                AAAD8BEDE6C04F26CD9A967F /* Sources */,
+                AAC01B07AF245CB0CDD170FA /* Frameworks */,
+                AA6976EEF676DCB4C0327BF2 /* CopyFiles */,
+                AA13B6076044B4EB7050DE39 /* Headers */,
+                AA26BF6507704A6409F338B9 /* Build Framework */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = YtelAPIV3;
+            productName = YtelAPIV3;
+            productReference = AAFFB6F12C34BFAB07465B52 /* libYtelAPIV3.a */;
+            productType = "com.apple.product-type.library.static";
+        };		
+/* End PBXNativeTarget section */
+
+
+
+/* Begin PBXProject section */
+        AAD86B0C4A909E780CCAF44D /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 0500;
+                ORGANIZATIONNAME = APIMatic;
+                TargetAttributes = {
+                    AA2DCD1EBC15E61EA692C99F = {
+                        CreatedOnToolsVersion = 7.3.1;
+                    };
+                };
+            };
+            buildConfigurationList = AA3D5C81EBA16BCDBA6678EE /* Build configuration list for PBXProject "YtelAPIV3" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                en,
+            );
+            mainGroup = AAD4984ADF584177665EB2F2;
+            productRefGroup = AA8858C16C1B7799495DB67C /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                AA28707B011D40DC5FCAABD7 /* YtelAPIV3 */,
+                AAEE5E87CAD05D168656264B /* Framework */,
+                AA2DCD1EBC15E61EA692C99F /* Tests */,
+            );
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+    AAF4E93AD0B9510E6CB456B5 /* Resources */ = {
+      isa = PBXResourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+        AA26BF6507704A6409F338B9 /* Build Framework */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "Build Framework";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "#Credit: http://www.raywenderlich.com/65964/create-a-framework-for-ios\nset -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${PODS_ROOT}/Headers/Public/JSONModel/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${PODS_ROOT}/Headers/Public/Unirest-APIMATIC/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Copy the public headers into the framework\n/bin/cp -f -r \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+        };
+        AACF2FCBE910DF27909EEA33 /* MultiBuild Framework */ = {
+            isa = PBXShellScriptBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            inputPaths = (
+            );
+            name = "MultiBuild Framework";
+            outputPaths = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+            shellPath = /bin/sh;
+            shellScript = "# Taken from Ray Wenderlich tutorial: http://www.raywenderlich.com/65964/create-a-framework-for-ios\n\nset -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nOUTPUT_LOCATION=\"${HOME}/Desktop\"\nif [ ! -w ${OUTPUT_LOCATION} ] ; then OUTPUT_LOCATION=\"${XCS_OUTPUT_DIR}\" ; fi\nif [ ! -w ${OUTPUT_LOCATION} ] ; then OUTPUT_LOCATION=\"/tmp\" ; fi\nif [ ! -w ${OUTPUT_LOCATION} ] ; then echo \"Couldn't find anywhere to write! Dying.\"; exit 1 ; fi\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\necho \"RW_SDK_PLATFORM is ${RW_SDK_PLATFORM}\"\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\necho \"RW_SDK_VERSION is ${RW_SDK_VERSION}\"\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\necho \"RW_OTHER_PLATFORM is ${RW_OTHER_PLATFORM}\"\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\necho \"BUILT_PRODUCTS_DIR is ${BUILT_PRODUCTS_DIR}\"\necho \"RW_OTHER_BUILT_PRODUCTS_DIR is ${RW_OTHER_BUILT_PRODUCTS_DIR}\"\n\n# remove alias and copy, if it's archive\nUNINSTALLED_PRODUCTS_DIRECTORY=\"${BUILT_PRODUCTS_DIR}/../../IntermediateBuildFilesPath/UninstalledProducts\"\n\nif [ -d \"$UNINSTALLED_PRODUCTS_DIRECTORY\" ]; then\necho \"Looks like we're archiving, fixing aliases...\"\nrm \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\ncp \"${UNINSTALLED_PRODUCTS_DIRECTORY}/${RW_INPUT_STATIC_LIB}\" \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\nif [ -d \"$UNINSTALLED_PRODUCTS_DIRECTORY\" ]; then\necho \"Looks like we're archiving, fixing aliases...\"\nrm \"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\ncp \"${UNINSTALLED_PRODUCTS_DIRECTORY}/${RW_INPUT_STATIC_LIB}\" \"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\"\nfi\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"";
+        };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        AAE0F287B400F63C88C756EB /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+				AAE3B94FA19A595C3F604173 /* TestBaseController.m in Sources */,
+				AAB09A5CCE8F415901C65989 /* TestShortCodeController.m in Sources */,
+				AA87A7870FAEA224E1F84DC2 /* TestAreaMailController.m in Sources */,
+				AA2DA4B7E62C1DF3F735F51F /* TestPostCardController.m in Sources */,
+				AAF8F385C769EDF87FCCCA06 /* TestLetterController.m in Sources */,
+				AAD107539111C4CE13AD1E29 /* TestCallController.m in Sources */,
+				AA8607F4619053E2D1940390 /* TestPhoneNumberController.m in Sources */,
+				AAA3ED41237BDB7FE7735A1C /* TestSMSController.m in Sources */,
+				AADF8D6FE84239A5F91BE428 /* TestSharedShortCodeController.m in Sources */,
+				AA63C7E0B1B6AD19824C38ED /* TestConferenceController.m in Sources */,
+				AAD3E654137F1D8F55409D31 /* TestCarrierController.m in Sources */,
+				AA051472876A907FD64D5D5F /* TestEmailController.m in Sources */,
+				AA6EE775B596D96F7CC1F5D4 /* TestAddressController.m in Sources */,
+				AAE207C18BD9EBBE2E427381 /* TestRecordingController.m in Sources */,
+				AA3358EE3F9C1A2865277003 /* TestTranscriptionController.m in Sources */,
+				AA58BB85AEC4F541BC1DB508 /* TestUsageController.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        AAAD8BEDE6C04F26CD9A967F /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                AA2F009821D5B379D796665A /* APIHelper.m in Sources */,
+                AA3FC84281C8B49DAC26F961 /* APIError.m in Sources */,
+                AA0C599E7D4F200F8897AFF7 /* NSDate+extension.m in Sources */,
+   
+                AAD23B63A95A1922D975BDD7 /* TestHelper.m in Sources */,
+                AABE48236E273EF1DB3275E0 /* Configuration.m in Sources */,
+                AAC5364659EE5DBD20C6F4D3 /* JSONValueTransformer+NSUUID.m in Sources */,
+				AAFC541FFA45F43EBAFDC88E /* Errors.m in Sources */,
+				AA20434721909C9FFFE92E31 /* GroupConfirmFile44EnumHelper.m in Sources */,
+				AA03CF2C9D2668EF67E245CC /* AudioUrl43EnumHelper.m in Sources */,
+				AACB48A25A090E15DD9F1755 /* Status24EnumHelper.m in Sources */,
+				AAA52F02D911D34A7EAE7876 /* Fileformat37EnumHelper.m in Sources */,
+				AA124901D3DD0CFF0F6FD073 /* Type36EnumHelper.m in Sources */,
+				AA76C3BFD6713495EFA95BCC /* AudioFormatEnumHelper.m in Sources */,
+				AAD32BFC920A9086CF46EF82 /* InterruptedCallStatusEnumHelper.m in Sources */,
+				AA9A8C81EA17174E0EF3F43F /* IfMachine32EnumHelper.m in Sources */,
+				AA0FA1BB70267B99952604E0 /* HttpActionEnumHelper.m in Sources */,
+				AA670A49A9D9F16AF0195077 /* AudioDirection29EnumHelper.m in Sources */,
+				AACBA88B8E162ED733BE68C6 /* SendEmailAsEnumHelper.m in Sources */,
+				AACAFCC0AA519F2A633B0136 /* TemplateData.m in Sources */,
+				AAC04C586CFCBB1764579FA5 /* GroupConfirmFileEnumHelper.m in Sources */,
+				AABD20E60957235D884B4DAA /* AudioUrlEnumHelper.m in Sources */,
+				AA6A156F81AD9613E1D38F9A /* StatusEnumHelper.m in Sources */,
+				AA9BBBBD535E0B028A091853 /* FileformatEnumHelper.m in Sources */,
+				AA88807C3F46E164A4CC46AF /* IfMachineEnumHelper.m in Sources */,
+				AA0124480B41A84693E2B417 /* TypeEnumHelper.m in Sources */,
+				AAA2CDE578DC30C560EF23FB /* NumbertypeEnumHelper.m in Sources */,
+				AA4CC65CD3EEA0C83D2BDC7D /* DirectionEnumHelper.m in Sources */,
+				AA45654DA38026589A55E986 /* Direction4EnumHelper.m in Sources */,
+				AA518111CD7A7504BA3BDBEC /* AudioDirectionEnumHelper.m in Sources */,
+				AAF77F5BE40A23AAC6569F13 /* PlayDtmfDirectionEnumHelper.m in Sources */,
+				AAD223257E90E0E46F7920FB /* MergeNumberEnumHelper.m in Sources */,
+				AA36C24A681D9F3F6FFD0BEF /* MActivateEnumHelper.m in Sources */,
+				AA70EADCC62819CB44677DC1 /* ProductCodeEnumHelper.m in Sources */,
+				AAC9C8B9E8C84163BFB9E688 /* Status12EnumHelper.m in Sources */,
+				AA5105A0855ED6DF2FA6A762 /* NumberType14EnumHelper.m in Sources */,
+				AA3A629DE42CBE5E05892418 /* NumberType15EnumHelper.m in Sources */,
+				AA7059940E10E8BBB873B6AC /* Error.m in Sources */,
+				AAC6135E16CA3B2B1D2A8DE7 /* Message.m in Sources */,
+				AA8D4D90EE2CBBA79CC657C7 /* Direction23EnumHelper.m in Sources */,
+				AACB1D592C617E60A4213B2A /* NumberType24EnumHelper.m in Sources */,
+				AA0FF4546259DE2BB7562B87 /* Status25EnumHelper.m in Sources */,
+				AAB95A59A24A0F107D3457BB /* ActivateStatusEnumHelper.m in Sources */,
+				AA63CCACB1A4189043136619 /* MergeNumberStatusEnumHelper.m in Sources */,
+				AA97DF570C714686834A17A9 /* ProductCode30EnumHelper.m in Sources */,
+				AA1641F20A36B4EF40336E52 /* Numbertype16EnumHelper.m in Sources */,
+				AA60FBECFBE87B80BD4FD163 /* PlayDtmfDirection38EnumHelper.m in Sources */,
+				AA684FFEB87776D626DF215D /* MergeNumber40EnumHelper.m in Sources */,
+				AAD0634C1D6FF8D2D8CD1CB2 /* ActivateEnumHelper.m in Sources */,
+				AAD58215B97D0257F813AD2C /* ProductCode27EnumHelper.m in Sources */,
+				AAB8FC8FBEB27D57C00E55CE /* BaseController.m in Sources */,
+				AA3EC21B8969A2103EA9FE9D /* ShortCodeController.m in Sources */,
+				AAD1825A765C4197063A6D6B /* AreaMailController.m in Sources */,
+				AA6C36B3F46A243F4C0D32D0 /* PostCardController.m in Sources */,
+				AAF29F142C9DA0354DD8C44D /* LetterController.m in Sources */,
+				AA45A1451C52D002FC5B8FEA /* CallController.m in Sources */,
+				AA86CBBF76237B9FDB448955 /* PhoneNumberController.m in Sources */,
+				AA53BF2F574700239CEE91C0 /* SMSController.m in Sources */,
+				AA1B043E9BCD1CE6761C74C4 /* SharedShortCodeController.m in Sources */,
+				AA19FD45FA709EFA78988E66 /* ConferenceController.m in Sources */,
+				AA9F5B4B193CAB558C4EC30F /* CarrierController.m in Sources */,
+				AA1ABE4537E611FD7556989B /* EmailController.m in Sources */,
+				AA2FB7E2A2747B93BB99E302 /* AccountController.m in Sources */,
+				AACD93C5737404A7EB61E1BA /* SubAccountController.m in Sources */,
+				AAD12DE65BE2213FC11B6C0E /* AddressController.m in Sources */,
+				AA70C85AB2B055B28FA877D4 /* RecordingController.m in Sources */,
+				AAAE3427710161D8CF0778FE /* TranscriptionController.m in Sources */,
+				AA179B90D667B8EF94E6C0DD /* UsageController.m in Sources */,
+                 AA751EC3D8D1E1F02BC41D50 /* HttpBodyRequest.m in Sources */,
+                 AAD0FE4E6546B42C42539D57 /* BaseController.m in Sources */,
+                 AAC751CC6398471D8AE95DF2 /* UnirestClient.m in Sources */,
+                 AADE4B211C778689E60B2D58 /* UnirestClient.m in Sources */,
+                 AA19178EE1D12F29A92B4F31 /* HttpResponse.m in Sources */,
+                 AA9B8CABE328A66C2F9C101E /* HttpStringResponse.m in Sources */,
+                 AA1A7ED3A893EFFCD4DDD12E /* HttpRequest.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+        AA64289540A97CFC567617A7 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = AA28707B011D40DC5FCAABD7 /* YtelAPIV3 */;
+            targetProxy = AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */;
+        };
+        AAE710D60AF9FA72F99ADA05 /* PBXTargetDependency */ = {
+            isa = PBXTargetDependency;
+            target = AA28707B011D40DC5FCAABD7 /* YtelAPIV3 */;
+            targetProxy = AACEBD8E9E09F53ADB403022 /* PBXContainerItemProxy */;
+        };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+   
+        AAE4BCDAA396863FD3B4811A /* Debug */ = {
+          isa = XCBuildConfiguration;
+          buildSettings = {
+            CLANG_ANALYZER_NONNULL = YES;
+            CLANG_WARN_UNREACHABLE_CODE = YES;
+            "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+            DEBUG_INFORMATION_FORMAT = dwarf;
+            ENABLE_STRICT_OBJC_MSGSEND = YES;
+            ENABLE_TESTABILITY = YES;
+            GCC_NO_COMMON_BLOCKS = YES;
+            GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+            INFOPLIST_FILE = YtelAPIV3/Tests/Info.plist;
+            IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+            MTL_ENABLE_DEBUG_INFO = YES;
+            PRODUCT_BUNDLE_IDENTIFIER = Apimatic.Tests;
+            PRODUCT_NAME = "$(TARGET_NAME)";
+          };
+          name = Debug;
+        };
+        AA24A11CAAB80D4DD12B8F5D /* Release */ = {
+          isa = XCBuildConfiguration;
+          buildSettings = {
+            CLANG_ANALYZER_NONNULL = YES;
+            CLANG_WARN_UNREACHABLE_CODE = YES;
+            "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+            COPY_PHASE_STRIP = NO;
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            ENABLE_STRICT_OBJC_MSGSEND = YES;
+            GCC_NO_COMMON_BLOCKS = YES;
+            GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+            INFOPLIST_FILE = YtelAPIV3/Tests/Info.plist;
+            IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+            LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+            MTL_ENABLE_DEBUG_INFO = NO;
+            PRODUCT_BUNDLE_IDENTIFIER = Apimatic.Tests;
+            PRODUCT_NAME = "$(TARGET_NAME)";
+          };
+          name = Release;
+        };
+
+        AA424ECAE71F053C848A780A /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Debug;
+        };
+        AACEA0FFC440D77D3D224A1D /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                PRODUCT_NAME = "$(TARGET_NAME)";
+            };
+            name = Release;
+        };
+        AAD9F6B0D7ABAB09FF5859BE /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = NO;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+            };
+            name = Debug;
+        };
+        AA05B27B66E0C62144B5D5CC /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_CXX_LIBRARY = "libc++";
+                CLANG_ENABLE_MODULES = YES;
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = YES;
+                ENABLE_NS_ASSERTIONS = NO;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+                SDKROOT = iphoneos;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        AA297EF2FAFA3A4730512B1A /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                DEAD_CODE_STRIPPING = NO;
+                DSTROOT = /tmp/YtelAPIV3.dst;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "YtelAPIV3/YtelAPIV3-Prefix.pch";
+                OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+                SKIP_INSTALL = YES;
+                STRIP_INSTALLED_PRODUCT = NO;
+                STRIP_STYLE = "non-global";
+            };
+            name = Debug;
+        };
+        AA898798C13E56D992CE646A /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                COPY_PHASE_STRIP = NO;
+                DEAD_CODE_STRIPPING = NO;
+                DSTROOT = /tmp/YtelAPIV3.dst;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "YtelAPIV3/YtelAPIV3-Prefix.pch";
+                OTHER_LDFLAGS = "$(inherited)";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+                SKIP_INSTALL = YES;
+                STRIP_INSTALLED_PRODUCT = NO;
+                STRIP_STYLE = "non-global";
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+   
+        AAADD1EA9E00AF9B9F8CDFC0 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+          isa = XCConfigurationList;
+          buildConfigurations = (
+            AAE4BCDAA396863FD3B4811A  /* Debug */,
+            AA24A11CAAB80D4DD12B8F5D /* Release */,
+          );
+          defaultConfigurationIsVisible = 0;
+        };
+        AA6B40043ACECBE13E13500A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA424ECAE71F053C848A780A /* Debug */,
+                AACEA0FFC440D77D3D224A1D /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+        };
+        AA3D5C81EBA16BCDBA6678EE /* Build configuration list for PBXProject "YtelAPIV3" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AAD9F6B0D7ABAB09FF5859BE /* Debug */,
+                AA05B27B66E0C62144B5D5CC /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        AA82ACA3B71B3D8AC53528FE /* Build configuration list for PBXNativeTarget "YtelAPIV3" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                AA297EF2FAFA3A4730512B1A /* Debug */,
+                AA898798C13E56D992CE646A /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+    };
+    rootObject = AAD86B0C4A909E780CCAF44D /* Project object */;
+}
