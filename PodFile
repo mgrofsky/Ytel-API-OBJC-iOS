@@ -8,7 +8,12 @@ def required_pods
 	pod 'ISO8601DateFormatter', '~> 0.7'
 end
 
-target 'YtelAPI' do
+target 'YtelAPIV3' do
+    required_pods
+end
+
+
+target 'Tests' do
     required_pods
 end
 
